@@ -1,0 +1,120 @@
+\begin{thebibliography}{10}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{kassiopeia}
+\textsc{Furse, D.} \textsc{et~al.} (2017) \enquote{{Kassiopeia: a modern, extensible C++ particle tracking package},} \emph{New Journal of Physics}, \textbf{19}(5), p. 053012.
+\newline\urlprefix\url{https://doi.org/10.1088/1367-2630/aa6950}
+
+\bibitem{p8originalcres}
+\textsc{Monreal, B.} and \textsc{J.~A. Formaggio} (2009) \enquote{Relativistic cyclotron radiation detection of tritium decay electrons as a new technique for measuring the neutrino mass,} \emph{Phys. Rev. D}, \textbf{80}, p. 051301.
+\newline\urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevD.80.051301}
+
+\bibitem{p8prl2023}
+\textsc{Esfahani, A.~A.}, \textsc{S.~Böser}, \textsc{N.~Buzinsky}, \textsc{M.~C. Carmona-Benitez}, \textsc{C.~Claessens}, \textsc{L.~de~Viveiros}, \textsc{P.~J. Doe}, \textsc{M.~Fertl}, \textsc{J.~A. Formaggio}, \textsc{J.~K. Gaison}, \textsc{L.~Gladstone}, \textsc{M.~Grando}, \textsc{M.~Guigue}, \textsc{J.~Hartse}, \textsc{K.~M. Heeger}, \textsc{X.~Huyan}, \textsc{J.~Johnston}, \textsc{A.~M. Jones}, \textsc{K.~Kazkaz}, \textsc{B.~H. LaRoque}, \textsc{M.~Li}, \textsc{A.~Lindman}, \textsc{E.~Machado}, \textsc{A.~Marsteller}, \textsc{C.~Matthé}, \textsc{R.~Mohiuddin}, \textsc{B.~Monreal}, \textsc{R.~Mueller}, \textsc{J.~A. Nikkel}, \textsc{E.~Novitski}, \textsc{N.~S. Oblath}, \textsc{J.~I. Peña}, \textsc{W.~Pettus}, \textsc{R.~Reimann}, \textsc{R.~G.~H. Robertson}, \textsc{D.~R.~D. Jesús}, \textsc{G.~Rybka}, \textsc{L.~Saldaña}, \textsc{M.~Schram}, \textsc{P.~L. Slocum}, \textsc{J.~Stachurska}, \textsc{Y.~H. Sun}, \textsc{P.~T. Surukuchi}, \textsc{J.~R. Tedeschi}, \textsc{A.~B. Telles}, \textsc{F.~Thomas}, \textsc{M.~Thomas}, \textsc{L.~A. Thorne}, \textsc{T.~Thümmler}, \textsc{L.~Tvrznikova}, \textsc{W.~V.~D. Pontseele}, \textsc{B.~A. VanDevender}, \textsc{J.~Weintroub}, \textsc{T.~E. Weiss}, \textsc{T.~Wendler}, \textsc{A.~Young}, \textsc{E.~Zayas}, and \textsc{A.~Ziegler} (2023) \enquote{Tritium Beta Spectrum and Neutrino Mass Limit from Cyclotron Radiation Emission Spectroscopy,} \eprint{2212.05048}.
+
+\bibitem{p8prc2023}
+\textsc{Esfahani, A.~A.}, \textsc{S.~Böser}, \textsc{N.~Buzinsky}, \textsc{M.~C. Carmona-Benitez}, \textsc{C.~Claessens}, \textsc{L.~de~Viveiros}, \textsc{P.~J. Doe}, \textsc{M.~Fertl}, \textsc{J.~A. Formaggio}, \textsc{J.~K. Gaison}, \textsc{L.~Gladstone}, \textsc{M.~Guigue}, \textsc{J.~Hartse}, \textsc{K.~M. Heeger}, \textsc{X.~Huyan}, \textsc{A.~M. Jones}, \textsc{K.~Kazkaz}, \textsc{B.~H. LaRoque}, \textsc{M.~Li}, \textsc{A.~Lindman}, \textsc{E.~Machado}, \textsc{A.~Marsteller}, \textsc{C.~Matthé}, \textsc{R.~Mohiuddin}, \textsc{B.~Monreal}, \textsc{R.~Mueller}, \textsc{J.~A. Nikkel}, \textsc{E.~Novitski}, \textsc{N.~S. Oblath}, \textsc{J.~I. Peña}, \textsc{W.~Pettus}, \textsc{R.~Reimann}, \textsc{R.~G.~H. Robertson}, \textsc{D.~R.~D. Jesús}, \textsc{G.~Rybka}, \textsc{L.~Saldaña}, \textsc{M.~Schram}, \textsc{P.~L. Slocum}, \textsc{J.~Stachurska}, \textsc{Y.~H. Sun}, \textsc{P.~T. Surukuchi}, \textsc{J.~R. Tedeschi}, \textsc{A.~B. Telles}, \textsc{F.~Thomas}, \textsc{M.~Thomas}, \textsc{L.~A. Thorne}, \textsc{T.~Thümmler}, \textsc{L.~Tvrznikova}, \textsc{W.~V.~D. Pontseele}, \textsc{B.~A. VanDevender}, \textsc{J.~Weintroub}, \textsc{T.~E. Weiss}, \textsc{T.~Wendler}, \textsc{A.~Young}, \textsc{E.~Zayas}, and \textsc{A.~Ziegler} (2023) \enquote{Cyclotron Radiation Emission Spectroscopy of Electrons from Tritium Beta Decay and $^{83\rm m}$Kr Internal Conversion,} \eprint{2303.12055}.
+
+\bibitem{p8snowmass2022}
+\textsc{Esfahani, A.~A.}, \textsc{S.~Böser}, \textsc{N.~Buzinsky}, \textsc{M.~C. Carmona-Benitez}, \textsc{C.~Claessens}, \textsc{L.~de~Viveiros}, \textsc{P.~J. Doe}, \textsc{S.~Enomoto}, \textsc{M.~Fertl}, \textsc{J.~A. Formaggio}, \textsc{J.~K. Gaison}, \textsc{M.~Grando}, \textsc{K.~M. Heeger}, \textsc{X.~Huyan}, \textsc{A.~M. Jones}, \textsc{K.~Kazkaz}, \textsc{M.~Li}, \textsc{A.~Lindman}, \textsc{C.~Matthé}, \textsc{R.~Mohiuddin}, \textsc{B.~Monreal}, \textsc{R.~Mueller}, \textsc{J.~A. Nikkel}, \textsc{E.~Novitski}, \textsc{N.~S. Oblath}, \textsc{J.~I. Peña}, \textsc{W.~Pettus}, \textsc{R.~Reimann}, \textsc{R.~G.~H. Robertson}, \textsc{G.~Rybka}, \textsc{L.~Saldaña}, \textsc{M.~Schram}, \textsc{P.~L. Slocum}, \textsc{J.~Stachurska}, \textsc{Y.~H. Sun}, \textsc{P.~T. Surukuchi}, \textsc{J.~R. Tedeschi}, \textsc{A.~B. Telles}, \textsc{F.~Thomas}, \textsc{M.~Thomas}, \textsc{L.~A. Thorne}, \textsc{T.~Thümmler}, \textsc{W.~V.~D. Pontseele}, \textsc{B.~A. VanDevender}, \textsc{T.~E. Weiss}, \textsc{T.~Wendler}, and \textsc{A.~Ziegler} (2022) \enquote{The Project 8 Neutrino Mass Experiment,} \eprint{2203.07349}.
+
+\bibitem{p8PanicProc}
+\textsc{Reimann, R.} (2022) \enquote{{Project 8: R\&D for a next-generation neutrino mass experiment},} \emph{PoS}, \textbf{PANIC2021}, p. 283.
+
+\bibitem{p8daqIII}
+\textsc{LaRoque, B.} (2020) \enquote{{Zero-deadtime processing in beta spectroscopy for measurement of the non-zero neutrino mass},} \emph{EPJ Web Conf.}, \textbf{245}, p. 01014.
+
+\bibitem{p8jugaad}
+ \enquote{Antenna Arrays for Physics Measurements with Large-scale CRES Detectors,} \emph{In preparation}.
+
+\bibitem{p8pheno}
+\textsc{Esfahani, A.~A.}, \textsc{V.~Bansal}, \textsc{S.~B\"oser}, \textsc{N.~Buzinsky}, \textsc{R.~Cervantes}, \textsc{C.~Claessens}, \textsc{L.~de~Viveiros}, \textsc{P.~J. Doe}, \textsc{M.~Fertl}, \textsc{J.~A. Formaggio}, \textsc{L.~Gladstone}, \textsc{M.~Guigue}, \textsc{K.~M. Heeger}, \textsc{J.~Johnston}, \textsc{A.~M. Jones}, \textsc{K.~Kazkaz}, \textsc{B.~H. LaRoque}, \textsc{M.~Leber}, \textsc{A.~Lindman}, \textsc{E.~Machado}, \textsc{B.~Monreal}, \textsc{E.~C. Morrison}, \textsc{J.~A. Nikkel}, \textsc{E.~Novitski}, \textsc{N.~S. Oblath}, \textsc{W.~Pettus}, \textsc{R.~G.~H. Robertson}, \textsc{G.~Rybka}, \textsc{L.~Salda\~na}, \textsc{V.~Sibille}, \textsc{M.~Schram}, \textsc{P.~L. Slocum}, \textsc{Y.-H. Sun}, \textsc{J.~R. Tedeschi}, \textsc{T.~Th\"ummler}, \textsc{B.~A. VanDevender}, \textsc{M.~Wachtendonk}, \textsc{M.~Walter}, \textsc{T.~E. Weiss}, \textsc{T.~Wendler}, and \textsc{E.~Zayas} (2019) \enquote{Electron radiated power in cyclotron radiation emission spectroscopy experiments,} \emph{Phys. Rev. C}, \textbf{99}, p. 055501.
+\newline\urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevC.99.055501}
+
+\bibitem{nb_thesis}
+\textsc{Buzinsky, N.} (2021) \emph{Statistical Signal Processing and Detector Optimization in Project 8}, Ph.D. thesis, Massachusetts Institute of Technology.
+
+\bibitem{p8synca}
+\textsc{Esfahani, A.~A.}, \textsc{S.~Böser}, \textsc{N.~Buzinsky}, \textsc{M.~Carmona-Benitez}, \textsc{C.~Claessens}, \textsc{L.~de~Viveiros}, \textsc{M.~Fertl}, \textsc{J.~Formaggio}, \textsc{L.~Gladstone}, \textsc{M.~Grando}, \textsc{J.~Hartse}, \textsc{K.~Heeger}, \textsc{X.~Huyan}, \textsc{A.~Jones}, \textsc{K.~Kazkaz}, \textsc{M.~Li}, \textsc{A.~Lindman}, \textsc{C.~Matthé}, \textsc{R.~Mohiuddin}, \textsc{B.~Monreal}, \textsc{R.~Mueller}, \textsc{J.~Nikkel}, \textsc{E.~Novitski}, \textsc{N.~Oblath}, \textsc{J.~Peña}, \textsc{W.~Pettus}, \textsc{R.~Reimann}, \textsc{R.~Robertson}, \textsc{L.~Saldaña}, \textsc{P.~Slocum}, \textsc{J.~Stachurska}, \textsc{Y.-H. Sun}, \textsc{P.~Surukuchi}, \textsc{A.~Telles}, \textsc{F.~Thomas}, \textsc{M.~Thomas}, \textsc{L.~Thorne}, \textsc{T.~Thümmler}, \textsc{L.~Tvrznikova}, \textsc{W.~V.~D. Pontseele}, \textsc{B.~VanDevender}, \textsc{T.~Weiss}, \textsc{T.~Wendler}, \textsc{E.~Zayas}, \textsc{A.~Ziegler}, and \textsc{P.~. Collaboration} (2023) \enquote{SYNCA: A Synthetic Cyclotron Antenna for the Project 8 Collaboration,} \emph{Journal of Instrumentation}, \textbf{18}(01), p. P01034.
+\newline\urlprefix\url{https://dx.doi.org/10.1088/1748-0221/18/01/P01034}
+
+\bibitem{detection_theory}
+\textsc{Kay, S.} (1998) \emph{Fundamentals of Statistical Signal Processing: Detection Theory, Volume II}, Pearson.
+
+\bibitem{p8locustpaper}
+\textsc{Ashtari~Esfahani, A.} \textsc{et~al.} (2019) \enquote{{Locust: C++ software for simulation of RF detection},} \emph{New J. Phys.}, \textbf{21}, p. 113051, \eprint{1907.11124}.
+
+\bibitem{v100}
+\url{https://www.nvidia.com/en-us/data-center/v100/}.
+
+\bibitem{h100}
+\url{https://www.nvidia.com/en-us/data-center/h100/}.
+
+\bibitem{resnet}
+\textsc{He, K.}, \textsc{X.~Zhang}, \textsc{S.~Ren}, and \textsc{J.~Sun} (2016) \enquote{Deep Residual Learning for Image Recognition,} in \emph{2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, pp. 770--778.
+
+\bibitem{vgg}
+\textsc{Simonyan, K.} and \textsc{A.~Zisserman} (2015) \enquote{Very Deep Convolutional Networks for Large-Scale Image Recognition,} in \emph{3rd International Conference on Learning Representations, {ICLR} 2015, San Diego, CA, USA, May 7-9, 2015, Conference Track Proceedings} (Y.~Bengio and Y.~LeCun, eds.).
+\newline\urlprefix\url{http://arxiv.org/abs/1409.1556}
+
+\bibitem{Workman:2022ynf}
+\textsc{Workman, R.~L.} and \textsc{Others} (2022) \enquote{{Review of Particle Physics},} \emph{PTEP}, \textbf{2022}, p. 083C01.
+
+\bibitem{FORMAGGIO20211}
+\textsc{Formaggio, J.~A.}, \textsc{A.~L.~C. {de Gouvêa}}, and \textsc{R.~G.~H. Robertson} (2021) \enquote{Direct measurements of neutrino mass,} \emph{Physics Reports}, \textbf{914}, pp. 1--54, direct measurements of neutrino mass.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0370157321000636}
+
+\bibitem{Aker2022}
+\textsc{Aker, M.} \textsc{et~al.} (2022) \enquote{Direct neutrino-mass measurement with sub-electronvolt sensitivity,} \emph{Nature Physics}, \textbf{18}(2), pp. 160--166.
+\newline\urlprefix\url{https://doi.org/10.1038/s41567-021-01463-1}
+
+\bibitem{Monreal:2009za}
+\textsc{Monreal, B.} and \textsc{J.~A. Formaggio} (2009) \enquote{{Relativistic Cyclotron Radiation Detection of Tritium Decay Electrons as a New Technique for Measuring the Neutrino Mass},} \emph{Phys. Rev. D}, \textbf{80}, p. 051301, \eprint{0904.2860}.
+
+\bibitem{Project8:2014ivu}
+\textsc{Asner, D.~M.} \textsc{et~al.} (2015) \enquote{{Single electron detection and spectroscopy via relativistic cyclotron radiation},} \emph{Phys. Rev. Lett.}, \textbf{114}(16), p. 162501, \eprint{1408.5362}.
+
+\bibitem{Project8:2017nal}
+\textsc{Ashtari~Esfahani, A.} \textsc{et~al.} (2017) \enquote{{Determining the neutrino mass with cyclotron radiation emission spectroscopy\textemdash{}Project 8},} \emph{J. Phys. G}, \textbf{44}(5), p. 054004, \eprint{1703.02037}.
+
+\bibitem{Project8:2022wqh}
+\textsc{Esfahani, A.~A.} \textsc{et~al.} (2022) \enquote{{The Project 8 Neutrino Mass Experiment},} in \emph{{2022 Snowmass Summer Study}}, \eprint{2203.07349}.
+
+\bibitem{PhysRevC.103.065501}
+\textsc{Ashtari~Esfahani, A.} \textsc{et~al.} (2021) \enquote{Bayesian analysis of a future $\ensuremath{\beta}$ decay experiment's sensitivity to neutrino mass scale and ordering,} \emph{Phys. Rev. C}, \textbf{103}, p. 065501.
+\newline\urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevC.103.065501}
+
+\bibitem{Bodine:2015sma}
+\textsc{Bodine, L.~I.}, \textsc{D.~S. Parno}, and \textsc{R.~G.~H. Robertson} (2015) \enquote{{Assessment of molecular effects on neutrino mass measurements from tritium \ensuremath{\beta} decay},} \emph{Phys. Rev. C}, \textbf{91}(3), p. 035505, \eprint{1502.03497}.
+
+\bibitem{Ashtari_Esfahani_2019}
+\textsc{Ashtari~Esfahani, A.} \textsc{et~al.} (2019) \enquote{Locust: C++ software for simulation of {RF} detection,} \emph{New Journal of Physics}, \textbf{21}(11), p. 113051.
+\newline\urlprefix\url{https://doi.org/10.1088/1367-2630/ab550d}
+
+\bibitem{jackson_classical_1999}
+\textsc{Jackson, J.~D.} (1999) \emph{Classical electrodynamics}, 3rd ed., Wiley, New York, {NY}.
+\newline\urlprefix\url{http://cdsweb.cern.ch/record/490457}
+
+\bibitem{Furse_2017}
+\textsc{Furse, D.} \textsc{et~al.} (2017) \enquote{{Kassiopeia: a modern, extensible C++ particle tracking package},} \emph{New Journal of Physics}, \textbf{19}(5), p. 053012.
+\newline\urlprefix\url{https://doi.org/10.1088/1367-2630/aa6950}
+
+\bibitem{balanis2011modern}
+\textsc{Balanis, C.} (2011) \emph{Modern Antenna Handbook}, Wiley.
+\newline\urlprefix\url{https://books.google.com/books?id=UYpV8L8GNCwC}
+
+\bibitem{balanis2015antenna}
+---{}---{}--- (2015) \emph{Antenna Theory: Analysis and Design}, Wiley.
+\newline\urlprefix\url{https://books.google.com/books?id=PTFcCwAAQBAJ}
+
+\bibitem{hfss}
+\url{https://www.ansys.com/products/electronics/ansys-hfss}.
+
+\bibitem{wirth2001radar}
+\textsc{Wirth, W.} (2001) \emph{Radar Techniques Using Array Antennas}, Institution of Engineering and Technology.
+\newline\urlprefix\url{https://books.google.com/books?id=ALht42gkzLsC}
+
+\end{thebibliography}
