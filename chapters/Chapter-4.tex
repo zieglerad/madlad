@@ -182,23 +182,27 @@ Compared with the signal reconstruction used in previous CRES experiments by Pro
 
 Changes to the approach to CRES signal reconstruction are motivated not only by the switch to a new CRES detector technology, but also by the more ambitious scientific goals of the FSCD experiment. A measurement of the tritium beta-decay spectrum sensitive to neutrino masses as small as 40~meV requires that we measure the kinetic energies of individual electrons with a resolution of 115~meV. This resolution includes all sources of potential uncertainty in the electrons kinetic energy such as magnetic field inhomogeneities and event start time uncertainty. This level of energy resolution is compatible only with an event-by-event signal reconstruction approach where the kinetic energies, pitch angles, and other parameters of the individual CRES events are estimated before constructing the beta-decay spectrum. This approach is distinct from the analysis done for the Phase I and Phase II experiments where only the starting cyclotron frequency of the event was estimated by analyzing the tracks formed by the carrier frequency in the time-frequency spectrogram. These frequencies were then combined into a frequency spectrogram, which was converted to the beta-decay energy spectrum using an ensemble approach that averaged over all other event parameters. The ensemble approach to signal reconstruction results in poor energy resolution because other kinematic parameters such as pitch angle change the cyclotron carrier frequency due to changes in the average magnetic field experience by the electron, and it is therefore incompatible with the future goals of the Project 8 collaboration.
 
-\subsubsection*{Signal Detection and Parameter Estimation}
+\subsubsection*{Components of Reconstruction: Signal Detection and Parameter Estimation}
 
-In developing new signal reconstruction approaches for the FSCD and beyond it is helpful to pose signal reconstruction as a two-step procedure consisting of signal detection followed by parameter estimation. 
-
-[be sure to pose the signal detection problem here]
-
+In developing new signal reconstruction approaches for the FSCD and beyond it is helpful to pose signal reconstruction as a two-step procedure consisting of signal detection followed by parameter estimation. In the former we are only concerned with the identification of the presence of a CRES signal in the data regardless of its specific parameters, whereas, in the latter we always operate under the assumption that a signal is present and attempt figure out it's parameters. More formally, signal detection is essentially a binary hypothesis test between the signal and noise data classes and parameter estimation describes a procedure of fitting a model to the observed data. While both of these processes are required for a complete reconstruction (see Figure \ref{fig:chap4-pter-pipeline}), the focus of my work and this chapter is on the signal detection aspect of antenna array CRES signal reconstruction.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figs/Chapter-4/230108_deepfilter_paper_event_reconstruction_pipeline.png}
-    \caption{}
-    \label{fig:my_label}
+    \caption{A high-level diagram depicting the process of CRES event reconstruction. The first step consists of identifying the presence of a signal in the data. This step is necessary to avoid the danger of performing a reconstruction of a false event, which would constitute a background contribution to the tritium spectrum measured by CRES.}
+    \label{fig:chap4-pter-pipeline}
 \end{figure}
 
-\pagebreak
+\subsubsection*{Detection Theory}
 
-\subsection{Detection Theory}
+The problem of signal detection is equivalent to a statistical hypothesis test. For CRES signals, which are essentially vectors with added WGN, we need to select between two hypotheses
+\begin{align}
+    \mathcal{H}_0:&\quad\bm{y}=\bm{\nu}\\
+    \mathcal{H}_1:&\quad\bm{y}=\bm{x}+\bm{\nu},
+\end{align}
+where $\bm{y}$ is the CRES data vector, $\bm{\nu}$ is a sample of WGN, and $\bm{x}$ represents the CRES signal. We label the hyothesis that the data contains only noise $\mathcal{H}_0$ and the hypothesis that the data contains signal $\mathcal{H}_1$.
+
+To visualize this procedure we examine the case where we attempt to distinguish between $\mathcal{H}_0$ and $\mathcal{H}_1$ using only the first sample of data. 
 
 \subsection{Digital Beamforming}
 \label{sec:chap4-dig-bf}
@@ -252,7 +256,7 @@ Using Locust simulations of the FSCD we can perform beamforming reconstruction s
         \includegraphics[width=\textwidth]{figs/Chapter-4/230518_locust_bf_onaxis.png}
         \caption{}
     \end{subfigure}
-    \caption{Caption}
+    \caption{Beamforming images visualizing the reconstruction of an electron without (a) and with (b) the cyclotron phase correction.}
     \label{fig:chap4-cyclotron-phase-bf-corr}
 \end{figure}
 
@@ -278,7 +282,7 @@ The beamforming image examples in Figure \ref{fig:chap4-cyclotron-phase-bf-corr}
         \includegraphics[width=\textwidth]{figs/Chapter-4/220318_88deg_electron_3cm_corrected.png}
         \caption{}
     \end{subfigure}
-    \caption{Caption}
+    \caption{Beamforming images visualizing the reconstruction of an electron located off the central axis of the FSCD trap. In (a) we performing beamforming without the $\nabla B$-drift correction, and in (b) we include the $\nabla B$-drift correction.}
     \label{fig:chap4-gradb-bf-drift-corr}
 \end{figure}
 This effect significantly reduces the power of the beamforming maxima and increases the size of the beamforming features, simultaneously harming detection efficiency and position reconstruction. 
@@ -294,21 +298,21 @@ where $\omega_{\nabla B}$ is the drift frequency and $t[n]$ is the time vector. 
 
 Up to this point we have neglected any specific discussion of how digital beamforming is used for signal detection and reconstruction. This is because, strictly speaking, digital beamforming consists only of the phased summation of the array signals and cannot be used alone for signal detection. The example beamforming images shown in Figures \ref{fig:chap4-cyclotron-phase-bf-corr} and \ref{fig:chap4-gradb-bf-drift-corr} were produced using simulated data that contained no noise, which significantly degrades the utility of analyzing the beamforming images for signal detection and reconstruction. 
 
-When discussing digital beamforming as a detection algorithm for antenna array CRES this is generally understood within Project 8 to mean digital beamforming plus a detection threshold placed on the amplitude of the frequency spectrum obtained by applying a fast Fourier transform (FFT) to the summed time-series (see Figure \ref{fig:chap4-bf-signal-examples}). This approach is most similar to the time-frequency spectrogram analysis employed in previous CRES experiments, however, in principle any signal detection algorithm could be used after the beamforming procedure. In Section \ref{sec:chap4-trigger-paper} we analyze the signal detection performance of the power threshold approach in detail.
-
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.67\textwidth]{figs/Chapter-4/220304_example_power_spectrum_gradb_vs_noise_vs_standard_bf.png}
-    \caption{Caption}
+    \caption{A plot of a typical frequency spectrum obtained by applying a Fourier transform to the time-series obtained from beamforming. The frequency spectra are plotted without noise on top of an example of a typical noise spectrum to visualize a realistic signal-to-noise ratio. In the example we see that without beamforming it would not be possible to detect anything since the signal amplitudes would be reduced by a factor of sixty relative to the noise. Additionally, we see that the $\nabla B$-drift correction is needed to detect this electron since it comes from a simulation of an electron with a significant off-axis position. }
     \label{fig:chap4-bf-signal-example}
 \end{figure}
+
+When discussing digital beamforming as a detection algorithm for antenna array CRES this is generally understood within Project 8 to mean digital beamforming plus a detection threshold placed on the amplitude of the frequency spectrum obtained by applying a fast Fourier transform (FFT) to the summed time-series (see Figure \ref{fig:chap4-bf-signal-examples}). This approach is most similar to the time-frequency spectrogram analysis employed in previous CRES experiments, however, in principle any signal detection algorithm could be used after the beamforming procedure. In Section \ref{sec:chap4-trigger-paper} we analyze the signal detection performance of the power threshold approach in detail.
 
 From the example frequency spectra in Figure \ref{fig:chap4-bf-signal-example} it is clear that without a reconstruction technique that coherently combines the signals from the full antenna our ability to detect CRES signals will be drastically reduced. Because the CRES signals are in-phase at the correct beamforming position the summed power increases as a function of $N^2$ compared to a single antenna channel, where $N$ is the number of antennas. It is true that the noise power is also increased by beamforming, but, because the noise is incoherent, it's power only increases linearly. Consequently the signal-to-noise ratio of the CRES signal increases linearly with the number of antennas, which greatly improves detection efficiency compared to using only the information in a single antenna.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.67\textwidth]{figs/Chapter-4/220318_static_vs_bf_vs_mf_vs_dnn_detection_threshold_electron_paramter_map.png}
-    \caption{Caption}
+    \includegraphics[width=0.67\textwidth]{figs/Chapter-4/230522_beamforming_detectability.png}
+    \caption{A plot of the total signal power received by the FSCD array from trapped electrons with different radial positions and pitch angles generated using Locust simulations. The lines on the plot indicate a 10~dB detection threshold above the mean value of the noise in the frequency spectrum. With static beamforming electrons with radial positions larger than about two centimeters are undetectable due to the change in the electron's position over time causing losses from beamforming phase mismatch. This is corrected by including $\nabla B$-drift frequencies in the beamforming phases. Both beamforming techniques fail to detect electrons below $\approx 88.0^\circ$, since these signal are composed of several relatively weak sidebands that are comparable to the noise.}
     \label{fig:chap4-detection-boundaries}
 \end{figure}
 
@@ -356,7 +360,7 @@ The optimality provided by the matched filter makes it a useful algorithm for an
 
 In order to limit the number of simulations required to evaluate the detection efficiency the standard approach is to fix the starting axial position, starting azimuthal position, starting direction of the perpendicular component of the electron's momentum, and event start time to reduce the parameter space to starting radial position, starting kinetic energy, and starting pitch angle. The fixed variables are true nuisance parameters that do not affect the detection efficiency estimates for the FSCD design, because they manifest as phases which are marginalized during the calculation of the matched filter score.
 
-Across radial position, kinetic energy, and pitch angle we can define a regular grid of parameters and use Locust to simulate the corresponding signals. This grid of simulated signals can be used to estimate the likelihood of detecting signals in the FSCD by using the same set of signals as both the data and templates when evaluating the matched filter scores. The matched filter score specifies the shape of the PDF that defines the detection probability. We can get a rough picture of the detection probability as a function of the electrons parameters by only considering the cases when there is perfect agreement between signal and template. In Figure \ref{fig:chap4-detection-boundaries}, we show an example of this calculation for the FSCD where the detection boundary is obtained using a matched filter score of 4 as the detection cutoff.
+Across radial position, kinetic energy, and pitch angle we can define a regular grid of parameters and use Locust to simulate the corresponding signals. This grid of simulated signals can be used to estimate the likelihood of detecting signals in the FSCD by using the same set of signals as both the data and templates when evaluating the matched filter scores. The matched filter score specifies the shape of the PDF that defines the detection probability.
 
 \subsubsection*{Kinetic Energy and Pitch Angle Degeneracy}
 
@@ -372,9 +376,10 @@ More accurate modeling of a matched filter requires that we consider the effects
         \includegraphics[width=\textwidth]{figs/Chapter-4/230517_mf_degen_2.png}
         \caption{}
     \end{subfigure}
-    \caption{Caption}
+    \caption{Two example illustrations of the correlation between kinetic energy and pitch angle imparted by the shape of the FSCD magnetic trap. The correlations manifest themselves as degeneracies in the matched filter score where multiple matched filter templates have the same matched filter for a particular signal. These degeneracies are a sign that the magnetic trap must be redesigned in order to break the correlation between pitch angle and kinetic energy. }
     \label{fig:chap4-mf-degeneracy}
 \end{figure}
+
 This degeneracy in matched filter score is the result of correlations between the kinetic energy of the electron and the pitch angle caused by changes in the average magnetic field experienced by an electron for different pitch angles. While in principle helpful for the purposes of signal detection these correlations are unacceptable since they greatly reduce the energy resolution of the experiment by causing electrons with specific kinetic energy to templates across a wide range of energies.
 \begin{figure}[htbp]
     \centering
@@ -409,19 +414,22 @@ An important type of DNN are convolutional neural networks (CNN) that typically 
 
 \subsubsection*{Deep Filtering for Signal Detection in the FSCD}
 
-CNNs have been extremely influential in the field of computer vision, particularly tasks such as image segmentation and classification, but have also been applied in numerous experimental physics contexts. 
-
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.66\textwidth]{figs/Chapter-4/230517_mf_conv_net.png}
-    \caption{Caption}
-    \label{fig:my_label}
+    \caption{A representation of a matched filter template bank as a convolutional neural network. The network has a single layer composed of the templates, which act as convolutional filters. The activation of the neural network is an absolute value followed by a max operator.}
+    \label{fig:chap4-mf-neural-network}
 \end{figure}
 
+CNNs have been extremely influential in the field of computer vision, particularly tasks such as image segmentation and classification, but have also been applied in numerous experimental physics contexts. Given the particular challenge posed by signal detection and reconstruction in the FSCD we are interested in exploring the potential of machine learning as an effective algorithm for real-time signal detection, since this application requires both high efficiency and fast evaluation.
+
+In the machine learning paradigm signal detection is equivalent to a binary classification problem between the signal and noise data classes, and my investigation focuses specifically on the application of CNNs to signal detection in the FSCD, which is motivated by relatively recent demonstrations of CNNs achieving classification accuracies for gravitational wave time-series signals comparable to a matched filter template bank. In this framework it is possible to interpret the matched filter as a type of CNN composed of a single convolutional layer with the templates making up the layer filters (see Figure \ref{fig:chap4-mf-neural-network}). Since this neural network has no hidden layers, it is not a DNN like we have been discussing so far, but we can attempt to construct a proper CNN that attempts to reproduce the classification performance of the matched filter network.
+
+The name deep filtering refers to this scheme of replacing a matched filter template bank with a DNN. The reason why one might want to do this is that it may be possible to exploit redundancies and correlations between templates that may allow one to perform signal detection with similar accuracy but with fewer computations, which is important for real-time detection scenarios like the FSCD experiment. In Section \ref{sec:chap4-trigger-paper} we perform a detailed comparison of the signal detection performance of a CNN to beamforming and a matched filter template bank.
 
 \section{Analysis of Signal Detection Algorithms for the Antenna Array Demonstrator}
 \label{sec:chap4-trigger-paper}
-This section contains an early version of the manuscript for the triggering paper prepared for publication in JINST. 
+This section contains an early version of the manuscript for the triggering paper prepared for publication in JINST. In it I present a relatively detailed analysis of the signal detection performance of the three signal detection approaches discussed so far using a population of simulated CRES signals generated with Locust. The focus of the paper is on the performance of the signal detection algorithms for pitch angles below $88.5^\circ$ where the beamforming power threshold begins to fail.
 
 \subsection{Introduction}
 Cyclotron Radiation Emission Spectroscopy (CRES) is a technique for measuring the kinetic energies of charged particles by observing the frequency of the cyclotron radiation that is emitted as they travel through a magnetic field \cite{p8originalcres}.
