@@ -389,6 +389,7 @@ It is important to emphasize that this degeneracy cannot be fixed by implementin
 Machine learning is a vast and rapidly developing field of research. In this Section we shall attempt to provided a brief introduction to some of the concepts and techniques of machine learning that were applied to CRES signal detection rather than attempt a comprehensive overview.
 
 \subsubsection*{Introduction to Machine Learning}
+\label{sec:chap4-intro-ml}
 
 Digitization of the FSCD antenna array generates large amounts of data that must be rapidly processed to enable real-time signal detection and reconstruction. While digital beamforming combined with a power threshold is relatively computationally inexpensive, it is relatively ineffective at detecting CRES signal with small pitch angles, since it relies on a visible frequency peak above the noise. On the other hand, a matched filter is able to detect signals with a significantly larger range of parameters, however, the exhaustive search of matched filter templates can be computationally expensive. Machine learning based triggering algorithms have been used successfully in many different high-energy physics experiments and recent developments have shown success in the detection of gravitational wave signals using machine learning techniques in place of the more traditional matched filtering method. This motivates the exploration of machine learning as a potential CRES signal detection algorithm. 
 
@@ -398,9 +399,17 @@ In supervised learning the model is trained to map from the data to the correct 
 
 Using the outputs of the loss function the next step in supervised learning is to compute the gradient of error with respect to the model parameters in a process called backpropogation. Using the model parameter gradients the last step in the supervised learning process is to perform an update of the parameter values in order to minimize the error in the model predictions across the whole dataset. This loop is performed many times while randomly shuffling the dataset until the error converges to a minimum value at which point the training procedure has finished. It is standard practice to monitor the training procedure by evaluating the performance of the model using a separate validation dataset that matches the statistical distribution of the training data and to check the performance of the model after training using yet another dataset called the test dataset. These practices help to guard against overtraining which is a concern for models with many parameters.
 
+\subsubsection*{Convolutional Neural Networks}
 
+A popular class of machine learning models are neural networks. A neural network is essentially a function composed of a series of linear operations called layers which take a piece of data typically represented as a matrix, multiplies the elements of the data by a weight, and then sums these products to produce an output matrix. Neural networks composed of purely linear operations are unable to model complex non-linear behavior, therefore, non-linear activation functions are applied to the outputs of each of the layers to increase the ability of the neural network to model complex relationships between the data. 
+
+Neural networks are typically composed of at least three layers, but with the present capabilities of computer hardware they more often contain many more than this. The first layer in a neural network is called the input layer, because it takes the data objects as input, and the last layer in a neural network is known as the output layer. The output layer is trained by machine learning to map the data to a desired output using the supervised learning procedure described in Section~\ref{sec:chap4-intro-ml}. In between the input and the output layer are typically several hidden layers that receive inputs from and transmit outputs to other layers in the neural network model. The term deep neural network (DNN) refers to those neural networks that have at least one hidden layer, which have proven to be extremely powerful tools for pattern recognition and function approximation.
+
+An important type of DNN are convolutional neural networks (CNN) that typically contain several layers which perform a convolution of the input with a set of filters. These convolution operations are typically accompanied by layers that attempt to down-sample the data along with the standard neural network activation functions. A standard CNN is composed of several convolutional layers at the beginning of the network and ends with a series of fully-connected neural network layers at the output. Intuitively, one can imagine that the convolutional layers are extracting features from the data that fully-connected layers use to perform the classification or regression task.
 
 \subsubsection*{Deep Filtering for Signal Detection in the FSCD}
+
+CNNs have been extremely influential in the field of computer vision, particularly tasks such as image segmentation and classification, but have also been applied in numerous experimental physics contexts. 
 
 \begin{figure}[htbp]
     \centering
