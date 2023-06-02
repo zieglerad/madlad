@@ -202,7 +202,26 @@ The problem of signal detection is equivalent to a statistical hypothesis test. 
 \end{align}
 where $\bm{y}$ is the CRES data vector, $\bm{\nu}$ is a sample of WGN, and $\bm{x}$ represents the CRES signal. We label the hyothesis that the data contains only noise $\mathcal{H}_0$ and the hypothesis that the data contains signal $\mathcal{H}_1$.
 
-To visualize this procedure we examine the case where we attempt to distinguish between $\mathcal{H}_0$ and $\mathcal{H}_1$ using only the first sample of data. 
+To visualize this procedure we examine the case where we attempt to distinguish between $\mathcal{H}_0$ and $\mathcal{H}_1$ using only the first sample of data. The likelihood of choosing either hypothesis is given by the area underneath the probability distribution curve. A true positive corresponds to correctly identifying that the data contains signal, whereas, a true negative means that we have correctly identified the data as noise. The rate at which the detector performs a true positive classification is given by the green region underneath $p(\bm{y}[0];\mathcal{H}_0)$, and the rate at which the detector performs a true negative classification is given by the orange region underneath $p(\bm{y}[0];\mathcal{H}_1)$ (see Figure \ref{fig:chap4-detection-threshold}).
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figs/Chapter-4/230523_detection_theory.png}
+        \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figs/Chapter-4/230523_detection_theory2.png}
+        \caption{}
+    \end{subfigure}
+    \caption{Caption}
+    \label{fig:chap4-detection-threshold}
+\end{figure}
+Two types of misclassifications are possible. Either we declare noise data as signal, which is call a false positive, or we declare signal data as noise, which is a false negative. Note that it is only possible to trade-off these two types of errors by tuning the detection threshold. One cannot simultaneously reduce the rate of false positives without also increasing the rate of false negatives.
+
+The approach we take with CRES signals is to fix the rate of false positives by setting a minimum value for a detection threshold. The rate of false positives that is acceptable at the detection stage depends upon the rate of background events compatible with the sensitivity goals of the experiment. The ultimate goal of a neutrino mass measurement with 40~meV sensitivity in general has strict requirements on the number of background events, which requires a relatively high detection threshold to achieve. Consequently, we are interested in the signal detection algorithm that achieves the maximum rate of true positives for a fixed rate of false positives, so that we can maximize the detection efficiency of the experiment.
+
+
 
 \subsection{Digital Beamforming}
 \label{sec:chap4-dig-bf}
