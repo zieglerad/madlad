@@ -85,6 +85,11 @@
 \contentsline {subsubsection}{\numberline {5.4.3.3}Magnitude Analysis}{119}{}%
 \contentsline {subsubsection}{\numberline {5.4.3.4}Beamforming Characterization}{122}{}%
 \contentsline {subsection}{\numberline {5.4.4}Conclusions}{125}{}%
-\contentsline {chapter}{\numberline {6}Development of an Open Resonant Cavity Design for Scalable CRES Measurements}{126}{}%
-\contentsline {section}{\numberline {6.1}Might cut this.}{126}{}%
+\contentsline {chapter}{\numberline {6}Development of Resonant Cavities for Large Volume CRES Measurements}{126}{}%
+\contentsline {section}{\numberline {6.1}Introduction}{126}{}%
+\contentsline {section}{\numberline {6.2}Resonant Cavities}{126}{}%
+\contentsline {section}{\numberline {6.3}The Cavity Approach to CRES}{126}{}%
+\contentsline {section}{\numberline {6.4}Trade-offs Between Antennas and Cavities}{126}{}%
+\contentsline {section}{\numberline {6.5}Single-mode Resonant Cavity Design and Simulations}{126}{}%
+\contentsline {section}{\numberline {6.6}Single-mode Resonant Cavity Measurements}{126}{}%
 \contentsline {chapter}{Bibliography}{127}{}%
