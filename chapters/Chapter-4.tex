@@ -2,6 +2,14 @@
 
 \section{Introduction}
 
+The transition from a CRES experiment that utilizes the waveguide gas cell technology to an antenna array based experiment introduces new challenges related to data acquisition, signal detection, and signal reconstruction due to the multi-channel nature of the data. The development of signal reconstruction algorithms is crucial to the design of antenna array based experiments like the FSCD, because these algorithms directly influence the detection efficiency and energy resolution of the CRES experiment. In this Chapter I summarize my contributions to the development and analysis of signal reconstruction and detection algorithms for the FSCD experiment.
+
+In Section \ref{sec:chap4-simulations} we discuss the primary tool for this work, which is the Locust simulations package developed by the Project 8 experiment for the simulation of CRES events in the detector. This package utilizes the Kassiopeia package to obtain particle trajectory solutions for electrons in the magnetic trap, The trajectory solutions can then used to calculate the response of the antenna array to the cyclotron radiation produced by the electron, which results in signals that can be used to analyze the performance of different signal reconstruction algorithms. More recently, Project 8 has developed CREsana, which is a new simulations package that takes a more analytical approach to CRES signal simulations for antenna arrays. Although CRESana signals were not used for the signal reconstruction algorithm development detailed here, we introduce the software as it plays a role in the antenna array measurements presented in Section \ref{sec:chap5-fscd-array-measurements}.
+
+In Section \ref{sec:chap4-pter} we discuss the signal reconstruction and detection approaches analyzed for the FSCD experiment. In general there are two steps to signal reconstruction: detection and parameter estimation. With signal detection one is primarily concerned only with distinguishing between data that contains a signal versus data that contains only noise, whereas, with parameter estimation one is interested in extracting the kinematic parameters of the electron encoded in the cyclotron radiation signal shape. Due to the low signal power of electrons near the spectrum endpoint in the FSCD experiment, signal detection is a non-trivial problem. This is magnified by the need to maximize the detection efficiency of the experiment in order to achieve the neutrino mass sensitivity goals. My contributions to signal reconstruction analysis fof the FSCD are focused on this signal detection component of reconstruction.
+
+After the discussion of various signal detection approaches, in Section \ref{sec:chap4-trigger-paper} we present a more detailed analysis of the detection performance of three algorithms, which could be used to signal detection in the FSCD. This section was originally prepared for publication in JINST as a separate paper. The algorithms include a digital beamforming algorithm, a matched filter algorithm, and a neural network algorithm, which we analyze in terms of both classification accuracy and estimated computational cost.  
+
 \section{FSCD Simulations}
 \label{sec:chap4-simulations}
 
@@ -419,7 +427,40 @@ The computational cost of the direct matched filter approach can be significantl
 \end{equation}
 A typical signal vector in the FSCD contains $O(10^4)$ samples in which case the FFT reduces the computational cost of the matched filter by a factor of $O(10^3)$. This large reduction in computational cost implies that a direct implementation of a matched filter is completely infeasible in the FSCD due to resource constraints. 
 
-Rather than relying solely on the matched filter ...
+Rather than relying solely on the matched filter it is tempting to consider using digital beamforming as an initial step in the signal reconstruction for the purposes of data reduction. The primary motivation is to reduce the dimensionality of the data by a factor of $N_\mathrm{ch}$ by combining the array outputs coherently into a single channel. One can view the beamforming operation as a partial matched filter, in the sense that the matched filter convolution contains the beamforming phased summation along with a prediction of the signal shape. By separating beamforming from the signal shape one hopes to reduce the overall computational cost by effectively shrinking the number of templates and reducing the number of operations required to check each one.
+
+The nature of this optimization requires that we account for the number of templates used for pure matched filtering versus the hybrid approach. To first order, the total number of templates at the trigger stage is a product of the number of guesses for each of the electron's parameters
+\begin{equation}
+    N_\mathrm{T}=N_\mathrm{E}\times N_\theta \times N_\mathrm{r} \times N_\mathrm{\varphi},
+\end{equation}
+where $N_\mathrm{E}$ is the number of kinetic energies, $N_\theta$ is the number of pitch angles, $N_\mathrm{r}$ is the number of starting radial positions, and $N_\mathrm{\varphi}$ is the number of starting azimuthal positions. The starting axial position and cyclotron motion phase are not necessary to include in the template bank since these parameters manifest themselves as the starting phase of the signal, which is effectively marginalized when using a FFT to compute the matched filter convolution. Therefore, the total number of operations required by a matched filter to detect a signal in a segment of array data is on the order of 
+\begin{equation}
+    O(N_\mathrm{T})\times O(N_\mathrm{ch})\times O(N_\mathrm{s}\log{N_\mathrm{s}})
+    \label{eq:chap4-tot-ops-pure-mf}
+\end{equation}
+
+With the hybrid approach we attempt to remove the spatial parameters from the template bank by using beamforming to combine the array signals into a single channel. Beamforming explicitly assumes a starting position, which allows us to only use matched filter templates that span the two-dimensional space of kinetic energy and pitch angle. The total computational cost of the hybrid method is directly proportional to the number of beamforming positions. For the time-dependent beamforming defined in Section \ref{sec:chap4-dig-bf}, the number of beamforming positions is given by 
+\begin{equation}
+    N_\mathrm{BF}=N_\mathrm{r}\times N_\mathrm{\varphi}\times N_\mathrm{\omega_{\nabla B}},
+\end{equation}
+where $N_\mathrm{r}$ and $N_\mathrm{\varphi}$ are the same spatial parameters encountered in the pure matched filter template bank and $N_\mathrm{\omega_{\nabla B}}$ is the number of $\nabla B$-drift frequency assumptions. If a unique drift frequency is used for each pitch angle then the hybrid approach is effectively equivalent to a pure matched filter in the number of operations. The key efficiency gain of the hybrid approach is to exploit the relatively small differences in $\omega_{\nabla B}$ for electrons of different pitch angles by using only a small number of average drift frequencies. 
+
+The total number of operations for the hybrid approach can be expressed as a sum of the operations required by the beamforming and matched filtering steps,
+\begin{equation}
+    O(N_\mathrm{BF})\times O(N_\mathrm{ch}N_\mathrm{s}) + O(N_\mathrm{BF})\times O(N_\mathrm{E}N_\mathrm{\theta})\times O(N_\mathrm{s}\log{N_\mathrm{s}}).
+    \label{eq:chap4-tot-ops-bf-hybrid}
+\end{equation}
+The first product in the sum is the number of operations required by beamforming, which is simply the number of beamforming points times the computational cost of the beamforming matrix multiplication, and the second product is the computational cost of matched filtering the summed signal generated by each beamforming position. To compare this to pure matched filtering we take the ratio of Equations \ref{eq:chap4-tot-ops-pure-mf} and \ref{eq:chap4-tot-ops-bf-hybrid} to obtain 
+\begin{equation}
+    \Gamma_\mathrm{BFMF}=\frac{O(N_{\omega_{\nabla B}})}{O(N_\mathrm{E}N_\mathrm{\theta})\times O(\log{N_\mathrm{s}})} + \frac{O(N_{\omega_{\nabla B}})}{O(N_\mathrm{ch})}.
+\end{equation}
+This expression can be simplified by observing that $O(N_\mathrm{E}N_\theta)\times O(\log{N_\mathrm{s}})\gg O(N_\mathrm{ch})$, which means that the ratio of computational cost for the two methods can be reduced to
+\begin{equation}
+    \Gamma_\mathrm{BFMF}\approx frac{O(N_{\omega_{\nabla B}})}{O(N_\mathrm{ch})}.
+\end{equation} 
+If we limit ourselves to a number of estimated drift frequencies of $O(1)$ then we see that the estimated computational cost reduction of the hybrid approach is of $O(N_\mathrm{ch})$. This is quite a large reduction considering that the FSCD antenna array contains sixty antennas in the baseline design. 
+
+The main drawback of the hybrid approach is that the limited number of allowed drift frequency guesses can lead to detection efficiency loss due to phase mismatch. The degree of phase error from an incorrect drift frequency is proportional to the length of the array data vector used by the signal detection algorithm. For signals with lengths equal to the baseline FSCD Fourier analysis window of 8192 samples, typical phase errors from using an average versus the exact $\nabla B$-drift frequency are on the order of a few percent in terms of the signal energy. This has a relatively small impact on the overall detection efficiency, however, future experiments with antenna array CRES will want to balance optimizations such as these during the design phase to keep experiment costs to a minimum while still achieving scientific goals.
 
 \subsubsection*{Kinetic Energy and Pitch Angle Degeneracy}
 
