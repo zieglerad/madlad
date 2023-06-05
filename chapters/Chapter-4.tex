@@ -64,7 +64,7 @@ The volume of the FSCD trap is a cylindrically shaped region with a radius of 5~
 
 The depth of the FSCD trap is approximately 10~mT when measured along the central axis of the trap, which is sufficient to trap electrons with pitch angles as small as $84^\circ$. The total trap depth factors into the total efficiency of the experiment by controlling  the range of electron pitch angles that can be trapped. If a higher fraction of pitch angles can be trapped then, in principle, more decay events can be observed. However, the signals from electrons with small pitch angles are typically significantly harder to detect than larger pitch angles, which increases the likelihood of not detecting the first track of the CRES event harming the energy resolution of the experiment. 
 
-The steepness of the trap walls as well as any non-uniformities in the magnetic field both contribute to the total energy resolution of the CRES measurement by causing uncertainty in the relationship between an electron's kinetic energy and it's cyclotron frequency. When an electron is trapped, it oscillates back and forth along the trap z-axis (see Figure \ref{fig:chap4-trap10-coils}) unless it is produced with a pitch angle of exactly $90^\circ$. As the electron is reflected from the trap walls it experiences a change in the total magnetic field, which causes a modulation in the cyclotron frequency in addition to the expected doppler modulation. This change in magnetic field from the trap wall introduces a correlation between the pitch angle and kinetic energy parameters of the electron that can reduce energy resolution. In order to mitigate this effect as much as possible it is important to make the trap walls as steep as possible. 
+The steepness of the trap walls as well as any non-uniformities in the magnetic field both contribute to the total energy resolution of the CRES measurement by causing uncertainty in the relationship between an electron's kinetic energy and it's cyclotron frequency. When an electron is trapped, it oscillates back and forth along the trap z-axis (see Figure \ref{fig:chap4-trap10-coils}) unless it is produced with a pitch angle of exactly $90^\circ$. As the electron is reflected from the trap walls it experiences a change in the total magnetic field, which causes a modulation in the cyclotron frequency in addition to the expected Doppler modulation. This change in magnetic field from the trap wall introduces a correlation between the pitch angle and kinetic energy parameters of the electron that can reduce energy resolution. In order to mitigate this effect as much as possible it is important to make the trap walls as steep as possible. 
 
 %\begin{figure}[htbp]
 %    \centering
@@ -99,7 +99,7 @@ where $\mathbf{r}$ is the position of the electron, $\mathbf{p}$ is the electron
     \label{fig:chap4-gradb-drift-frequency-map}
 \end{figure}
 
-Even though Kassiopeia is not directly capable of simulating the cyclotron radiation, it is still an invaluable CRES simulation tool, due to the accurate trajectory solutions for electrons in magnetic traps. With Kassiopeia it is possible to test the efficiency of a particular trap design and analyze features of the electron trajectories that are important to the position, track, and event reconstruction algorithms (see Section \ref{sec:chap4-pter}). One example of this for the FSCD is the analysis of the average $\nabla B$-drift frequency as a function of the electrons radial position and pitch angle in the magnetic trap (see Figure \ref{fig:chap4-gradb-drift-frequency-map}). Radial gradients in the trap cause the guiding center of the electron to drift around the center of the magnetic trap with an average frequency on the order of $10^3$~rad/s. This frequency, while slow compared to the length of a typical CRES time-slice, is large enough to cause a significant loss in efficiency of certain signal reconstruction algorithms. Therefore it is important to model the drift of the electron in the reconstruction algorithm in order to mitigate the effects of this motion on the reconstruction.
+Even though Kassiopeia is not directly capable of simulating the cyclotron radiation, it is still an invaluable CRES simulation tool, due to the accurate trajectory solutions for electrons in magnetic traps. With Kassiopeia it is possible to test the efficiency of a particular trap design and analyze features of the electron trajectories that are important to the position, track, and event reconstruction algorithms (see Section \ref{sec:chap4-pter}). One example of this for the FSCD is the analysis of the average $\nabla B$-drift frequency as a function of the electrons radial position and pitch angle in the magnetic trap (see Figure \ref{fig:chap4-gradb-drift-frequency-map}). Radial gradients in the trap cause the guiding center of the electron to drift around the center of the magnetic trap with an average frequency on the order of $10^3$~rad/s. This frequency, while slow compared to the length of a typical CRES time-slice, is large enough to cause a significant loss in efficiency of certain signal reconstruction algorithms. Therefore, it is important to model the drift of the electron in the reconstruction algorithm in order to mitigate the effects of this motion on the reconstruction.
 
 \subsection{Locust}
 
@@ -214,12 +214,34 @@ To visualize this procedure we examine the case where we attempt to distinguish 
         \includegraphics[width=\textwidth]{figs/Chapter-4/230523_detection_theory2.png}
         \caption{}
     \end{subfigure}
-    \caption{Caption}
+    \caption{An illustration of two PDFs associated a binary hypothesis test. The decision threshold is represented by the vertical line that partitions both distributions. The orange and red areas correspond to the true negative and false positive probabilities and the blue and green areas correspond to the false negative and true positive probabilities respectively. To decided between the two hypotheses we perform the likelihood ratio test specified by the Neyman-Pearson theorem. This approach achieves the highest true positive probability for a given false positive probability.}
     \label{fig:chap4-detection-threshold}
 \end{figure}
-Two types of misclassifications are possible. Either we declare noise data as signal, which is call a false positive, or we declare signal data as noise, which is a false negative. Note that it is only possible to trade-off these two types of errors by tuning the detection threshold. One cannot simultaneously reduce the rate of false positives without also increasing the rate of false negatives.
+Two types of misclassifications are possible. Either we declare noise data as signal, which is call a false positive, or we declare signal data as noise, which is a false negative. Note that it is only possible to trade off these two types of errors by tuning the detection threshold. One cannot simultaneously reduce the rate of false positives without also increasing the rate of false negatives.
 
 The approach we take with CRES signals is to fix the rate of false positives by setting a minimum value for a detection threshold. The rate of false positives that is acceptable at the detection stage depends upon the rate of background events compatible with the sensitivity goals of the experiment. The ultimate goal of a neutrino mass measurement with 40~meV sensitivity in general has strict requirements on the number of background events, which requires a relatively high detection threshold to achieve. Consequently, we are interested in the signal detection algorithm that achieves the maximum rate of true positives for a fixed rate of false positives, so that we can maximize the detection efficiency of the experiment.
+
+According to the Neyman-Pearson theorem, the statistical hypothesis test that maximizes the probability of detection for a fixed rate of false positives is the likelihood ratio test, which is formed by computing the ratio of the signal likelihood to the noise likelihood,
+\begin{equation}
+    L(x)=\frac{P(\bm{y};\mathcal{H}_1)}{P(\bm{y};\mathcal{H}_0)}>\gamma.
+\end{equation}
+Here, the likelihood of the hypotheses $\mathcal{H}_0$ and $\mathcal{H}_1$ are described by the probability distributions $P(\bm{y};\mathcal{H}_0)$ and $P(\bm{y};\mathcal{H}_1)$ respectively, and $\gamma$ is the threshold for deciding $\mathcal{H}_1$. The decision threshold is determined by integrating $P(\bm{y};\mathcal{H}_0)$ such that 
+\begin{equation}
+    P_{\textrm{FP}}=\int_\gamma^\infty{P(\tilde{\bm{y}};\mathcal{H}_0)d\tilde{\bm{y}}}=\alpha,
+\end{equation}
+where $\alpha$ is the desired false positive detection rate given by the red colored areas shown in Figure \ref{fig:chap4-detection-threshold}. The true positive detection rate is given by the similar integral 
+\begin{equation}
+    P_{\textrm{TP}}=\int_\gamma^\infty{P(\tilde{\bm{y}};\mathcal{H}_1)d\tilde{\bm{y}}},
+\end{equation}
+which corresponds to the green areas in Figure \ref{fig:chap4-detection-threshold}.
+
+Changing the decision threshold allows us to trade-off between $P_{\textrm{TP}}$ and $P_{textrm{FP}}$ as appropriate for the given situation. It is common to summarize the relationship between $P_{\textrm{TP}}$ and $P_{\textrm{FP}}$ using the receiver operating characteristic (ROC) curve, which is obtained by evaluating the true positive and false positive probabilities as a function of the decision threshold value (see Figure \ref{fig:chap4-example-roc-curve}).
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/230603_roc_curve_example.png}
+    \caption{\label{fig:chap4-example-roc-curve} An example ROC curve formed by computing the $P_\mathrm{FP}$ and the $P_\mathrm{TP}$ for a given likelihood ratio test. As the decision threshold is increased $P_\mathrm{FP}$ decreases at the expense of a lower $P_\mathrm{TP}$. The black dashed line indicates the lower bound ROC curve obtained by randomly deciding between $\mathcal{H}_0$ and $\mathcal{H}_1$. }
+\end{figure}
+The ROC curve provides a convenient way to compare the performance of different signal detection algorithms. In general, a classifier with a higher the $P_\mathrm{TP}$ as a function of $P_\mathrm{FP}$ is desirable, which corresponds to a larger area underneath the respective ROC curve. A perfect classifier has an area underneath the curve of 1.0, however, such a classifier is never achievable in practice. 
 
 
 
@@ -380,6 +402,24 @@ The optimality provided by the matched filter makes it a useful algorithm for an
 In order to limit the number of simulations required to evaluate the detection efficiency the standard approach is to fix the starting axial position, starting azimuthal position, starting direction of the perpendicular component of the electron's momentum, and event start time to reduce the parameter space to starting radial position, starting kinetic energy, and starting pitch angle. The fixed variables are true nuisance parameters that do not affect the detection efficiency estimates for the FSCD design, because they manifest as phases which are marginalized during the calculation of the matched filter score.
 
 Across radial position, kinetic energy, and pitch angle we can define a regular grid of parameters and use Locust to simulate the corresponding signals. This grid of simulated signals can be used to estimate the likelihood of detecting signals in the FSCD by using the same set of signals as both the data and templates when evaluating the matched filter scores. The matched filter score specifies the shape of the PDF that defines the detection probability.
+
+\subsubsection*{Optimized Matched Filtering Implementation for the FSCD}
+
+The biggest practical obstacle to the implementation of a matched filter template bank detection approach is oftentimes the computational cost associated with exhaustively calculating the matched filter scores of the template bank, and the FSCD is no exception in this regard. At a basic level computing a matched filter score requires the convolution of two vectors, which can be performed very efficiently by computers if the convolution theorem and fast Fourier transforms (FFT) are utilized. Furthermore, one can consider applying digital beamforming as a pre-processing step to reduce the dimensionality of the data before the matched filter is applied. In order to understand the relative gain in computational efficiency offered by these optimizations we analyze the total number of floating-point operations (FLOP) of several matched filter implementations in big $O$ notation that utilize different combinations of optimizations. 
+
+A direct implementation of a matched filter as specified by Equation \ref{eq:chap4-mf-test-stat-conv} involves the convolution of $N_\mathrm{ch}$ signals of length $N_\mathrm{s}$ with template signals of length $N_\mathrm{t}$. As a uniform metric we shall compare the FLOP of the various matched filter implementations on a per-template basis, since each implementation scales linearly with the number of templates. The direct convolution approach to matched filtering costs
+\begin{equation}
+    O(N_\mathrm{ch})\times O(N_\mathrm{s}\times N_\mathrm{t})
+\end{equation}
+FLOP per-template, whose cost is dominated by the $O(M\times N)$ convolution operation. 
+
+The computational cost of the direct matched filter approach can be significantly reduced by exploiting the convolution theorem and FFT algorithms. If we restrict ourselves to signals and templates that contain equal numbers of samples then the convolution can be calculated by Fourier transforming both vectors, performing the point-wise multiplication, and then performing the inverse Fourier transform to obtain the convolution result. The FFT algorithm is able to compute the Fourier transform utilizing only $O(N\log{N})$ operations compared to $O(N^2)$ for a naive Fourier transform implementation. This optimization results in a computational cost per-template of
+\begin{equation}
+    O(N_\mathrm{ch})\times O(N_\mathrm{s}\log{N_\mathrm{s}})
+\end{equation}
+A typical signal vector in the FSCD contains $O(10^4)$ samples in which case the FFT reduces the computational cost of the matched filter by a factor of $O(10^3)$. This large reduction in computational cost implies that a direct implementation of a matched filter is completely infeasible in the FSCD due to resource constraints. 
+
+Rather than relying solely on the matched filter ...
 
 \subsubsection*{Kinetic Energy and Pitch Angle Degeneracy}
 
