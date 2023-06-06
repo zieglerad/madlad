@@ -4,13 +4,157 @@
 
 \section{Introduction}
 
-\section{Resonant Cavities}
+The cavity approach is an alternative CRES measurement technology under consideration by the Project 8 collaboration for a neutrino mass measurement experiment with 40~meV sensitivity. After pursuing an antenna array based CRES demonstrator design for several years the increasing costs and complexity of the antenna arrays led to a rexamination of resonant cavities for a large scale experiment. Currently, a cavity based CRES experiment is the preferred technology for the Project 8 neutrino mass measurement goal with antennas as a fall-back approach. 
+
+In this chapter we provide a brief summary of resonant cavities and sketch out the key features of a cavity based CRES experiment. In Section \ref{sec:chap6-resonant-cavities} we provide a brief introduction to cylindrical resonant cavities and the solutions for the electromagnetic fields in the cavity volume.
+
+In Section \ref{sec:chap6-cavity-approach} we describe the main components of a cavity based CRES experiment. Including the background and trap magnets, cavity geometry and design, and cavity coupling considerations. We also discuss some relevant trade-offs between an antenna array and cavity CRES experiment, and highlight some reasons for the transition of Project 8 to the development of a cavity based experiment.
+
+Finally, in Sections \ref{sec:chap6-single-mode-cavity-sims} and \ref{sec:chap6-single-mode-cavity-measurement} I present the design and development of an open, mode-filtered cavity that could be used in a cavity based CRES experiment. The results of the cavity simulations are confirmed by laboratory measurements of a proof-of-principle prototype cavity intended to demonstrate key features of the design.
+
+\section{Cylindrical Resonant Cavities}
+\label{sec:chap6-resonant-cavities}
+
+Resonant cavities are essentially sealed conductive containers, which allows us to describe the electromagnetic (EM) fields as a superposition of resonant modes. The field shapes of the resonant modes are determined by Maxwell's equations and the boundary conditions enforced by the cavity geometry. Of interest to Project 8 for CRES measurements are cylindrical cavities due to their ease of construction and integration with atom and electron trapping magnets. 
+
+\subsection{General Field Solutions}
+
+Consider a long segment of conducting material with a cylindrical cross-section (see Figure \ref{fig:chap6-circ-waveguide}). A geometry such as this can be used as a waveguide transmission line to transfer EM energy from point to point, or, if conducting shorts are inserted on both ends of the cylinder, the waveguide becomes a resonant cavity. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.4\textwidth]{figs/Chapter-6/230606_circular_waveguide.png}
+    \caption{\label{fig:chap6-circ-waveguide} Geometry of a cylindrical waveguide with radius $b$. }
+\end{figure}
+
+The fields allowed inside a cylindrical cavity are determined by the boundary conditions of the cylindrical geometry. The general approach to solving for the fields begins by assuming solutions to Maxwell's equations of the form
+\begin{align}
+    \label{eq:chap6-maxwell-eqn-solutions-E}\bm{E}(x,y,z)&=(\bm{e}(x,y)+\hat{z}e_z(x,y))e^{-i\beta z},\\
+    \label{eq:chap6-maxwell-eqn-solutions-H}\bm{H}(x,y,z)&=(\bm{h}(x,y)+\hat{z}h_z(x,y))e^{-i\beta z}.
+\end{align}
+
+The solutions assume a harmonic time dependence of the form $e^{i\omega t}$ and propagation along the positive z-axis. The functions $\bm{e}(x,y)$ and $\bm{h}(x,y)$ represent the transverse ($\hat{x}, \hat{y}$) components of the electric and magnetic fields respectively, and $e_z(x,y)$, $h_z(x,y)$ are the longitudinal components. The version of Maxwell's equations in the case where there are no source terms can be written as a pair of coupled differential equations, 
+\begin{align}
+    \nabla\times\bm{E}&=-i\omega\mu\bm{H},\\
+    \nabla\times\bm{H}&=i\omega\epsilon\bm{E},
+\end{align}
+where $\epsilon$ and $\mu$ are the permittivity and permeability of the material inside the waveguide or cavity. Using the field solutions from Equations \ref{eq:chap6-maxwell-eqn-solutions-E} and \ref{eq:chap6-maxwell-eqn-solutions-H} one can solve for the transverse components of the fields in terms of the longitudinal fields. Because we are interested in cylindrical cavities it is advantageous to write the field solutions in cylindrical coordinates. After performing this transformation the set of four equations for the transverse field components are,
+\begin{align}
+    H_\rho&=\frac{i}{k_c^2}\left(\frac{\omega\epsilon}{\rho}\frac{\partial E_z}{\partial \phi}-\beta \frac{\partial H_z}{\partial \rho}\right),\\
+    H_\phi&=\frac{-i}{k_c^2}\left(\omega\epsilon\frac{\partial E_z}{\partial \rho}+\frac{\beta}{\rho}\frac{\partial H_z}{\partial \phi}\right),\\
+    E_\rho&=\frac{-i}{k_c^2}\left(\beta\frac{\partial E_z}{\partial \rho}+\frac{\omega\mu}{\rho}\frac{\partial H_z}{\partial \phi}\right),\\
+    E_\phi&=\frac{i}{k_c^2}\left(\frac{-\beta}{\rho}\frac{\partial E_z}{\partial \phi}+\omega\mu\frac{\partial H_z}{\partial \rho}\right),
+\end{align}
+where $k_c$ is the cutoff wavenumber defined by $k_c^2=k^2-\beta^2$ with $k=\omega\sqrt{\mu\epsilon}$ being the wavenumber of the EM radiation. 
+
+This set of equations can be used to solve for a variety of different modes that can be obtained by setting conditions on $E_z$ and $H_z$. For cylindrical cavities two types of modes are allowed, which correspond to solutions where $E_z=0$ and $H_z=0$ respectively. 
+
+\subsection{TE and TM Modes}
+\label{sec:chap6-TE-TM-modes}
+
+The TE family of modes corresponds to the case where $E_z=0$. This implies that $H_z$ is a solution to the Helmholtz wave equation 
+\begin{equation}
+    (\nabla^2 + k^2)H_z = 0.
+    \label{eq:chap6-helmholtz-magnetic}
+\end{equation}
+For solutions of the form $H_z(\rho,\phi,z)=h_z(\rho,\phi)e^{-i\beta z}$, Equation \ref{eq:chap6-helmholtz-magnetic} can be solved using the standard technique of separation of variables. Rather than reproduce the derivation here we shall simply quote the solutions for the transverse fields, which are 
+\begin{align}
+    H_\rho &= \frac{-i\beta }{k_{c_{nm}}}(A\sin{n\phi}+B\cos{n\phi})J_n^\prime(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},\\
+    H_\phi &=\frac{-i\beta n}{k_{c_{nm}}^2\rho}(A\cos{n\phi}-B\sin{n\phi})J_n(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},\\
+    E_\rho &=\frac{-i\omega\mu n}{k_{c_{nm}}^2 \rho}(A\cos{n\phi}-B\sin{n\phi})J_n(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},\\
+    E_\phi &=\frac{i\omega\mu}{k_{c_{nm}}}(A\sin{n\phi}+B\cos{n\phi})J_n^\prime(k_{c_{nm}}\rho)e^{-i\beta_{nm} z}.
+\end{align}
+One can observe that the solutions have a periodic dependence on $\phi$, and radial profiles given by the Bessel functions of the first kind. The integer indices $n$ and $m$ arise from continuity conditions on the EM fields in the azimuthal and radial directions. For the TE modes $n\geq0$ and $m\geq1$. $k_{c_{nm}}$ is the cutoff wavenumber for the $\mathrm{TE}_{nm}$ mode given by 
+\begin{equation}
+    k_{c_{nm}} = \frac{p^\prime_{nm}}{b},
+\end{equation}
+where $b$ is the radius of the cavity or waveguide and $p^\prime_{nm}$ is the $m$-th root of the derivative of the $n$-th order Bessel function (see Table \ref{tab:chap6-bessel-derivative roots}).
+
+\begin{table}[htbp]
+    \centering
+    \caption{\label{tab:chap6-bessel-derivative-roots} A table of the values of $p_{nm}^\prime$.}
+    \begin{tabular}{c c c c }
+        \hline
+        $n$ & $p_{n1}^\prime$ & $p_{n2}^\prime$ & $p_{n3}^\prime$ \\
+        \hline
+        0 & 3.832 & 7.016 & 10.174\\
+        1 & 1.841 & 5.331 & 8.536\\
+        2 & 3.054 & 6.706 & 9.970\\
+        \hline
+    \end{tabular}
+\end{table}
+
+The TM mode family corresponds to the case where $H_z=0$, and $(\nabla^2 +k^2)E_z=0$. Again, we assume solutions of the form $E_z(\rho,\phi,z)=e_z(\rho,\phi)e^{-i\beta z}$, for which the general form of the solutions is the same as for the TE modes. However, the different boundary conditions for the TM modes results in particular solutions with a different from, which we shall quote here without derivation. The transverse fields of the TM modes are given by 
+\begin{align}
+    H_\rho &=\frac{-i\omega\epsilon n}{k_{c_{nm}}^2 \rho}(A\cos{n\phi}-B\sin{n\phi})J_n(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},\\
+    H_\phi &=\frac{-i\omega\epsilon}{k_{c_{nm}}}(A\sin{n\phi}+B\cos{n\phi})J_n^\prime(k_{c_{nm}}\rho)e^{-i\beta_{nm} z}\\
+    E_\rho &= \frac{-i\beta }{k_{c_{nm}}}(A\sin{n\phi}+B\cos{n\phi})J_n^\prime(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},\\
+    E_\phi &=\frac{-i\beta n}{k_{c_{nm}}^2\rho}(A\cos{n\phi}-B\sin{n\phi})J_n(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},
+\end{align}
+which one may notice are the same solutions as the TE modes with $H$ and $E$ flipped. The cutoff wavenumber for the TM modes is given by, $k_{c_{nm}}=p_{nm}/b$, where the values of $p_{nm}$ correspond to the $m$-th zero of the $n$-th order Bessel function (see Table \ref{tab:chap6-bessel-roots}).
+
+\begin{table}[htbp]
+    \centering
+    \caption{\label{tab:chap6-bessel-roots} A table of the values of $p_{nm}$.}
+    \begin{tabular}{c c c c }
+        \hline
+        $n$ & $p_{n1}$ & $p_{n2}$ & $p_{n3}$ \\
+        \hline
+        0 & 2.405 & 5.520 & 8.654\\
+        1 & 3.832 & 7.016 & 10.174\\
+        2 & 5.135 & 8.417 & 11.620\\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Resonant Frequencies of a Cylindrical Cavity}
+
+A cylindrical cavity is essentially constructed by taking a section of cylindrical waveguide and shorting both ends with conductive material. This means that the electric fields inside a cylindrical cavity are exactly those we derived in Section \ref{sec:chap6-TE-TM-modes} with the additional condition that the electric fields must go to zero at $z=0$ and $z=L$ (see Figure \ref{fig:chap6-cyl-cav}).
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.3\textwidth]{figs/Chapter-6/230606_cylindrical_cavity.png}
+    \caption{\label{fig:chap6-cyl-cav} Caption}
+\end{figure}
+
+The transverse electric field solutions for a cylindrical waveguide are of the form
+\begin{equation}
+    \bm{E}(\rho,\phi,z)=\bm{e}(\rho,\phi)\left(A_+e^{-i\beta_{nm}z}+A_-e^{i\beta_{nm}z }\right),
+\end{equation}
+where $A_+$ and $A_-$ are arbitrary amplitudes of forward and backward propagating waves. In order to enforce\ldots
+
 
 \section{The Cavity Approach to CRES}
+\label{sec:chap6-cavity-approach}
 
-\section{Trade-offs Between Antennas and Cavities}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-6/230606_cavity_cartoon.png}
+    \caption{\label{fig:chap6-cav-cartoon} Caption}
+\end{figure}
+
+\subsection{Magnetic Field and Cyclotron Frequency}
+
+\subsection{Magneto-gravitational Trap}
+
+\subsection{Cavity Geometry and Design}
+
+\subsection{Cavity Couplers}
+
+\subsection{Trade-offs Between Antennas and Cavities}
 
 \section{Single-mode Resonant Cavity Design and Simulations}
+\label{sec:chap6-single-mode-cavity-sims}
+
+\subsection{Open Cylindrical Cavities}
+
+\subsection{Mode Filtering Techniques}
+
+\subsection{Simulations of Open, Mode-filtered Cavities}
 
 \section{Single-mode Resonant Cavity Measurements}
+\label{sec:chap6-single-mode-cavity-measurement}
+
+\subsection{Cavities and Setup}
+
+\subsection{Results and Discussion}
 

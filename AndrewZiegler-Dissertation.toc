@@ -1,7 +1,7 @@
 \acswitchoff 
-\contentsline {chapter}{List of Figures}{vii}{}%
-\contentsline {chapter}{List of Tables}{vii}{}%
-\contentsline {chapter}{Acknowledgments}{vii}{}%
+\contentsline {chapter}{List of Figures}{viii}{}%
+\contentsline {chapter}{List of Tables}{viii}{}%
+\contentsline {chapter}{Acknowledgments}{viii}{}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{}%
 \contentsline {chapter}{\numberline {2}Neutrinos and Neutrino Masses}{2}{}%
 \contentsline {section}{\numberline {2.1}Introduction}{2}{}%
@@ -26,7 +26,7 @@
 \contentsline {section}{\numberline {3.5}Scalable Approaches to CRES Measurements}{8}{}%
 \contentsline {subsection}{\numberline {3.5.1}The Antenna Array Approach}{8}{}%
 \contentsline {subsection}{\numberline {3.5.2}The Cavity Approach}{8}{}%
-\contentsline {chapter}{\numberline {4}Signal Reconstruction for Antenna Array CRES and the FSCD}{13}{}%
+\contentsline {chapter}{\numberline {4}Signal Reconstruction Techniques for Antenna Array CRES and the FSCD}{13}{}%
 \contentsline {section}{\numberline {4.1}Introduction}{13}{}%
 \contentsline {section}{\numberline {4.2}FSCD Simulations}{14}{}%
 \contentsline {subsection}{\numberline {4.2.1}Kassiopeia}{15}{}%
@@ -87,9 +87,21 @@
 \contentsline {subsection}{\numberline {5.4.4}Conclusions}{125}{}%
 \contentsline {chapter}{\numberline {6}Development of Resonant Cavities for Large Volume CRES Measurements}{126}{}%
 \contentsline {section}{\numberline {6.1}Introduction}{126}{}%
-\contentsline {section}{\numberline {6.2}Resonant Cavities}{126}{}%
-\contentsline {section}{\numberline {6.3}The Cavity Approach to CRES}{126}{}%
-\contentsline {section}{\numberline {6.4}Trade-offs Between Antennas and Cavities}{126}{}%
-\contentsline {section}{\numberline {6.5}Single-mode Resonant Cavity Design and Simulations}{126}{}%
-\contentsline {section}{\numberline {6.6}Single-mode Resonant Cavity Measurements}{126}{}%
-\contentsline {chapter}{Bibliography}{127}{}%
+\contentsline {section}{\numberline {6.2}Cylindrical Resonant Cavities}{127}{}%
+\contentsline {subsection}{\numberline {6.2.1}General Field Solutions}{127}{}%
+\contentsline {subsection}{\numberline {6.2.2}TE and TM Modes}{128}{}%
+\contentsline {subsection}{\numberline {6.2.3}Resonant Frequencies of a Cylindrical Cavity}{130}{}%
+\contentsline {section}{\numberline {6.3}The Cavity Approach to CRES}{131}{}%
+\contentsline {subsection}{\numberline {6.3.1}Magnetic Field and Cyclotron Frequency}{132}{}%
+\contentsline {subsection}{\numberline {6.3.2}Magneto-gravitational Trap}{132}{}%
+\contentsline {subsection}{\numberline {6.3.3}Cavity Geometry and Design}{132}{}%
+\contentsline {subsection}{\numberline {6.3.4}Cavity Couplers}{132}{}%
+\contentsline {subsection}{\numberline {6.3.5}Trade-offs Between Antennas and Cavities}{132}{}%
+\contentsline {section}{\numberline {6.4}Single-mode Resonant Cavity Design and Simulations}{132}{}%
+\contentsline {subsection}{\numberline {6.4.1}Open Cylindrical Cavities}{132}{}%
+\contentsline {subsection}{\numberline {6.4.2}Mode Filtering Techniques}{132}{}%
+\contentsline {subsection}{\numberline {6.4.3}Simulations of Open, Mode-filtered Cavities}{132}{}%
+\contentsline {section}{\numberline {6.5}Single-mode Resonant Cavity Measurements}{132}{}%
+\contentsline {subsection}{\numberline {6.5.1}Cavities and Setup}{132}{}%
+\contentsline {subsection}{\numberline {6.5.2}Results and Discussion}{132}{}%
+\contentsline {chapter}{Bibliography}{133}{}%
