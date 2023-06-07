@@ -113,39 +113,155 @@ A cylindrical cavity is essentially constructed by taking a section of cylindric
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.3\textwidth]{figs/Chapter-6/230606_cylindrical_cavity.png}
-    \caption{\label{fig:chap6-cyl-cav} Caption}
+    \caption{\label{fig:chap6-cyl-cav} The geometry of a cylindrical cavity with length $L$ and radius $b$.}
 \end{figure}
 
 The transverse electric field solutions for a cylindrical waveguide are of the form
 \begin{equation}
     \bm{E}(\rho,\phi,z)=\bm{e}(\rho,\phi)\left(A_+e^{-i\beta_{nm}z}+A_-e^{i\beta_{nm}z }\right),
 \end{equation}
-where $A_+$ and $A_-$ are arbitrary amplitudes of forward and backward propagating waves. In order to enforce\ldots
+where $A_+$ and $A_-$ are arbitrary amplitudes of forward and backward propagating waves. In order to enforce that $\bm{E}$ is zero at both ends of the cavity we require that 
+\begin{equation}
+    \beta_{nm}L = 2\pi \ell,
+\end{equation}
+where $\ell=0,1,2,3\ldots$. Using this constraint on the propagation constant we can solve for the resonant frequencies of the $\mathrm{TE}_{nm\ell}$ and the $\mathrm{TM}_{nm\ell}$ modes in a cylindrical cavity. For the TE modes the resonant frequencies are
+\begin{equation}
+    f_{nm\ell}=\frac{c}{2\pi\sqrt{\mu_r\epsilon_r}}\sqrt{\left(\frac{p_{nm}^\prime}{b}\right)^2+\left(\frac{\ell\pi}{L}\right)^2},
+\end{equation}
+and the frequencies of the TM modes are 
+\begin{equation}
+    f_{nm\ell}=\frac{c}{2\pi\sqrt{\mu_r\epsilon_r}}\sqrt{\left(\frac{p_{nm}^\prime}{b}\right)^2+\left(\frac{\ell\pi}{L}\right)^2}.
+\end{equation}
 
+\subsection{Cavity Q-factors}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.6\textwidth]{figs/Chapter-6/230607_rlc.png}
+    \caption{\label{fig:chap6-series-rlc} A series RLC circuit.}
+\end{figure}
+
+The resonant behavior of cylindrical cavities can be modeled as a series RLC circuit (see figure \ref{fig:chap6-series-rlc}). The input impedance of the circuit can be obtained by applying Kirchhoff's laws to calculate the impedance of the equivalent circuit. For a series RLC circuit the input impedance is 
+\begin{equation}
+    Z_\mathrm{in}=\left(\frac{1}{R}+\frac{1}{i\omega L}+i\omega C\right).
+\end{equation}
+The resistance in the circuit represents all sources of loss in the cavity, which is primarily caused by the finite conductivity of the cavity walls, and the inductor and capacitor represent the energy stored in the cavity in the form of electric and magnetic fields. If the circuit is being driven by an external power source we can write the input power in terms of the circuit input impedance and the source voltage 
+\begin{equation}
+    P_\mathrm{in} = \frac{1}{2}Z_\mathrm{in}|I|^2=\frac{1}{2}|I|^2\left(\frac{1}{R}+\frac{1}{i\omega L}+i\omega C\right).
+\end{equation} 
+The resistor introduces a loss into the system with a power given by 
+\begin{equation}
+    P_\mathrm{loss} = \frac{1}{2}|I|^2R,
+\end{equation}
+and the capacitor and inductor store energies given by
+\begin{align}
+    W_e&=\frac{1}{4}\frac{|I|^2}{\omega^2 C},\\
+    W_m&=\frac{1}{4}|I|^2 L,
+\end{align}
+respectively. Using these expressions we can write the input power and input impedance expressions in terms of the lost power and stored energy 
+\begin{align}
+    P_\mathrm{in}=P_\mathrm{loss}+2i\omega(W_m-W_e),\\
+    Z_\mathrm{in}=\frac{P_\mathrm{loss}+2i\omega(W_m-W_e)}{\frac{1}{2}|I|^2}.
+\end{align}
+
+The condition for resonance in the RLC circuit is that the stored magnetic energy is equal to the stored electric energy ($W_e$=$W_m$). When this occurs $Z_\mathrm{in}=R$, which is a purely real impedance, and $P_{in}=P_{loss}$. The resonant frequency of the circuit can be determined from the condition $W_e=W_m$ from which one finds that 
+\begin{equation}
+    \omega_0=\frac{1}{\sqrt{LC}}.
+\end{equation}
+An important performance parameter for any resonant system is the Q-factor, which quantifies the quality of the resonator as the ratio of the stored energy multiplied by the resonant frequency to the average energy lost per second. For the series RLC circuit, the Q-factor is given by the expression 
+\begin{equation}
+    Q_0=\omega\frac{W_e+W_m}{P_\mathrm{loss}}=\frac{1}{\omega_0RC},
+\end{equation}
+from which one observes that as the resistance of the RLC circuit is decreased the quality factor of the resonator increases. From the perspective of cylindrical cavities this implies that as one decreases the resistance of the cavity walls it is expected that the Q-factor of the cavity should increase, which is indeed the case. In certain applications where a high Q is desireable it is possible to manufacture a cavity out of superconducting materials in order to minimize the power losses of the system.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.6\textwidth]{figs/Chapter-6/230607_rlc_resonance.png}
+    \caption{\label{fig:chap6-rlc-resonance}}
+\end{figure}
+
+The Q-factor of the resonator also determines with bandwidth (BW) of the system. A cavity with a high Q-factor will resonant with a smaller range of frequencies than a cavity with a low Q-factor. To see this we can examine the behavior of the RLC circuit when driven by frequencies near the resonance. For a frequency $\omega=\omega_0+\Delta \omega$, where $\Delta \omega=\omega-\omega_0\ll \omega_0$, we can write the input impedance as 
+\begin{equation}
+    Z_\mathrm{in}=R+i\omega L\left(\frac{\omega^2-\omega_0^2}{\omega^2}\right),
+\end{equation}
+and by expanding $(\omega^2-\omega_0^2)/\omega^2$ to first order in $\Delta\omega$, we obtain 
+\begin{equation}
+    Z_\mathrm{in}\approx R+i\frac{2RQ_0\Delta\omega}{\omega_0}.
+\end{equation}
+Therefore, the magnitude of the input impedance near the resonance is given by 
+\begin{equation}
+    |Z_\mathrm{in}|=R\sqrt{1+4Q_0^2\frac{\Delta\omega^2}{\omega^2}}, 
+    \label{eq:chap6-mag-input-impedance}
+\end{equation}
+from which we observe that for the series RLC circuit the input impedance is minimized at the resonant frequency, which corresponds to the maximum input power (see Figure \ref{fig:chap6-rlc-input-impedance}). The half-power BW is the range of frequencies over which the input power drops to half the input power on resonance. This occurs when $|Z_\mathrm{in}|=\sqrt{2}R$, which corresponds to $\Delta\omega/\omega=\textrm{BW}/2$. Using Equation \ref{eq:chap6-mag-input-impedance} one can find that
+\begin{equation}
+    2R^2=R^2(1+Q_0^2\mathrm{BW}^2),
+\end{equation}
+which implies
+\begin{equation}
+    \mathrm{BW}=\frac{1}{Q_0}
+\end{equation}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-6/230607_loaded_rlc.png}
+    \caption{\label{fig:chap6-loaded-resonator-circuit} A series RLC circuit coupled to an external circuit with input impedance $R_L$.}
+\end{figure}
+
+It is important to emphasize that the Q-factor defined here, $Q_0$, is technically the unloaded Q. It reflects the quality of the cavity or resonant circuit without the influence of any external circuitry. In practice, however, a cavity is invariably coupled to an external circuit to drive a cavity resonance or to measure the energy of a resonant mode. Coupling a cavity to an external circuit changes the Q by loading the equivalent cavity RLC circuit (see Figure \ref{fig:chap6-loaded-resonator-circuit}). The Q-factor of the cavity when it is loaded by an external circuit is called the loaded Q, which is the quantity that one actually measures when exciting a resonance in the cavity. Using the series RLC circuit model one can see that the load resistor in Figure \ref{fig:chap6-loaded-resonator-circuit} will add in series with the resistor in the circuit for a total equivalent resistance of $R+R_L$. Therefore, the loaded Q is given by 
+\begin{equation}
+    Q_L=\frac{1}{\omega_0(R+R_L)C},
+\end{equation}
+from which one observes that the loaded Q is always less than the intrinsic Q of the cavity.
+
+The amount of coupling that is desireable depends on the specific application of the resonator. If one wants a resonator that is particular frequency selective than it makes sense to limit the amount of coupling to the cavity to maintain a small BW, alternatively, if a larger BW is need one can increase the cavity coupling by tuning the input impedance of the external circuit. The critical point, where maximum power is transferred between the cavity and the external circuit, occurs when the input impedance of the cavity matches the input impedance of the external transmission line.  For the series RLC circuit on resonance, this matching condition corresponds to 
+\begin{equation}
+    Z_0=Z_\mathrm{in}=R,
+\end{equation}
+where $Z_0$ is the impedance of the transmission line. The loaded Q at this critical point is, therefore,
+\begin{equation}
+    Q_L=\frac{1}{2\omega_0Z_0C}=\frac{Q_0}{2}.
+\end{equation}
+One can described the degree of coupling between the cavity and an external circuit by defining a coupling factor, $g$, such that,
+\begin{equation}
+    g=\frac{Q_0}{Q_L}-1.
+\end{equation} 
+When $g=1$ then $Q_L=Q_0/2$, and the cavity is said to be critically coupled as we described. If $Q_L<Q_0/2$, then the cavity is undercoupled to the transmission line, corresponding to $g<1$. Alternatively, if $Q_L>Q_0/2$, then $g>1$, and the cavity is overcoupled to the transmission line. Various specialized circuits can be used to tune the input impedance of the external circuit as seen by the cavity to achieve a wide range of different coupling factors based on the desired application of the cavity.
 
 \section{The Cavity Approach to CRES}
 \label{sec:chap6-cavity-approach}
 
+\subsection{A Sketch of a Molecular Tritium Cavity CRES Experiment}
+
+Resonant cavities can be used to perform CRES measurements, and they represent the current preferred technology by the Project 8 collaboration for the ultimate goal of a 40~meV neutrino mass measurement using CRES. The basic approach to a neutrino mass measurement using a resonant cavity and molecular tritium beta-decay source is illustrated by Figure \ref{fig:chap6-cav-cartoon}.
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.7\textwidth]{figs/Chapter-6/230606_cavity_cartoon.png}
     \caption{\label{fig:chap6-cav-cartoon} Caption}
 \end{figure}
 
-\subsection{Magnetic Field and Cyclotron Frequency}
+At the core of the experiment is a large resonant cavity filled with tritium gas. In principle a sealed metallic cavity serves a dual purpose as the tritium containment vessel although the risks of exposure to radioactive tritium may necessitate a secondary dielectric containment vessel (such as fused scilica) inside the cavity volume. The filled cavity is then placed in a uniform magnetic field provided by a primary magnet that sets the values of the cyclotron frequencies for electrons emitted with energies near the tritium spectrum endpoint. When a beta-decay electron is produced in the cavity it is trapped using an additional set of magnetic coils that prevents the electrons from running into the cavity walls.
 
-\subsection{Magneto-gravitational Trap}
+Electrons trapped inside the cavity volume do not radiate in the same way as electron in free-space. Effectively, the same boundary conditions that were used to derive the resonant modes of a cylindrical cavity in Section \ref{sec:chap6-resonant-cavities} apply to the radiation of the electron as well. If an electron is emitted with a kinetic energy that corresponds to a cyclotron frequency that matches a resonant frequency of the cavity, then the power radiated by the electron excites the corresponding resonance in the cavity. The strength of the electron's coupling to the cavity is given by the dot product between the electrons trajectory and the electric field vector of the resonant mode. However, if an electron is moving with a cyclotron frequency that is far from any resonant modes in the cavity, then radiation from the electron is suppressed. One can interpret this somewhat surprising effect as the metallic walls of the cavity reflecting the radiated energy back into the electron. 
 
-\subsection{Cavity Geometry and Design}
+To detect the electron the cavity is coupled to an external transmission line that leads to an amplifier and RF receiver chain similar to an antenna array based experiment. The coupling of the cavity resonance to the amplifier occurs through a coupling probe designed to resonate with the same mode or modes excited by the electron. In other resonant cavity systems this is often accomplished using a simple wire antenna,  which could be connected to the amplifier through a segment of coaxial cable. Alternatively, cavities are oftentimes coupled to waveguides or smaller external cavities using small holes or apertures cut into the main cavity wall. For CRES measurements, the placement of a wire coupling probe inside the cavity volume leads to additional scattering of electrons and eventually tritium atoms, therefore, the apertures are the preferred coupling method for cavity CRES experiments.
 
-\subsection{Cavity Couplers}
+One of the attractive features of the CRES technique for neutrino mass measurement is the gain in statistics that comes from the differential nature of the tritium spectrum measurement. Initially, this seems incompatible with cavities, due to the narrow resonances of cavity modes giving relatively small bandwidth. However, by intentionally overcoupling to a single cavity mode one can achieve bandwidths of a few 10's of MHz, which is sufficient for a measurement of the tritium spectrum endpoint region.  
 
-\subsection{Trade-offs Between Antennas and Cavities}
+\subsection{Magnetic Field and Cavity Geometry}
+
+For a CRES experiment, cylindrical cavities are a natural choice.
+
+\subsection{Resonant Mode Selection}
+
+\subsection{Potential Trade-offs Between Antennas and Cavities}
 
 \section{Single-mode Resonant Cavity Design and Simulations}
 \label{sec:chap6-single-mode-cavity-sims}
 
-\subsection{Open Cylindrical Cavities}
+\subsection{Cylindrical Cavity Design Considerations for CRES Experiments}
+
+\subsection{Open Cylindrical Cavities with Coaxial Terminations}
 
 \subsection{Mode Filtering Techniques}
 
