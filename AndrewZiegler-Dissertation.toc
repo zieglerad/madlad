@@ -94,15 +94,13 @@
 \contentsline {subsection}{\numberline {6.2.4}Cavity Q-factors}{131}{}%
 \contentsline {section}{\numberline {6.3}The Cavity Approach to CRES}{135}{}%
 \contentsline {subsection}{\numberline {6.3.1}A Sketch of a Molecular Tritium Cavity CRES Experiment}{135}{}%
-\contentsline {subsection}{\numberline {6.3.2}Magnetic Field and Cavity Geometry}{137}{}%
-\contentsline {subsection}{\numberline {6.3.3}Resonant Mode Selection}{137}{}%
-\contentsline {subsection}{\numberline {6.3.4}Potential Trade-offs Between Antennas and Cavities}{137}{}%
-\contentsline {section}{\numberline {6.4}Single-mode Resonant Cavity Design and Simulations}{137}{}%
-\contentsline {subsection}{\numberline {6.4.1}Cylindrical Cavity Design Considerations for CRES Experiments}{137}{}%
-\contentsline {subsection}{\numberline {6.4.2}Open Cylindrical Cavities with Coaxial Terminations}{137}{}%
-\contentsline {subsection}{\numberline {6.4.3}Mode Filtering Techniques}{137}{}%
-\contentsline {subsection}{\numberline {6.4.4}Simulations of Open, Mode-filtered Cavities}{137}{}%
-\contentsline {section}{\numberline {6.5}Single-mode Resonant Cavity Measurements}{137}{}%
-\contentsline {subsection}{\numberline {6.5.1}Cavities and Setup}{137}{}%
-\contentsline {subsection}{\numberline {6.5.2}Results and Discussion}{137}{}%
-\contentsline {chapter}{Bibliography}{138}{}%
+\contentsline {subsection}{\numberline {6.3.2}Magnetic Field, Cavity Geometry, and Resonant Modes}{137}{}%
+\contentsline {subsection}{\numberline {6.3.3}Trade-offs Between the Antenna and Cavity Approaches}{139}{}%
+\contentsline {section}{\numberline {6.4}Single-mode Resonant Cavity Design and Simulations}{141}{}%
+\contentsline {subsection}{\numberline {6.4.1}Open Cylindrical Cavities with Coaxial Terminations}{142}{}%
+\contentsline {subsection}{\numberline {6.4.2}Mode Filtering Techniques}{142}{}%
+\contentsline {subsection}{\numberline {6.4.3}Simulations of Open, Mode-filtered Cavities}{142}{}%
+\contentsline {section}{\numberline {6.5}Single-mode Resonant Cavity Measurements}{142}{}%
+\contentsline {subsection}{\numberline {6.5.1}Cavities and Setup}{142}{}%
+\contentsline {subsection}{\numberline {6.5.2}Results and Discussion}{142}{}%
+\contentsline {chapter}{Bibliography}{143}{}%
