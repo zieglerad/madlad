@@ -133,6 +133,12 @@ and the frequencies of the TM modes are
     f_{nm\ell}=\frac{c}{2\pi\sqrt{\mu_r\epsilon_r}}\sqrt{\left(\frac{p_{nm}^\prime}{b}\right)^2+\left(\frac{\ell\pi}{L}\right)^2}.
 \end{equation}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figs/Chapter-6/230610_mode_lines.png}
+    \caption{\label{fig:chap6-cavity-mode-lines} Relation of mode frequency to cavity length for a cylindrical cavity with a radius of 18.32~cm.}
+\end{figure}
+
 \subsection{Cavity Q-factors}
 
 \begin{figure}[htbp]
@@ -270,6 +276,22 @@ A second consideration for mode selection is the volumetric efficiency of the mo
 
 The longitudinal variation in the mode strength is ultimately critical for achieving the energy resolution required for neutrino mass measurements. Correcting for the change in the average magnetic fields experienced by electrons with different pitch angles requires that information on the axial motion of the electron be encoded into the CRES signal. The longitudinal variation in the mode amplitude leads to amplitude modulation of the CRES signal with a frequency proportional to the electron's pitch angle. 
 
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.67\textwidth}
+        \centering
+        \includegraphics*[width=1\textwidth]{figs/Chapter-6/230610_resmodes_1ghz_ld4pt5_wide.png}
+        \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.67\textwidth}
+        \centering
+        \includegraphics*[width=1\textwidth]{figs/Chapter-6/230610_resmodes_1ghz_ld4pt5.png}
+        \caption{}
+    \end{subfigure}
+    \caption{}
+\end{figure}
+
 An additional factor for mode selection is the intrinsic or unloaded Q of the mode. In terms of SNR it is advantageous to use a mode with a very high $Q_0$, which is then highly overcoupled to achieve the necessary bandwidth to cover the tritium endpoint spectrum. This scheme leads to a decoupling of the physical cavity temperature from the effective noise temperature after the amplifier, which allows us to achieve adequate SNR without the requirement of cooling the entire cavity to single Kelvin temperatures. 
 
 An example of a resonant mode that exhibits these traits is the $\mathrm{TE}_{011}$ mode. At present the $\mathrm{TE}_{011}$ mode is the preferred resonance for a single-mode cavity CRES experiment by the Project 8 collaboration. $\mathrm{TE}_{011}$ is a low order mode located in a region relatively far from other cavity modes. Furthermore, the separation of the $\mathrm{TE}_011$ mode can be improved by various mode-filtering techniques discussed in Section \ref{sec:chap6-mode-filtering-techniques} below. $\mathrm{TE}_{011}$ consists of a single longitudinal antinode that can provide pitch angle information in the form of amplitude modulation, and has an electric field with a radial profile given by the $J_0^\prime$ Bessel function allowing for radial position estimation. Lastly, the $\mathrm{TE}_{011}$ mode has a relatively high intrinsic Q compared to nearby modes, which helps with SNR. Unloaded Q's greater than 80000 are achievable for a 1~GHz $\mathrm{TE}_{011}$ resonance using a copper walled cavity. 
@@ -293,11 +315,50 @@ The single-mode cylindrical cavities envisioned for the Phase III and IV experim
 
 \subsection{Open Cylindrical Cavities with Coaxial Terminations}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.6\textwidth]{figs/Chapter-6/230606_open_cavity_image.png}
+    \caption{Caption}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-6/230606_open_cavity_sketch.png}
+    \caption{Caption}
+\end{figure}
 
 \subsection{Mode Filtering Techniques}
 \label{sec:chap6-mode-filtering-techniques}
 
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.7\textwidth}
+        \centering
+        \includegraphics*[width=\textwidth]{figs/Chapter-6/230608_insulator_mode_filter_cartoon.png}
+        \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.7\textwidth}
+        \centering
+        \includegraphics*[width=\textwidth]{figs/Chapter-6/230608_grooved_mode_filter_cartoon.png}
+        \caption{}
+    \end{subfigure}
+    \caption{}
+\end{figure}
+
 \subsection{Simulations of Open, Mode-filtered Cavities}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-6/230610_cavity_variations.png}
+    \caption{}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.9\textwidth]{figs/Chapter-6/230610_cavity_variation_eigenmodes_linear_annotate.png}
+    \caption{}
+\end{figure}
 
 \section{Single-mode Resonant Cavity Measurements}
 \label{sec:chap6-single-mode-cavity-measurement}
