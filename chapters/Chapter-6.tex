@@ -381,8 +381,11 @@ Using the constraints from the three field regions one can develop a coaxial ter
 
 The general case of an electron coupling to a resonant cavity can quickly be come quite complicated. This is because cavities contain an infinite number of resonant modes that at higher orders have a coupling to the electron with a complex spatial dependence. The danger is that improper modeling of the electron's coupling to the cavity can lead to systematic errors in the CRES measurements that prevent a high enough resolution measurement of the electron's kinetic energy. This in part drives the preference for a single-mode cavity experiment that uses only the electron's coupling to the $\mathrm{TE}_{011}$ mode to perform CRES. If sufficient information on the electron's position can be obtained with only this mode then this represents the ideal case. 
 
-The $\mathrm{TE}_{011}$ mode is in a region where there are relatively few other modes to which the electron could couple(see Figure \ref{fig:chap6-res-mode-freq-cylindrical-cav}). However, one can see that the frequency of the $\mathrm{TE}_{011}$ is perfectly degenerate with the $\mathrm{TM}_{111}$ mode, 
+The $\mathrm{TE}_{011}$ mode is in a region where there are relatively few other modes to which the electron could couple(see Figure \ref{fig:chap6-res-mode-freq-cylindrical-cav}). However, one can see that the frequency of the $\mathrm{TE}_{011}$ is perfectly degenerate with the $\mathrm{TM}_{111}$ mode, which means that electrons will inevitably couple to both modes if they have the correct cyclotron frequency. 
 
+The magnitude of the impact of the electron coupling to both $\mathrm{TE}_{011}$ and $\mathrm{TM}_{111}$ is currently unknown. To first order an electron coupling to more both modes will lose more energy overtime, which can be measured by observing the frequency chirp rate of the signal. This effect may be small enough to be negligible or simple enough to model that the cavity can be treated as an effective single-mode cavity. Alternatively, the one could consider devising a coupling scheme that is sensitive to both the $\mathrm{TE}_{011}$ and the $\mathrm{TM}_{111}$ modes. By measuring the coupling of the electron to both modes more information on the position of the electron could be obtained, which might improve the position and energy resolution of the CRES measurements.
+
+A different approach is the mode filtering approach, which seeks to obtain a true single $\mathrm{TE}_{011}$ mode cavity by using perturbations to the cavity walls that selectively impede the $\mathrm{TM}$ modes, while leaving the $\mathrm{TE}$ modes mostly unperturbed.
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}{0.7\textwidth}
@@ -396,8 +399,9 @@ The $\mathrm{TE}_{011}$ mode is in a region where there are relatively few other
         \includegraphics*[width=\textwidth]{figs/Chapter-6/230608_grooved_mode_filter_cartoon.png}
         \caption{}
     \end{subfigure}
-    \caption{}
+    \caption{\label{fig:chap6-mode-filter-cartoons}}
 \end{figure}
+The type of perturbations required can be determined by visualizing the surface currents induced in the cavity walls by each type of mode (see Figure \ref{fig:chap6-mode-filter-cartoons}).
 
 \subsection{Simulations of Open, Mode-filtered Cavities}
 
