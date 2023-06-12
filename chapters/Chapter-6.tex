@@ -61,8 +61,8 @@ For solutions of the form $H_z(\rho,\phi,z)=h_z(\rho,\phi)e^{-i\beta z}$, Equati
 \begin{align}
     H_\rho &= \frac{-i\beta }{k_{c_{nm}}}(A\sin{n\phi}+B\cos{n\phi})J_n^\prime(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},\\
     H_\phi &=\frac{-i\beta n}{k_{c_{nm}}^2\rho}(A\cos{n\phi}-B\sin{n\phi})J_n(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},\\
-    E_\rho &=\frac{-i\omega\mu n}{k_{c_{nm}}^2 \rho}(A\cos{n\phi}-B\sin{n\phi})J_n(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},\\
-    E_\phi &=\frac{i\omega\mu}{k_{c_{nm}}}(A\sin{n\phi}+B\cos{n\phi})J_n^\prime(k_{c_{nm}}\rho)e^{-i\beta_{nm} z}.
+    E_\rho &=\frac{-i\omega\mu n}{k_{c_{nm}}^2 \rho}(A\cos{n\phi}-B\sin{n\phi})J_n(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},\label{eq:chap6-erho-TE}\\
+    E_\phi &=\frac{i\omega\mu}{k_{c_{nm}}}(A\sin{n\phi}+B\cos{n\phi})J_n^\prime(k_{c_{nm}}\rho)e^{-i\beta_{nm} z}\label{eq:chap6-ephi-TE}.
 \end{align}
 One can observe that the solutions have a periodic dependence on $\phi$, and radial profiles given by the Bessel functions of the first kind. The integer indices $n$ and $m$ arise from continuity conditions on the EM fields in the azimuthal and radial directions. For the TE modes $n\geq0$ and $m\geq1$. $k_{c_{nm}}$ is the cutoff wavenumber for the $\mathrm{TE}_{nm}$ mode given by 
 \begin{equation}
@@ -289,7 +289,7 @@ The longitudinal variation in the mode strength is ultimately critical for achie
         \includegraphics*[width=1\textwidth]{figs/Chapter-6/230610_resmodes_1ghz_ld4pt5.png}
         \caption{}
     \end{subfigure}
-    \caption{}
+    \caption{\label{fig:chap6-res-mode-freq-cylindrical-cav} Examples of the resonant mode frequencies of a cylindrical cavity.}
 \end{figure}
 
 An additional factor for mode selection is the intrinsic or unloaded Q of the mode. In terms of SNR it is advantageous to use a mode with a very high $Q_0$, which is then highly overcoupled to achieve the necessary bandwidth to cover the tritium endpoint spectrum. This scheme leads to a decoupling of the physical cavity temperature from the effective noise temperature after the amplifier, which allows us to achieve adequate SNR without the requirement of cooling the entire cavity to single Kelvin temperatures. 
@@ -315,20 +315,73 @@ The single-mode cylindrical cavities envisioned for the Phase III and IV experim
 
 \subsection{Open Cylindrical Cavities with Coaxial Terminations}
 
+\subsubsection*{Design Concept}
+
+A basic cavity design question relevant to Project 8's ultimate goal of an atomic tritium CRES experiment is how to build a cavity that can be efficiently filled with atomic tritium. To keep the rate of atom loss from recombination on surfaces it is ideal if the ends of the cylindrical cavity are as open as possible so that tritium atoms can flow inside unimpeded. Additionally, one of the primary calibration techniques planned for future CRES experiments involves CRES measurements using electrons injected from an electron gun source, which also requires an openings at the cavity ends. Cylindrical cavities with open ends can be manufactured, however, the intrinsic Q-factors of these cavities are orders of magnitude less than their sealed counterparts, which reduces the signal-to-noise ratio when that cavity is used for CRES measurement.
+
+Cylindrical cavities with mostly open ends that also exhibit Q values for the $\mathrm{TE}_{01\ell}$ modes similar to sealed cavities can be built by using coaxial endcaps to terminate the cavity. Cavities of this type have been manufactured for specialized applications related to the measurements of the dielectric constants of liquefied gasses (see Figure \ref{fig:chap6-open-cavity-image}).
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.6\textwidth]{figs/Chapter-6/230606_open_cavity_image.png}
-    \caption{Caption}
+    \caption{\label{fig:chap6-open-cavity-image} An image of an open cavity with coaxial terminations used for dielectric constant measurements. Figure from ??}
 \end{figure}
+This cavity design leaves the ends of the cavity wide open, but retains high Q-values for the $\mathrm{TE}_{01\ell}$ modes due to the coaxial endcap, which are designed to perfectly reflect the electric fields of $\mathrm{TE}_{01\ell}$ modes. Coupling to the $\mathrm{TE_{01\ell}}$ mode is achieved via an aperture located at the center of the cavity wall. 
+
+A cavity similar to Figure \ref{fig:chap6-open-cavity-image} is a candidate design for the future CRES experiments by Project 8, since it appears to elegantly solve many practical issues that arise when combining cavity CRES and atomic tritium. The coaxial endcaps leave significant regions of the cavity ends completely open, which allows for the entrance of atomic tritium as well as the pumping away of molecular tritium that has recombined on the cavity walls. These open ends are achieved while preserving the high Q-values of the $\mathrm{TE}_{01\ell}$ modes, which is important for extracting as much signal power from the electron as possible. In subsequent sections we shall analyze this cavity design in more detail, primarily by using HFSS simulations to analyze the resonant mode structure of this cavity geometry.
+
+\subsubsection*{Coaxial Terminator Constraints}
+
+The reason that coaxial endcaps can be used to achieve high Q-values for the $\mathrm{TE}_{01\ell}$ modes is that the electric fields for these modes are purely azimuthally polarized (see Equations \ref{eq:chap6-erho-TE} and \ref{eq:chap6-ephi-TE}). Therefore, the boundary conditions that require the electric field to go to zero at the cavity ends can be supplied uisng a coaxial partition of the correct radius (see Figure \ref{fig:chap6-open-cavity-sketch}). Because the cylindrical shape enforced by the partition does not match the boundary conditions of other cavity modes, these terminations also significantly suppress the Q-factors of non-$\mathrm{TE}_{01\ell}$ modes, which is potentially beneficial for a single-mode cavity CRES experiment.  
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.6\textwidth]{figs/Chapter-6/230606_open_cavity_sketch.png}
+    \caption{\label{fig:chap6-open-cavity-sketch} The simplified geometry of an open cavity with coaxial terminations. Figure from ??}
+\end{figure}
+
+The correct radius of the cylindrical partition can can be derived by setting up the boundary value problem in Figure \ref{fig:chap6-open-cavity-sketch}, and analyzing the reflection and transmission coefficients for waves incident on the coaxial terminators. The basic problem is to identify the radius $a$ at which the reflection coefficient for the $\mathrm{TE}_{01\ell}$ modes is equal to 1. One can show that if the coaxial partitions are made sufficiently long relative to the wavelength of the $\mathrm{TE}_{01}$ modes than perfect reflection can be achieved. This derivation is quite lengthy and complex and is presented in full in reference ??. Here, we shall simply explain the resulting conditions on the partition radius for perfect reflection.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics*[width=0.7\textwidth]{figs/Chapter-6/230606_open_cavity_sketch.png}
-    \caption{Caption}
+    \includegraphics*[width=0.6\textwidth]{figs/Chapter-6/230612_open_cavity_regions.png}
+    \caption{\label{fig:chap6-open-cavity-regions} Electric field regions for the open cavity boundary value problem.}
 \end{figure}
 
-\subsection{Mode Filtering Techniques}
+The open cavity boundary value problem is solved by expressing the forms of the electric fields in the different regions of the cavity and requiring that the electric fields are continuous. There are effectively three distinct regions in the open cavity corresponding to the central cavity volume, the inner coaxial volume, and the outer coaxial volume (see Figure \ref{fig:chap6-open-cavity-regions}). 
+
+In Region I the boundary conditions are those of a cylindrical waveguide, and we require that $E_\phi$ for the $\mathrm{TE}_{0m}$ modes go to zero at the cavity wall ($r=b$). This requires that $J^\prime_{0m}(k_{c_{0m}}b)=0$. We aim to solve for the radius $a$ in the specific situation where the $\mathrm{TE}_{01}$ mode can propogate but all other $\mathrm{TE}_{0m}$ modes are below the cutoff frequency for the circular waveguide. This is equivalent to requiring 
+\begin{equation}
+    3.832<k_{c_{0m}}b<7.016,
+\end{equation}
+where the numbers $3.832$ and $7.016$ correspond to the first and second zeros of the Bessel function (see Table \ref{tab:chap6-bessel-derivative-roots}).
+
+In Region II the boundary conditions are also those of a cylindrical waveguide, but with a new, smaller radius. The condition that $E_\phi=0$ at the cylindrical partition radius is that $J^\prime_{0m}(k_{c_{0m}}a)=0$. To ensure perfect reflection we want all modes in Region 1 of the cavity to be below the cutoff frequency of the circular waveguide formed by the inner volume of the coaxial terminator. Therefore, we consider the solutions where
+\begin{equation}
+    k_{c_{0m}}a<3.832.
+\end{equation}
+
+Finally, in Region III the boundary condition are those of a coaxial waveguide. We need to guarantee that $E_\phi = 0$ at both $r=b$ and $r=a$, which involves finding the eigenvalues of the following equation
+\begin{equation}
+    J^\prime_{0}(k_{c_{0m}}a)Y^\prime_0(k_{c_{0m}}b)-J^\prime_0(k_{c_{0m}}b)Y^\prime_0(k_{c_{0m}}a) = 0,
+    \label{eq:chap6-regionIII-evalue-eqn}
+\end{equation}
+where $Y_0^\prime$ the zeroth-order derivatives of the Bessel function of the second kind. The solutions to this equation depend on the value of the ratio $b/a$. The approximate solution is given by 
+\begin{equation}
+    \delta_na\simeq\frac{n\pi}{b/a-1},  
+\end{equation}
+where $\delta_n$ are eigenvalues of Equation \ref{eq:chap6-regionIII-evalue-eqn}. Similar to Region II, we are interested in solutions for which the $\mathrm{TE}_{01}$ modes of Region I are below the cutoff of Region III. Therefore, we require that 
+\begin{equation}
+    k_{c_{0m}}<\delta_1.
+\end{equation}
+In general, one has some freedom in specifying the value of $b/a$. A value typically used in practice is $b/a=2.082$, which corresponds to positioning the radius of the cylindrical partition at the maxima of the $\mathrm{TE}_{01}$ electrical fields. 
+
+Using the constraints from the three field regions one can develop a coaxial terminator that acts as a virtual perfectly conducting surface for the $\mathrm{TE}_{01}$ modes. The only required inputs are the desired frequency of the $\mathrm{TE}_{011}$ mode and a choice for the value of $b/a$. 
+
+\subsection{Mode Filtering}
 \label{sec:chap6-mode-filtering-techniques}
+
+The general case of an electron coupling to a resonant cavity can quickly be come quite complicated. This is because cavities contain an infinite number of resonant modes that at higher orders have a coupling to the electron with a complex spatial dependence. The danger is that improper modeling of the electron's coupling to the cavity can lead to systematic errors in the CRES measurements that prevent a high enough resolution measurement of the electron's kinetic energy. This in part drives the preference for a single-mode cavity experiment that uses only the electron's coupling to the $\mathrm{TE}_{011}$ mode to perform CRES. If sufficient information on the electron's position can be obtained with only this mode then this represents the ideal case. 
+
+The $\mathrm{TE}_{011}$ mode is in a region where there are relatively few other modes to which the electron could couple(see Figure \ref{fig:chap6-res-mode-freq-cylindrical-cav}). However, one can see that the frequency of the $\mathrm{TE}_{011}$ is perfectly degenerate with the $\mathrm{TM}_{111}$ mode, 
 
 \begin{figure}[htbp]
     \centering
