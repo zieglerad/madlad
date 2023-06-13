@@ -68,7 +68,7 @@ One can observe that the solutions have a periodic dependence on $\phi$, and rad
 \begin{equation}
     k_{c_{nm}} = \frac{p^\prime_{nm}}{b},
 \end{equation}
-where $b$ is the radius of the cavity or waveguide and $p^\prime_{nm}$ is the $m$-th root of the derivative of the $n$-th order Bessel function (see Table \ref{tab:chap6-bessel-derivative roots}).
+where $b$ is the radius of the cavity or waveguide and $p^\prime_{nm}$ is the $m$-th root of the derivative of the $n$-th order Bessel function (see Table \ref{tab:chap6-bessel-derivative-roots}).
 
 \begin{table}[htbp]
     \centering
@@ -130,7 +130,7 @@ where $\ell=0,1,2,3\ldots$. Using this constraint on the propagation constant we
 \end{equation}
 and the frequencies of the TM modes are 
 \begin{equation}
-    f_{nm\ell}=\frac{c}{2\pi\sqrt{\mu_r\epsilon_r}}\sqrt{\left(\frac{p_{nm}^\prime}{b}\right)^2+\left(\frac{\ell\pi}{L}\right)^2}.
+    f_{nm\ell}=\frac{c}{2\pi\sqrt{\mu_r\epsilon_r}}\sqrt{\left(\frac{p_{nm}}{b}\right)^2+\left(\frac{\ell\pi}{L}\right)^2}.
 \end{equation}
 
 \begin{figure}[htbp]
@@ -183,7 +183,7 @@ from which one observes that as the resistance of the RLC circuit is decreased t
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.6\textwidth]{figs/Chapter-6/230607_rlc_resonance.png}
-    \caption{\label{fig:chap6-rlc-resonance}}
+    \caption{\label{fig:chap6-rlc-resonance} Illustration of the behavior of the input impedance of the series RLC circuit as a function of the driving frequency. The BW is proportion to the width of the resonance, which is inversely proportional to Q.}
 \end{figure}
 
 The Q-factor of the resonator also determines with bandwidth (BW) of the system. A cavity with a high Q-factor will resonant with a smaller range of frequencies than a cavity with a low Q-factor. To see this we can examine the behavior of the RLC circuit when driven by frequencies near the resonance. For a frequency $\omega=\omega_0+\Delta \omega$, where $\Delta \omega=\omega-\omega_0\ll \omega_0$, we can write the input impedance as 
@@ -243,7 +243,7 @@ Resonant cavities can be used to perform CRES measurements, and they represent t
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.7\textwidth]{figs/Chapter-6/230606_cavity_cartoon.png}
-    \caption{\label{fig:chap6-cav-cartoon} Caption}
+    \caption{\label{fig:chap6-cav-cartoon} Cartoon depiction of a cavity CRES experiment.}
 \end{figure}
 
 At the core of the experiment is a large resonant cavity filled with tritium gas. In principle a sealed metallic cavity serves a dual purpose as the tritium containment vessel although the risks of exposure to radioactive tritium may necessitate a secondary dielectric containment vessel (such as fused scilica) inside the cavity volume. The filled cavity is then placed in a uniform magnetic field provided by a primary magnet that sets the values of the cyclotron frequencies for electrons emitted with energies near the tritium spectrum endpoint. When a beta-decay electron is produced in the cavity it is trapped using an additional set of magnetic coils that prevents the electrons from running into the cavity walls.
@@ -314,6 +314,7 @@ A potential downside of the cavity approach is the apparent difficulty of estima
 The single-mode cylindrical cavities envisioned for the Phase III and IV experiments must be carefully engineered in order to measure the neutrino mass with the desired sensitivity. In this section I summarize some simulation studies performed to analyze early design concepts for a single-mode cavity. The primary tool for these investigations was Ansys HFSS, which was also used for the development of the SYNCA antenna described in Section \ref{sec:SYNCA}. 
 
 \subsection{Open Cylindrical Cavities with Coaxial Terminations}
+\label{sec:chap6-open-cavities}
 
 \subsubsection*{Design Concept}
 
@@ -322,7 +323,7 @@ A basic cavity design question relevant to Project 8's ultimate goal of an atomi
 Cylindrical cavities with mostly open ends that also exhibit Q values for the $\mathrm{TE}_{01\ell}$ modes similar to sealed cavities can be built by using coaxial endcaps to terminate the cavity. Cavities of this type have been manufactured for specialized applications related to the measurements of the dielectric constants of liquefied gasses (see Figure \ref{fig:chap6-open-cavity-image}).
 \begin{figure}[htbp]
     \centering
-    \includegraphics*[width=0.6\textwidth]{figs/Chapter-6/230606_open_cavity_image.png}
+    \includegraphics*[width=0.5\textwidth]{figs/Chapter-6/230606_open_cavity_image.png}
     \caption{\label{fig:chap6-open-cavity-image} An image of an open cavity with coaxial terminations used for dielectric constant measurements. Figure from ??}
 \end{figure}
 This cavity design leaves the ends of the cavity wide open, but retains high Q-values for the $\mathrm{TE}_{01\ell}$ modes due to the coaxial endcap, which are designed to perfectly reflect the electric fields of $\mathrm{TE}_{01\ell}$ modes. Coupling to the $\mathrm{TE_{01\ell}}$ mode is achieved via an aperture located at the center of the cavity wall. 
@@ -385,7 +386,6 @@ The $\mathrm{TE}_{011}$ mode is in a region where there are relatively few other
 
 The magnitude of the impact of the electron coupling to both $\mathrm{TE}_{011}$ and $\mathrm{TM}_{111}$ is currently unknown. To first order an electron coupling to more both modes will lose more energy overtime, which can be measured by observing the frequency chirp rate of the signal. This effect may be small enough to be negligible or simple enough to model that the cavity can be treated as an effective single-mode cavity. Alternatively, the one could consider devising a coupling scheme that is sensitive to both the $\mathrm{TE}_{011}$ and the $\mathrm{TM}_{111}$ modes. By measuring the coupling of the electron to both modes more information on the position of the electron could be obtained, which might improve the position and energy resolution of the CRES measurements.
 
-A different approach is the mode filtering approach, which seeks to obtain a true single $\mathrm{TE}_{011}$ mode cavity by using perturbations to the cavity walls that selectively impede the $\mathrm{TM}$ modes, while leaving the $\mathrm{TE}$ modes mostly unperturbed.
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}{0.7\textwidth}
@@ -399,36 +399,94 @@ A different approach is the mode filtering approach, which seeks to obtain a tru
         \includegraphics*[width=\textwidth]{figs/Chapter-6/230608_grooved_mode_filter_cartoon.png}
         \caption{}
     \end{subfigure}
-    \caption{\label{fig:chap6-mode-filter-cartoons}}
+    \caption{\label{fig:chap6-mode-filter-cartoons} Two mode filtering concepts to break the degeneracy of $\mathrm{TE}_{01}$ and $\mathrm{TM}_{11}$ modes. }
 \end{figure}
-The type of perturbations required can be determined by visualizing the surface currents induced in the cavity walls by each type of mode (see Figure \ref{fig:chap6-mode-filter-cartoons}).
+
+A different approach is the mode filtering approach, which seeks to obtain a true single $\mathrm{TE}_{011}$ mode cavity by using perturbations to the cavity walls that selectively impede the $\mathrm{TM}$ modes, while leaving the $\mathrm{TE}$ modes mostly unperturbed.
+The type of perturbations required can be determined by visualizing the surface currents induced in the cavity walls by each type of mode (see Figure \ref{fig:chap6-mode-filter-cartoons}). By definition, all $\mathrm{TM}$ have electric fields directed along the vertical axis of the cylindrical cavity, which means that perturbations that impede currents in this direction will modify $\mathrm{TM}$ resonances. On the other hand, the $\mathrm{TE}_{01}$ modes induce azimuthal currents in the cavity walls, therefore, it is possible to break the degeneracy between $\mathrm{TE}_{01}$ and $\mathrm{TM}_{11}$ using a cavity perturbation that imepedes axial currents, but does not affect the flow of azimuthal currents. 
+
+Figure \ref{fig:chap6-mode-filter-cartoons} shows two cavity design concepts that achieve this selective current perturbation. The resistive approach inserts a series of thin dielectric rings into the walls of the cavity that introduces a resistive and capacitive impedance to the longitudinal currents, while leaving azimuthal current paths intact. Cavities of this type with high $\mathrm{TE}_{01}$ Q's have also been constructed by tightly wrapping a thin, dielectric coated wire around a mold to form the cavity wall. An alternative method is to introduce an inductive impedance by cutting grooves or a thread pattern on the inside wall of the cavity. For reasons of manufacturability and compatibility with tritium the grooved cavity approach is the preferred method for mode-filtered cavity construction by Project 8. 
 
 \subsection{Simulations of Open, Mode-filtered Cavities}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics*[width=0.7\textwidth]{figs/Chapter-6/230610_cavity_variations.png}
-    \caption{}
+    \includegraphics*[width=0.55\textwidth]{figs/Chapter-6/230610_cavity_variations.png}
+    \caption{\label{fig:chap6-cavity-variations} Four cavity design variations. (a) is a standard sealed cylindrical cavity, (b) is an open cavity with smooth walls, (c) is an open cavity with resistive walls, and (d) is an open cavity with grooved walls. The main cavity and coaxial terminator parameter are identical for all four cavities.}
 \end{figure}
 
+The ideal cavity design for a single $\mathrm{TE}_{011}$ mode CRES experiment is potential a cavity that utilizes the coaxial terminations with a mode-filtering wall. The first step towards validating that a cavity that combines these two design features will operate as expected is a thorough simulation effort for which finite element method (FEM) simulation software is invaluable. The primary tool for electromagnetic FEM calculations inside Project 8 is Ansys HFSS, which has a robust and well-established eigenmode solver that can identify the resonant frequencies and associated Q-factors for given structure. 
+
+Four variations of a cavity design with a $\sim 1$~GHz $\mathrm{TE}_{011}$ resonance were implemented in HFSS (see Figure \ref{fig:chap6-cavity-variations}). The four designs include a standard cylindrical cavity, an open cavity with smooth walls, an open cavity with resistive walls, and an open cavity with grooved walls. The relevant design parameters are summarized in Table \ref{tab:chap6-cavity-sim-params}. All cavities were simulated using copper walls and filled with a vacuum dielectric. The identities of the resonant modes found by HFSS were validated by visual inspection of the electric and magnetic field patterns and by comparison to analytical calculations of the mode frequencies.
+
+\begin{table}[htbp]
+    \centering
+    \caption{\label{tab:chap6-cavity-sim-params} A table of cavity design parameters used for HFSS simulations.}
+    \begin{tabular}{l|c|c|l}
+        \hline
+        Name & Qty. & Unit & Description \\
+        \hline
+        $D_\mathrm{cav}$ & 326.4 & mm & Cavity diameter\\
+        $L_\mathrm{cav}$ & 1668.0 & mm & Cavity length\\
+        $D_\mathrm{term}$ & 200.2 & mm & Inner diameter of coaxial terminator\\
+        $L_\mathrm{term}$ & 100.0 & mm & Terminator length\\
+        $l_\mathrm{die}$ & 8.3 & mm & Dielectric spacer thickness\\
+        $\Delta l_\mathrm{die}$ & 66.7 & mm & Distance between dielectric spacers\\
+        $l_\mathrm{groove}$ & 3.0 & mm & Groove height\\
+        $d_\mathrm{groove}$ & 9.0 & mm & Groove depth\\
+        $\Delta l_\mathrm{groove}$ & 18.3 & mm & Distance between grooves \\
+        \hline
+    \end{tabular}
+\end{table}
+
+The results of the HFSS simulations validate our predictions of the resonant behavior of an open, mode-filtered cavity developed in the preceding sections (see Figure \ref{fig:chap6-hfss-cavity-variation-results})
 \begin{figure}[htbp]
     \centering
-    \includegraphics*[width=0.9\textwidth]{figs/Chapter-6/230610_cavity_variation_eigenmodes_linear_annotate.png}
-    \caption{}
+    \includegraphics*[width=0.85\textwidth]{figs/Chapter-6/230610_cavity_variation_eigenmodes_linear_annotate.png}
+    \caption{\label{fig:chap6-hfss-cavity-variation-results} The frequencies and Q-factors of the resonant modes identified by HFSS for the cavity variations shown in Figure \ref{fig:chap6-cavity-variations}.}
 \end{figure}
+The resonant modes of the standard cavity agree well with analytical calculations for the resonant frequencies of cylindrical cavities. One can see that for a standard cavity the $\mathrm{TE}_{01}$ and the $\mathrm{TM}_{11}$ are degenerate in frequency with relatively high Q-factors. The open ended cavity preserves the high Q-factors of the $\mathrm{TE}_{01}$ modes, while the other modes, since their boundary conditions do not match the coaxial geometry, have their Q-factors suppressed. One can see that the effect of the resistive and inductive mode-filtering schemes is to effectively shift the resonant frequencies of the $\mathrm{TM}_{11}$ modes below those of the associated $\mathrm{TE}_{01}$ modes, which breaks the degeneracy. Optimization of the dielectric spacer or groove parameters can ensure that the $\mathrm{TE}_{011}$ mode is isolated from other modes by $O(10)$~MHz, which provides sufficient bandwidth for a measurement of the tritium spectrum endpoint.
+
+Further optimization of the cavity design requires a more detailed cavity simulation that includes the cavity coupling mechanism as well as other geometry modifications required for integration into the magnetic and tritium gas subsystems. Perhaps more important is the development of the capability to simulate the interaction of electrons with the cavity so that simulated CRES signals can be generated using cavities designed for CRES measurements. Simulated CRES signals can then be used to estimate the neutrino mass sensitivity of the experiment, which allows for the optimization of the cavity design towards the configuration that provides the best measurement of the neutrino mass. 
 
 \section{Single-mode Resonant Cavity Measurements}
 \label{sec:chap6-single-mode-cavity-measurement}
 
+Laboratory prototyping of cavities and measurement test stands play an important role in the research and development process that cannot be replaced by simulations. For example, constructing a prototype of a CRES measurement cavity forces one to consider important practical issues such as manufacturability and machine tolerances that may require modifications to the design. Furthermore, by comparing laboratory measurements of the resonant behavior of a real cavity to simulations of the cavity, one can quantify the impact of mechanical tolerances, which allows for more accurate sensitivity estimates of the experiment. Lastly, the development of these prototypes helps to build the necessary experience and expertise within the collaboration required for more complicated experiments to succeed.
+
+In this spirit a prototype cavity was constructed to demonstrate the open, mode-filtered cavity concept explored in the previous sections. The primary goal of the measurements was to validate that an open, mode-filtered cavity suppressed the $\mathrm{TM}_{11}$ modes as predicted by HFSS simulations.
+
 \subsection{Cavities and Setup}
 
+Two rudimentary, cavities were constructed using segments of copper pipe available from McMaster-Carr (see Figure \ref{fig:toy-cavity-cartoon}). The design consists of copper pipes of two diameters. The larger diameter pipe forms the main cavity wall and the smaller diameter pipe is used to create a coaxial termination. The diameter of the outer pipe was chosen to produce a $\mathrm{TE}_{011}$ resonance of approximately 6~GHz, while the diameter of the smaller pipe was selected based on the open termination criteria introduced in Section \ref{sec:chap6-open-cavities}.
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.7\textwidth]{figs/Chapter-6/230612_toy_cavity_cartoon.png}
-    \caption{}
+    \caption{\label{fig:toy-cavity-cartoon} }
 \end{figure}
+The approximate diameters and lengths of the copper pipe are summarized in Table \ref{tab:chap6-cavity-prototype-params}. Coupling to the cavity was achieved using a hand-formable segment of coaxial cable stripped at one end to form a loop antenna. This was inserted into a small hole located at the center of the main cavity wall. The coaxial terminators were supported inside the main cavity by carving a spacer from polystyrene foam (styrofoam) so that they could be easily inserted into the cavity and repositioned. The dielectric constant of styrofoam is quite close to air at microwave frequencies so this is expected to have minimal impact on the resonant properties of the cavity. 
 
+\begin{table}[htbp]
+    \centering
+    \caption{\label{tab:chap6-cavity-prototype-params} A table of parameters describing the cavity prototypes. Certain values such as the cavity length and the distace between dielectric spacers are approximate due to variation in the machining of the copper. In particular, the filtered cavity was constructed from conducting copper segments that varied in size from 1.50" to 1.85".}
+    \begin{tabular}{l|c|c|l}
+        \hline
+        Name & Qty. & Unit & Description \\
+        \hline
+        $D_\mathrm{cav}$ & 2.625 & in & Cavity diameter\\
+        $L_\mathrm{cav}$ & $\approx 13$ & in & Cavity length\\
+        $D_\mathrm{term}$ & 1.375 & in & Inner diameter of coaxial terminator\\
+        $L_\mathrm{term}$ & 1.575 & in & Terminator length\\
+        \hline
+        $l_\mathrm{die}$ & 0.75 & in & Dielectric spacer thickness\\
+        $\Delta l_\mathrm{die}$ & $\approx 1.50$ to $1.85$ & in & Distance between dielectric spacers\\
+        \hline
+    \end{tabular}
+\end{table}
 
+The actual length of the cavity is given by the distance between the inner edges of the coaxial terminations. The length of the outer section of pipe that forms the main wall of the cavity is approximately 16" in length which leads to a cavity length of $\approx 13$" when both terminators are inserted in the cavity. Because the terminators were not rigidly mounted this distance is only approximate, however, the uncertain length of the cavity will not prevent us from validating the open cavity design.
+
+Along with the smooth-walled open cavity a resistively mode-filtered cavity was constructed by creating dielectric spacers out of segments of clear PVC pipe (see Figure \ref{fig:chap6-prototype-cav-meas-images}). The spacers were machined such that the conductive segments of the cavity would be separated by 0.75" when the cavity was fully assembled. Due to variations in the lengths of the copper segments that make up the cavity wall the distance between spacers has significant variation with average value of about 1.7". Eight total spacers were used to build the cavity, which when assembled was approximately 16" in total length similar to the non-filtered cavity.
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}{0.48\textwidth}
@@ -445,55 +503,47 @@ The type of perturbations required can be determined by visualizing the surface 
         \includegraphics*[width=\textwidth]{figs/Chapter-6/230612_coupling_loop.png}
         \caption{}
     \end{subfigure}
-    \caption{}
+    \caption{\label{fig:chap6-prototype-cav-meas-images} Images depicting the measurement of the filtered and non-filtered open cavities using the VNA. The coupling loop in the figure is shown in the TE orientation.}
 \end{figure}
 
+Measurements of both cavities were performed using a VNA connected to the cavity coupling probe (see Figure \ref{fig:chap6-prototype-cav-meas-images}). By measuring the return loss over a range of frequencies one can measure the frequencies and relative Q-factors of the resonant modes in the cavity. Due to the opposite polarity of the electric fields for the TE and TM modes, the loop coupling probe must be rotated $90^\circ$ to change the polarity of the loop antenna. When the antenna is oriented such that the loop opening faces the ends of the cavity, it couples primarily to the TE modes which have magnetic fields directed along the long axis of the cavity (see Figure \ref{fig:chap6-prototype-cav-meas-images}). If the coupling loop is turned by $90^\circ$ from where it is shown in the image then it will couple to the TM modes which have azimuthally directed magnetic fields. In this way both the TE and TM resonances can be measured independently. 
+
 \subsection{Results and Discussion}
+
+The primary analysis method for the prototype cavities involved simply visualizing the return loss measured by the VNA and comparing between the filtered and non-filtered cavities. Since the resonances measured by the VNA are not labeled, there is some uncertainty about the true identities of the modes measured by the VNA. To help with this we performed a simulation of the simplest possible cavity that could be created from the prototype components, which is a fully open cavity created by simply removing the coaxial inserts from the non-filtered cavity configuration. The fully open cavity with the as-built dimensions was simulated in HFSS to get estimates on the positions of the $\mathrm{TE}_{011}$ and $\mathrm{TM}_{111}$ modes (see Figure \ref{fig:chap6-fully-open-cavity-sim}).
 
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.7\textwidth]{figs/Chapter-6/230612_simulated_toy_cav_no_term_modes_annotated.png}
-    \caption{}
+    \caption{\label{fig:chap6-fully-open-cavity-sim} HFSS simulation results for a the as-built cavity with the coaxial terminators removed. The $\mathrm{TE}_{011}$/$\mathrm{TM}_{111}$ frequency is approximately 5.78~GHz.}
 \end{figure}
 
+Simulation of the fully open cavity shows that the $\mathrm{TE}_{011}$/$\mathrm{TM}_{111}$ modes have a frequency of approximately 5.78~GHz in the fully open cavity. If the frequency of this mode is compared to the measurments of the fitered and non-filtered cavities with the terminators removed we can easily identify the $\mathrm{TE}_{011}$ mode at approximately 5.75~GHz (see Figure \ref{fig:chap6-cav-measurements-no-term}).
+
+For the non-filtered cavity one sees that the $\mathrm{TE}_{011}$ mode is degenerate in frequency with what appears to be a doublet of TM modes located at the $\mathrm{TM}_{111}$ frequency position. This doublet is actually the $\mathrm{TM}_{111}$ mode, which has two polarizations with opposite polarizations. Because the pipe used to construct the cavity is not perfectly round, the frequency degeneracy between the two polarizations is broken producing the doublet peak.
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}{0.67\textwidth}
-        \includegraphics*[width=\textwidth]{figs/Chapter-6/210922_open_cavity_no_term_TM_vs_TE.png}
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics*[width=\textwidth]{figs/Chapter-6/230613_TETM_nofilter_cav_no_term.png}
         \caption{}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.67\textwidth}
-        \includegraphics*[width=\textwidth]{figs/Chapter-6/210922_open_cavity_no_term_TM_vs_TE_zoom.png}
-        \caption{}
-    \end{subfigure}
-    \caption{}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \begin{subfigure}{0.67\textwidth}
-        \includegraphics*[width=\textwidth]{figs/Chapter-6/210922_open_cavity_with_and_without_term_TE.png}
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics*[width=\textwidth]{figs/Chapter-6/230613_TETM_filter_cav_no_term.png}
         \caption{}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.67\textwidth}
-        \includegraphics*[width=\textwidth]{figs/Chapter-6/210922_open_cavity_with_and_without_term_TM.png}
-        \caption{}
-    \end{subfigure}
-    \caption{}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \begin{subfigure}{0.67\textwidth}
-        \includegraphics*[width=\textwidth]{figs/Chapter-6/220601_TE_resonance_filtering.png}
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics*[width=\textwidth]{figs/Chapter-6/230613_TETM_nofilter_cav_with_term.png}
         \caption{}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.67\textwidth}
-        \includegraphics*[width=\textwidth]{figs/Chapter-6/220505_TM_resonance_filtering.png}
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics*[width=\textwidth]{figs/Chapter-6/230613_TETM_filter_cav_with_term.png}
         \caption{}
     \end{subfigure}
-    \caption{}    
+    \caption{\label{fig:chap6-cav-measurements-no-term} Measurements of the filtered and non-filtered prototype cavities acquired with the VNA.}
 \end{figure}
+In the case of the filtered cavity with no terminators there is an isolated TE resonance at 5.75~GHz that appears to be the $\mathrm{TE}_{011}$, however, there is no apparent $\mathrm{TM}_{111}$ doublet at the same frequency. This is what one would expect if the mode-filtering was effective at suppressing the TM modes. There is a notable difference in the Q of the $\mathrm{TE}_{011}$ resonance for the non-filtered and filtered cavities indicated by the relative widths of the resonances. This is likely caused by the large width of the dielectric spacers that are partially impeding the TE modes. When the terminators are inserted into the cavity one sees that Q-factors of the modes improves as expected, by noticing the narrowing of the peaks compared to the no terminator plots. 
+
+In conclusion, one see from these cavity measurements that, in principle, mode-filtering can be used to separate the $\mathrm{TE}_{011}$ resonance from the degenerate $\mathrm{TM}_{111}$ mode in combination with the an open cavity design. The ideal next step would be to construct a open, mode-filtered cavity that could be used to perform CRES measurements. In order to study the coupling of an electron to the isolated $\mathrm{TE}_{011}$ mode.
