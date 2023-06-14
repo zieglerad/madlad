@@ -27,7 +27,7 @@
 \contentsline {subsection}{\numberline {3.4.4}Tritium Spectrum and Neutrino Mass Results}{8}{}%
 \contentsline {section}{\numberline {3.5}Phase III: Developing Free-space CRES Measurements with Antenna Arrays}{8}{}%
 \contentsline {subsection}{\numberline {3.5.1}The Basic Approach}{9}{}%
-\contentsline {subsection}{\numberline {3.5.2}The FSCD: Free Space CRES Demonstrator}{11}{}%
+\contentsline {subsection}{\numberline {3.5.2}The FSCD: Free Space CRES Demonstrator}{12}{}%
 \contentsline {chapter}{\numberline {4}Signal Reconstruction Techniques for Antenna Array CRES and the FSCD}{15}{}%
 \contentsline {section}{\numberline {4.1}Introduction}{15}{}%
 \contentsline {section}{\numberline {4.2}FSCD Simulations}{16}{}%
