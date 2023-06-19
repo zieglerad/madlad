@@ -127,21 +127,42 @@ The background magnetic field for the FSCD experiment is provided by a hospital-
     \includegraphics*[width=0.5\textwidth]{figs/Chapter-3/230614_mri_magnet.png}
     \caption{\label{fig:chap3-mri-magnet}}
 \end{figure}
-The magnet is installed in the Project 8 laboratory located at the University of Washington, Seattle, and is shimmed to produce a uniform magnetic field with variations on the ppm scale.
+The magnet is installed in the Project 8 laboratory located at the University of Washington, Seattle, and is shimmed to produce a uniform magnetic field with variations on the ppm scale. Measurements of the magnetic field non-uniformities were performed using a NMR probe and rotational gantry to capture measurements of the magnetic field around an elliptical surface in the center of the MRI magnet. During the operation of the FSCD an array of Hall or NMR magnetometers could be used to periodical measure the magnetic field in order to quantify its time stability.
+
+Inside the main magnetic field of the MRI magnet are additional magnets that provide the capability to shift the value of the background magnetic field as well as the magnets that produce the magnetic trap. Shifting the background value of the magnetic field on a scale of $O(\mu T)$ allows one to control the cyclotron frequencies of electrons with a fixed kinetic energy, which is key to effectively calibrating the FSCD. The preferred calibration method for the FSCD is a mono-energetic electron gun that can inject electrons into the magnetic trap with a known kinetic energy. In combination with the field shifting magnet one can vary the cyclotron frequencies of the electrons to measure the response of the antenna array as a function of the radiation frequency and electron position. This procedure not only characterizes the response of the antenna array but also provides further information on magnetic field uniformity, which important to achieving optimal energy resolution.
+
+Several additional magnetic coils will need to included inside the MRI magnet to produce the magnetic trap. The ideal trap shape for CRES is the perfect magnetic box, which has a flat bottom and step function walls. Any variation in the average magnetic field experienced by an electron leads to changes in the cyclotron frequency that can make determining the true starting kinetic energy more difficult. This includes changes in the magnetic field caused by the walls of the magnetic trap as well as radial magnetic field variations. The perfect box trap is completely uniform and has infinitely steep walls that cause no change in the electron's cyclotron frequency as it is reflected from the trap wall, however, such a trap cannot be made from any combination of magnetic coils since it violates Maxwell's equations. The goal of magnetic trap design is to identify the configuration of coils that produces a trap that approximates the perfect box trap as closely as possible.
 
 \subsubsection*{Antenna Array}
 
+The canonical antenna array design for a CRES experiment is a uniform cylindrical array of antennas that surrounds the magnetic trap volume. Since the FSCD is a demonstrator experiment, the antenna array design is the simplest form of the uniform cylindrical array, which is a single circular ring of antennas with a diameter of 20~cm (see Figure \ref{fig:chap3-fscd-render}).
 \begin{figure}[htbp]
     \centering
-    \includegraphics*[width=0.4\textwidth]{figs/Chapter-3/230614_5slot_model.png}
-    \caption{}
+    \begin{subfigure}{0.7\textwidth}
+        \includegraphics*[width=\textwidth]{figs/Chapter-3/230614_fscd_render.png}
+        \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.4\textwidth}
+        \includegraphics*[width=\textwidth]{figs/Chapter-3/230614_5slot_model.png}
+        \caption{}
+    \end{subfigure}
+    \caption{\label{fig:chap3-fscd-render} (a) A model of the FSCD antenna array, magnetic trap, and tritium containment vessel design.(b) A more detailed model of a prototype design for the 5-slot waveguide antenna design.}
 \end{figure}
+Along this circle are sixty slotted waveguide antennas that fully populate the available space around the array circumference. In order to maximize the power collected from each electron it is optimal to cover as large a fraction of the solid angle around the magnetic trap as possible. 
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics*[width=0.7\textwidth]{figs/Chapter-3/230614_fscd_render.png}
-    \caption{}
-\end{figure}
+The distance between antennas around the circumference of the array is proportional to the wavelength of the cyclotron radiation. Therefore, maximizing the solid angle coverage of the array, while minimizing channel count to keep the hardware and data acquisition costs manageable, biases one towards smaller array diameters. Antenna near-field effects limit the minimum diameter of the array for a given antenna design since the radiation from electron's that are too close to the array cannot be detected due to destructive interference caused by path-length differences from the electron to different points on the antenna surface. 
+
+Slotted waveguide antennas are used in the FSCD antenna array due to their high efficiency and low loss, which comes from the lack of dielectric materials in the antenna structure. Coupling to the waveguide can be performed with a coaxial cable connected at the center or on either end of the waveguide. One of the drawbacks of waveguide antennas is the large amount of space required to fit them inside the limited MRI magnet volume. Alternative antenna designs, constructed from microstrip printed circuit boards require significantly less space at the cost of slightly higher energy loss in the antenna structure. 
+
+The FSCD antenna design is a 5~cm long segment of WR-34 waveguide with 5 vertical slots cut into the side. The distance between slots along the length of the waveguide is a half wavelength for optimal power combination between the individual antenna slots. Each slot is offset from the center of the antenna face a small distance in order to most effectively couple the slot to waveguide modes inside the antenna.
+
+The passive power combination achieved by placing 5 slots in a single waveguide is a compromise intended to reduce the cost and complexity of the antenna array system. Each additional channel in the array requires it's own cryogenic amplifier and also increase the required computer power to process the raw data collected by digitizing each channel. Passive summation, achieved by combining antennas into arrays axially, reduces the array channel count at the cost of losses from imperfect passive combination. Imperfect passive combination is caused by effects such as re-radiation of energy from and destructive interference between slots in the waveguide antenna.
+
+
+
+
+
 
 \subsubsection*{Gas System and Tritium Source}
 
