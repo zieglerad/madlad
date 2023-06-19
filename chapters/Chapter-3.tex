@@ -41,23 +41,36 @@ Neutrino mass measurements using tritium beta-decay are effectively attempting t
     \label{fig:p8_nu_mass_goal}
 \end{figure}
 
+\cleardoublepage
+
+
 \section{Phase II: First Tritium Beta Decay Spectrum and Neutrino Mass Measurement with CRES}
 
-\subsection{The Project 8 CRES Demonstrator}
+In Phase II Project 8 demonstrate the first ever measurement of the tritium beta-decay spectrum endpoint using the CRES technique, which lead to the first neutrino mass measurement by the Project 8 collaboration. This milestone was made possible by many improvements in the CRES technique and more developed understanding of CRES systematics, which takes an important first step towards larger scale measurments of the tritium beta-decay spectrum with CRES. In this section, I shall briefly describe some the important elements of the Phase II experiment, with the goal of contextualizing the research and development efforts for Phases III and IV of Project 8. For more complete descriptions of the work that lead to Project 8's Phase II results please refer to the many Phase II papers produced by the collaboration.
+
+\subsection{The Phase II CRES Apparatus}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{figs/Chapter-3/phaseII_system.png}
+    \begin{subfigure}{0.6\textwidth}
+        \includegraphics[width=1\textwidth]{figs/Chapter-3/phaseII_system.png}
+        \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.7\textwidth}
+        \includegraphics[width=1\textwidth]{figs/Chapter-3/apparatus.pdf}
+        \caption{}
+    \end{subfigure}
     \caption{Caption}
-    \label{fig:phase2_apparatus}
+    \label{fig:chap3-phase2-apparatus}
 \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figs/Chapter-3/apparatus.pdf}
-    \caption{Caption}
-    \label{fig:phase2_cres_cell}
-\end{figure}
+\subsubsection*{Magnet and Cryogenics}
+A diagram and picture of the Phase II CRES apparatus are shown in Figure \ref{fig:chap3-phase2-apparatus}. 
+
+\subsubsection*{CRES Cell}
+
+\subsubsection*{RF System}
 
 \subsection{CRES Track and Event Reconstruction}
 
@@ -111,7 +124,13 @@ Several features of the antenna array approach make it an attractive candidate t
 
 The easy availability of position information with the antennas array approach is potentially a unique advantage that provides significant flexibility in the magnetic field uniformity requirements compared to other proposed approaches to large volume CRES (see Chapter \ref{chap:cavity}). Spatial discrimination using digital beamforming leads to pileup reduction, which helps to reduce the potential of background events caused by missing tracks or by incorrectly clustering a group of tracks into an event. Limits on the background rate for a neutrino mass measurement with 40~meV sensitivity are stringent and the total activity of the tritium source for such an experiment is gigantic relative to the activity near the endpoint. Thus, pileup discrimination could be an important tool for a large scale CRES experiment.
 
-Another beneficial quality of the antenna array approach is that the volume of the experiment can be scaled independent of frequency by simply adding more antennas to the array. Resonant cavities, the proposed alternative large volume CRES technology, are ideally operated in magnetic fields that cause electrons to move with cyclotron frequencies near the fundamental cavity resonance, to avoid complex coupling of the electron to many cavity modes simultaneously. This leads to a coupling between the cavity volume and the magnetic field magnitude, which forces one to lower the magnetic field in order to increase the experiment scale. Whereas, for antenna arrays, in principle there is no physical limitation on the size of the antenna array that can be used at a particular magnetic field. However, the nature of scaling an antenna array based experiment leads to rapidly increasing cost and complexity due to the large number of antennas, amplifiers, and data streams that require substantial computer processing power to effectively analyze.
+Another beneficial quality of the antenna array approach is that the volume of the experiment can be scaled independent of frequency by simply adding more antennas to the array (see Figure \ref{fig:chap3-phaseiv-antenna}). Resonant cavities, the proposed alternative large volume CRES technology, are ideally operated in magnetic fields that cause electrons to move with cyclotron frequencies near the fundamental cavity resonance, to avoid complex coupling of the electron to many cavity modes simultaneously. This leads to a coupling between the cavity volume and the magnetic field magnitude, which forces one to lower the magnetic field in order to increase the experiment scale. Whereas, for antenna arrays, in principle there is no physical limitation on the size of the antenna array that can be used at a particular magnetic field. However, the nature of scaling an antenna array based experiment leads to rapidly increasing cost and complexity due to the large number of antennas, amplifiers, and data streams that require substantial computer processing power to effectively analyze.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=1\textwidth]{figs/Chapter-3/phaseiv_concept_sketch_ver2.png}
+    \caption{\label{fig:chap3-phaseiv-antenna} A conceptual sketch of a large volume antenna array based CRES experiment to measure the neutrino mass.}
+\end{figure}
 
 \subsection{The FSCD: Free-space CRES Demonstrator}
 
@@ -125,7 +144,7 @@ The background magnetic field for the FSCD experiment is provided by a hospital-
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.5\textwidth]{figs/Chapter-3/230614_mri_magnet.png}
-    \caption{\label{fig:chap3-mri-magnet}}
+    \caption{\label{fig:chap3-mri-magnet} An image of the MRI magnet installed in the Project 8 laboratory at the University of Washington, Seattle.}
 \end{figure}
 The magnet is installed in the Project 8 laboratory located at the University of Washington, Seattle, and is shimmed to produce a uniform magnetic field with variations on the ppm scale. Measurements of the magnetic field non-uniformities were performed using a NMR probe and rotational gantry to capture measurements of the magnetic field around an elliptical surface in the center of the MRI magnet. During the operation of the FSCD an array of Hall or NMR magnetometers could be used to periodical measure the magnetic field in order to quantify its time stability.
 
@@ -157,25 +176,23 @@ Slotted waveguide antennas are used in the FSCD antenna array due to their high 
 
 The FSCD antenna design is a 5~cm long segment of WR-34 waveguide with 5 vertical slots cut into the side. The distance between slots along the length of the waveguide is a half wavelength for optimal power combination between the individual antenna slots. Each slot is offset from the center of the antenna face a small distance in order to most effectively couple the slot to waveguide modes inside the antenna.
 
-The passive power combination achieved by placing 5 slots in a single waveguide is a compromise intended to reduce the cost and complexity of the antenna array system. Each additional channel in the array requires it's own cryogenic amplifier and also increase the required computer power to process the raw data collected by digitizing each channel. Passive summation, achieved by combining antennas into arrays axially, reduces the array channel count at the cost of losses from imperfect passive combination. Imperfect passive combination is caused by effects such as re-radiation of energy from and destructive interference between slots in the waveguide antenna.
+The passive power combination achieved by placing 5 slots in a single waveguide is a compromise intended to reduce the cost and complexity of the antenna array system. Each additional channel in the array requires it's own cryogenic amplifier and also increase the required computer power to process the raw data collected by digitizing each channel. Passive summation, achieved by combining antennas into arrays axially, reduces the array channel count at the cost of losses from imperfect passive combination. Imperfect passive combination is caused by effects such as re-radiation of energy from and destructive interference between slots in the waveguide antenna. 
 
+Interference and re-radiation eventually limit the achievable the axial extent of passive power combination. The 5-slot designed developed for the FSCD is optimized to minimize the impact of these losses while achieving the maximum amount of axial coverage with a single ring of antennas. Scaling beyond the volume covered by a single ring of antennas is achieved by stacking additional rings of antennas together to cover a larger trap volume for a higher statistics measurement of the tritium spectrum endpoint region. A likely scenario for the FSCD experiment involves a staged experiment approach, where first a series of measurements is performed using only a single ring of antennas followed by experiments that add additional rings to the FSCD. The goal would be to first understand the principles of antenna array CRES using the simplest possible experiment, before attempting to scale the technique by expanding the antenna array size. 
 
+\subsubsection*{Tritium Source}
 
+While the primary purpose of the FSCD is as a technology demonstrator, it is unlikely for the collaboration to gain the required confidence in the antenna array CRES technique to perform neutrino mass measurements at the 40~meV sensitivity level without an intermediate scale measurement of the neutrino mass using antenna array CRES. Therefore, the FSCD has an additional scientific goal of measuring the neutrino mass with a rough sensitivity goal of a few eV. This level of precision is achievable using a source of molecular tritium with a volume of approximately 1~L at a density comparable to potential Phase IV scenarios.
 
-
-
-\subsubsection*{Gas System and Tritium Source}
+Unlike previous CRES experiments, where the tritium source could be co-located with the receiving antenna inside a waveguide transmission line, the tritium source in the FSCD is thermally isolated from the antenna array to avoid freeze-out of the tritium molecules. The tiny radiation power emitted by electrons requires a system noise temperature of $\approx 10$~K or less, in order to detect events at a high enough efficiency to reach the neutrino mass sensitivity goals of the experiment. Achieving a system noise of 10~K requires that the antenna array and amplifiers operate at cryogenic, liquid helium temperatures of $\approx 4$~K, which significantly lowers the vapor pressure of molecular tritium. By keeping the molecular tritium isolated in an RF-transparent vessel the tritium gas can be kept at a relatively warmer temperature in the range of 30~K to avoid the accumulation of tritium on the experiment surfaces. 
 
 \subsubsection*{Data Acquisition and Reconstruction}
 
-\subsubsection*{Neutrino Mass Sensitivity}
+A fundamental change in the data acquisition system for the FSCD is the shift from single to multi-channel reconstruction. This transition results in a significant increase in the data-generation rate, which is linearly related to the number of independent channels in the array. The larger data volume coincides with an increased demand for computer processing power based on the need for more precise signal reconstruction algorithms driven by the FSCD and Phase IV sensitivity goals. Therefore, the data acquisition system for the FSCD is likely to represent a significantly larger fraction of the experiment cost and complexity than previous CRES experiments.
 
-\subsubsection*{Scaling}
+Each antenna in the array is connected to a cryogenic amplifier and down-converted from the 26~GHz CRES frequency using an IQ-mixer to reduce the size of the analysis window in which the tritium spectrum is measured. Using an LO with a frequency of approximately 25.80~GHz the antenna array signals can be digitized at a rate of 200~MHz, which is sufficient bandwidth to resolve the complete sideband spectrum produced by axial oscillations of electrons in the FSCD magnetic trap. 
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics*[width=1\textwidth]{figs/Chapter-3/phaseiv_concept_sketch_ver2.png}
-    \caption{}
-\end{figure}
+Direct storage of the raw FSCD antenna array data is undesirable, since the estimated amount of raw data generated is $O(1)$~exabyte per year. The management and storage of such a large dataset is infeasible for a demonstrator experiment on the scale of the FSCD and would represent a large fraction of the budget for a Phase IV scale antenna array based CRES experiment. Therefore, a sub-goal of the FSCD experiment is the development of real-time reconstruction methods that could reduce the raw data volume by detecting and reconstructing CRES events in real-time. The ultimate goal would be a complete real-time reconstruction pipeline that takes raw voltages samples from the antenna array and returns estimates for the starting kinetic energies of CRES events in the data.
 
+The feasibility of a real-time reconstruction pipeline rests on the development of computationally efficient algorithms that can be implemented without the need for enormous computing resources. One challenge with the antenna array approach is that the small radiation power of a single electron is distributed between each channel in the array, such that reconstruction using only the information in a single channel is not possible. Therefore, the simply performing the initial step in reconstruction --- signal detection --- requires orders of magnitude more computational power than previous CRES experiments. This operation will then be followed by other, potentially more expensive, reconstruction steps that are required in order to determine the kinetic energy of the electron.
 
