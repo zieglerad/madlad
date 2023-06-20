@@ -2,7 +2,7 @@
 \contentsline {chapter}{List of Figures}{viii}{}%
 \contentsline {chapter}{List of Tables}{viii}{}%
 \contentsline {chapter}{Acknowledgments}{viii}{}%
-\contentsline {chapter}{\numberline {1}Introduction}{1}{}%
+\contentsline {chapter}{\numberline {1}Introduction and Summary}{1}{}%
 \contentsline {chapter}{\numberline {2}Neutrinos and Neutrino Masses}{2}{}%
 \contentsline {section}{\numberline {2.1}Introduction}{2}{}%
 \contentsline {section}{\numberline {2.2}Neutrinos}{2}{}%
@@ -22,12 +22,12 @@
 \contentsline {subsection}{\numberline {3.3.2}Phased Development Plans}{8}{}%
 \contentsline {section}{\numberline {3.4}Phase II: First Tritium Beta Decay Spectrum and Neutrino Mass Measurement with CRES}{10}{}%
 \contentsline {subsection}{\numberline {3.4.1}The Phase II CRES Apparatus}{10}{}%
-\contentsline {subsection}{\numberline {3.4.2}CRES Track and Event Reconstruction}{10}{}%
-\contentsline {subsection}{\numberline {3.4.3}Measurements with Krypton}{10}{}%
-\contentsline {subsection}{\numberline {3.4.4}Tritium Spectrum and Neutrino Mass Results}{10}{}%
-\contentsline {section}{\numberline {3.5}Phase III: Developing Free-space CRES Measurements with Antenna Arrays}{10}{}%
-\contentsline {subsection}{\numberline {3.5.1}The Basic Approach}{11}{}%
-\contentsline {subsection}{\numberline {3.5.2}The FSCD: Free-space CRES Demonstrator}{12}{}%
+\contentsline {subsection}{\numberline {3.4.2}CRES Track and Event Reconstruction}{13}{}%
+\contentsline {subsection}{\numberline {3.4.3}Measurements with Krypton}{13}{}%
+\contentsline {subsection}{\numberline {3.4.4}Tritium Spectrum and Neutrino Mass Results}{14}{}%
+\contentsline {section}{\numberline {3.5}Phase III: Developing Free-space CRES Measurements with Antenna Arrays}{14}{}%
+\contentsline {subsection}{\numberline {3.5.1}The Basic Approach}{15}{}%
+\contentsline {subsection}{\numberline {3.5.2}The FSCD: Free-space CRES Demonstrator}{17}{}%
 \contentsline {chapter}{\numberline {4}Signal Reconstruction Techniques for Antenna Array CRES and the FSCD}{23}{}%
 \contentsline {section}{\numberline {4.1}Introduction}{23}{}%
 \contentsline {section}{\numberline {4.2}FSCD Simulations}{24}{}%
