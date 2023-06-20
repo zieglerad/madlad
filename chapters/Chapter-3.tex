@@ -53,7 +53,7 @@ In Phase II Project 8 demonstrate the first ever measurement of the tritium beta
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.55\textwidth]{figs/Chapter-3/phaseII_system.png}
-    \caption{\label{fig:chap3-phase2-apparatus} Caption}
+    \caption{\label{fig:chap3-phase2-apparatus} The Phase II CRES apparatus used to perform the first measurement of the tritium beta-decay spectrum using CRES.}
 \end{figure}
 
 \subsubsection*{Magnet and Cryogenics}
@@ -70,7 +70,7 @@ Located in the most uniform region of the magnetic field is the CRES cell, which
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.65\textwidth]{figs/Chapter-3/apparatus.pdf}
-    \caption{\label{fig:chap3-cres-cell}}
+    \caption{\label{fig:chap3-cres-cell} Diagram of the CRES cell portion of the Phase II apparatus.}
 \end{figure}
 The CRES cell is manufactured from a segment of cylindrical waveguide designed to operate at K-band frequencies near 26~GHz. The diameter of the waveguide determines which resonant modes of the waveguide will couple to the electron and transmit its radiation to the amplifiers. For Phase II a waveguide diameter of 1~cm was selected, which allows electrons to couple to the $\mathrm{TE}_{11}$ and $\mathrm{TM}_{01}$ cylindrical waveguide modes. To reduce complexity in modeling and analyzing the CRES data, it is ideal to select a diameter that prevents electrons from coupling to higher-order waveguide modes beyond the fundamental TE and TM modes. 
 
@@ -78,9 +78,16 @@ Around the exterior of the cylindrical waveguide are several magnetic coils used
 
 Two primary magnetic trap configurations were used during the Phase II experiment. The first was a shallow trap configuration used primarily for it's high energy resolution to study systematics using $^{83m}$Kr decays, and the second was a deeper trap that could trap a higher percentage of pitch angles. The trade-off with this trap is that the higher trapping efficiency comes at the cost of lower energy resolution due to the greater variation in pitch angle. The deep trap was the trap used to measure the tritium beta-decay spectrum in Phase II.
 
-The source gases were delivered into the CRES cell through a gas port located near the top end of the cylindrical waveguide. To prevent the gases from escaping the cell 
+The source gases were delivered into the CRES cell through a gas port located near the top end of the cylindrical waveguide. To prevent the gases from escaping the cell, vacuum tight RF transparent windows are needed to contain the tritium and krypton source gas across a 1~atm pressure differential, while still transmitting the cyclotron radiation without distortion. The crystalline material, $\mathrm{CaF}_2$, which has a thermal expansion coefficient similar to that of copper, was used for this purpose in the CRES cell. Two windows, each 2.4~mm thick, were used to seal off the ends of the CRES cell. The thickness of 2.4~mm corresponds to half of a cyclotron wavelength when one accounts for the permittivity of $\mathrm{CaF}_2$.
 
 \subsubsection*{RF System}
+
+The RF system in the Phase II apparatus transferred the cyclotron radiation from the CRES cell to the receiver chain that begins at the top of the apparatus, and performed the down-conversion and digitization to obtain signals that could be analyzed to determine the cyclotron frequencies of electrons in the CRES cell (see Figure \ref{fig:chap3-phase2_rf_chain}).
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.6\textwidth]{figs/Chapter-3/230620_phase2_rf_chain.png}
+    \caption{\label{fig:chap3-phase2-rf-chain} Caption}
+\end{figure}
 
 \subsection{CRES Track and Event Reconstruction}
 
