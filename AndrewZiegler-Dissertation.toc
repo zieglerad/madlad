@@ -23,86 +23,85 @@
 \contentsline {section}{\numberline {3.4}Phase II: First Tritium Beta Decay Spectrum and Neutrino Mass Measurement with CRES}{10}{}%
 \contentsline {subsection}{\numberline {3.4.1}The Phase II CRES Apparatus}{10}{}%
 \contentsline {subsection}{\numberline {3.4.2}CRES Track and Event Reconstruction}{14}{}%
-\contentsline {subsection}{\numberline {3.4.3}Measurements with Krypton}{14}{}%
-\contentsline {subsection}{\numberline {3.4.4}Tritium Spectrum and Neutrino Mass Results}{14}{}%
-\contentsline {section}{\numberline {3.5}Phase III: Developing Free-space CRES Measurements with Antenna Arrays}{14}{}%
-\contentsline {subsection}{\numberline {3.5.1}The Basic Approach}{16}{}%
-\contentsline {subsection}{\numberline {3.5.2}The FSCD: Free-space CRES Demonstrator}{17}{}%
-\contentsline {chapter}{\numberline {4}Signal Reconstruction Techniques for Antenna Array CRES and the FSCD}{24}{}%
-\contentsline {section}{\numberline {4.1}Introduction}{24}{}%
-\contentsline {section}{\numberline {4.2}FSCD Simulations}{25}{}%
-\contentsline {subsection}{\numberline {4.2.1}Kassiopeia}{26}{}%
-\contentsline {subsection}{\numberline {4.2.2}Locust}{30}{}%
-\contentsline {subsection}{\numberline {4.2.3}CRESana}{34}{}%
-\contentsline {section}{\numberline {4.3}Signal Detection and Reconstruction Techniques for Antenna Array CRES}{35}{}%
-\contentsline {subsection}{\numberline {4.3.1}Digital Beamforming}{39}{}%
-\contentsline {subsection}{\numberline {4.3.2}Matched Filtering}{47}{}%
-\contentsline {subsection}{\numberline {4.3.3}Machine Learning}{54}{}%
-\contentsline {section}{\numberline {4.4}Analysis of Signal Detection Algorithms for the Antenna Array Demonstrator}{58}{}%
-\contentsline {subsection}{\numberline {4.4.1}Introduction}{58}{}%
-\contentsline {subsection}{\numberline {4.4.2}Signal Detection with Antenna Array CRES}{61}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.1}Antenna Array and DAQ System}{61}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.2}Real-time Signal Detection}{63}{}%
-\contentsline {subsection}{\numberline {4.4.3}Signal Detection Algorithms}{67}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.1}Power Threshold}{67}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.2}Matched Filtering}{69}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.3}Machine Learning}{73}{}%
-\contentsline {subsection}{\numberline {4.4.4}Methods}{75}{}%
-\contentsline {subsubsection}{\numberline {4.4.4.1}Data Generation}{75}{}%
-\contentsline {subsubsection}{\numberline {4.4.4.2}Template Number and Match Estimation}{76}{}%
-\contentsline {subsubsection}{\numberline {4.4.4.3}CNN Training and Data Augmentation}{77}{}%
-\contentsline {subsection}{\numberline {4.4.5}Results and Discussion}{78}{}%
-\contentsline {subsubsection}{\numberline {4.4.5.1}Trigger Classification Performance}{78}{}%
-\contentsline {subsubsection}{\numberline {4.4.5.2}Computational Cost and Hardware Requirements}{80}{}%
-\contentsline {subsection}{\numberline {4.4.6}Conclusion}{82}{}%
-\contentsline {chapter}{\numberline {5}Antenna and Antenna Measurement System Development for the Project 8 Experiment}{84}{}%
-\contentsline {section}{\numberline {5.1}Introduction}{84}{}%
-\contentsline {section}{\numberline {5.2}Antenna Measurements for CRES experiments}{85}{}%
-\contentsline {subsection}{\numberline {5.2.1}Antenna Parameters}{85}{}%
-\contentsline {subsubsection}{\numberline {5.2.1.1}Radiation Patterns}{85}{}%
-\contentsline {subsubsection}{\numberline {5.2.1.2}Directivity and Gain}{86}{}%
-\contentsline {subsubsection}{\numberline {5.2.1.3}Far-field and Near-field}{87}{}%
-\contentsline {subsubsection}{\numberline {5.2.1.4}Polarization}{88}{}%
-\contentsline {subsubsection}{\numberline {5.2.1.5}Antenna Factor and Effective Aperture}{89}{}%
-\contentsline {subsection}{\numberline {5.2.2}Antenna Measurement Fundamentals}{91}{}%
-\contentsline {subsubsection}{\numberline {5.2.2.1}Friis Transmission Equation}{91}{}%
-\contentsline {subsubsection}{\numberline {5.2.2.2}S-Parameters and Network Analyzers}{92}{}%
-\contentsline {subsubsection}{\numberline {5.2.2.3}Antenna Array Commissioning and Calibration Measurements}{93}{}%
-\contentsline {subsection}{\numberline {5.2.3}The Penn State Antenna Measurement System}{94}{}%
-\contentsline {section}{\numberline {5.3}Development of a Synthetic Cyclotron Antenna (SYNCA) for Antenna Array Calibration}{98}{}%
-\contentsline {subsection}{\numberline {5.3.1}Introduction}{98}{}%
-\contentsline {subsection}{\numberline {5.3.2}Cyclotron Radiation Phenomenology}{101}{}%
-\contentsline {subsection}{\numberline {5.3.3}SYNCA Simulations and Design}{107}{}%
-\contentsline {subsection}{\numberline {5.3.4}Characterization of the SYNCA}{111}{}%
-\contentsline {subsection}{\numberline {5.3.5}Beamforming Measurements with the SYNCA}{115}{}%
-\contentsline {subsection}{\numberline {5.3.6}Conclusions}{118}{}%
-\contentsline {section}{\numberline {5.4}FSCD Antenna Array Measurements with the SYNCA}{119}{}%
-\contentsline {subsection}{\numberline {5.4.1}Introduction}{119}{}%
-\contentsline {subsection}{\numberline {5.4.2}Measurement Setups}{121}{}%
-\contentsline {subsubsection}{\numberline {5.4.2.1}FSCD Array Setup}{121}{}%
-\contentsline {subsubsection}{\numberline {5.4.2.2}Synthetic Array Setup}{123}{}%
-\contentsline {subsection}{\numberline {5.4.3}Simulations, Analysis, and Results}{124}{}%
-\contentsline {subsubsection}{\numberline {5.4.3.1}Simulations}{124}{}%
-\contentsline {subsubsection}{\numberline {5.4.3.2}Phase Analysis}{125}{}%
-\contentsline {subsubsection}{\numberline {5.4.3.3}Magnitude Analysis}{130}{}%
-\contentsline {subsubsection}{\numberline {5.4.3.4}Beamforming Characterization}{133}{}%
-\contentsline {subsection}{\numberline {5.4.4}Conclusions}{136}{}%
-\contentsline {chapter}{\numberline {6}Development of Resonant Cavities for Large Volume CRES Measurements}{137}{}%
-\contentsline {section}{\numberline {6.1}Introduction}{137}{}%
-\contentsline {section}{\numberline {6.2}Cylindrical Resonant Cavities}{138}{}%
-\contentsline {subsection}{\numberline {6.2.1}General Field Solutions}{138}{}%
-\contentsline {subsection}{\numberline {6.2.2}TE and TM Modes}{139}{}%
-\contentsline {subsection}{\numberline {6.2.3}Resonant Frequencies of a Cylindrical Cavity}{141}{}%
-\contentsline {subsection}{\numberline {6.2.4}Cavity Q-factors}{143}{}%
-\contentsline {section}{\numberline {6.3}The Cavity Approach to CRES}{147}{}%
-\contentsline {subsection}{\numberline {6.3.1}A Sketch of a Molecular Tritium Cavity CRES Experiment}{147}{}%
-\contentsline {subsection}{\numberline {6.3.2}Magnetic Field, Cavity Geometry, and Resonant Modes}{149}{}%
-\contentsline {subsection}{\numberline {6.3.3}Trade-offs Between the Antenna and Cavity Approaches}{152}{}%
-\contentsline {section}{\numberline {6.4}Single-mode Resonant Cavity Design and Simulations}{154}{}%
-\contentsline {subsection}{\numberline {6.4.1}Open Cylindrical Cavities with Coaxial Terminations}{154}{}%
-\contentsline {subsection}{\numberline {6.4.2}Mode Filtering}{157}{}%
-\contentsline {subsection}{\numberline {6.4.3}Simulations of Open, Mode-filtered Cavities}{159}{}%
-\contentsline {section}{\numberline {6.5}Single-mode Resonant Cavity Measurements}{162}{}%
-\contentsline {subsection}{\numberline {6.5.1}Cavities and Setup}{162}{}%
-\contentsline {subsection}{\numberline {6.5.2}Results and Discussion}{164}{}%
-\contentsline {chapter}{Bibliography}{167}{}%
+\contentsline {subsection}{\numberline {3.4.3}Results from Phase II}{18}{}%
+\contentsline {section}{\numberline {3.5}Phase III: Developing Free-space CRES Measurements with Antenna Arrays}{19}{}%
+\contentsline {subsection}{\numberline {3.5.1}The Basic Approach}{19}{}%
+\contentsline {subsection}{\numberline {3.5.2}The FSCD: Free-space CRES Demonstrator}{21}{}%
+\contentsline {chapter}{\numberline {4}Signal Reconstruction Techniques for Antenna Array CRES and the FSCD}{27}{}%
+\contentsline {section}{\numberline {4.1}Introduction}{27}{}%
+\contentsline {section}{\numberline {4.2}FSCD Simulations}{28}{}%
+\contentsline {subsection}{\numberline {4.2.1}Kassiopeia}{29}{}%
+\contentsline {subsection}{\numberline {4.2.2}Locust}{33}{}%
+\contentsline {subsection}{\numberline {4.2.3}CRESana}{37}{}%
+\contentsline {section}{\numberline {4.3}Signal Detection and Reconstruction Techniques for Antenna Array CRES}{38}{}%
+\contentsline {subsection}{\numberline {4.3.1}Digital Beamforming}{42}{}%
+\contentsline {subsection}{\numberline {4.3.2}Matched Filtering}{50}{}%
+\contentsline {subsection}{\numberline {4.3.3}Machine Learning}{57}{}%
+\contentsline {section}{\numberline {4.4}Analysis of Signal Detection Algorithms for the Antenna Array Demonstrator}{61}{}%
+\contentsline {subsection}{\numberline {4.4.1}Introduction}{61}{}%
+\contentsline {subsection}{\numberline {4.4.2}Signal Detection with Antenna Array CRES}{64}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Antenna Array and DAQ System}{64}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}Real-time Signal Detection}{66}{}%
+\contentsline {subsection}{\numberline {4.4.3}Signal Detection Algorithms}{70}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}Power Threshold}{70}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.2}Matched Filtering}{72}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.3}Machine Learning}{76}{}%
+\contentsline {subsection}{\numberline {4.4.4}Methods}{78}{}%
+\contentsline {subsubsection}{\numberline {4.4.4.1}Data Generation}{78}{}%
+\contentsline {subsubsection}{\numberline {4.4.4.2}Template Number and Match Estimation}{79}{}%
+\contentsline {subsubsection}{\numberline {4.4.4.3}CNN Training and Data Augmentation}{80}{}%
+\contentsline {subsection}{\numberline {4.4.5}Results and Discussion}{81}{}%
+\contentsline {subsubsection}{\numberline {4.4.5.1}Trigger Classification Performance}{81}{}%
+\contentsline {subsubsection}{\numberline {4.4.5.2}Computational Cost and Hardware Requirements}{83}{}%
+\contentsline {subsection}{\numberline {4.4.6}Conclusion}{85}{}%
+\contentsline {chapter}{\numberline {5}Antenna and Antenna Measurement System Development for the Project 8 Experiment}{87}{}%
+\contentsline {section}{\numberline {5.1}Introduction}{87}{}%
+\contentsline {section}{\numberline {5.2}Antenna Measurements for CRES experiments}{88}{}%
+\contentsline {subsection}{\numberline {5.2.1}Antenna Parameters}{88}{}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}Radiation Patterns}{88}{}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}Directivity and Gain}{89}{}%
+\contentsline {subsubsection}{\numberline {5.2.1.3}Far-field and Near-field}{90}{}%
+\contentsline {subsubsection}{\numberline {5.2.1.4}Polarization}{91}{}%
+\contentsline {subsubsection}{\numberline {5.2.1.5}Antenna Factor and Effective Aperture}{92}{}%
+\contentsline {subsection}{\numberline {5.2.2}Antenna Measurement Fundamentals}{94}{}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Friis Transmission Equation}{94}{}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}S-Parameters and Network Analyzers}{95}{}%
+\contentsline {subsubsection}{\numberline {5.2.2.3}Antenna Array Commissioning and Calibration Measurements}{96}{}%
+\contentsline {subsection}{\numberline {5.2.3}The Penn State Antenna Measurement System}{97}{}%
+\contentsline {section}{\numberline {5.3}Development of a Synthetic Cyclotron Antenna (SYNCA) for Antenna Array Calibration}{101}{}%
+\contentsline {subsection}{\numberline {5.3.1}Introduction}{101}{}%
+\contentsline {subsection}{\numberline {5.3.2}Cyclotron Radiation Phenomenology}{104}{}%
+\contentsline {subsection}{\numberline {5.3.3}SYNCA Simulations and Design}{110}{}%
+\contentsline {subsection}{\numberline {5.3.4}Characterization of the SYNCA}{114}{}%
+\contentsline {subsection}{\numberline {5.3.5}Beamforming Measurements with the SYNCA}{118}{}%
+\contentsline {subsection}{\numberline {5.3.6}Conclusions}{121}{}%
+\contentsline {section}{\numberline {5.4}FSCD Antenna Array Measurements with the SYNCA}{122}{}%
+\contentsline {subsection}{\numberline {5.4.1}Introduction}{122}{}%
+\contentsline {subsection}{\numberline {5.4.2}Measurement Setups}{124}{}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}FSCD Array Setup}{124}{}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}Synthetic Array Setup}{126}{}%
+\contentsline {subsection}{\numberline {5.4.3}Simulations, Analysis, and Results}{127}{}%
+\contentsline {subsubsection}{\numberline {5.4.3.1}Simulations}{127}{}%
+\contentsline {subsubsection}{\numberline {5.4.3.2}Phase Analysis}{128}{}%
+\contentsline {subsubsection}{\numberline {5.4.3.3}Magnitude Analysis}{133}{}%
+\contentsline {subsubsection}{\numberline {5.4.3.4}Beamforming Characterization}{136}{}%
+\contentsline {subsection}{\numberline {5.4.4}Conclusions}{139}{}%
+\contentsline {chapter}{\numberline {6}Development of Resonant Cavities for Large Volume CRES Measurements}{140}{}%
+\contentsline {section}{\numberline {6.1}Introduction}{140}{}%
+\contentsline {section}{\numberline {6.2}Cylindrical Resonant Cavities}{141}{}%
+\contentsline {subsection}{\numberline {6.2.1}General Field Solutions}{141}{}%
+\contentsline {subsection}{\numberline {6.2.2}TE and TM Modes}{142}{}%
+\contentsline {subsection}{\numberline {6.2.3}Resonant Frequencies of a Cylindrical Cavity}{144}{}%
+\contentsline {subsection}{\numberline {6.2.4}Cavity Q-factors}{146}{}%
+\contentsline {section}{\numberline {6.3}The Cavity Approach to CRES}{150}{}%
+\contentsline {subsection}{\numberline {6.3.1}A Sketch of a Molecular Tritium Cavity CRES Experiment}{150}{}%
+\contentsline {subsection}{\numberline {6.3.2}Magnetic Field, Cavity Geometry, and Resonant Modes}{152}{}%
+\contentsline {subsection}{\numberline {6.3.3}Trade-offs Between the Antenna and Cavity Approaches}{155}{}%
+\contentsline {section}{\numberline {6.4}Single-mode Resonant Cavity Design and Simulations}{157}{}%
+\contentsline {subsection}{\numberline {6.4.1}Open Cylindrical Cavities with Coaxial Terminations}{157}{}%
+\contentsline {subsection}{\numberline {6.4.2}Mode Filtering}{160}{}%
+\contentsline {subsection}{\numberline {6.4.3}Simulations of Open, Mode-filtered Cavities}{162}{}%
+\contentsline {section}{\numberline {6.5}Single-mode Resonant Cavity Measurements}{165}{}%
+\contentsline {subsection}{\numberline {6.5.1}Cavities and Setup}{165}{}%
+\contentsline {subsection}{\numberline {6.5.2}Results and Discussion}{167}{}%
+\contentsline {chapter}{Bibliography}{170}{}%

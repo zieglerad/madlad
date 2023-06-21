@@ -82,23 +82,66 @@ The source gases were delivered into the CRES cell through a gas port located ne
 
 \subsubsection*{RF System}
 
-The RF system in the Phase II apparatus transferred the cyclotron radiation from the CRES cell to the receiver chain that begins at the top of the apparatus, and performed the down-conversion and digitization to obtain signals that could be analyzed to determine the cyclotron frequencies of electrons in the CRES cell (see Figure \ref{fig:chap3-phase2_rf_chain}).
+The RF system in the Phase II apparatus transferred the cyclotron radiation from the CRES cell to the receiver chain. The receiver chain performs the down-conversion and digitization required to obtain signals that can be analyzed to determine the cyclotron frequencies of electrons in the CRES cell (see Figure \ref{fig:chap3-phase2-rf-chain}).
 \begin{figure}[htbp]
     \centering
-    \includegraphics*[width=0.6\textwidth]{figs/Chapter-3/230620_phase2_rf_chain.png}
+    \includegraphics*[width=0.95\textwidth]{figs/Chapter-3/230620_phase2_rf_chain.png}
     \caption{\label{fig:chap3-phase2-rf-chain} Caption}
 \end{figure}
 
+Below the CRES cell, at the bottom of the Phase II apparatus, is a tickler port and waveguide terminator. The tickler port is used to inject signals into the CRES cell and RF system for testing and calibration purposes. The waveguide terminator is designed to absorb cyclotron radiation emitted by electrons that transmits out of the bottom of the CRES cell. This lowers the total power received from electrons in the CRES cell, since all the energy radiated downwards is absorbed into the terminator. Earlier iterations of the Phase II apparatus used an RF short in this location that reflected this power up towards the amplifiers, however, interference between the upward traveling and reflected radiation led to a disappearance in the signal carrier that made reconstruction impossible.
+
+Radiation traveling upward passes through the $\mathrm{CaF}_2$ window passes through a $\lambda/4$ plate, which transforms the circularly polarized cyclotron radiation into linear polarization. The linearly polarized fields next travel through a segment of circular waveguide that transitions into a long segment of WR-42 waveguide that carries the fields out of the high magnetic field region. A thermal break segment is included, which consists of a a segment of gold-plated stainless steel WR-42 waveguide, to help thermally isolate the relatively warm CRES cell from the colder amplifiers. The radiation then passes through a cryogenic circular, which prevents signals reflected from the amplifiers from interfering with the CRES cell before a WR-42 to WR-28 transition connects the waveguide to the first of the cyrogenic amplifiers. The radiation passes through two cyrogenic amplifiers before being coupled to a coaxial termination at the top of the Phase II apparatus.
+
+The coaxial cable transfers the cyclotron radiation signals to a high-frequency mixing stage that performs an analog frequency down-conversion using a 24.5~GHz LO. Two forms of digitization can be used at this stage to readout the CRES data. One is a real-time spectrum analyzer that digitizes the CRES signal data in time-domain and computes the frequency spectrum in real-time, which allows for direct visualization of CRES signal spectrograms as the experiment is running. The real-time spectrum analyzer is most useful for taking small amount of streamed data for debugging and analysis of the system. The other method, which was used to collect the majority of the CRES data in Phase II, is a ROACH-2 FPGA and digitizer system. The ROACH system consists of a fast ADC that samples the CRES signal data at 3.2~GSps. Internal digital down-conversion stages implemented in the FPGA perform a mixing operation that reduces the bandwidth of the CRES signals to 100~MHz. The FPGA implements a 8192 sample FFT and packetizes time and frequency domain records in parallel. The packetized data is then transferred from the ROACH to be analyzed by the data-processing pipeline.
+
 \subsection{CRES Track and Event Reconstruction}
 
+\subsubsection*{Time-Frequency Spectrogram}
+
+The online data-processing is intended to identify interesting data that could contain CRES signals using a software real-time triggering algorithm. Interesting segments of data identified by this algorithm are collected into files that are transferred to a server for offline processing and analysis. The data files contain a continuous series of time-domain samples, broken into a set of records, which are 4096 samples long. The time-series is made up of 8-bit IQ samples acquired at 100~MHz. 
+
+Each time-series record is accompanied by an associated frequency spectrum consisting of 4096 frequency bins approximately 24.4~kHz wide, which is represented as a power spectral density. The individual frequency spectra can be organized temporally to create a time-frequency spectrogram that represents the evolution of the cyclotron frequency spectrum over the course of the CRES event (see Figure \ref{fig:chap3-tritium-event0-spectrogram}). 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/Chapter-3/T2_Event0.pdf}
     \caption{Caption}
-    \label{fig:tritium_event0}
+    \label{fig:chap3-tritium-event0-spectrogram}
+\end{figure}
+The time-frequency spectrogram is represented as a two-dimensional image where the color of each pixel is proportional to the power spectral density. Each vertical slice of pixels in the image represents a frequency spectrum, therefore, each horizontal bin represents the data obtained over a duration of $4096\times 0.01$ $\mathrm{MHz}^{-1}=40.96$ $\mu$sec. 
+
+\subsubsection*{CRES Event Data Features}
+
+Phenomenologically, a CRES signal appears as a sinusoidal signal whose frequency slow increases ("chirps") over time. Axial motion of the electron in the trap leads to the formation of frequency sidebands that surround the more powerful carrier frequency, due to doppler modulation of the electron's frequency as it bounces between the walls of the magnetic trap. The critical piece of information that must be extracted from the track and event reconstruction procedure is the carrier frequency, since it is this frequency that gives the cyclotron frequency and thus the kinetic energy. While axial motion from non-$90^\circ$ pitch angles does change the average magnetic field experienced by an electron and, therefore, changes the cyclotron frequency. We were not able to resolve sidebands in Phase II, so a correction for the effect of the pitch angle on the cyclotron frequency was not possible. 
+
+In the time-frequency spectrogram representation the chriping carrier frequency appears as a linear track of high-power frequency bins (see Figure \ref{fig:chap3-tritium-event0-spectrogram}). The vertical slope of the tracks is caused by the emission of energy from from the electron in the form of cyclotron radiation, therefore, the size of the slope parameter is directly proportional to the Larmor power. The continuous track is periodically interrupted by random jumps to higher frequency and lower energy caused by random inelastic collisions with background gas molecules. The length of a track is an exponentially distributed variable whose mean value is inversely proportional to the gas density. The size of the frequency discontinuities is directly proportional to the energies of the rotational and vibrational states of background gas species such as $CO_2$. 
+
+A CRES event refers to the collection of tracks produced by a trapped electron until it inevitably scatters into a pitch angle that can no longer be trapped. The goal of track and event reconstruction is to first identify the set of tracks present in a time-frequency spectrogram that represents a segment of data acquired in the Phase II apparatus. These tracks must then be clustered into events from which we can determine the first track produced by the electron and thus estimate it's starting cyclotron frequency and kinetic energy. 
+
+\subsubsection*{Track Reconstruction}
+
+The first step in this process is the identification of tracks in the time-frequency spectrogram, which is essentially an image processing feature identification task. The first step in the track finding procedure is to normalize the power spectral density based on the average noise power to obtain the time-frequency spectrogram in the form of normalized, unitless power. Next a power threshold is applied to the normalized spectrogram where only bins that have a signal-to-noise ratio greater than five are selected to build tracks. In this case signal-to-noise ratio is defined as the ratio between the normalized, unitless power of a bin divided by the average normalized power across the full frequency spectrum.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-3/230621_t_event_zero_sparse_spectrogram_zoom.pdf}
+    \caption{\label{fig:chap3-sparse-spectrogram}}
 \end{figure}
 
-\subsection{Measurements with Krypton}
+The spectrogram produced by this power cut, termed the sparse spectrogram, consists only of a sparse collection of high-power frequency bins that could be part of a CRES signal track (see Figure \ref{fig:chap3-sparse-spectrogram}). In this form is it much easier to identify tracks "by eye", however, for the Phase II analysis Project 8 developed it's own custom-made track finding algorithm, called the sequential track finder (STF). 
+
+The STF algorithm process the sparse spectrogram in sequential fashion, processing each time-slice one-by-one until the end of the spectrogram is reached. Tracks are found by searching for points in the sparse spectrogram that appear to fall on a straight line. Multiple configurable parameters are built into the STF algorithm that allow the user to tune the criteria for adding a point to an existing track or creating a brand new track. These include parameters such as maximum time and frequency differences between subsequent points in a track as well as minimum SNR values for the start and endpoints of the track. Additionally, tracks are required to have a minimum length and slope to be considered potential CRES tracks rather than random noise fluctuations. 
+
+The resulting output of the STF is a collection of track objects that consist of all of the points that make up the track and their properties. The final step in track reconstruction is to calculate the track properties and apply final cuts to reject the majority of false tracks found by the STF. This includes 
+
+\subsubsection*{Event Reconstruction}
+
+
+
+
+\subsection{Results from Phase II}
+
+\subsubsection*{Measurements with Krypton}
 
 \begin{figure}[htbp]
     \centering
@@ -114,7 +157,7 @@ The RF system in the Phase II apparatus transferred the cyclotron radiation from
     \label{fig:fss_plot}
 \end{figure}
 
-\subsection{Tritium Spectrum and Neutrino Mass Results}
+\subsubsection*{Tritium Spectrum and Neutrino Mass Results}
 
 \begin{figure}
     \centering
