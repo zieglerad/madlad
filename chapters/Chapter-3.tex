@@ -4,7 +4,9 @@
 
 \section{Introduction}
 
-\section{Cyclotron Radiation Emission Spectroscopy}
+\section{CRES and Project 8}
+
+\subsection{Cyclotron Radiation Emission Spectroscopy --- CRES}
 
 Of the standard physical quantities the one that can be measured with the highest precision is time and the inversely related quantity frequency. In fact it is often advantageous to convert measurements of other physical quantities like mass or length into frequency measurements due to the digital nature of frequency measurements that make them immune to many sources of noise. Atomic clocks, which operate by measuring the frequencies of various atomic transitions, have been used to measure time with astounding relative uncertainties of $10^{-18}$~seconds. The extreme precision possible with frequency measurements is often summarized using the a quote from the Physicist Arthur Schawlow who said advise his students to "Never measure anything but frequency!". 
 
@@ -17,7 +19,7 @@ Neutrino mass measurements using tritium beta-decay are effectively attempting t
     \label{fig:cres_cartoon}
 \end{figure}
 
-\subsection{Charged Particles in a Magnetic Trap}
+\subsubsection*{Charged Particles in a Magnetic Trap}
 
 \begin{figure}[htbp]
     \centering
@@ -26,23 +28,61 @@ Neutrino mass measurements using tritium beta-decay are effectively attempting t
     \label{fig:chap3-trapped-electron-motion}
 \end{figure}
 
-\subsection{Radiation from a Charged Particle}
+\subsubsection*{Radiation from a Charged Particle}
 
-\section{The Project 8 Collaboration}
 
-\subsection{Neutrino Mass Sensitivity Goals}
+\subsection{The Project 8 Collaboration}
 
-\subsection{Phased Development Plans}
+The Project 8 collaboration is a group of institutions in the United States and Germany aiming to measure the neutrino mass by developing a novel spectrometer technology based on CRES. In the ultimate Project 8 experiment the CRES technique will be used to measure the beta-decay spectrum using a large source of atomic tritium sufficient to achieve the required statistics in the last $O(10)$~eV of the decay spectrum. Project 8 is targeting a neutrino mass sensitivity below 50~meV, which exhausts the range of possible neutrino masses under the inverted hierarchy and is a factor of four less than sensitivity projections for the ongoing KATRIN experiment.
+
+Project 8's proposed experiment requires the development of two novel technologies: the production and trapping of a source of atomic tritium on cubic-meter scales and technology to enable CRES measurements of individual electrons in the same volume. 
+
+\subsubsection*{Atomic Tritium}
+
+Previous measurements of the tritium beta-decay spectrum for neutrino mass measurements have all relied on a sources of molecular tritium for their measurements due to the numerous practical and technical challenges associated with the production and storage of hydrogen isotopes.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.5\textwidth]{figs/Chapter-3/atmol2.pdf}
+    \caption{\label{fig:chap3-atomic-vs-mol-final-state-spectra}}
+\end{figure}
+
+To produce atomic hydrogen one must supply sufficient energy to the tritium molecule to break the molecular bond between. Common approaches to this include the use of hot coaxial filament atom crackers as well as plasma atom sources. Both approaches heat the tritium atoms to temperatures $>2500$~K, which must then be cooled to temperatures on the order of a few~mK so that the tritium atoms can be trapped. Cooling the atoms requires the construction of a large tritium infrastructure and cooling system that can supply a source of cold atoms to the trap. 
+
+Once cold tritium atoms are produced they cannot make contact with any surfaces to avoid recombination of the atoms to molecules. Therefore, a magnetic trap is required to store the atoms for a sufficient length of time that they have a chance to decay before escaping the trap. Trapping the atoms at this scale requires the construction of a large and complex magnet system that must be cooled to cryogenic temperatures to avoid heating of the atoms, which leads to their escape from the trap.
+
+The significant experimental complexity caused by atomic tritium makes a molecular source the obvious choice from practical considerations. However, the drawback of molecular tritium for neutrino mass measurement is the irreducible broadening in the electron's kinetic energy due to the final state spectrum of molecular tritium (see Figure \ref{fig:chap3-atomic-vs-mol-final-state-spectra}). The broadening of the final state spectra has a RMS amplitude of 436~meV caused by variation in the final vibrational state of the daughter molecule. For atomic tritium the primary sources of broadening in the final state spectrum are magnetic hyperfine splittings ($O(10^{-5})$~eV) and thermal Doppler broadening caused by the motion of the trapped atom. For atomic tritium at a temperature of 1~mK thermal broadening is the dominant contribution, providing about 1~meV RMS of broadening to the electron's kinetic energy.
+
+The larger energy broadening with molecular tritium leads to an irreducible statistical uncertainty that limits the achievable sensitivity to approximately 100~meV at 90\% confidence. For previous direct measurements of the neutrino mass this uncertainty is an insignificant contribution to the overall uncertainty budget, however, for experiments like Project 8 atomic tritium is a key component to the success of the experiment.
+
+\subsubsection*{CRES for Neutrino Mass Measurement}
+
+Several promising features of the CRES technique make it a particularly attractive choice for a next generation neutrino mass measurement experiment. For example, with a CRES experiment the volume of the source gas can be the same as the volume of the CRES spectrometer. This is due to the fact that CRES is a remote-sensing technique that can observe the energy of the electron without altering its trajectory or directly interacting with the electron. Given that tritium gas is transparent to cyclotron radiation the kinetic energies of electrons can be measured with an appropriate sensing technology, such as a cavity or antenna array, located directly outside the atom trapping volume. 
+
+The current state-of-the-art tritium beta-decay spectroscopy experiment, KATRIN, utilizes the magnetic adiabatic collimation with an electrostatic filter (MAC-E filter) technique to measure the beta-decay spectrum of molecular tritium. In this approach, a source of molecular tritium is located outside of the spectrometer. When a beta-decay occurs the electron must exit the tritium source and travel through the MAC-E filter before it can be detected on the other side of the filter using a charge sensor. With this approach the measurement statistics are limited by the transverse areas of the tritium source and MAC-E filter due to the need to travel through the detector without scattering. This scaling is less favorable than the volumetric scaling that one has with CRES due to the ability to co-locate source and detector.
+
+Another promising aspect of the CRES technique is the inherently high precision of frequency based measurements. The endpoint of the molecular tritium beta-decay spectrum is approximately 18.6~keV, which dwarfs the neutrino mass scale of $<1$~eV/$\rm{c}^2$ by at least a factor of $10^5$. Measuring the effect of such a small mass on a high energy electron requires excellent energy resolution. Since frequency measurements are essentially counting measurements they are intrinsically quite accurate due to the ability to measure the cyclotron frequency by effectively averaging over millions of cyclotron orbits. Using off-the-shelf RF components its is possible to achieve part-per-million accuracy on the kinetic energy with the CRES technique.
+
+A final aspect of the CRES technique that is attractive for a next-generation experiment is the relative immunity to backgrounds. Since CRES operates via non-destructive measurements of the electron's cyclotron frequency potential sources of background electrons are effectively filtered out by limiting the frequency bandwidth of the measurement. The fiducial volume of the experiment is free from any surfaces that could introduce stray electrons and electrons from sources outside the fiducial volume can be prevented from entering the experiment.
+
+\subsubsection*{Neutrino Mass Sensitivity Goals}
+
+Project 8's ultimate goal is to combine CRES with atomic tritium to measure the neutrino mass with 40~meV sensitivity at the 90\% confidence level (see Figure \ref{fig:chap3-p8-nu-mass-goal}).
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/Chapter-3/230303_sum_nu_mass_vs_m_beta_with_exclusion_and_goal.png}
     \caption{Caption}
-    \label{fig:p8_nu_mass_goal}
+    \label{fig:chap3-p8-nu-mass-goal}
 \end{figure}
 
-\cleardoublepage
+\subsection{Project 8 Phased Development Plan}
 
+\subsubsection*{Phase I and II: Proof of Principle and First Tritium Measurements}
+
+\subsubsection*{Phase III: Research and Development and a Pilot-scale Experiment}
+
+\subsubsection*{Phase IV: Project 8's Ultimate Neutrino Mass Experiment}
 
 \section{Phase II: First Tritium Beta Decay Spectrum and Neutrino Mass Measurement with CRES}
 
@@ -60,7 +100,7 @@ In Phase II Project 8 demonstrate the first ever measurement of the tritium beta
 
 The magnetic field for the the Phase II experiment is provided by a nuclear magnetic resonance (NMR) spectroscopy magnet with a central bore diameter of 52~mm (see Figure \ref{fig:chap3-phase2-apparatus}). The magnet produces a background magnetic field with an average value of 0.959~T and a 10~ppm variation across the bore diameter achieved using several shim coils built into the magnet. Using an external NMR field probe the variation of the magnetic field along the vertical axis of the magnet bore was measured to obtain an accurate model of the magnetic field so that the CRES cell could be positioned for optimal magnetic field uniformity.
 
-An external solenoid magnet was installed inside the magnet bore to provide the ability to shift the magnitude of the background magnetic field by values on the order of a few mT. The solenoid has inside diameter of 46~mm and a length of 350~mm, which terminates in a vacuum flange that allows it to be inserted into the NMR magnet bore from the bottom. By shifting the value of the magnetic field by a few mT, the cyclotron frequencies of electrons produced by the 17.8~keV $^{83m}$Kr electron conversion line can be shifted over a range of frequencies on the order of 100~MHz. This allows one to study the frequency dependent behavior of multiple CRES systematics such as detection efficiency that directly affect the measured shape of the tritium spectrum. 
+An external solenoid magnet was installed inside the magnet bore to provide the ability to shift the magnitude of the background magnetic field by values on the order of a few mT. The solenoid has inside diameter of 46~mm and a length of 350~mm, which terminates in a vacuum flange that allows it to be inserted into the NMR magnet bore from the bottom. By shifting the value of the magnetic field by a few mT, the cyclotron frequencies of electrons produced by the 17.8~keV $^{83m}$Kr internal-conversion line can be shifted over a range of frequencies on the order of 100~MHz. This allows one to study the frequency dependent behavior of multiple CRES systematics such as detection efficiency that directly affect the measured shape of the tritium spectrum. 
 
 The inside of the magnet bore diameter was pumped down to a vacuum of less than 10~$\mu$torr using a turbomolecular pump, which allows for cryogenic cooling of the CRES cell and RF system. Cooling power was supplied to the Phase II apparatus using a cryopump with its coldhead mounted above the primary magnet and CRES cell. This arrangement allowed for sufficient cooling power to be delivered to the amplifiers to cool them to a temperature of $\approx 40$~K, while keeping the amplifiers far enough from the magnet so as not to be damaged by the large field strength. Thermal contact between the coldhead, amplifiers, RF system, and CRES cell is achieved using a copper bar that runs the full length of the apparatus. To prevent freeze-out of $^{83m}$Kr on the walls of the CRES cell a separate heater was installed to keep the CRES cell near a temperature of 85~K during the operation of the experiment.
 
@@ -86,7 +126,7 @@ The RF system in the Phase II apparatus transferred the cyclotron radiation from
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.95\textwidth]{figs/Chapter-3/230620_phase2_rf_chain.png}
-    \caption{\label{fig:chap3-phase2-rf-chain} Caption}
+    \caption{\label{fig:chap3-phase2-rf-chain} RF system diagram for the Phase II apparatus.}
 \end{figure}
 
 Below the CRES cell, at the bottom of the Phase II apparatus, is a tickler port and waveguide terminator. The tickler port is used to inject signals into the CRES cell and RF system for testing and calibration purposes. The waveguide terminator is designed to absorb cyclotron radiation emitted by electrons that transmits out of the bottom of the CRES cell. This lowers the total power received from electrons in the CRES cell, since all the energy radiated downwards is absorbed into the terminator. Earlier iterations of the Phase II apparatus used an RF short in this location that reflected this power up towards the amplifiers, however, interference between the upward traveling and reflected radiation led to a disappearance in the signal carrier that made reconstruction impossible.
@@ -105,7 +145,7 @@ Each time-series record is accompanied by an associated frequency spectrum consi
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/Chapter-3/T2_Event0.pdf}
-    \caption{Caption}
+    \caption{The time-frequency spectrogram of a tritium CRES event in the Phase II apparatus.}
     \label{fig:chap3-tritium-event0-spectrogram}
 \end{figure}
 The time-frequency spectrogram is represented as a two-dimensional image where the color of each pixel is proportional to the power spectral density. Each vertical slice of pixels in the image represents a frequency spectrum, therefore, each horizontal bin represents the data obtained over a duration of $4096\times 0.01$ $\mathrm{MHz}^{-1}=40.96$ $\mu$sec. 
@@ -125,48 +165,74 @@ The first step in this process is the identification of tracks in the time-frequ
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.7\textwidth]{figs/Chapter-3/230621_t_event_zero_sparse_spectrogram_zoom.pdf}
-    \caption{\label{fig:chap3-sparse-spectrogram}}
+    \caption{\label{fig:chap3-sparse-spectrogram} The sparse spectrogram obtained by placing a power cut on the raw spectrogram shown in Figure \ref{fig:chap3-tritium-event0-spectrogram}.}
 \end{figure}
 
 The spectrogram produced by this power cut, termed the sparse spectrogram, consists only of a sparse collection of high-power frequency bins that could be part of a CRES signal track (see Figure \ref{fig:chap3-sparse-spectrogram}). In this form is it much easier to identify tracks "by eye", however, for the Phase II analysis Project 8 developed it's own custom-made track finding algorithm, called the sequential track finder (STF). 
 
 The STF algorithm process the sparse spectrogram in sequential fashion, processing each time-slice one-by-one until the end of the spectrogram is reached. Tracks are found by searching for points in the sparse spectrogram that appear to fall on a straight line. Multiple configurable parameters are built into the STF algorithm that allow the user to tune the criteria for adding a point to an existing track or creating a brand new track. These include parameters such as maximum time and frequency differences between subsequent points in a track as well as minimum SNR values for the start and endpoints of the track. Additionally, tracks are required to have a minimum length and slope to be considered potential CRES tracks rather than random noise fluctuations. 
 
-The resulting output of the STF is a collection of track objects that consist of all of the points that make up the track and their properties. The final step in track reconstruction is to calculate the track properties and apply final cuts to reject the majority of false tracks found by the STF. This includes 
+The resulting output of the STF is a collection of track objects that consist of all of the points that make up the track and their properties. The final step in track reconstruction is to calculate the track properties and apply final cuts to reject the majority of false tracks found by the STF. This involves the fitting of a line to the collection of track points as well as the total and average power of the track obtained by computing the sum and mean of the points powers. The starting frequency of the track is determined by calculating the time coordinate that  intersects with the linear fit. A cut is the performed to remove all tracks that do not have a specified average power over their duration, which helps to remove the majority of noise fluctuations that have passed all previous cuts up to this point.
 
 \subsubsection*{Event Reconstruction}
 
+The final step is event reconstruction where the identified tracks are grouped into events that contain all tracks likely caused by the same electron. This procedure simply attempts to match tracks head to tail by checking if the start and end times of a pair of tracks falls withing a certain tolerance. This tolerance is an additional configurable parameter that can be tuned to an optimal value using monte carlo simulations of events in the Phase II apparatus.
 
+After the event building procedure has completed there is still a small likelihood that false tracks have made it through to this stage in the reconstruction. Typically, cuts at the track level are able to remove 95\% of the false tracks identified by the STF, which leads to a significant number of false tracks at the event building stage. However, the additional event-level information makes it possible to reject events that contain these false tracks with a high degree of confidence. 
 
+Two event level features are associated with events caused by real electrons --- the duration of the first track as well as the number of tracks in the event. Real electrons tend to have event structures with longer first tracks and a higher number of total tracks. Based on the values of these two criteria, a minimum threshold on the average power in the first track was configured to reject false events. The average power in the first track was chosen due to the critical nature of the starting frequency of the first track in an event to the krypton and tritium spectrum analyses.
 
 \subsection{Results from Phase II}
 
+The primary result from Phase II is the first-ever measurement of the tritium beta-decay spectrum using CRES, which lead to the first neutrino mass limit using the CRES technique. However, Phase II also included a significant $^{83m}\rm{Kr}$ measurement campaign to understand important systematics relevant to the tritium spectrum measurement, but also to understanding the fundamentals of the CRES technique itself. This required high-resolution measurements of the $^{83m}\rm{Kr}$ internal-conversion spectrum, which is an interesting science result in its own right.
+
+The results from Phase II represents a significant effort from the entire Project 8 collaboration over several years. Because the focus of my contributions to Project 8 is directed towards the research and development efforts for the Phase III experiments, the goal in this section is not to provide a detailed description of the the analyses that lead to the Phase II results. Rather, I will provide brief descriptions of a few plots representative of the main results from Phase II and direct the interested reader to the relevant Phase II papers.  
+
 \subsubsection*{Measurements with Krypton}
+
+Measurements with krypton were a key calibration tool for Phase II of the experiment and will most likely continue to be useful in future Phases of Project 8. In the context of Project 8 krypton measurements refers to CRES measurements of the internal-conversion spectrum of the metastable state of krypton-83, $^{83m}\rm{Kr}$, produced by electron capture decays of $^{83}\rm{Rb}$. A supply of $^{83}\rm{Rb}$ was built into the Phase II apparatus gas system that supplied the CRES cell with $^{83m}\rm{Kr}$ via emanation.
+
+The $^{83m}\rm{Kr}$ internal-conversion spectrum consists of several lines based on the orbital of the electron ejected during the decay. The conversion lines useful to Project 8 are those that emit electrons with kinetic energies that fall inside the detectable frequency bandwidth of the Phase II apparatus. These are the K; L2 and L3; M2 and M3; and N2 and N3 lines with kinetic energies of 17.8~keV, $\approx 30.4$~keV, $\approx 31.9$~keV, and $\approx 32.1$~keV, respectively. The different energies of the lines allow us to test the linearity of the relationship between kinetic energy and frequency across the range of frequencies covered by the continuous tritium spectrum.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/Chapter-3/kr_fit.pdf}
-    \caption{Caption}
-    \label{fig:krypton_fit}
+    \caption{Fits to the measured 17.8-keV $^{83m}\rm{Kr}$ conversion line using the deep and shallow trap configurations. }
+    \label{fig:chap3-krypton-spec-fit}
 \end{figure}
+
+By measuring the shape of the krypton spectrum we can characterize the effects of numerous detector related effects relevant to the tritium analysis. Specific examples include the variation in the magnetic field as a function of the radial position of the electron, variation in the magnetic field caused by the trap shape, variation in the average magnetic field for electron of different pitch angles, the effect of missing tracks due to scattering, among others. These spectrum shape measurements focused on the 17.8-keV krypton line and utilized different trap geometries based on the particular goal of the dataset (see Figure \ref{fig:chap3-krypton-spec-fit}).
+
+Krypton measurements with a shallow trap allow for high energy resolution, since variation in frequency due to pitch angle differences is sharply reduced in the shallow trap configuration. With this trap the main 17.8-keV peak of the conversion spectrum is clearly visible along with additional satellite peaks at lower energy, which correspond to the shakeup/shakeoff spectrum of the decay. The high accuracy of the fit demonstrates a high degree of understanding of the CRES systematics.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/Chapter-3/fss_for_prl_plot.pdf}
-    \caption{Caption}
-    \label{fig:fss_plot}
+    \caption{Measurements of the 17.8-keV $^{83m}\rm{Kr}$ line using the deep trap configuration for different values of the magnetic field from the field shifting solenoid.}
+    \label{fig:chap3-fss-plot}
 \end{figure}
+
+The broadening of the krypton spectrum seen for the deeper track is due to the higher range of electron pitch angles that can be trapped. Furthermore, with a deeper trap there is a larger parameter space of electron that could be produced with pitch angles that are trappable but not not visible in the time-frequency spectrogram. These electrons live in the trap can can scatter multiple times before randomly scattering to a pitch angle that is now visible. This causes us to miss one to several of the electron's tracks earlier in the event, which leads us to mis-reconstruct the true starting frequency of an event. By measuring the krypton spectrum shape in the same deep trap used to detect tritium events we can characterize the affect that this has on the spectrum shape to mitigate it's impact on the tritium measurements.
+
+An additional systematic characterized with krypton is the calibration of the detection efficiency of the Phase II apparatus as a function of frequency. Variations in the detection efficiency as a function of frequency directly changes the measured shape of the continuous tritium spectrum, which can lead to errors in the neutrino mass estimate if not modeled appropriately. Using the field shifting solenoid the cyclotron frequency of the krypton 17.83~keV line was shifted across the full frequency range of the tritium spectrum data (see Figure \ref{fig:chap3-fss-plot}). Variations in the deep trap krypton spectrum shape can be used to infer the detection efficiency as a function of frequency and correct for this affect in the tritium measurements.
 
 \subsubsection*{Tritium Spectrum and Neutrino Mass Results}
 
+The tritium measurement campaign resulted in the collection of 82 days of detector live time during which 3770 total tritium events were detected. The track and event reconstruction analysis extracted the starting frequencies of these tritium events, which were used to build a frequency spectrum of tritium beta-decays. The resulting frequency spectrum was then converted to an energy spectrum using the information gleaned from the krypton measurement campaign to obtain the tritium beta-decay spectrum (see Figure \ref{fig:chap3-final-tritium-fit}).
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{figs/Chapter-3/12-03-22A_final_E0_real_data_phase_II_tritium_fit_1d.pdf}
-    \caption{Caption}
-    \label{fig:final_tritium_fit}
+    \caption{The measured tritium spectrum from Phase II with Bayesian and frequentist fits.}
+    \label{fig:chap3-final-tritium-fit}
 \end{figure}
 
-\section{Phase III: Developing Free-space CRES Measurements with Antenna Arrays}
+CRES is inherently a very low background technique with the dominant source of noise being random RF fluctuations. Monte carlo simulations backed up by measurements of the RF noise background were used to set track and event characteristic cuts to guarantee that zero false events would occur over the duration of the experiment with 90\% confidence. Notably, the measured spectrum has zero events beyond the tritium spectrum endpoint, which allows us to constrain the background rate in the Phase II apparatus to less than $3\times10^{-10}$~counts/ev/s. Achieving a low background is critical for future neutrino mass experiments that seek to measure the neutrino mass with less than 100~meV sensitivity.
+
+Bayesian and frequentist based fits to the measured tritium spectrum, incorporating information gained about CRES systematics from the krypton measurements, were performed to extract upper limits on the tritium beta-decay spectrum endpoint as well as the neutrino mass. The estimated spectrum endpoints are $18553^{+18}_{-19}$~eV for the Bayesian analysis and $18548^{+19}_{-19}$~eV for the frequentist analysis. The quoted uncertainties are 1-$\sigma$, and both results are within 2-$\sigma$ of the literature endpoint value of 15574~eV. The estimated neutrino mass for both results is consistent with $m_\beta^2=0$. The 90\% confidence upper limits for the Bayesian analysis is $m_\beta < 155$~$\rm{eV}/\rm{c}^2$ and $m_\beta < 152$~$\rm{eV}/\rm{c}$ for the frequentist analysis.
+
+Though the neutrino mass results from Phase II are not competitive with KATRIN it is a promising first step towards the development of more precise neutrino mass measurements using CRES. The low background and demonstrated high resolution with krypton measurements are promising features of the technique that were able to be demonstrated with the Phase II apparatus. As new technologies are developed to enable CRES measurements in larger volume, many of the lessons learned from Phase II will continue to influence the operation and design of the detectors.
+
+\section{Phase III R\&D: Antenna Array CRES}
 
 The goal of Phase III in the Project 8 experimental program is to develop the technologies and expertise required to build an experiment that uses CRES to measure the neutrino mass with a target sensitivity of 40~meV. One of the key technologies is a method for performing high resolution CRES measurements in a large volume, which allows one to observe a sufficient quantity of tritium to measure the low-activity endpoint region of the tritium spectrum. 
 
@@ -185,6 +251,14 @@ Several features of the antenna array approach make it an attractive candidate t
 The easy availability of position information with the antennas array approach is potentially a unique advantage that provides significant flexibility in the magnetic field uniformity requirements compared to other proposed approaches to large volume CRES (see Chapter \ref{chap:cavity}). Spatial discrimination using digital beamforming leads to pileup reduction, which helps to reduce the potential of background events caused by missing tracks or by incorrectly clustering a group of tracks into an event. Limits on the background rate for a neutrino mass measurement with 40~meV sensitivity are stringent and the total activity of the tritium source for such an experiment is gigantic relative to the activity near the endpoint. Thus, pileup discrimination could be an important tool for a large scale CRES experiment.
 
 Another beneficial quality of the antenna array approach is that the volume of the experiment can be scaled independent of frequency by simply adding more antennas to the array (see Figure \ref{fig:chap3-phaseiv-antenna}). Resonant cavities, the proposed alternative large volume CRES technology, are ideally operated in magnetic fields that cause electrons to move with cyclotron frequencies near the fundamental cavity resonance, to avoid complex coupling of the electron to many cavity modes simultaneously. This leads to a coupling between the cavity volume and the magnetic field magnitude, which forces one to lower the magnetic field in order to increase the experiment scale. Whereas, for antenna arrays, in principle there is no physical limitation on the size of the antenna array that can be used at a particular magnetic field. However, the nature of scaling an antenna array based experiment leads to rapidly increasing cost and complexity due to the large number of antennas, amplifiers, and data streams that require substantial computer processing power to effectively analyze.
+
+\subsection{Choice of Frequency}
+
+\subsubsection*{Scaling Laws}
+
+\subsubsection*{Atomic Tritium Considerations}
+
+\subsubsection*{Pilot-scale Atenna Array CRES Experiment Concept}
 
 \begin{figure}[htbp]
     \centering
