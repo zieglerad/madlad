@@ -68,23 +68,46 @@ A final aspect of the CRES technique that is attractive for a next-generation ex
 \subsubsection*{Neutrino Mass Sensitivity Goals}
 
 Project 8's ultimate goal is to combine CRES with atomic tritium to measure the neutrino mass with 40~meV sensitivity at the 90\% confidence level (see Figure \ref{fig:chap3-p8-nu-mass-goal}).
-
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/Chapter-3/230303_sum_nu_mass_vs_m_beta_with_exclusion_and_goal.png}
     \caption{Caption}
     \label{fig:chap3-p8-nu-mass-goal}
 \end{figure}
+This sensitivity is sufficient to fully exhaust the range of allowable neutrino masses under the inverted neutrino mass ordering regime and is approximately an order of magnitude less than the projected final sensitivity of the KATRIN experiment. Excluding the full neutrino mass parameter space would require a sensitivity an order of magnitude lower than what is proposed by Project 8, which would require an experiment whose size and complexity are currently well beyond proposals for the next-generation of neutrino mass direct measurement experiments.
 
 \subsection{Project 8 Phased Development Plan}
 
+Reach 40~meV sensitivity will require the simultaneous development and eventually combination of two novel technologies. The first is the technology required to supply a source of atomic tritium of the appropriate size, density, purity, and temperature along so that the atoms can be trapped and their beta-decays measured in the spectrometer. The second is a CRES measurement technology that is both compatible with the tritium atom trap and is capable of reconstructing CRES events with sufficient energy resolution to achieve the required sensitivity.
+
+These technologies require a significant up-front research and development (R\&D) investment to build-out the required capabilities for a 40~meV CRES experiment. Therefore, Project 8 is following a phased experiment plan in which incremental progress can be made towards the ultimate goal of a 40~meV neutrino mass measurement with CRES.
+
 \subsubsection*{Phase I and II: Proof of Principle and First Tritium Measurements}
+
+The earlier phases of the Project 8 experiment, Phase I and II, were focused on demonstration and development of the CRES technique itself as well as a proof-of-principle measurement of the neutrino mass using the CRES technique.
+
+In Phase I, Project 8 performed a proof-of-principle measurement of the $^{83m}\rm{Kr}$ spectrum using CRES, which marked the first ever energy spectrum measurement with CRES. The experiment included all of the main components expected for the full-scale version of the experiment. An electron source consisting of a gas of $^{83m}\rm{Kr}$ was supplied to a waveguide gas cell constructed out of a segment of WR-42 waveguide and sealed with Kapton windows at the top and bottom. A magnetic trapping region was created in the waveguide cell using a single electromagnetic coil wrapped around the waveguide which provided a trapping volume on the order of a few cubic-millimeters. Detection of the cyclotron radiation was performed by connecting the waveguide cell to an additional segment of waveguide that transmitted the radiation to a cryogenic amplifier.
+
+Success in Phase I was achieved with the 2014 publication of the measured $^{83m}\rm{Kr}$ conversion spectrum, which contains a mono-energetic 17.8-keV as well as several other conversion lines at higher energies. Publication of this result marked the official end of Phase I and the start of Phase II in which Project 8 shifted its focus to the demonstration of the first tritium beta-decay spectrum using CRES. Phase II successfully concluded in 2023 with the submission of the papers demonstrating the first tritium beta-decay spectrum endpoint and neutrino mass measurement using CRES. For more information on Phase II please see Section \ref{sec:chap3-phaseII}.
 
 \subsubsection*{Phase III: Research and Development and a Pilot-scale Experiment}
 
+With the completion of Phase II Project 8 has shifted into a phase focused on the construction of an experiment that demonstrates all the technologies of the final experiment in Phase IV. The goal for this pilot-scale experiment is to successfully retire all technological and engineering risks associated with the Phase IV experiment, while being a scientifically interesting experiment in it's own right that has sensitivity to neutrino masses on par with KATRIN's final projected sensitivity. 
+
+Phase III R\&D is divided into two equally important efforts --- atomic tritium and CRES detection techniques. Atomic tritium development in Phase III includes the development of all aspects of the tritium system required for the pilot-scale experiment. This includes the production of tritium atoms, atomic cooling and recirculation systems, purity and isotope concentration monitoring, and trapping. Currently, Project 8 is operating small scale demonstrator systems developing atom crackers to show that atom production at the estimated rates needed for Phase IV is achievable. Future efforts will continue the current developments on atom production and expand to include demonstrations of atomic cooling with an evaporative beam line as well as atom trapping using Halbach magnet arrays.
+
+The need for new CRES detection techniques is driven by the drastic increase in scale from Phase II to the Phase IV and the pilot-scale experiments. The physical volume used for CRES in Phase II was on the order of a few cubic-centimeters, and achieving Project 8's sensitivity target of 40~meV requires an experiment volume on the multi-cubic meter scale. Therefore, the waveguide gas cell CRES detection technique used in Phase II is not a feasible option for the future of Project 8 due to it's inability to scale to the required size.
+
+Two alternative CRES detection techniques have been proposed for the pilot-scale experiment --- antenna arrays and resonant cavities (see Section \ref{sec:chap3-phaseIII-antenna-arrays} and Chapter \ref{chap:cavity} respectively). Both approaches have relative advantages and disadvantages, however, the improved understanding of the antenna array and cavity approaches to CRES in the recent years has led to cavities being the preferred technology for the pilot-scale experiment due to the estimated reduced cost and complexity of this approach. Since a large degree of the work presented in this thesis is focused on the development of the antenna array CRES technique as well as the design of demonstrator experiments, we described the proposed R\&D plan for antenna array CRES in Phase III in Section \ref{sec:chap3-phaseIII-antenna-arrays}. 
+
+Cavity CRES R\&D in Phase III consists of a series of demonstrator experiments intended to demonstrate cavity CRES at a variety of scales and magnetic fields using electrons from $^{83m}\rm{Kr}$, an electron gun, and potentially molecular tritium sources. The near-term cavity effort in Project 8 is the cavity CRES apparatus (CCA), which is a small-scale cavity experiment operating near 26~GHz, that will perform the first CRES measurements using a small cavity. This experiment will pave the way towards larger scale cavity experiments in preparation for the eventual pilot-scale tritium experiment.
+
 \subsubsection*{Phase IV: Project 8's Ultimate Neutrino Mass Experiment}
 
+At this stage it is too early to predict exactly what is required for the Phase IV experiment, given the current levels of technical risk associated with the atomic tritium and CRES detection systems. The purpose of Phase III is to fully specify the design of the Phase IV experiment such that no untested technologies are required to construct the experiment. The design of Phase IV should be a direct extension of the pilot-scale CRES experiment that marks the official end of Phase III (see Section \ref{sec:chap3-freq-choice-and-pilot-scale}). A robust approach to scaling up from the pilot-scale would be to construct several identical copies of the original pilot experiment, such that if maintenance is required on one experiment the others may continue running. The multiple copies approach is the current preferred path from pilot-scale to Phase IV with the cavity CRES approach.
+
 \section{Phase II: First Tritium Beta Decay Spectrum and Neutrino Mass Measurement with CRES}
+\label{sec:chap3-phaseII}
 
 In Phase II Project 8 demonstrate the first ever measurement of the tritium beta-decay spectrum endpoint using the CRES technique, which lead to the first neutrino mass measurement by the Project 8 collaboration. This milestone was made possible by many improvements in the CRES technique and more developed understanding of CRES systematics, which takes an important first step towards larger scale measurments of the tritium beta-decay spectrum with CRES. In this section, I shall briefly describe some the important elements of the Phase II experiment, with the goal of contextualizing the research and development efforts for Phases III and IV of Project 8. For more complete descriptions of the work that lead to Project 8's Phase II results please refer to the many Phase II papers produced by the collaboration.
 
@@ -233,6 +256,7 @@ Bayesian and frequentist based fits to the measured tritium spectrum, incorporat
 Though the neutrino mass results from Phase II are not competitive with KATRIN it is a promising first step towards the development of more precise neutrino mass measurements using CRES. The low background and demonstrated high resolution with krypton measurements are promising features of the technique that were able to be demonstrated with the Phase II apparatus. As new technologies are developed to enable CRES measurements in larger volume, many of the lessons learned from Phase II will continue to influence the operation and design of the detectors.
 
 \section{Phase III R\&D: Antenna Array CRES}
+\label{sec:chap3-phaseIII-antenna-arrays}
 
 The goal of Phase III in the Project 8 experimental program is to develop the technologies and expertise required to build an experiment that uses CRES to measure the neutrino mass with a target sensitivity of 40~meV. One of the key technologies is a method for performing high resolution CRES measurements in a large volume, which allows one to observe a sufficient quantity of tritium to measure the low-activity endpoint region of the tritium spectrum. 
 
@@ -251,20 +275,6 @@ Several features of the antenna array approach make it an attractive candidate t
 The easy availability of position information with the antennas array approach is potentially a unique advantage that provides significant flexibility in the magnetic field uniformity requirements compared to other proposed approaches to large volume CRES (see Chapter \ref{chap:cavity}). Spatial discrimination using digital beamforming leads to pileup reduction, which helps to reduce the potential of background events caused by missing tracks or by incorrectly clustering a group of tracks into an event. Limits on the background rate for a neutrino mass measurement with 40~meV sensitivity are stringent and the total activity of the tritium source for such an experiment is gigantic relative to the activity near the endpoint. Thus, pileup discrimination could be an important tool for a large scale CRES experiment.
 
 Another beneficial quality of the antenna array approach is that the volume of the experiment can be scaled independent of frequency by simply adding more antennas to the array (see Figure \ref{fig:chap3-phaseiv-antenna}). Resonant cavities, the proposed alternative large volume CRES technology, are ideally operated in magnetic fields that cause electrons to move with cyclotron frequencies near the fundamental cavity resonance, to avoid complex coupling of the electron to many cavity modes simultaneously. This leads to a coupling between the cavity volume and the magnetic field magnitude, which forces one to lower the magnetic field in order to increase the experiment scale. Whereas, for antenna arrays, in principle there is no physical limitation on the size of the antenna array that can be used at a particular magnetic field. However, the nature of scaling an antenna array based experiment leads to rapidly increasing cost and complexity due to the large number of antennas, amplifiers, and data streams that require substantial computer processing power to effectively analyze.
-
-\subsection{Choice of Frequency}
-
-\subsubsection*{Scaling Laws}
-
-\subsubsection*{Atomic Tritium Considerations}
-
-\subsubsection*{Pilot-scale Atenna Array CRES Experiment Concept}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics*[width=0.8\textwidth]{figs/Chapter-3/phaseiv_concept_sketch_ver2.png}
-    \caption{\label{fig:chap3-phaseiv-antenna} A conceptual sketch of a large volume antenna array based CRES experiment to measure the neutrino mass.}
-\end{figure}
 
 \subsection{The FSCD: Free-space CRES Demonstrator}
 
@@ -330,3 +340,74 @@ Direct storage of the raw FSCD antenna array data is undesirable, since the esti
 
 The feasibility of a real-time reconstruction pipeline rests on the development of computationally efficient algorithms that can be implemented without the need for enormous computing resources. One challenge with the antenna array approach is that the small radiation power of a single electron is distributed between each channel in the array, such that reconstruction using only the information in a single channel is not possible. Therefore, the simply performing the initial step in reconstruction --- signal detection --- requires orders of magnitude more computational power than previous CRES experiments. This operation will then be followed by other, potentially more expensive, reconstruction steps that are required in order to determine the kinetic energy of the electron.
 
+\section{Pilot-scale Experiments}
+\label{sec:chap3-freq-choice-and-pilot-scale}
+
+\subsection{Choice of Frequency}
+The optimal CRES frequency for Project 8 is that which can reach our target sensitivity of 40~meV, while minimizing the cost and complexity of the overall experiment. Since the size of the background magnetic field determines the cyclotron frequency, which affects the entirety of the CRES detection system design, specifying the operating frequency of the CRES experiments is one of the first steps towards developing a full design.
+
+\subsubsection*{Scaling Laws}
+
+In Phases I and II the background magnetic field was provided by an NMR magnet with a 0.959~T magnetic field. This magnetic field was selected primarily for convenience, however, the cyclotron frequencies for electrons near the tritium endpoint in a 0.959~T field ranges from 25 to 26~GHz, which is within the standard RF Ka-band. Therefore, microwave electronics specialized for these frequencies are easily obtainable for relatively low cost. Frequency choice for the upcoming large-scale experiments must be selected in a more rigorous manner than in the earlier phases due to the increasing scale and complexity of the systems and the 40~meV neutrino mass science goal.
+
+Naturally, for a larger volume experiment there is a bias towards lower frequencies, due to the direct relationship between wavelength and the physical size of the compatible RF components like antennas and cavities. With a longer wavelength a larger volume can be surrounded by an array with fewer antennas, which reduces hardware and data-processing costs. On the other hand, for a cavity experiment, the volume of the experiment is directly proportional to the wavelength since this sets the physical dimensions of the cavity. Furthermore, it is easier to engineer a magnet that provides a uniform magnetic field across several cubic-meters of space at a lower magnetic fields, which provides advantages in terms of cost-reduction as well as more uniform magnetic fields for CRES.
+
+A concern with lower magnetic fields and frequencies is the scaling of the Larmor power equation, which is proportional to the square of the frequency. Naively, one would predict that the SNR would decrease with lower fields, however, two additional scaling laws that affect the noise power also come into play. Noise power is directly proportional to the required bandwidth, which decreases linearly with the magnetic field. Furthermore, at lower frequencies it is possible to purchase amplifiers with lower noise temperatures until approximately 300~MHz at which point this relationship tends to flatten. Therefore, it is expected that the SNR remains approximately constant as the frequency decreases.
+
+The SNR directly impacts the overall efficiency of the experiment through its affects on CRES signal detection probabilities as well as energy resolution. Thus, the expectation that SNR remains the same at lower frequencies clearly biases large-scale experiments in this direction. One drawback of lower magnetic fields is the increased influence of external magnetic fields on the experiment. This includes magnetic fields from the building materials as well as variations in the earth's magnetic field. To deal with these affects a suitable magnetic field correction system will need to be devised, which includes constant monitoring of external fields.
+
+\subsubsection*{Atomic Tritium Considerations}
+
+The pilot-scale experiments will be the first Project 8 experiments to combine CRES with atomic tritium, therefore, the optimal frequency should take into account the affect of the background magnetic field size on atom trapping.
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.46\textwidth}
+        \includegraphics*[width=\textwidth]{figs/Chapter-3/gloss.pdf}
+        \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.49\textwidth}
+        \includegraphics*[width=\textwidth]{figs/Chapter-3/dipolarloss.pdf}
+        \caption{}
+    \end{subfigure}
+    \caption{}
+    \label{fig:chap3-dipolarloss}
+ \end{figure}
+ The primary influence of the background field magnitude is through the rate of dipolar spin-flips caused by a spin exchange interaction between trapped atoms. 
+ 
+ Atomic tritium is a simple quantum system with a hyperfine structure given by the addition of the nuclear and atomic spins. The addition of two spins leads to a hyperfine structure with four states in the $(m_s,m_I)$ basis. The states with atomic spins directed anti-parallel to the magnetic field have $m_s=-1/2$ and are labeled as the a and b states. The a and b states are colloquially known as high-field seeking states, since their energy is minimized when in regions of higher magnetic field. This leads to losses in the magnetic trap as these atoms are drawn to higher fields away from the trap center. Alternatively, the c and d states, with atomic spin $m_s=+1/2$, minimize their energy in low magnetic fields because of the parallel alignment between spin and the magnetic field. Therefore, these low-field seeking states tend to stay trapped significantly longer than the high-field seeking states.
+
+ Project 8 would do well to prepare the tritium atoms in purely c and d states before trapping, however, even in this case losses still occur due to dipolar interactions between pairs of c and d states leading to a flipped atomic spins and subsequent losses due to high-field seeking atoms. The rate of these interactions depends on the magnitude of the background magnetic field and is maximal for dd interactions around 1~T (see Figure \ref{fig:chap3-dipolarloss}). The rate of losses from these interactions at 1~T requires atomic tritium production at a rate two orders of magnitude larger than at 0.1~T, thus, requirements on the whole atomic tritium system are significantly relaxed at lower magnetic fields, which provides an additional argument for transitioning to lower frequencies with the pilot-scale experiments.
+
+\subsection{Pilot-scale Experiment Concepts}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.9\textwidth]{figs/Chapter-3/phaseiv_concept_sketch_ver2.png}
+    \caption{\label{fig:chap3-phaseiv-antenna} A conceptual sketch of a large-volume antenna array based CRES experiment to measure the neutrino mass.}
+\end{figure}
+
+While the pilot-scale experiments are still in the early stages, enough is known to sketch the general features of these experiments at the cartoon level. 
+
+\subsubsection*{Pilot-scale Antenna Array CRES Experiment Concept}
+
+A conceptual design for an antenna-based CRES experiment is shown in Figure \ref{fig:chap3-phaseiv-antenna}. A large solenoid magnet provides a uniform background magnetic field less than 0.1~T in magnitude. Inside this region is the atom trapping magnet that generates a high magnetic field at the walls, which decays exponentially towards the central region. 
+Known magnet designs that produce suitable atom trapping fields include Ioffe-Prichard traps, which use conducting coils, as well as a Halbach array made from permanent magnets. Either magnet choice produces a region of high magnetic fields, which excludes atoms and allows for the placement of antennas inside the experiment. 
+
+Inside this region an array of microstrip patch antennas is inserted to collect the cyclotron radiation without providing a surface for atomic tritium recombination. Due to the lower frequency of cyclotron radiation antennas of a larger size can be used, which lowers the total number of antennas required to observe the experiment volume. Because of this scaling, the lower frequency experiment uses a similar number of antennas compared to a much smaller demonstrator experiment with a 1~T magnetic field.
+
+The atomic tritium beamline that supplies fresh tritium atoms to the experiment is not shown in the figure. The general configuration would matches the one shown for the pilot-scale cavity experiment (see Figure \ref{fig:chap3-cavity-pilot-scale}).
+
+\subsubsection*{Pilot-scale Cavity CRES Experiment Concept}
+
+The pilot-scale cavity experiment includes both an atomic tritium system and cavity CRES system. The atomic system consists of a thermal atom cracker located at the start of an evaporatively cooled atomic beamline. The atomic tritium system provides a supply of tritium atoms to the trap with temperatures on the order of a few mK. Atoms at this temperature can be trapped magneto-gravitationally, which is the reason for the vertical orientation of the cavity. At these low magnetic fields the trapping requirements for electrons and atoms differ enough such that it is advantageous to decouple the the trapping potentials to avoid radioactive heating of the tritium atoms from excess trapped electrons. Electron trapping is provided by a set of magnetic pinch coils at the top and bottom of the cavity and a multi-pole Ioffe or Halbach magnet serves to contain the atoms.
+
+The cavity design for the pilot-scale experiment consists of a large cylindrical cavity with a TE011 resonance of 325~MHz. Such a cavity is truly enormous, with a diameter of approximately 1.2~m and a height of 10~m. When an electron is produced inside the cavity with a cyclotron frequency that matches the TE011 resonant frequency it's cyclotron orbit couples the electron to the TE011, which drives a resonance in the cavity. These resonant fields can be read-out using an appropriate cavity coupling mechanism located at the center of the cavity. For more information on the cavity approach to CRES see Chapter \ref{chap:cavity}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.8\textwidth]{figs/Chapter-3/CavityAndBeamAndPerson2.pdf}
+    \caption{\label{fig:chap3-cavity-pilot-scale}}
+\end{figure}
+
+The bottom of the cavity has a cone termination to match the contour of the atom trapping magnet. This shape still allows for TE011 resonances with high internal Qs, which are required for good SNR in the cavity experiment. A small opening in the bottom of the cone serves as an entry point for the tritium atoms. To allow for calibration of the magnetic field inhomogeneities with an electron gun, the top of the cavity is left nearly completely open. Normally, this would drastically lower the Q-factor of the TE011 mode, but a specially configured coaxial partition is inserted at the top. This termination scheme is designed to act as a perfect short for the TE011 mode since the circular shape of the partition matches the electric field boundary conditions for the TE011 mode. Simulations with HFSS have confirmed that this design results in a high quality TE011 resonance despite the nearly completely open end.
