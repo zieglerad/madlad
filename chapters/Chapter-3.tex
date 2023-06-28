@@ -10,26 +10,63 @@
 
 Of the standard physical quantities the one that can be measured with the highest precision is time and the inversely related quantity frequency. In fact it is often advantageous to convert measurements of other physical quantities like mass or length into frequency measurements due to the digital nature of frequency measurements that make them immune to many sources of noise. Atomic clocks, which operate by measuring the frequencies of various atomic transitions, have been used to measure time with astounding relative uncertainties of $10^{-18}$~seconds. The extreme precision possible with frequency measurements is often summarized using the a quote from the Physicist Arthur Schawlow who said advise his students to "Never measure anything but frequency!". 
 
-Neutrino mass measurements using tritium beta-decay are effectively attempting to measure  
+Neutrino mass measurements using tritium beta-decay require us to measure a perturbation of the 18600~eV tritium endpoint to precisions as low as 0.1~eV, therefore, a spectroscopic technique with extremely high resolution is required for this measurement. Part of the reason that frequency measurements are capable of such high resolutions is that they are essentially counting measurements, which average the number of oscillations of a physical system over time. By observing a rapidly oscillating system over a sufficient length of time one can obtain essentially arbitrary precision on a frequency limited only by the time available for measurement and the SNR of the system.
+
+In order to perform frequency-based high-resolution spectroscopy of the tritium beta-decay spectrum one needs to translate the kinetic energy of the electron into a frequency. The simplest way to accomplish this is to place a gaseous supply of tritium into a magnetic field. When one of the atoms decays the resulting electron will immediately begin to orbit around a magnetic field line at the cyclotron frequency which is proportional to its kinetic energy (see Figure \ref{fig:chap3-cres-cartoon}). The acceleration caused by the orbit leads to the emission of cyclotron radiation that can be detected using an array of antennas or a different RF sensor such as a resonant cavity. The frequency of the radiation gives the electron's kinetic energy, which is used to build the beta-decay spectrum and measure the neutrino mass. The name for this measurement technique is Cyclotron Radiation Emission Spectroscopy or CRES.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/Chapter-3/230303_cres_cartoon.png}
     \caption{Caption}
-    \label{fig:cres_cartoon}
+    \label{fig:chap3-cres-cartoon}
 \end{figure}
 
-\subsubsection*{Charged Particles in a Magnetic Trap}
+For non-relativistic particles the cyclotron frequency is only a function of the charge-to-mass ratio of the particle, however, from the relativistic form of the cyclotron frequency
+\begin{equation}
+    f_c = \frac{qB}{2\pi m_e\gamma}=\frac{1}{2\pi}\frac{qB}{m_e+E_\mathrm{kin}/c^2},
+    \label{eq:chap3-cyclotron-freq}
+\end{equation} 
+one can see that the kinetic energy ($E_\mathrm{kin}$) of the electron is directly proportional to the inverse of the cyclotron frequency ($f_c$). Electrons with kinetic energies of 18.6~keV are in the weakly relativistic regime with $\beta=\frac{v}{c}=0.263$ and $\gamma=1.036$.
 
+The required frequency resolution needed for neutrino mass measurement can be obtained by differentiating Equation \ref{eq:chap3-cyclotron-freq},
+\begin{equation}
+    \frac{df_c}{dE_\mathrm{kin}} = \frac{1}{2\pi}\frac{-qBc^2}{\left(m_ec^2+E_\mathrm{kin}\right)^2},
+\end{equation}
+from which we can obtain the relationship between fractional differences in energy and frequency,
+\begin{equation}
+    \frac{df_c}{f_c}=\frac{1-\gamma}{\gamma}\frac{dE_\mathrm{kin}}{E_\mathrm{kin}}.
+\end{equation}
+Therefore, an energy precision of 1~eV for an 18.6~keV electron requires a frequency precision of approximately 2~ppm.
+
+The minimum observation time required to achieve this resolution can be estimated using the uncertainty principle as formulated by Gabor. Electron's from tritium beta-decay experience random collisions with the background gas particles, which limits the uninterrupted radiation lifetime. The time between collision events, referred to as track length in the context of CRES measurements, is an exponentially distributed variable. Differences in the track lengths of a population of mono-energetic electrons leads to uncertainty or broadening in the distribution of measured frequencies proportional to the mean track length, $\tau_\lambda$. The resulting frequency distribution has a Lorentizan profile, whose width is given by the Gabor limit,
+\begin{equation}
+    \tau_\lambda\Delta f_c=\frac{1}{2\pi}\implies\Delta\omega_c=\frac{1}{2\pi\tau_\lambda}.
+\end{equation}
+
+The cyclotron frequency for a 18.6-keV electron in a 1~T field is approximately 27~GHz, from which one can estimate the minimum observation time for 2~ppm frequency resolution at approximately 3~$\mu$sec. The Gabor limit is not the true lower bound on the frequency resolution for a CRES signal, since it is based on the details of the Fourier representation of a time-series with a fixed length. If one takes the approach of fitting the CRES signal in the time-domain, then one finds that the limit on frequency precision is given by the Cram\'{e}r-Rao lower bound (CRLB), which depends on both the track length as well as the SNR. In general, the CRLB allows for better precision on the cyclotron frequency, however, the Gabor limit provides an illustrative limit with the correct order of magnitude.  
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.75\textwidth]{figs/Chapter-3/230628_bathtub_trap.png}
+    \caption{\label{fig:chap3-bathtub-trap}}
+\end{figure}
+
+Ensuring that an electron remains under observation long enough so that it's frequency can be properly measured requires a magnetic trap. A magnetic trap is a local minimum in a background magnetic field generated an appropriate configuration of electromagnetic coils. Since magnetic fields can do no work, there is no danger of the magnetic trap affecting the kinetic energy electron after it is emitted from the beta-decay. One common approach to creating a magnetic trap is the "bathtub" trap configuration, which in it's simplest form consists of two high magnetic field pinch coils aligned on a central axis that are well separated (see Figure \ref{fig:chap3-bathtub-trap}). This configuration produces a trap with a flat uniform bottom and relatively steep walls, which is ideal for CRES measurements. 
+
+Electrons produced in the trap oscillate back and forth between the trap walls at a frequency that depends upon the pitch angle, unless they are produced with pitch angles too small to be contained in the trap. Pitch angle is defined as the angle between the component of the electron's velocity perpendicular to the magnetic field and the component parallel to the magnetic field,
+\begin{equation}
+    \tan{\theta}=\frac{v_\perp}{v_\parallel}.
+\end{equation}
+The axial motion of the electron leads to variation in the cyclotron frequency due to the changing value of the magnetic fields. This leads to frequency modulation that generate sidebands in the cyclotron radiation spectrum. Resolving these sideband frequency components is necessary for a complete reconstruction of the CRES signal in the experiment.
+
+Electrons trapped in a cylindrically symmetric trap have three primary components of motion (see Figure \ref{fig:chap3-trapped-electron-motion}).
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/Chapter-3/230511_trapped_motion.png}
     \caption{Caption}
     \label{fig:chap3-trapped-electron-motion}
 \end{figure}
-
-\subsubsection*{Radiation from a Charged Particle}
-
+The dominant component, with the highest frequency, is the electron's cyclotron 
 
 \subsection{The Project 8 Collaboration}
 
