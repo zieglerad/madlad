@@ -4,7 +4,20 @@
 
 \section{Introduction}
 
+A promising technique for direct measurements of the neutrino mass beyond the projected limit of the ongoing KATRIN experiment is tritium beta-decay spectroscopy with an atomic tritium source. Atomic tritium, combined with a large-volume, high-resolution energy measurement technique, is capable of measuring the neutrino mass with sensitivity below the 50~meV limit allowed by neutrino oscillations. 
+
+Cyclotron Radiation Emission Spectroscopy or CRES is a high-resolution energy measurement technique compatible with atomic tritium production and storage that can enable the next-generation of neutrino mass direct measurement experiments. The Project 8 collaboration is currently engaged in a program of research and development (R\&D) aimed at developing the technology necessary for a 40~meV sensitivity measurement of the neutrino mass using CRES and atomic tritium.
+
+In Section \ref{sec:chap3-cres-and-p8} we provide and introduction to the basics of the CRES technique as well as the goals of the Project 8 experiment. Additionally, we sketch out the phased experiment development plan being implemented by Project 8 to build towards a next-generation neutrino mass experiment.
+
+In Section \ref{sec:chap3-phaseII} we give a brief overview of Phase II of the Project 8 experiment, which completed early in 2023. Although the bulk of the work presented in this thesis is relevant to designs of future Project 8 experiments, a description of the work in Phase II provides useful context for the rest of the work.
+
+In Section \ref{sec:chap3-phaseIII-antenna-arrays} we introduce a CRES measurement concept based on antenna arrays which could be the basis for the ultimate Project 8 neutrino mass experiment. A significant portion of the R\&D efforts of Project 8 in Phase III were directed towards simulating and modeling this experimental concept in order to understand the achievable sensitivity to the neutrino mass.
+
+Lastly, in Section \ref{sec:chap3-freq-choice-and-pilot-scale} we introduce conceptual designs of pilot-scale experiments that combine atomic CRES with a large-volume CRES detection technique. This includes a design concept for an antenna array based experiment, but also a design for a resonant cavity based experiment. Resonant cavities are discussed in more depth in Chapter \ref{chap:cavity} and have become the preferred choice for future CRES experiments in Project 8 over antenna arrays.
+
 \section{CRES and Project 8}
+\label{sec:chap3-cres-and-p8}
 
 \subsection{Cyclotron Radiation Emission Spectroscopy --- CRES}
 
@@ -17,7 +30,7 @@ In order to perform frequency-based high-resolution spectroscopy of the tritium 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/Chapter-3/230303_cres_cartoon.png}
-    \caption{Caption}
+    \caption{A cartoon illustration of the CRES technique. An electron is contained in a magnetic trap so that it's cyclotron radiation can be detected by an array of antennas. Detecting the cyclotron radiation allows us to measure its cyclotron frequency and determine its kinetic energy.}
     \label{fig:chap3-cres-cartoon}
 \end{figure}
 
@@ -40,7 +53,7 @@ Therefore, an energy precision of 1~eV for an 18.6~keV electron requires a frequ
 
 The minimum observation time required to achieve this resolution can be estimated using the uncertainty principle as formulated by Gabor. Electron's from tritium beta-decay experience random collisions with the background gas particles, which limits the uninterrupted radiation lifetime. The time between collision events, referred to as track length in the context of CRES measurements, is an exponentially distributed variable. Differences in the track lengths of a population of mono-energetic electrons leads to uncertainty or broadening in the distribution of measured frequencies proportional to the mean track length, $\tau_\lambda$. The resulting frequency distribution has a Lorentizan profile, whose width is given by the Gabor limit,
 \begin{equation}
-    \tau_\lambda\Delta f_c=\frac{1}{2\pi}\implies\Delta\omega_c=\frac{1}{2\pi\tau_\lambda}.
+    \tau_\lambda\Delta f_c=\frac{1}{2\pi}\implies\Delta f_c=\frac{1}{2\pi\tau_\lambda}.
 \end{equation}
 
 The cyclotron frequency for a 18.6-keV electron in a 1~T field is approximately 27~GHz, from which one can estimate the minimum observation time for 2~ppm frequency resolution at approximately 3~$\mu$sec. The Gabor limit is not the true lower bound on the frequency resolution for a CRES signal, since it is based on the details of the Fourier representation of a time-series with a fixed length. If one takes the approach of fitting the CRES signal in the time-domain, then one finds that the limit on frequency precision is given by the Cram\'{e}r-Rao lower bound (CRLB), which depends on both the track length as well as the SNR. In general, the CRLB allows for better precision on the cyclotron frequency, however, the Gabor limit provides an illustrative limit with the correct order of magnitude.  
@@ -48,7 +61,7 @@ The cyclotron frequency for a 18.6-keV electron in a 1~T field is approximately 
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.75\textwidth]{figs/Chapter-3/230628_bathtub_trap.png}
-    \caption{\label{fig:chap3-bathtub-trap}}
+    \caption{\label{fig:chap3-bathtub-trap}An illustration of an electron in a bathtub magnetic trap generated by two well-separated coils.}
 \end{figure}
 
 Ensuring that an electron remains under observation long enough so that it's frequency can be properly measured requires a magnetic trap. A magnetic trap is a local minimum in a background magnetic field generated an appropriate configuration of electromagnetic coils. Since magnetic fields can do no work, there is no danger of the magnetic trap affecting the kinetic energy electron after it is emitted from the beta-decay. One common approach to creating a magnetic trap is the "bathtub" trap configuration, which in it's simplest form consists of two high magnetic field pinch coils aligned on a central axis that are well separated (see Figure \ref{fig:chap3-bathtub-trap}). This configuration produces a trap with a flat uniform bottom and relatively steep walls, which is ideal for CRES measurements. 
@@ -63,10 +76,20 @@ Electrons trapped in a cylindrically symmetric trap have three primary component
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/Chapter-3/230511_trapped_motion.png}
-    \caption{Caption}
+    \caption{A plot of the main components of an electron's trajectory in a cylindrically symmetric trap.}
     \label{fig:chap3-trapped-electron-motion}
 \end{figure}
-The dominant component, with the highest frequency, is the electron's cyclotron 
+The dominant component, typically with the highest frequency, is the electron's cyclotron orbit, which encodes information on the electron's kinetic energy. Axial motion from the electron's pitch angle leads to frequency modulation but also a shift in the average magnetic field experienced by an electron. This leads to a correlation between the kinetic energy of the electron and the pitch angle depending on the particular shape of the magnetic trap, which can negatively impact energy resolution. To reduce this correlation one must engineer the trap to have a flat bottom with very steep wall both of which are more easily achieved with a small aspect ratio bathtub trap. Radial gradients in the trap oftentimes leads to a third component of motion called grad-B drift. The equation for the drift velocity is
+\begin{equation}
+    \mathbf{v}_{\nabla B} = \frac{m_e v_\perp^2}{2qB}\frac{\mathbf{B}\times\nabla B}{B^2}.
+\end{equation}
+These additional components of motion all influence the shape of the CRES signal so modeling their effects is critical to proper measurement of the kinetic energy.
+
+The total power of the radiation emitted by an electron in a free-space environment is given by the Larmor equation
+\begin{equation}
+    P(\gamma, \theta_p)=\frac{1}{4\pi\epsilon_0}\frac{2}{3}\frac{q^2\omega_c^2}{c}(\gamma^2 - 1)\sin^2{\theta_p},
+\end{equation}
+where $\omega_c$ is the cyclotron frequency multiplied by $2\pi$ and $\theta_p$ is the pitch angle to distinguish it from the spherical angle coordinate. A single electron with a $90^\circ$ pitch angle and 18.6~keV of kinetic energy in a 1~T magnetic field emits a total radiation power of 1.2~fW, which is quite small compared with typical RF systems, furthermore, one is typically only able to receive a fraction of this total power with an antenna or other detection system. Therefore, RF systems in CRES experiments must be operated at cyrogenic temperatures to limit the noise power such that adequate SNR can be achieved for signal detection and reconstruction. Alternatively, longer tracks enable detection of weaker signals due to the increase in the total signal energy available for the detection algorithm.
 
 \subsection{The Project 8 Collaboration}
 
@@ -81,7 +104,7 @@ Previous measurements of the tritium beta-decay spectrum for neutrino mass measu
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.5\textwidth]{figs/Chapter-3/atmol2.pdf}
-    \caption{\label{fig:chap3-atomic-vs-mol-final-state-spectra}}
+    \caption{\label{fig:chap3-atomic-vs-mol-final-state-spectra} A plot of the final state distributions of atomic and molecular tritium. The final state distribution provides the primary contribution to the width of the molecular spectrum whereas thermal doppler broadening is responsible for the width of the atomic spectrum.}
 \end{figure}
 
 To produce atomic hydrogen one must supply sufficient energy to the tritium molecule to break the molecular bond between. Common approaches to this include the use of hot coaxial filament atom crackers as well as plasma atom sources. Both approaches heat the tritium atoms to temperatures $>2500$~K, which must then be cooled to temperatures on the order of a few~mK so that the tritium atoms can be trapped. Cooling the atoms requires the construction of a large tritium infrastructure and cooling system that can supply a source of cold atoms to the trap. 
@@ -108,7 +131,7 @@ Project 8's ultimate goal is to combine CRES with atomic tritium to measure the 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/Chapter-3/230303_sum_nu_mass_vs_m_beta_with_exclusion_and_goal.png}
-    \caption{Caption}
+    \caption{Neutrino mass exclusion plot including limits from cosmological measurements and the KATRIN experiment. Allowed ranges for neutrino masses under the normal and inverted hierarchies are shown as the blue and orange lines respectively. The black dashed line shows Project 8's goal neutrino mass sensitivity for the Phase IV experiment.}
     \label{fig:chap3-p8-nu-mass-goal}
 \end{figure}
 This sensitivity is sufficient to fully exhaust the range of allowable neutrino masses under the inverted neutrino mass ordering regime and is approximately an order of magnitude less than the projected final sensitivity of the KATRIN experiment. Excluding the full neutrino mass parameter space would require a sensitivity an order of magnitude lower than what is proposed by Project 8, which would require an experiment whose size and complexity are currently well beyond proposals for the next-generation of neutrino mass direct measurement experiments.
@@ -303,7 +326,7 @@ One possible approach, suggested in the original CRES publication, is to use man
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.6\textwidth]{figs/Chapter-3/230614_antenna_cartoon.png}
-    \caption{\label{fig:chap3-antenna-concept-cartoon}}
+    \caption{\label{fig:chap3-antenna-concept-cartoon} A cartoon illustration of the basics of the antenna array CRES technique.}
 \end{figure}
 Each antenna in the array collects only a small fraction of the electron's signal power, which is less than 1~fW for a 18.6~keV kinetic energy electron in a 1~T magnetic field. Scaling to large volumes with the antenna array approach is accomplished by increasing the number of antennas in the array, which increases the volume under observation proportionally, so that a sufficient population of tritium atoms can be observed to measure the tritium spectrum endpoint shape. 
 
@@ -407,7 +430,7 @@ The pilot-scale experiments will be the first Project 8 experiments to combine C
         \includegraphics*[width=\textwidth]{figs/Chapter-3/dipolarloss.pdf}
         \caption{}
     \end{subfigure}
-    \caption{}
+    \caption{(a) A plot of the decay rate for the two-body dipolar spin exchange interaction for c+c and d+d state. (b) A plot of the decay rate of the dipolar spin exchange interaction for d+d states as a function of magnetic field magnitude. Lowering the magnetic field is key for reducing the losses from this interaction.}
     \label{fig:chap3-dipolarloss}
  \end{figure}
  The primary influence of the background field magnitude is through the rate of dipolar spin-flips caused by a spin exchange interaction between trapped atoms. 
@@ -439,12 +462,14 @@ The atomic tritium beamline that supplies fresh tritium atoms to the experiment 
 
 The pilot-scale cavity experiment includes both an atomic tritium system and cavity CRES system. The atomic system consists of a thermal atom cracker located at the start of an evaporatively cooled atomic beamline. The atomic tritium system provides a supply of tritium atoms to the trap with temperatures on the order of a few mK. Atoms at this temperature can be trapped magneto-gravitationally, which is the reason for the vertical orientation of the cavity. At these low magnetic fields the trapping requirements for electrons and atoms differ enough such that it is advantageous to decouple the the trapping potentials to avoid radioactive heating of the tritium atoms from excess trapped electrons. Electron trapping is provided by a set of magnetic pinch coils at the top and bottom of the cavity and a multi-pole Ioffe or Halbach magnet serves to contain the atoms.
 
-The cavity design for the pilot-scale experiment consists of a large cylindrical cavity with a TE011 resonance of 325~MHz. Such a cavity is truly enormous, with a diameter of approximately 1.2~m and a height of 10~m. When an electron is produced inside the cavity with a cyclotron frequency that matches the TE011 resonant frequency it's cyclotron orbit couples the electron to the TE011, which drives a resonance in the cavity. These resonant fields can be read-out using an appropriate cavity coupling mechanism located at the center of the cavity. For more information on the cavity approach to CRES see Chapter \ref{chap:cavity}.
-
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.8\textwidth]{figs/Chapter-3/CavityAndBeamAndPerson2.pdf}
-    \caption{\label{fig:chap3-cavity-pilot-scale}}
+    \caption{\label{fig:chap3-cavity-pilot-scale} A conceptual sketch of a pilot-scale cavity CRES experiment with an atomic tritium beamline.}
 \end{figure}
+
+The cavity design for the pilot-scale experiment consists of a large cylindrical cavity with a TE011 resonance of 325~MHz. Such a cavity is truly enormous, with a diameter of approximately 1.2~m and a height of 10~m. When an electron is produced inside the cavity with a cyclotron frequency that matches the TE011 resonant frequency it's cyclotron orbit couples the electron to the TE011, which drives a resonance in the cavity. These resonant fields can be read-out using an appropriate cavity coupling mechanism located at the center of the cavity. For more information on the cavity approach to CRES see Chapter \ref{chap:cavity}.
+
+
 
 The bottom of the cavity has a cone termination to match the contour of the atom trapping magnet. This shape still allows for TE011 resonances with high internal Qs, which are required for good SNR in the cavity experiment. A small opening in the bottom of the cone serves as an entry point for the tritium atoms. To allow for calibration of the magnetic field inhomogeneities with an electron gun, the top of the cavity is left nearly completely open. Normally, this would drastically lower the Q-factor of the TE011 mode, but a specially configured coaxial partition is inserted at the top. This termination scheme is designed to act as a perfect short for the TE011 mode since the circular shape of the partition matches the electric field boundary conditions for the TE011 mode. Simulations with HFSS have confirmed that this design results in a high quality TE011 resonance despite the nearly completely open end.
