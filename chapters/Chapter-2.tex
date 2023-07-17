@@ -190,15 +190,19 @@ The neutrino mass scale variable measured by beta-decay is given by
 \end{equation}
 where $m_beta$ is the effective mass of the neutrino in beta-decay or simply neutrino mass for brevity. By assuming unitarity, the neutrino mass can be expressed in terms of the PMNS matrix elements, squared mass differences, and the lightest neutrino mass eigenstate. For the normal mass ordering the equation is
 \begin{equation}
-    m_\beta^2=m^2_\textrm{least} 
+    m_\beta^2=m^2_\textrm{least} + |U_{e2}|^2\Delta m_{21}^2 +|U_{e3}|^2\Delta m_{31}^2,
 \end{equation} 
-
+and for the inverted ordering the equation is 
+\begin{equation}
+    m_\beta^2=m^2_\textrm{least}+|U_{e1}|^2(-\Delta m_{32}^2-\Delta m_{21}^2)+|U_{e2}|^2(-\Delta m_{32}^2).
+\end{equation}
+Therefore, a measurement of the neutrino mass in combination with neutrino mixing parameters is effectively a measurement of $m_\textrm{least}$.
 
 Since the neutrino mass is small ($<1$~eV), it's effect on the spectrum is limited to the endpoint region.
-
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/Chapter-2/230302_atomic_tritium_spectrum_near_endpoint.png}
     \caption{Caption}
-    \label{fig:atomic_tritium_endpoint}
+    \label{fig:chap2-atomic-tritium-endpoint}
 \end{figure}
+The affect of a non-zero neutrino mass on the endpoint spectrum is plotted for the reader in Figure \ref{fig:chap2-atomic-tritium-endpoint}. Resolving the small changes in the spectrum shape requires an experimental technique with high statistics,, excellent energy resolution, as well as low background activity. The KATRIN collaboration 
