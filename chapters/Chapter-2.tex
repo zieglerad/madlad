@@ -14,19 +14,13 @@ While first discovered in the context of nuclear physics, neutrinos have a perva
 
 \section{Neutrino Oscillations}
 
-Back in the day the solar neutrino problem was noticed in the experiment by Ray Davis. Neutrinos from the sun were missing. The experiment took place at the Sanford mine in South Dakota.
+The first hint of neutrino flavor transitions or neutrino oscillations was indicated by the solar neutrino problem, which referred to discrepancies between the predicted flux of $\nu_e$ from the standard solar model and measurements of the solar neutrino flux such as the famous experiment at the Homestake mine by Ray Davis Jr. and collaborators in the 1960's. Essentially, fewer electron-type neutrinos than expected were being observed from the sun. Finally, in the early 2000's the SNO experiment was able to resolve the solar neutrino problem by identifying neutrino oscillations as the cause of the observed deficit. Furthermore, measurements of the atomspheric flux of neutrinos by the Super-Kamiokande experiment and others revealed that fewer muon-type neutrinos survived passage through the earth than expected providing strong evidence for neutrino oscillations for both flavors.
 
-Neutrino oscillations were first observed by the Super-Kamiokande (SK) experiment in th 90's. The rates of atmospheric neutrinos from above and below were compared.
-
-Neutrino oscillations were independently confirmed by the Sudbury Neutrino Observatory experiment (SNO) using solar neutrinos. 
-
-Both experiments were awarded the Nobel prize in 2015 for the discover of neutrino oscillations.
-
-Today the number of experiments which have measured rates of neutrino oscillation are legion. Measurements have been performed using various sources of neutrinos such as nuclear reactor, solar, atmospheric, and accelerator. 
-
-The origin of neutrino oscillations is that the weak eigenstates are distinct from the mass eigenstates. The weakly interacting eigenstates are described as a superposition of the massive neutrino states using a 3x3 mixing matrix. 
-
-The neutrino mixing matrix is typically written in the Pontecorvo-Maki-Nakagawa-Sakata (PMNS) parameterization.
+The origin of neutrino oscillations is that the weak eigenstates are distinct from the mass eigenstates. The neutrino mass eigenstates represent physical particles in the sense that they are solutions to the free-particle Hamiltonian, whereas, the neutrino weak eigenstates correspond to the neutrino states that interact via the weak charged-current interaction. The neutrino weak eigenstates are a linear superposition of the neutrino mass eigenstates
+\begin{equation}
+    \nu_\ell=\sum_i{U_{\ell i}\nu_i},
+\end{equation}
+where $\ell=e,\mu,\tau$ and $i=1,2,3$. The matrix elements $U_{\ell i}$ are the elements of the Pontecorvo-Maki-Nakagawa-Sakata (PMNS) matrix that describes the mixing between the neutrino flavor and mass states.
 
 \begin{figure}[htbp]
     \centering
@@ -35,18 +29,58 @@ The neutrino mixing matrix is typically written in the Pontecorvo-Maki-Nakagawa-
     \label{fig:chap2-nu-hierarchy}
 \end{figure}
 
-A giant experimental effort over the past couple of decades has greatly contained the majority of parameters in the PMNS matrix, many to relative uncertainties of only a few percent. However, some parameters still remain relatively unconstrained, which is the origin of the current uncertainty in the ordering of the neutrino masses. Next-generation neutrino oscillation experiments such as JUNO, Hyper-Kamiokande, and DUNE are poised to resolve this ambiguity in the coming years.
+One standard parameterization of the PMNS matrix is 
+\begin{equation}
+    \begin{split}
+        U_{PMNS}=&\begin{bmatrix}
+            U_{e1}&U_{e2}&U_{e3}\\
+            U_{\mu 1}&U_{\mu 2}&U_{\mu 3}\\
+            U_{\tau 1}&U_{\tau 2}&U_{\tau 3}
+        \end{bmatrix}\\
+        =&\begin{bmatrix}
+            1&0&0\\0&c_{23}&s_{23}\\0&-s_{23}&c_{23}
+        \end{bmatrix}
+        \begin{bmatrix}
+            c_{13}&0&s_{13}e^{-i\delta}\\0&1&0\\-s_{13}e^{i\delta}&0&c_{13}
+        \end{bmatrix}
+        \begin{bmatrix}
+            c_{12}&s_{12}&0\\-s_{12}&c_{12}&0\\0&0&1
+        \end{bmatrix}\\
+        &\times
+        \begin{bmatrix}
+            e^{i\alpha_1/2}&0&0\\
+            0&e^{i\alpha_2/2}&0\\
+            0&0&1
+        \end{bmatrix},
+    \end{split}
+\end{equation}
+where $c_{ij}=\cos{\theta_{ij}}$ and $s_{ij}=\sin{\theta_{ij}}$. The parameters $\alpha_1$ and $\alpha_2$ are only included in the PNMS matrix if neutrinos are Majorana particles, something which represents a current area of research in neutrino physics. The phase $\delta$ quantifies the degree of CP-violation in the neutrino sector. Including the Majorana phases the PMNS matrix contains six independent parameters. In addition, neutrino oscillation probabilities depend on the squared mass differences between neutrino mass eigenstates
+\begin{equation}
+    \Delta m_{ij}^2=m_i^2-m_j^2,
+\end{equation}
+where $ij=12,32,31$ respectively. Because $\Delta m_{32}^2=\Delta m_{31}^2-\Delta m_{21}^2$, this adds an additional two parameters that must be constrained by neutrino oscillations. 
 
-As one can see from the equation for neutrino mixing probabilities, the dependence on mass only enters as a difference between the mass eigenstates. Therefore oscillation probabilities are unaffected by the absolute scale of the neutrino mass. However, oscillations can be used to obtain a lower bound on the neutrino masses by setting the mass of the lightest neutrino mass state to zero. This results in different lower limits depending on the ordering of the neutrino mass states.
+A giant experimental effort over the past couple of decades has greatly contained the majority of parameters in the PMNS matrix, many to relative uncertainties of only a few percent. However, some parameters still remain relatively unconstrained, which is the origin of the current uncertainty in the ordering of the neutrino masses (see Figure \ref{fig:chap2-nu-hierarchy}). The neutrino masses can be organized by their relative mass. The current neutrino oscillation data can confirm that $m_2>m_1$, however, the sign of $\Delta m_{32}^2$ is still unknown. This leads to two scenarios where neutrino masses follow the ordering $m_3>m_2>m_1$, which is called the normal mass ordering (NMO), or alternatively neutrino masses may be ordered $m_2>m_1>m_3$, which is called the inverted mass ordering (IMO). Next-generation neutrino oscillation experiments such as JUNO, Hyper-Kamiokande, and DUNE are poised to resolve this ambiguity in the coming years.
+
+Neutrino oscillation probabilities are only sensitive to the neutrino masses via the squared mass differences. Therefore oscillation probabilities are unaffected by the absolute scale of the neutrino mass. However, oscillations can be used to obtain a lower bound on the neutrino masses by setting the mass of the lightest neutrino mass state to zero. This results in different lower limits depending on the ordering of the neutrino mass states. Current best-fit values with $1\sigma$-uncertainties for the squared mass differences are 
+\begin{align}
+    \Delta m_{21}^2&=(7.42^{+0.21}_{-0.20})\times 10^{-5}\text{ eV}^2,\\
+    \Delta m_{31}^2&=(2.5176{+0.026}_{-0.028})\times 10^{-3}\text{ eV}^2\text{ (NMO)},
+\end{align}
+for the normal mass ordering, and in the case of the inverted ordering we have
+\begin{align}
+    \Delta m_{32}^2&=(-2.498^{+0.028}_{-0.028})\times 10^{-3}\text{ eV}^2\text{ (IMO)}.
+\end{align}
+By letting the lightest neutrino mass in each ordering scenario ($m_\textrm{least}$) take on a range of values one can visualize the relative masses of the neutrinos as a function of $m_\textrm{least}$ (see Figure \ref{fig:chap2-mass-estates}).
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}{0.7\textwidth}
+    \begin{subfigure}{0.49\textwidth}
         \includegraphics*[width=\textwidth]{figs/Chapter-2/230302_mass_estate_vals_normal.png}
         \caption{}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.7\textwidth}
+    \begin{subfigure}{0.49\textwidth}
         \includegraphics*[width=\textwidth]{figs/Chapter-2/230302_mass_estate_vals_inverted.png}
         \caption{}
     \end{subfigure}
@@ -54,25 +88,62 @@ As one can see from the equation for neutrino mixing probabilities, the dependen
     \label{fig:chap2-mass-estates}
 \end{figure}
 
-Various extensions to the 3x3 mixing regime, so called sterile neutrinos, have been proposed to explain certain anomalous neutrino oscillation phenomena observed primarily in neutrinos produced by nuclear reactors. Currently there is inconclusive evidence to support the existence of sterile neutrinos. Certain of these apparently anomalous results can be explained by better modeling of the nuclear processes in the reactors that generate the measured flux of neutrinos. However, some puzzles such as the unexplained neutrino deficits measured by the BEST experiment remain open.  
+%Various extensions to the 3x3 mixing regime, so called sterile neutrinos, have been proposed to explain certain anomalous neutrino oscillation phenomena observed primarily in neutrinos produced by nuclear reactors. Currently there is inconclusive evidence to support the existence of sterile neutrinos. Certain of these apparently anomalous results can be explained by better modeling of the nuclear processes in the reactors that generate the measured flux of neutrinos. However, some puzzles such as the unexplained neutrino deficits measured by the BEST experiment remain open.  
 
 \section{Neutrino Masses in the Standard Model}
 
-In modern quantum field theory spin-1/2 particles, or Fermions, are described using the Dirac equation. 
+Neutrinos are spin 1/2 particles and in modern quantum field theory spin-1/2 particles, or fermions, are described using the Dirac equation. 
+\begin{equation}
+    (i\hbar\gamma^\mu\partial_\mu-mc)\psi(x)=0, 
+\end{equation}
+where the field that describes the particle is denoted as $\psi(x)$. In the standard fermions acquire mass through the Yukawa interaction, which add to the standard model Lagrangian terms of the form 
+\begin{equation}
+    \mathcal{L}_\textrm{Yukawa}=-Y^\ell_{ij}\bar{L}_{Li}\phi E_{Rj}+\textrm{h.c.},
+\end{equation}
+where $Y_{ij}^\ell$ is an element of the $3\times3$ Yukawa coupling matrix for leptons, $L_{Li}$ is the left-handed lepton doublet for generation $i$, $\phi$ is the Higgs doublet, and $E_{Rj}$ is the right-handed lepton field for generation $j$. In the standard model neutrinos are only represented as left-handed neutrinos and right-handed antineutrinos, consistent with experimental observations. Since there are no right-handed neutrino singlet fields and no Yukawa interaction terms for neutrinos are strictly massless, and non-zero neutrino masses is evidence for physics beyond the standard model. For the charged leptons, the Yukawa interaction leads to masses of the form 
+\begin{equation}
+    m^\ell_{ij}=Y^\ell_{ij}\frac{v}{\sqrt{2}},
+\end{equation}
+where $v$ is the Higgs vacuum expectation value.
 
-Fermion masses in the standard model are a result of the Higgs mechanism, which requires both left-chiral and right-chiral fermion fields. The current experimental evidence for neutrinos only support the existence of right-handed neutrinos and left-handed antineutrinos, therefore, neutrinos in the standard model are predicted to have zero mass. Consequently, the observation of neutrino oscillations is inconsistent with the standard model.
+The observation of massive neutrinos motivates the extension of the standard model to explain the origin of neutrino masses, which can be approached in different way, but all methods add additional degrees of freedom to the standard model. One approach is to introduce to the standard model a right-handed neutrino field that allows one to introduce Yukawa terms of the form 
+\begin{equation}
+    \mathcal{L}_{\nu\textrm{Yukawa}} = -Y^\ell_{ij}\bar{L}_{Li}\phi \nu_{Rj}+\textrm{h.c.}
+\end{equation}
+where $\nu_{Rj}$ is the right-handed neutrino singlet. Because experimental evidence strongly predicts only three active neutrinos these additional neutrinos are sterile and do not interact via the strong, weak, or electromagnetic interactions. After spontaneous symmetry breaking, the Yukawa interaction leads to mass terms given by 
+\begin{equation}
+    \mathcal{L}_{D}=-M_{Dij}\bar{\nu}_{Ri}\nu_{Lj} +\textrm{h.c.},
+\end{equation}
+which is called a Dirac mass term. One of the issues with constructing neutrino masses in this way is that the required Yukawa couplings are at least a factor of $10^6$ smaller than that of an electron, which begs the question: why are the Yukawa couplings so small for the neutrinos?
 
-Since neutrinos are neutral particles, the simplest extension to the standard model is to allow neutrinos to have a Majorana mass term of the form \ldots If neutrinos are indeed Majorana fermions then one would predict that certain nuclei can decay via the rare neutrino-less double-beta decay process at a rate proportional to the neutrino mass absolute scale. 
+An alternative approach is to allow the neutrinos to have a Majorana mass, which is possible because neutrinos are electrically neutral particles. The Majorana mass terms for the neutrino have the form 
+\begin{equation}
+    \mathcal{L}_{M}=-\frac{1}{2}(M_{Rij}\bar{\nu}_{Ri}\nu_{Rj}^c M_{Lij}\bar{\nu}_{Li}\nu_{Lj}^c) +\textrm{h.c.},
+\end{equation}
+where $M_{Rij}$ and $M_{Lij}$ are right-handed and left-handed Majorana mass matrices. A consequence of neutrinos being Majorana particles is lepton number violation, which predicts the occurrence of neutrino-less double beta-decay at a rate proportional to the neutrino mass.
 
-Alternatively, if neutrinos are instead Dirac Fermions, one can generate neutrino masses in the standard model by allowing the existence of right-handed neutrino states. In this case neutrino masses are generated in the same way as other Fermions through the Yukawa coupling terms of the form \ldots These right-handed neutrino states are disallowed from interacting with the rest of the standard model other than gravitationally in order to be consistent with experimental data and are thus often referred to as "sterile neutrinos" due to their lack of weak interactions. Despite their lack of weak interactions it is possible for sterile neutrinos to be observed via their effects on neutrino oscillations.
-
-These simple extensions to the standard model are dissatisfactory to many physicist, since they require coupling constants to the Majorana and Yukawa mass terms that are many orders of magnitude smaller than other fermions in order to generate neutrino masses consistent with observation data. The absolute masses of neutrinos are on the order of $10^{-6}$ smaller than the electron, which is suggestive that the origin of neutrino masses is the result of some new physics beyond the standard model.
-
-A popular extension to the standard model to explain the smallness of the neutrino mass is the so-called see-saw mechanism \ldots
+In the most general case neutrinos have both Dirac and Majorana mass terms, which allows one to generate neutrino masses with Yukawa couplings similar to the rest of the standard model. Considering just one generation of neutrinos for illustration, the combined Lagrangian can be written as 
+\begin{equation}
+    \mathcal{L}_{D+M}=-m_D\bar{\nu}_{R}\nu_{L} - \frac{1}{2}(m_L\bar{\nu}_L\nu_L^c+m_R\bar{\nu}_R\nu_R^c)+\text{h.c.},
+\end{equation}
+or equivalently,
+\begin{equation}
+    \label{eq:chap2-see-saw-lagrangian}
+    \mathcal{L}_{D+M}=-\frac{1}{2}\begin{bmatrix}\bar{\nu}_L&\bar{\nu}^c_R\end{bmatrix}\begin{bmatrix}m_L&m_D\\m_D&m_R\end{bmatrix}\begin{bmatrix}\nu^c_L\\ \nu_R\end{bmatrix} + \text{h.c.}.
+\end{equation}
+An example mass generation mechanism with this approach is the Type-I see-saw mechanism, in which we take $m_L=0$ and $m_R\gg m_D$. By diagonalizing Equation \ref{eq:chap2-see-saw-lagrangian} one obtains the mass eigenvalues that represent the physical masses of the neutrinos. The light neutrino mass eigenstate, which represents the observed neutrino mass, has a mass given by
+\begin{equation}
+    m_1\approx\frac{m_D^2}{m_R},
+\end{equation}
+and the heavy neutrino mass eigenstate, which represents the unobserved sterile neutrino, has a mass
+\begin{equation}
+    m_2\approx m_R.
+\end{equation}
+For $m_D$ similar to the other quark or lepton masses, one obtains physical neutrino masses consistent with observations from sterile neutrino masses of $m_R\approx O(10^{15})$~GeV. This mass scale is well beyond the capabilities of modern particle accelerators. 
 
 \section{Neutrino Absolute Mass Scale}
 
-Neutrino oscillation probabilities are determined by the squared mass differences and are insensitive to the absolute neutrino mass scale, therefore, alternative probes are needed to perform an effective measurement of the neutrino mass.
+The neutrino absolute mass scale or simply "neutrino mass" cannot be probed with neutrino oscillations, since oscillation probabilities are determined by the squared mass differences between neutrino mass eigenstates, therefore, alternative techniques are needed to perform an effective measurement of the neutrino mass.
 
 \subsection{Limits from Cosmology}
 
@@ -184,6 +255,13 @@ Neutrino mass measurements using beta-decay measure the effect of the neutrino's
 \end{figure}
 where $G_F$ is the Fermi coupling constant, $V_{ud}$ is an element of the CKM matrix, $E$ is the kinetic energy of the electron, $\beta$ is the velocity of the electron divided by the speed of light, $E_0$ is the endpoint energy assuming zero neutrino mass, $F(Z,\beta)$ is the Fermi function, and $\Theta(E_0-E-m_i)$ is the Heviside function, which enforces energy conservation. One can see that the decay spectrum is actually a combination of three spectra with different endpoints based on the actual values of the neutrino mass eigenstates, $m_i$. This results in "kinks" in the spectrum shape due to the overlapping spectra but such an effect would be nearly impossible to resolve given the finite energy resolution of a real experiment. 
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figs/Chapter-2/230302_atomic_tritium_spectrum_near_endpoint.png}
+    \caption{Caption}
+    \label{fig:chap2-atomic-tritium-endpoint}
+\end{figure}
+
 The neutrino mass scale variable measured by beta-decay is given by 
 \begin{equation}
     m_\beta^2=\sum_i{|U_{ei}|^2}m_i^2,
@@ -198,11 +276,6 @@ and for the inverted ordering the equation is
 \end{equation}
 Therefore, a measurement of the neutrino mass in combination with neutrino mixing parameters is effectively a measurement of $m_\textrm{least}$.
 
-Since the neutrino mass is small ($<1$~eV), it's effect on the spectrum is limited to the endpoint region.
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.7\textwidth]{figs/Chapter-2/230302_atomic_tritium_spectrum_near_endpoint.png}
-    \caption{Caption}
-    \label{fig:chap2-atomic-tritium-endpoint}
-\end{figure}
-The affect of a non-zero neutrino mass on the endpoint spectrum is plotted for the reader in Figure \ref{fig:chap2-atomic-tritium-endpoint}. Resolving the small changes in the spectrum shape requires an experimental technique with high statistics,, excellent energy resolution, as well as low background activity. The KATRIN collaboration 
+Since the neutrino mass is small ($<1$~eV), it's effect on the spectrum is limited to the endpoint region. The affect of a non-zero neutrino mass on the endpoint spectrum is plotted for the reader in Figure \ref{fig:chap2-atomic-tritium-endpoint}. Resolving the small changes in the spectrum shape requires an experimental technique with high statistics, excellent energy resolution, and low background activity. 
+
+The KATRIN collaboration, utilizing a large MAC-E (magnetic adiabatic collimation with electrostactic) filter spectrometer recently obtained the best direct measurement of the neutrino mass, with a 90\% confidence upper limit of 0.8~eV. With more statistics the KATRIN collaboration estimates an ultimate sensitivity to neutrino masses of 0.2~eV.
