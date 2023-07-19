@@ -7,6 +7,7 @@ A level-1 auxiliary file: chapters/Chapter-3.aux
 A level-1 auxiliary file: chapters/Chapter-4.aux
 A level-1 auxiliary file: chapters/Chapter-5.aux
 A level-1 auxiliary file: chapters/Chapter-6.aux
+A level-1 auxiliary file: chapters/Chapter-7.aux
 The style file: GLG-bibstyle.bst
 Database file #1: refs.bib
 Warning--empty journal in p8prl2023
@@ -18,7 +19,7 @@ Warning--empty pages in vgg
 Warning--empty pages in Project8:2022wqh
 You've used 33 entries,
             2552 wiz_defined-function locations,
-            759 strings with 13466 characters,
+            760 strings with 13488 characters,
 and the built_in function-call counts, 19929 in all, are:
 = -- 872
 > -- 1230
