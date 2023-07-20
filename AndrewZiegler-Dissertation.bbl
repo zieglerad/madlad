@@ -117,4 +117,16 @@
 \textsc{Wirth, W.} (2001) \emph{Radar Techniques Using Array Antennas}, Institution of Engineering and Technology.
 \newline\urlprefix\url{https://books.google.com/books?id=ALht42gkzLsC}
 
+\bibitem{p8phase3trigger}
+ \enquote{Real-time Signal Detection for Cyclotron Radiation Emission Spectroscopy Measurements using Antenna Arrays,} \emph{In preparation}.
+
+\bibitem{cresHe6}
+\textsc{Byron, W.} \textsc{et~al.} (2022) \enquote{{First observation of cyclotron radiation from MeV-scale ${\rm e}^{pm}$ following nuclear beta decay},} \eprint{2209.02870}.
+
+\bibitem{cresXrayKazkaz}
+\textsc{Kazkaz, K.} and \textsc{N.~Woollett} (2021) \enquote{{Using Cyclotron Radiation Emission for Ultra-high Resolution X-Ray Spectroscopy},} \emph{New J. Phys.}, \textbf{23}(3), p. 033043, \eprint{1911.05869}.
+
+\bibitem{cresda}
+\textsc{Canning, J. A.~L.}, \textsc{F.~F. Deppisch}, and \textsc{W.~Pei} (2023) \enquote{{Sensitivity of future tritium decay experiments to New Physics},} \emph{JHEP}, \textbf{03}, p. 144, \eprint{2212.06106}.
+
 \end{thebibliography}
