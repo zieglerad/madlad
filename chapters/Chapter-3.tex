@@ -142,8 +142,13 @@ Reaching 40~meV sensitivity will require the simultaneous development and eventu
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics*[width=0.6\textwidth]{figs/Chapter-3/p8sensitivity4.pdf}
-    \caption{caption}
+    \begin{subfigure}{0.725\textwidth}
+        \includegraphics*[width=\textwidth]{figs/Chapter-3/sensitivity_vs_exposure_curve.pdf}
+    \end{subfigure}
+    \begin{subfigure}{0.67\textwidth}
+        \includegraphics*[width=\textwidth]{figs/Chapter-3/sensitivity_vs_density_curve.pdf}
+    \end{subfigure}
+    \caption{Sensitivity calculations for a cavity based CRES experiment that demonstrate the neutrino mass measurement goals of the Project 8 collaboration throughout the phased development plan. The blue tinged curves indicate molecular tritium sources and the red tinged curves indicate atomic tritium sources. In the current plan Phase III contains two tritium experiments. The first is the Low-frequency Apparatus (LFA) which is a molecular tritium experiment and the second is the atomic tritium pilot-scale experiment that ends Phase III. The sensitivity of these experiments is primarily a function of statistics, however, there is a critical density beyond which CRES electrons do not have enough time to radiate between collisions for a high-resolution frequency measurement leading to worse sensitivity. }
 \end{figure}
 
 These technologies require a significant up-front research and development (R\&D) investment to build-out the required capabilities for a 40~meV CRES experiment. Therefore, Project 8 is following a phased experiment plan in which incremental progress can be made towards the ultimate goal of a 40~meV neutrino mass measurement with CRES.
@@ -482,8 +487,12 @@ The bottom of the cavity has a cone termination to match the contour of the atom
 
 \section{Phase IV}
 
+The baseline CRES technology being pursued by the Project 8 collaboration are resonant cavities, which, due to their geometric properties, simple CRES signal structure, and low channel count, appear to be the better option for Phase IV. The current knowledge of the antenna array CRES approach reveals no technical obstacles that would preclude it as a baseline technology for Phase IV though it would most certainly be significantly more expensive. Therefore, antenna arrays represent a fallback approach if resonant cavities prove infeasible.
+
+The sensitivity of the pilot-scale atomic tritium experiment is estimated to be on the order of 0.1~eV, which means that increasing the sensitivity to reach the Phase IV goal will require a larger volume experiment. Because of the direct coupling between the RF characteristics of a cavity and its geometry, the baseline plan is to build multiple copies of the pilot-scale experiment (see Figure \ref{fig:chap3-p4-render}) to obtain the required amount of volume rather than increase the size of the cavity beyond the pilot-scale. The built-in redundancy of this approach is attactive in that the experiment has no single point of failure, additionally, building several copies of the a pilot-scale experiment will require minimal new engineering and design.
+
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.6\textwidth]{figs/Chapter-3/230718_PhaseIVPerspectiveView.png}
-    \caption{An illustration of a possible arrangement of ten pilot-scale cavity experiments for Phase IV. The experiments are arranged in a circle with an approximate diameter of 50~meters. Each atomic beamline connected to the bottom of each cavity is approximately 10~m in length. The cavities themselves are designed to operate at 325~MHz and are approximately 11~m tall. The circular arrangement of cavities has some advantages when it comes to cancellation of fringe fields from neighboring magnets, which is important due to the small magnetic field magnitudes consistent with these CRES frequencies. The advantage of ten independent atomic sources and cavities is that there is no single point of failure for the experiment. If an experiment goes down for repairs the other nine may continue running. Figure courtesy of Michael Huehn at UW-Seattle. }
+    \caption{\label{fig:chap3-p4-render}An illustration of a possible arrangement of ten pilot-scale cavity experiments for Phase IV. The experiments are arranged in a circle with an approximate diameter of 50~meters. Each atomic beamline connected to the bottom of each cavity is approximately 10~m in length. The cavities themselves are designed to operate at 325~MHz and are approximately 11~m tall. The circular arrangement of cavities has some advantages when it comes to cancellation of fringe fields from neighboring magnets, which is important due to the small magnetic field magnitudes consistent with these CRES frequencies. The advantage of ten independent atomic sources and cavities is that there is no single point of failure for the experiment. If an experiment goes down for repairs the other nine may continue running. Figure courtesy of Michael Huehn at UW-Seattle. }
 \end{figure}
