@@ -117,6 +117,32 @@
 \textsc{Wirth, W.} (2001) \emph{Radar Techniques Using Array Antennas}, Institution of Engineering and Technology.
 \newline\urlprefix\url{https://books.google.com/books?id=ALht42gkzLsC}
 
+\bibitem{pozar}
+\textsc{Pozar, D.~M.} (2005) \emph{{Microwave engineering; 3rd ed.}}, Wiley, Hoboken, NJ.
+\newline\urlprefix\url{https://cds.cern.ch/record/882338}
+
+\bibitem{cyclotron_motion_cavity}
+\textsc{Brown, L.~S.}, \textsc{G.~Gabrielse}, \textsc{K.~Helmerson}, and \textsc{J.~Tan} (1985) \enquote{Cyclotron motion in a microwave cavity: Lifetime and frequency shifts,} \emph{Phys. Rev. A}, \textbf{32}, pp. 3204--3218.
+\newline\urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevA.32.3204}
+
+\bibitem{hanneke_paper}
+\textsc{Hanneke, D.}, \textsc{S.~Fogwell~Hoogerheide}, and \textsc{G.~Gabrielse} (2011) \enquote{Cavity control of a single-electron quantum cyclotron: Measuring the electron magnetic moment,} \emph{Phys. Rev. A}, \textbf{83}, p. 052122.
+\newline\urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevA.83.052122}
+
+\bibitem{hanneke_thesis}
+\textsc{Hanneke, D.~A.} (2007) \emph{{Cavity control in a single-electron quantum cyclotron}: {an improved measurement of the electron magnetic moment}}, Ph.D. thesis, Harvard U.
+
+\bibitem{purcell}
+\textsc{Purcell, E.} (1946) \enquote{Spontaneous Emission Probabilities at Radio Frequencies,} \emph{Phys. Rev.}, \textbf{69}, pp. 674--674.
+\newline\urlprefix\url{https://link.aps.org/doi/10.1103/PhysRev.69.674}
+
+\bibitem{larmor_eqn}
+\textsc{F.R.S., J. L.~D.} (1897) \enquote{LXIII. On the theory of the magnetic influence on spectra; and on the radiation from moving ions,} \emph{The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science}, \textbf{44}(271), pp. 503--512, \eprint{https://doi.org/10.1080/14786449708621095}.
+\newline\urlprefix\url{https://doi.org/10.1080/14786449708621095}
+
+\bibitem{cavity_coupled_to_amp}
+\textsc{Moskowitz, B.~E.} and \textsc{J.~Rogers} (1988) \enquote{{ANALYSIS OF A MICROWAVE CAVITY DETECTOR COUPLED TO A NOISY AMPLIFIER},} \emph{Nucl. Instrum. Meth. A}, \textbf{264}, pp. 445--452.
+
 \bibitem{p8phase3trigger}
  \enquote{Real-time Signal Detection for Cyclotron Radiation Emission Spectroscopy Measurements using Antenna Arrays,} \emph{In preparation}.
 
