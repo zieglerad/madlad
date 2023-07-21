@@ -143,6 +143,12 @@
 \bibitem{cavity_coupled_to_amp}
 \textsc{Moskowitz, B.~E.} and \textsc{J.~Rogers} (1988) \enquote{{ANALYSIS OF A MICROWAVE CAVITY DETECTOR COUPLED TO A NOISY AMPLIFIER},} \emph{Nucl. Instrum. Meth. A}, \textbf{264}, pp. 445--452.
 
+\bibitem{nasa_cavity_theory}
+\textsc{Wenger, N.} (1967) \enquote{Resonant Frequency of Open-Ended Cylindrical Cavity,} \emph{IEEE Transactions on Microwave Theory and Techniques}, \textbf{15}(6), pp. 334--340.
+
+\bibitem{nasa_cavity_measurement}
+\textsc{Wenger, N.~C.} and \textsc{J.~Smetana} (1972) \enquote{Hydrogen Density Measurements Using an Open-Ended Microwave Cavity,} \emph{IEEE Transactions on Instrumentation and Measurement}, \textbf{21}(2), pp. 105--114.
+
 \bibitem{p8phase3trigger}
  \enquote{Real-time Signal Detection for Cyclotron Radiation Emission Spectroscopy Measurements using Antenna Arrays,} \emph{In preparation}.
 
