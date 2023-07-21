@@ -60,6 +60,64 @@
 \textsc{Simonyan, K.} and \textsc{A.~Zisserman} (2015) \enquote{Very Deep Convolutional Networks for Large-Scale Image Recognition,} in \emph{3rd International Conference on Learning Representations, {ICLR} 2015, San Diego, CA, USA, May 7-9, 2015, Conference Track Proceedings} (Y.~Bengio and Y.~LeCun, eds.).
 \newline\urlprefix\url{http://arxiv.org/abs/1409.1556}
 
+\bibitem{balanis2015antenna}
+\textsc{Balanis, C.} (2015) \emph{Antenna Theory: Analysis and Design}, Wiley.
+\newline\urlprefix\url{https://books.google.com/books?id=PTFcCwAAQBAJ}
+
+\bibitem{jackson_classical_1999}
+\textsc{Jackson, J.~D.} (1999) \emph{Classical electrodynamics}, 3rd ed., Wiley, New York, {NY}.
+\newline\urlprefix\url{http://cdsweb.cern.ch/record/490457}
+
+\bibitem{lw_potential_1}
+\textsc{Wiechert, E.} (1901) \enquote{Elektrodynamische Elementargesetze,} .
+\newline\urlprefix\url{https://doi.org/10.1002/andp.19013090403}
+
+\bibitem{lw_potential_2}
+\textsc{Li\'{e}ard, A.} (1898) \enquote{Champ \'{e}lectrique et Magn\'{e}tique,} \emph{L\'{e}clairage \'{e}lectrique}, \textbf{16}(27-29).
+
+\bibitem{lti_theory_wiki}
+\url{https://en.wikipedia.org/wiki/Linear_time-invariant_system}.
+
+\bibitem{friis_paper}
+\textsc{Friis, H.} (1946) \enquote{A Note on a Simple Transmission Formula,} \emph{Proceedings of the IRE}, \textbf{34}(5), pp. 254--256.
+
+\bibitem{friis_wiki}
+\url{https://en.wikipedia.org/wiki/Friis_transmission_equation}.
+
+\bibitem{pozar}
+\textsc{Pozar, D.~M.} (2005) \emph{{Microwave engineering; 3rd ed.}}, Wiley, Hoboken, NJ.
+\newline\urlprefix\url{https://cds.cern.ch/record/882338}
+
+\bibitem{absorber_foam}
+\url{https://www.mvg-world.com/en/products/absorbers/standard-absorbers/convoluted-absorbers-aec-series}.
+
+\bibitem{vna}
+\url{https://en.wikipedia.org/wiki/Network_analyzer_(electrical)}.
+
+\bibitem{keysight_vna}
+\url{https://www.keysight.com/us/en/product/N5222A/pna-microwave-network-analyzer-265-ghz.html}.
+
+\bibitem{pasternack_antenna}
+\url{https://www.pasternack.com/standard-gain-horn-antennas-category.aspx}.
+
+\bibitem{marki}
+\url{https://www.markimicrowave.com/home/}.
+
+\bibitem{quad}
+\url{https://en.wikipedia.org/wiki/Power_dividers_and_directional_couplers}.
+
+\bibitem{balun}
+\url{https://en.wikipedia.org/wiki/Balun}.
+
+\bibitem{awg}
+\url{https://www.rigolna.com/products/waveform-generators/dg5000/}.
+
+\bibitem{mixer}
+\cite{https://en.wikipedia.org/wiki/Frequency_mixer}.
+
+\bibitem{caen}
+\url{https://www.caen.it/}.
+
 \bibitem{Workman:2022ynf}
 \textsc{Workman, R.~L.} and \textsc{Others} (2022) \enquote{{Review of Particle Physics},} \emph{PTEP}, \textbf{2022}, p. 083C01.
 
@@ -94,10 +152,6 @@
 \textsc{Ashtari~Esfahani, A.} \textsc{et~al.} (2019) \enquote{Locust: C++ software for simulation of {RF} detection,} \emph{New Journal of Physics}, \textbf{21}(11), p. 113051.
 \newline\urlprefix\url{https://doi.org/10.1088/1367-2630/ab550d}
 
-\bibitem{jackson_classical_1999}
-\textsc{Jackson, J.~D.} (1999) \emph{Classical electrodynamics}, 3rd ed., Wiley, New York, {NY}.
-\newline\urlprefix\url{http://cdsweb.cern.ch/record/490457}
-
 \bibitem{Furse_2017}
 \textsc{Furse, D.} \textsc{et~al.} (2017) \enquote{{Kassiopeia: a modern, extensible C++ particle tracking package},} \emph{New Journal of Physics}, \textbf{19}(5), p. 053012.
 \newline\urlprefix\url{https://doi.org/10.1088/1367-2630/aa6950}
@@ -106,20 +160,12 @@
 \textsc{Balanis, C.} (2011) \emph{Modern Antenna Handbook}, Wiley.
 \newline\urlprefix\url{https://books.google.com/books?id=UYpV8L8GNCwC}
 
-\bibitem{balanis2015antenna}
----{}---{}--- (2015) \emph{Antenna Theory: Analysis and Design}, Wiley.
-\newline\urlprefix\url{https://books.google.com/books?id=PTFcCwAAQBAJ}
-
 \bibitem{hfss}
 \url{https://www.ansys.com/products/electronics/ansys-hfss}.
 
 \bibitem{wirth2001radar}
 \textsc{Wirth, W.} (2001) \emph{Radar Techniques Using Array Antennas}, Institution of Engineering and Technology.
 \newline\urlprefix\url{https://books.google.com/books?id=ALht42gkzLsC}
-
-\bibitem{pozar}
-\textsc{Pozar, D.~M.} (2005) \emph{{Microwave engineering; 3rd ed.}}, Wiley, Hoboken, NJ.
-\newline\urlprefix\url{https://cds.cern.ch/record/882338}
 
 \bibitem{cyclotron_motion_cavity}
 \textsc{Brown, L.~S.}, \textsc{G.~Gabrielse}, \textsc{K.~Helmerson}, and \textsc{J.~Tan} (1985) \enquote{Cyclotron motion in a microwave cavity: Lifetime and frequency shifts,} \emph{Phys. Rev. A}, \textbf{32}, pp. 3204--3218.

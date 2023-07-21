@@ -10,55 +10,57 @@ A level-1 auxiliary file: chapters/Chapter-6.aux
 A level-1 auxiliary file: chapters/Chapter-7.aux
 The style file: GLG-bibstyle.bst
 Database file #1: refs.bib
+Warning--I didn't find a database entry for "https://en.wikipedia.org/wiki/Frequency_mixer"
 Warning--empty journal in p8prl2023
 Warning--empty journal in p8prc2023
 Warning--empty journal in p8snowmass2022
 Warning--empty author in p8jugaad
 Warning--empty year in p8jugaad
 Warning--empty pages in vgg
+Warning--empty journal in lw_potential_1
 Warning--empty pages in Project8:2022wqh
 Warning--empty author in p8phase3trigger
 Warning--empty year in p8phase3trigger
 Warning--empty journal in cresHe6
-You've used 46 entries,
+You've used 44 entries,
             2552 wiz_defined-function locations,
-            846 strings with 15716 characters,
-and the built_in function-call counts, 25244 in all, are:
-= -- 1262
-> -- 1342
-< -- 27
-+ -- 363
-- -- 317
-* -- 2166
-:= -- 2506
-add.period$ -- 81
-call.type$ -- 46
+            832 strings with 15381 characters,
+and the built_in function-call counts, 24320 in all, are:
+= -- 1190
+> -- 1327
+< -- 25
++ -- 358
+- -- 314
+* -- 2104
+:= -- 2415
+add.period$ -- 77
+call.type$ -- 44
 change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 56
-duplicate$ -- 2946
-empty$ -- 2382
-format.name$ -- 346
-if$ -- 5603
+cite$ -- 54
+duplicate$ -- 2847
+empty$ -- 2286
+format.name$ -- 342
+if$ -- 5382
 int.to.chr$ -- 0
-int.to.str$ -- 46
-missing$ -- 596
-newline$ -- 164
-num.names$ -- 43
-pop$ -- 807
+int.to.str$ -- 44
+missing$ -- 579
+newline$ -- 158
+num.names$ -- 41
+pop$ -- 787
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 710
+skip$ -- 671
 stack$ -- 0
-substring$ -- 801
-swap$ -- 2027
-text.length$ -- 27
+substring$ -- 743
+swap$ -- 1953
+text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 10
-while$ -- 99
-width$ -- 48
-write$ -- 420
+while$ -- 93
+width$ -- 46
+write$ -- 402
 (There were 10 warnings)

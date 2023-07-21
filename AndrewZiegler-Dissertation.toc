@@ -69,16 +69,16 @@
 \contentsline {subsubsection}{\numberline {5.2.2.1}Friis Transmission Equation}{124}{}%
 \contentsline {subsubsection}{\numberline {5.2.2.2}S-Parameters and Network Analyzers}{125}{}%
 \contentsline {subsubsection}{\numberline {5.2.2.3}Antenna Array Commissioning and Calibration Measurements}{126}{}%
-\contentsline {subsection}{\numberline {5.2.3}The Penn State Antenna Measurement System}{127}{}%
+\contentsline {subsection}{\numberline {5.2.3}The Penn State Antenna Measurement System}{128}{}%
 \contentsline {section}{\numberline {5.3}Development of a Synthetic Cyclotron Antenna (SYNCA) for Antenna Array Calibration}{131}{}%
 \contentsline {subsection}{\numberline {5.3.1}Introduction}{131}{}%
 \contentsline {subsection}{\numberline {5.3.2}Cyclotron Radiation Phenomenology}{134}{}%
 \contentsline {subsection}{\numberline {5.3.3}SYNCA Simulations and Design}{140}{}%
-\contentsline {subsection}{\numberline {5.3.4}Characterization of the SYNCA}{144}{}%
+\contentsline {subsection}{\numberline {5.3.4}Characterization of the SYNCA}{145}{}%
 \contentsline {subsection}{\numberline {5.3.5}Beamforming Measurements with the SYNCA}{148}{}%
-\contentsline {subsection}{\numberline {5.3.6}Conclusions}{151}{}%
-\contentsline {section}{\numberline {5.4}FSCD Antenna Array Measurements with the SYNCA}{152}{}%
-\contentsline {subsection}{\numberline {5.4.1}Introduction}{152}{}%
+\contentsline {subsection}{\numberline {5.3.6}Conclusions}{152}{}%
+\contentsline {section}{\numberline {5.4}FSCD Antenna Array Measurements with the SYNCA}{153}{}%
+\contentsline {subsection}{\numberline {5.4.1}Introduction}{153}{}%
 \contentsline {subsection}{\numberline {5.4.2}Measurement Setups}{154}{}%
 \contentsline {subsubsection}{\numberline {5.4.2.1}FSCD Array Setup}{154}{}%
 \contentsline {subsubsection}{\numberline {5.4.2.2}Synthetic Array Setup}{156}{}%
@@ -86,7 +86,7 @@
 \contentsline {subsubsection}{\numberline {5.4.3.1}Simulations}{157}{}%
 \contentsline {subsubsection}{\numberline {5.4.3.2}Phase Analysis}{158}{}%
 \contentsline {subsubsection}{\numberline {5.4.3.3}Magnitude Analysis}{163}{}%
-\contentsline {subsubsection}{\numberline {5.4.3.4}Beamforming Characterization}{166}{}%
+\contentsline {subsubsection}{\numberline {5.4.3.4}Beamforming Characterization}{165}{}%
 \contentsline {subsection}{\numberline {5.4.4}Conclusions}{169}{}%
 \contentsline {chapter}{\numberline {6}Development of Resonant Cavities for Large Volume CRES Measurements}{170}{}%
 \contentsline {section}{\numberline {6.1}Introduction}{170}{}%
