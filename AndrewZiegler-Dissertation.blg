@@ -10,7 +10,6 @@ A level-1 auxiliary file: chapters/Chapter-6.aux
 A level-1 auxiliary file: chapters/Chapter-7.aux
 The style file: GLG-bibstyle.bst
 Database file #1: refs.bib
-Warning--I didn't find a database entry for "https://en.wikipedia.org/wiki/Frequency_mixer"
 Warning--empty journal in p8prl2023
 Warning--empty journal in p8prc2023
 Warning--empty journal in p8snowmass2022
@@ -24,7 +23,7 @@ Warning--empty year in p8phase3trigger
 Warning--empty journal in cresHe6
 You've used 61 entries,
             2552 wiz_defined-function locations,
-            889 strings with 16970 characters,
+            887 strings with 16879 characters,
 and the built_in function-call counts, 27769 in all, are:
 = -- 1359
 > -- 1369
@@ -63,4 +62,4 @@ warning$ -- 11
 while$ -- 104
 width$ -- 63
 write$ -- 506
-(There were 12 warnings)
+(There were 11 warnings)
