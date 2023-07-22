@@ -686,7 +686,7 @@ The Locust and CRESana simulation packages utilize the antenna transfer function
 
 \subsubsection{Simulations}
 
-Simulations for the FSCD array measurements were performed using CRESana, which performs analytical calculations of the EM-fields produced by an electron at the position of the antennas. At each sampled time CRESana computes the electric field vector at the antenna positions, which is projected onto the antenna polarization axis to obtain the co-polar electric field. The magnitude of the co-polar electric field is then multiplied by a flat antenna transfer function to calculate the voltage signal produced by the antenna. CRESana simulations exploit the flat transfer functions of the FSCD antennas, which allows the electric field to be multiplied by the antenna transfer function rather than performing the full FIR calculation. These calculations produce a voltage time-series for each of the antennas in the array that can be compared to the laboratory measurements.
+Simulations for the FSCD array measurements were performed using CRESana, which performs analytical calculations of the EM-fields produced by an electron at the position of the antennas. At each sampled time CRESana computes the electric field vector at the antenna positions, which is projected onto the antenna polarization axis to obtain the co-polar electric field. The magnitude of the co-polar electric field is then multiplied by a flat antenna transfer function to calculate the corresponding voltage signal. CRESana simulations exploit the flat transfer functions of the FSCD antennas, which allows the electric field to be multiplied by the antenna transfer function rather than performing the full FIR calculation. These calculations produce a voltage time-series for each of the antennas in the array that can be compared to the laboratory measurements.
 
 CRESana was configured to simulate a $90^\circ$ electron in a constant background magnetic field of $\approx0.958$~T with a kinetic energy of 18.6~keV. These parameters were chosen in order to mimic a CRES event near the tritium beta-decay spectrum endpoint in the FSCD experiment. The constant background magnetic field guarantees that the guiding center of the electron is stationary across the duration of the simulation which is consistent with the SYNCA in the laboratory measurements. Simulations were performed with the electron's guiding center at radial positions from 0 to 45~mm in steps of 1~mm and axial positions from 0 to 30~mm in steps of 1~mm. The simulations generated time series consisting of 
 8192 samples at 200~MHz for the sixty channel FSCD antenna array geometry.
@@ -700,54 +700,58 @@ CRESana was configured to simulate a $90^\circ$ electron in a constant backgroun
     \label{fig:cresana_simulated_phases}
 \end{figure}
 
-The first part of the analysis examines the phases of the signals received by each channel in the antenna array. The signal phase is fundamental to reconstruction for both beamforming and matched filter approaches. The beamforming reconstruction relies on a signal phase model developed from Locust simulations, whichs allows us to predict the relative signal phases for a specific magnetic trap and electron position. The equation for the model is
+Correct modeling of the signal phases is fundamental to reconstruction for both beamforming and matched filter approaches. The beamforming reconstruction relies on a signal phase model developed from Locust simulations, which allows one to predict the relative signal phases for a specific magnetic trap and electron position. The equation for the model is
 \begin{equation}
     \phi_{ij}(t) = \frac{2\pi d_{ij}(t)}{\lambda} + \theta_{ij}(t),
     \label{eq:phase_model_eqn}
 \end{equation}
-where $d_{ij}(t)$ is distance between the assumed electron position and the antenna position, and $\theta_{ij}(t)$ is the angular separation between the electron and antenna positions. For details on the components of the phase model see Section \ref{sec:pheno}. In Figure \ref{fig:cresana_simulated_phases} we compare the phases predicted by Equation \ref{eq:phase_model_eqn} to phases extracted from CRESana simulations of an electron located in the plane of the antenna array at a series of radial positions and observe excellent agreement between the model and simulation.
+where $d_{ij}(t)$ is distance between the assumed electron position and the antenna position, and $\theta_{ij}(t)$ is the angular separation between the electron and antenna positions. For details on the components of the phase model see Section \ref{sec:pheno}. In Figure \ref{fig:cresana_simulated_phases} we compare the phases predicted by Equation \ref{eq:phase_model_eqn} to phases extracted from CRESana simulations of an electron located in the plane of the antenna array at a series of radial positions. One observes excellent agreement between the model and simulation.
 
-In Figures \ref{fig:jugaad_phase} and \ref{fig:synth_jugaad_phase} we compare signal phases measured in the FSCD array setup and the synthetic array setup to the phase model for a selection of radial positions. The axial position of the SYNCA in both plots is $z=0$~mm, such that the plane of the PCB is aligned with the center of the FSCD antenna. The data shown in Figure \ref{fig:jugaad_phase} corresponds to the S-parameters measured at 25.80~GHz which is the frequency closest to the one used in the synthetic array setup. The different slope and sinusoidal phases exhibited by Figure \ref{fig:jugaad_phase} and \ref{fig:synth_jugaad_phase} reflects differences in the coordinate system for each setup. In general, we see that the phase model predicts the large scale features of the phases quite well, but there are some small scale deviations or errors from the phase model that do not appear to be present in simulation. 
 \begin{figure}[htbp]
-\centering
-\begin{subfigure}{.7\textwidth}
-  \centering
-  \includegraphics[width=1\textwidth]{figs/Chapter-5/230411_jugaad_measured_phases_z0.png}
-  \caption{}
-  \label{fig:jugaad_phase}
-\end{subfigure}
-\par\medskip % force a bit of vertical whitespace
-\begin{subfigure}{.7\textwidth}
-  \centering
-  \includegraphics[width=1\textwidth]{figs/Chapter-5/230411_synthetic_array_measured_phases_z0.png}
-  \caption{}
-  \label{fig:synth_jugaad_phase}
-\end{subfigure}
-\caption{Plots of the measured unwrapped phases from the FSCD array (a) and the synthetic array (b) compared to the model predictions for a series of radial positions. The different phases of the sinusoidal phase oscillations in the two plots reflects differences in the coordinate systems of the measurements.}
-\label{fig:jugaad_measured_phases}
-\end{figure}
+    \centering
+    \begin{subfigure}{.7\textwidth}
+      \centering
+      \includegraphics[width=1\textwidth]{figs/Chapter-5/230411_jugaad_measured_phases_z0.png}
+      \caption{}
+      \label{fig:jugaad_phase}
+    \end{subfigure}
+    \par\medskip % force a bit of vertical whitespace
+    \begin{subfigure}{.7\textwidth}
+      \centering
+      \includegraphics[width=1\textwidth]{figs/Chapter-5/230411_synthetic_array_measured_phases_z0.png}
+      \caption{}
+      \label{fig:synth_jugaad_phase}
+    \end{subfigure}
+    \caption{Plots of the measured unwrapped phases from the FSCD array (a) and the synthetic array (b) compared to the model predictions for a series of radial positions. The different phases of the sinusoidal phase oscillations in the two plots reflects differences in the coordinate systems of the measurements.}
+    \label{fig:jugaad_measured_phases}
+    \end{figure}
+    
 
-In Figure \ref{fig:phase-error-curve-comp} we plot comparisons of the phase error, which is the difference between measurement and model, for the synthetic array data and the FSCD array data as a function of the radial position of the SYNCA. The FSCD array data is referred to as the JUGAAD data in the plot legend, which was an alternative name for the FSCD array setup.
+The measured signal phases from the FSCD array and synthetic array are shown in Figures \ref{fig:jugaad_phase} and \ref{fig:synth_jugaad_phase} compared to the signal phase model. The axial position of the SYNCA in both plots is $z=0$~mm, such that the plane of the PCB is aligned with the center of the FSCD antenna. The data shown in Figure \ref{fig:jugaad_phase} corresponds to the S-parameters measured at 25.80~GHz which is the frequency closest to the one used in the synthetic array setup. The different slope and sinusoidal phases exhibited by Figure \ref{fig:jugaad_phase} and \ref{fig:synth_jugaad_phase} reflects differences in the coordinate system for each setup. In general, we see that the phase model predicts the large scale features of the phases quite well, but there are some small scale deviations or errors from the phase model that do not appear to be present in simulation. 
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{figs/Chapter-5/230414_synthetic_array_phase_error_curves_z0.png}
     \caption{The phase errors between the measurement and model for the synthetic array (blue) and the FSCD array (orange) for a series of radial positions. The label JUGAAD refers to an alternative name for the FSCD array setup. As the SYNCA is translated off-axis phase errors with progressively higher oscillation frequency enter into the measurements.}
     \label{fig:phase-error-curve-comp}
 \end{figure}
-Focusing on the trend for the synthetic array phase error data in Figure \ref{fig:phase-error-curve-comp} we see that at $R=0$~mm the phase error forms a relatively smooth curve with the exception of an outlier data point caused by an unintended error in the data acquisition script. Since the position of the SYNCA antenna is stationary at $R=0$~mm, we attribute the observed phase errors to imperfections in the antenna pattern of the SYNCA that cause it to emit a radiation pattern whose phases do not perfectly match the beamforming phase model in Equation \ref{eq:phase_model_eqn}. As the SYNCA is moved away from $R=0$~mm in the synthetic array data we see that the phase error exhibits oscillations whose frequency increases as a function of the radial position of the SYNCA. These oscillations have the appearance of a diffraction pattern, which is particularly obvious for radii $\geq15$~mm, due to the bilateral symmetry of the phase error peaks around $180^\circ$. 
 
-Comparing the phase errors measured in the FSCD array to the synthetic array we see that there is a higher average variance in the phase error. This is best seen by comparing the curves at $R\leq15$~mm where the smooth synthetic array curves are distinct from the relatively noisy FSCD array errors. The extra noise in the FSCD array is most likely caused by differences in the radiation patterns of the antennas that make up the array as well as differences in the transmission lines through the switch network that introduce additional phase errors into the measurement. Since the synthetic array measurements use only a single antenna, these extra error terms are not present, which explains the relatively smoother phase error curves. Despite the extra phase errors in the FSCD array, it is still possible to observe a similar phase error oscillation effect as the SYNCA is moved away from $R=0$~mm.
+A comparison of the phase errors, which are the difference between measurement and model is shown in Figure \ref{fig:phase-error-curve-comp}. The FSCD array data is referred to as the JUGAAD data in the plot legend, which is an alternative name for the FSCD array setup.
+
+The phase error at $R=0$ in Figure \ref{fig:phase-error-curve-comp} forms a smooth curve, with the exception of an outlier data point caused by a bug in the data acquisition script. One can attribute the observed phase error at this position to imperfections in the antenna pattern of the SYNCA. As the SYNCA is moved away from $R=0$~mm one observes that the phase error exhibits oscillations whose frequency increases as a function of the radial position of the SYNCA. These oscillations have the appearance of a diffraction pattern, which is particularly clear for the radii $\geq15$~mm, due to the bilateral symmetry of the phase error peaks around $180^\circ$. 
+
+One can observe a higher average variance in the phase errors measured for the FSCD array compared to the synthetic array. This is best seen by comparing the curves at $R\leq15$~mm where the smooth synthetic array curves are distinct from the relatively noisy FSCD array errors. The extra noise in the FSCD array is most likely caused by differences in the radiation patterns of the antennas that make up the array as well as differences in the transmission lines through the switch network that introduce additional phase errors into the measurement. Since the synthetic array measurements use only a single antenna, these extra error terms are not present, which explains the relatively smoother phase error curves. Despite the extra phase errors in the FSCD array, it is still possible to observe a similar phase error oscillation effect as the SYNCA is moved away from $R=0$~mm.
 
 \begin{figure}[h]
 \centering
-\begin{subfigure}{.7\textwidth}
+\begin{subfigure}{.6\textwidth}
   \centering
   \includegraphics[width=1\textwidth]{figs/Chapter-5/230120_synth_array_phase_error_map_z0.png}
   \caption{}
   \label{fig:jugaad_phase_map}
 \end{subfigure}
 \par\medskip % force a bit of vertical whitespace
-\begin{subfigure}{.7\textwidth}
+\begin{subfigure}{.6\textwidth}
   \centering
   \includegraphics[width=1\textwidth]{figs/Chapter-5/230123_jugaad_phase_error_map_z0.png}
   \caption{}
@@ -757,32 +761,35 @@ Comparing the phase errors measured in the FSCD array to the synthetic array we 
 \label{fig:jugaad_measured_phase_maps}
 \end{figure}
 
-The diffraction pattern exhibited by the phase error oscillations is more easily observed by plotting the phase errors in a two-dimensional map, which we do in Figures \ref{fig:jugaad_phase_map} and \ref{fig:synth_jugaad_phase_map}. For the synthetic array data we observe a relatively clear diffraction pattern that emerges as the SYNCA is moved radially. The bilateral symmetry of the diffraction patterns is due to the bilateral symmetry of the circular synthetic array around the translation axis of the SYNCA. A similar pattern is also visible in the FSCD array data although it is obscured by the additional phase error that results from the multi-channel array.
+The diffraction pattern exhibited by the phase error oscillations is more easily observed by plotting the phase errors in a two-dimensional map, which is done in Figures \ref{fig:jugaad_phase_map} and \ref{fig:synth_jugaad_phase_map}. For the synthetic array data ones observes a relatively clear diffraction pattern that emerges as the SYNCA is moved radially. The bilateral symmetry of the diffraction patterns is due to the bilateral symmetry of the circular synthetic array around the translation axis of the SYNCA. A similar pattern is also visible in the FSCD array data, although, it is obscured by the additional phase error that results from the multi-channel array.
 
-The physical origin of the phase error diffraction pattern is interference effects arising from path-length differences between the individual slots in the FSCD antenna and the SYNCA transmitter. Since we are operating in the radiative near-field of the FSCD antenna, the path length differences between the slots introduces a significant change in the summation of the signals that occurs inside the waveguide, which causes the radiation pattern of the antenna to change as a function of distance. Therefore, when the SYNCA is positioned off-axis the different path-lengths from the SYNCA to each antenna in the array results in different radiation patterns for each of the array antennas producing the observed diffraction pattern. 
+The physical origin of the phase error diffraction pattern is attributed to interference effects arising from path-length differences between the individual slots in the FSCD antenna and the SYNCA transmitter. Since we are operating in the radiative near-field of the FSCD antenna, the path length differences between the slots introduces a significant change in the summation of the signals that occurs inside the waveguide, which causes the radiation pattern of the antenna to change as a function of distance. Therefore, when the SYNCA is positioned off-axis the different path-lengths from the SYNCA to each antenna results in different radiation patterns leading to the observed diffraction pattern. 
 
-This near-field effect is not present in simulations, because in order to simplify the calculations we assume that the far-field approximation can be applied to the FSCD antennas. This means that the radiation pattern and antenna transfer functions are independent of the distance between the transmitter and the receiving antenna. In principle, we can account for these near-field effects with a more detailed simulation of the FSCD antennas either in CRESana or Locust, which would result in an additional term in the beamforming phase model. In the next section we briefly discuss the impact of these near-field effects on the measured magnitude of the signals.
+This near-field effect is not present in simulations, because in order to simplify the calculations we assume that the far-field approximation can be applied to the FSCD antennas. This means that the radiation pattern and antenna transfer functions are independent of the distance between the transmitter and the receiving antenna. In principle, we can account for these near-field effects with a more detailed simulation of the FSCD antennas either in CRESana or Locust, which would result in an additional term in the beamforming phase model. However, this would increase the computational intensity of the simulation software. In the next section we briefly discuss the impact of these near-field effects on the measured magnitude of the signals.
 
 \subsubsection{Magnitude Analysis}
 
-In addition to phase, magnitude is the second component necessary to fully describe the radiation pattern and performance of the antenna array. However, it is not the dominant component from the perspective of beamforming and signal reconstruction. In many cases it is safe to approximate the relative amplitudes of the signals received by each channel as equal with minimal loss in detection efficiency. Therefore, our analysis of the magnitudes from CRESana, the FSCD array, and the synthetic array is less complete and serves mostly to reinforce the conclusions of the phase analysis.
+%In addition to phase, magnitude is the second component necessary to fully describe the radiation pattern and performance of the antenna array. However, it is not the dominant component from the perspective of beamforming and signal reconstruction. In many cases it is safe to approximate the relative amplitudes of the signals received by each channel as equal with minimal loss in detection efficiency. Therefore, our analysis of the magnitudes from CRESana, the FSCD array, and the synthetic array is less complete and serves mostly to reinforce the conclusions of the phase analysis.
 
-We can use simulations to construct a model that describes the magnitude of the signals received by each channel in the antenna array. By examining the results of simulations or by analyzing the Li\'{e}nard-Wiechert equation one can show that radiation pattern from a $90^\circ$ pitch angle electron in a magnetic field is omni-directional. Therefore the relative magnitudes of the signals received by each channel will be determined by the free-space power loss, which is proportional to the inverse distance between the assumed electron position and the antenna. A consequence of this is that the signals produced in the array for electrons off the central axis will have larger amplitudes for the antennas closer to the electron compared to those which are further away. In Figure \ref{fig:cresana_mags} we plot the amplitudes of the signals received by each antenna in the array from an electron located at a series of radial positions.
+Exactly as for the signal phase, one can use simulations to construct a model that describes the magnitude of the signals received by each channel in the antenna array. By examining the results of simulations or by analyzing the Li\'{e}nard-Wiechert equation one can show that radiation pattern from a $90^\circ$ pitch angle electron in a magnetic field is omni-directional. Therefore the relative magnitudes of the signals received by each channel will be determined by the free-space power loss, which is proportional to the inverse distance between the assumed electron position and the antenna. 
+
+A consequence of this is that the signals produced in the array for electrons off the central axis will have larger amplitudes for the antennas closer to the electron compared to those which are further away. The amplitudes of the signals received by the array from an electron located at a series of radial positions are shown in Figure \ref{fig:cresana_mags}.
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{figs/Chapter-5/230508_cresana_mags.png}
+    \includegraphics[width=0.6\textwidth]{figs/Chapter-5/230508_cresana_mags.png}
     \caption{The amplitude of the signals from CRESana for the FSCD array from a $90^\circ$ electron. As the electron is moved from $R=0$ the signals begin to have unequal amplitudes depending on the distance from the electron to the antenna.}
     \label{fig:cresana_mags}
 \end{figure}
 
-We expect to see a similar trend in the signal magnitudes in both the FSCD and synthetic arrays. In Figure \ref{fig:jugaad_synth_mag_curve_comp} we plot the normalized signal magnitudes extracted from the VNA and digitizer measurements for a series of radial SYNCA positions. We use the data collected at the SYNCA axial position of $z=0$~mm for both the FSCD and synthetic arrays and show the S-parameters measured by the VNA at 25.86~GHz. A complication with these measurements is that the radiation pattern of the SYNCA is not perfectly omni-directional, which causes the measured magnitudes at $R=0$~mm to diverge from the perfectly flat behavior exhibited by electrons.
+One expects to see a similar trend in the signal magnitudes in both the FSCD and synthetic arrays. The normalized signal magnitudes extracted from the full and synthetic array setups for a series of radial SYNCA positions are shown in Figure \ref{fig:jugaad_synth_mag_curve_comp}. The data corresponds to a SYNCA axial position of $z=0$~mm and at a frequency 25.86~GHz. One complication is that the radiation pattern of the SYNCA is not perfectly omni-directional, which causes the measured magnitudes at $R=0$~mm to diverge from the perfectly flat behavior exhibited by electrons.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{figs/Chapter-5/230412_jugaad_mag_curves_z0.png}
     \caption{The normalized magnitudes of the S21 parameters measured in the FSCD (orange) and synthetic array (blue) setups. The dominant observed behavior as a function of radius is the increase in the number of magnitude peaks, which was noted in the phase error curves. There does not appear to be a strong change in the relative amplitude of a group of antennas as predicted by CRESana.}
     \label{fig:jugaad_synth_mag_curve_comp}
 \end{figure}
-As the SYNCA is moved away from $R=0$~mm in the synthetic array we observe a similar increase in the number of magnitude peaks that we would expect in a diffraction pattern, though this trend is less obvious than the phase data. Noticeably, there does not appear to be a set of channels with disproportionately larger amplitude at large $R$, which would be expected based on the trend from simulation. 
+
+As the SYNCA is moved off-axis one observes a similar increase in the number of magnitude peaks in the synthetic array data that one would expect from a diffraction pattern, although this trend is not as stark compared to the phase data. Noticeably, there does not appear to be a set of channels with disproportionately larger amplitude at large $R$, which would be expected based on the trends from CRESana. 
 
 \begin{figure}[htbp]
 \centering
@@ -805,12 +812,12 @@ As the SYNCA is moved away from $R=0$~mm in the synthetic array we observe a sim
 
 Comparing the magnitudes of the synthetic array to the FSCD array in Figure \ref{fig:jugaad_synth_mag_curve_comp} we see that there is a similar amount of variability in the magnitudes at $R=0$~mm, although there is potentially more small scale error in the magnitude curve caused by channel differences in the FSCD array. We observe a similar trend in the number of magnitude error peaks in the FSCD array data to the synthetic array data, which mirrors the diffraction effect observed in the phase data. The diffraction effect can be visualized more clearly by plotting a similar two-dimensional map of the magnitudes (see Figure \ref{fig:measured-mag-map-comp-jugaad}).
 
-Observing a similar diffractive pattern in the signal magnitudes as a function the SYNCA position reinforces our conclusions from the phase analysis that near-field effects are having a significant impact on the radiation pattern of the FSCD array. These near-field effects lead to changes in the magnitude and phase of the radiation pattern of the FSCD antenna as a function of distance. If left uncorrected these errors reduce detection efficiency by causing power loss in the beamforming or matched filter reconstruction due to phase mismatch. We explore the impact of these phase and magnitude errors on beamforming in the next section.
+The fact that one observes a similar diffraction pattern in the signal magnitudes as a function the SYNCA position reinforces the conclusions from the phase analysis that near-field effects are having a significant impact on the radiation pattern of the FSCD array. These near-field effects lead to changes in the magnitude and phase of the radiation pattern of the FSCD antenna as a function of distance. If left uncorrected these errors reduce detection efficiency by causing power loss in the beamforming or matched filter reconstruction due to phase mismatch. We explore the impact of these phase and magnitude errors on beamforming in the next section.
 
 \subsubsection{Beamforming Characterization}
 \label{sec:jugaad_bf_analysis}
 
-The errors in the magnitude and phase of the FSCD array radiation pattern lead to errors in the signal reconstruction. For example, a matched filter reconstruction requires accurate knowledge of the relative phases and magnitudes of the signals in each channel to achieve optimal performance. Uncorrected errors here leads to mismatch between the template and signal, which reduces detection efficiency and introduces uncertainty in the parameter estimation. In this section, we analyze the beamformed signal amplitude as a function of the position of the SYNCA to quantify the impact of the phase and magnitude errors on signal reconstruction. Because of the imperfections in the SYNCA source, it is inappropriate to directly compare the beamformed signal amplitude of the FSCD array or synthetic array. Such a comparison would not allow us to disentangle losses that occur because of the antenna array from those that occur because of the source. Therefore, we focus on comparing the beamforming of the FSCD array to the synthetic array.
+Errors in the signal magnitudes and phases lead to errors in signal reconstruction. For example, a matched filter reconstruction requires accurate knowledge of the signals in each channel to achieve optimal performance. Uncorrected errors leads to mismatches between the template and signal, which reduces detection efficiency and introduces uncertainty in the parameter estimation. In this section, we analyze the beamformed signal amplitude as a function of the position of the SYNCA to quantify the impact of the phase and magnitude errors on signal reconstruction. Because of the imperfections in the SYNCA source, it is inappropriate to directly compare the beamformed signal amplitude of the FSCD array or synthetic array. Such a comparison would not allow one to disentangle losses that occur because of the antenna array from those that occur because of the source. Therefore, we focus on comparing the beamforming of the FSCD array to the synthetic array.
 
 \begin{figure}[htbp]
     \centering
@@ -830,7 +837,7 @@ The errors in the magnitude and phase of the FSCD array radiation pattern lead t
     \label{fig:measured-bf-images}
 \end{figure}
 
-Our first method of comparison is to analyze the images generated by applying the beamforming reconstruction specified in Section \ref{sec:chap4-dig-bf} to the FSCD and synthetic array data (see Figure \ref{fig:jugaad-bf-compare}). We use a beamforming grid consisting of a square $121\times121$ grid spanning a range of -60-mm to 60~mm in the x and y dimensions. The beamforming images formed from the synthetic array produces a three-dimensional matrix where each grid position contains a summed time series. We form a single beamforming image from this matrix by taking the average over the time dimension. Applying beamforming to the FSCD array data also produces a three-dimensional matrix, but in this case each grid position contains a summed frequency series produced by the VNA sweep. In order to generate a clearer beamforming image we average over the entire frequency sweep.
+The first method of comparison is to analyze the images generated by applying the beamforming reconstruction specified in Section \ref{sec:chap4-dig-bf} to the FSCD and synthetic array data (see Figure \ref{fig:measured-bf-images}). The beamforming grid consisting of a square $121\times121$ grid spanning a range of -60-mm to 60~mm in the x and y dimensions. The beamforming images formed from the synthetic array produces a three-dimensional matrix where each grid position contains a summed time series. A single beamforming image is formed from this data matrix by taking the mean over the time dimension. In the case of the FSCD array, the VNA generates frequency domain data such that each grid position contains a summed frequency series produced by the VNA sweep. For this data a single image is formed by averaging in the frequency domain.
 
 There is a clear difference between the synthetic and FSCD array beamforming images, which is the additional faint beamforming maxima located directly opposite the maxima corresponding to the SYNCA position. The images in Figure \ref{fig:measured-bf-images} were generated with data collected at a SYNCA radial position of 15~mm, which agrees well with the observed beamforming maximum in both images. We observe that the faint beamforming peak is located directly opposite of the true beamforming maximum similar to a mirror image. Therefore, the origin of this additional feature appears to be reflections between the two sides of the circular antenna array that are not present for the synthetic array since only a single physical antenna is used.
 
