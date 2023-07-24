@@ -4,6 +4,25 @@
 \providecommand{\urlprefix}{URL }
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem{direct_meas_nu_mass}
+\textsc{Formaggio, J.~A.}, \textsc{A.~L.~C. de~Gouv\^ea}, and \textsc{R.~G.~H. Robertson} (2021) \enquote{{Direct Measurements of Neutrino Mass},} \emph{Phys. Rept.}, \textbf{914}, pp. 1--54, \eprint{2102.00594}.
+
+\bibitem{p8originalcres}
+\textsc{Monreal, B.} and \textsc{J.~A. Formaggio} (2009) \enquote{Relativistic cyclotron radiation detection of tritium decay electrons as a new technique for measuring the neutrino mass,} \emph{Phys. Rev. D}, \textbf{80}, p. 051301.
+\newline\urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevD.80.051301}
+
+\bibitem{p8snowmass2022}
+\textsc{Esfahani, A.~A.}, \textsc{S.~Böser}, \textsc{N.~Buzinsky}, \textsc{M.~C. Carmona-Benitez}, \textsc{C.~Claessens}, \textsc{L.~de~Viveiros}, \textsc{P.~J. Doe}, \textsc{S.~Enomoto}, \textsc{M.~Fertl}, \textsc{J.~A. Formaggio}, \textsc{J.~K. Gaison}, \textsc{M.~Grando}, \textsc{K.~M. Heeger}, \textsc{X.~Huyan}, \textsc{A.~M. Jones}, \textsc{K.~Kazkaz}, \textsc{M.~Li}, \textsc{A.~Lindman}, \textsc{C.~Matthé}, \textsc{R.~Mohiuddin}, \textsc{B.~Monreal}, \textsc{R.~Mueller}, \textsc{J.~A. Nikkel}, \textsc{E.~Novitski}, \textsc{N.~S. Oblath}, \textsc{J.~I. Peña}, \textsc{W.~Pettus}, \textsc{R.~Reimann}, \textsc{R.~G.~H. Robertson}, \textsc{G.~Rybka}, \textsc{L.~Saldaña}, \textsc{M.~Schram}, \textsc{P.~L. Slocum}, \textsc{J.~Stachurska}, \textsc{Y.~H. Sun}, \textsc{P.~T. Surukuchi}, \textsc{J.~R. Tedeschi}, \textsc{A.~B. Telles}, \textsc{F.~Thomas}, \textsc{M.~Thomas}, \textsc{L.~A. Thorne}, \textsc{T.~Thümmler}, \textsc{W.~V.~D. Pontseele}, \textsc{B.~A. VanDevender}, \textsc{T.~E. Weiss}, \textsc{T.~Wendler}, and \textsc{A.~Ziegler} (2022) \enquote{The Project 8 Neutrino Mass Experiment,} \eprint{2203.07349}.
+
+\bibitem{p8prc2023}
+\textsc{Esfahani, A.~A.}, \textsc{S.~Böser}, \textsc{N.~Buzinsky}, \textsc{M.~C. Carmona-Benitez}, \textsc{C.~Claessens}, \textsc{L.~de~Viveiros}, \textsc{P.~J. Doe}, \textsc{M.~Fertl}, \textsc{J.~A. Formaggio}, \textsc{J.~K. Gaison}, \textsc{L.~Gladstone}, \textsc{M.~Guigue}, \textsc{J.~Hartse}, \textsc{K.~M. Heeger}, \textsc{X.~Huyan}, \textsc{A.~M. Jones}, \textsc{K.~Kazkaz}, \textsc{B.~H. LaRoque}, \textsc{M.~Li}, \textsc{A.~Lindman}, \textsc{E.~Machado}, \textsc{A.~Marsteller}, \textsc{C.~Matthé}, \textsc{R.~Mohiuddin}, \textsc{B.~Monreal}, \textsc{R.~Mueller}, \textsc{J.~A. Nikkel}, \textsc{E.~Novitski}, \textsc{N.~S. Oblath}, \textsc{J.~I. Peña}, \textsc{W.~Pettus}, \textsc{R.~Reimann}, \textsc{R.~G.~H. Robertson}, \textsc{D.~R.~D. Jesús}, \textsc{G.~Rybka}, \textsc{L.~Saldaña}, \textsc{M.~Schram}, \textsc{P.~L. Slocum}, \textsc{J.~Stachurska}, \textsc{Y.~H. Sun}, \textsc{P.~T. Surukuchi}, \textsc{J.~R. Tedeschi}, \textsc{A.~B. Telles}, \textsc{F.~Thomas}, \textsc{M.~Thomas}, \textsc{L.~A. Thorne}, \textsc{T.~Thümmler}, \textsc{L.~Tvrznikova}, \textsc{W.~V.~D. Pontseele}, \textsc{B.~A. VanDevender}, \textsc{J.~Weintroub}, \textsc{T.~E. Weiss}, \textsc{T.~Wendler}, \textsc{A.~Young}, \textsc{E.~Zayas}, and \textsc{A.~Ziegler} (2023) \enquote{Cyclotron Radiation Emission Spectroscopy of Electrons from Tritium Beta Decay and $^{83\rm m}$Kr Internal Conversion,} \eprint{2303.12055}.
+
+\bibitem{p8prl2023}
+\textsc{Esfahani, A.~A.}, \textsc{S.~Böser}, \textsc{N.~Buzinsky}, \textsc{M.~C. Carmona-Benitez}, \textsc{C.~Claessens}, \textsc{L.~de~Viveiros}, \textsc{P.~J. Doe}, \textsc{M.~Fertl}, \textsc{J.~A. Formaggio}, \textsc{J.~K. Gaison}, \textsc{L.~Gladstone}, \textsc{M.~Grando}, \textsc{M.~Guigue}, \textsc{J.~Hartse}, \textsc{K.~M. Heeger}, \textsc{X.~Huyan}, \textsc{J.~Johnston}, \textsc{A.~M. Jones}, \textsc{K.~Kazkaz}, \textsc{B.~H. LaRoque}, \textsc{M.~Li}, \textsc{A.~Lindman}, \textsc{E.~Machado}, \textsc{A.~Marsteller}, \textsc{C.~Matthé}, \textsc{R.~Mohiuddin}, \textsc{B.~Monreal}, \textsc{R.~Mueller}, \textsc{J.~A. Nikkel}, \textsc{E.~Novitski}, \textsc{N.~S. Oblath}, \textsc{J.~I. Peña}, \textsc{W.~Pettus}, \textsc{R.~Reimann}, \textsc{R.~G.~H. Robertson}, \textsc{D.~R.~D. Jesús}, \textsc{G.~Rybka}, \textsc{L.~Saldaña}, \textsc{M.~Schram}, \textsc{P.~L. Slocum}, \textsc{J.~Stachurska}, \textsc{Y.~H. Sun}, \textsc{P.~T. Surukuchi}, \textsc{J.~R. Tedeschi}, \textsc{A.~B. Telles}, \textsc{F.~Thomas}, \textsc{M.~Thomas}, \textsc{L.~A. Thorne}, \textsc{T.~Thümmler}, \textsc{L.~Tvrznikova}, \textsc{W.~V.~D. Pontseele}, \textsc{B.~A. VanDevender}, \textsc{J.~Weintroub}, \textsc{T.~E. Weiss}, \textsc{T.~Wendler}, \textsc{A.~Young}, \textsc{E.~Zayas}, and \textsc{A.~Ziegler} (2023) \enquote{Tritium Beta Spectrum and Neutrino Mass Limit from Cyclotron Radiation Emission Spectroscopy,} \eprint{2212.05048}.
+
+\bibitem{p8jugaad}
+ \enquote{Antenna Arrays for Physics Measurements with Large-scale CRES Detectors,} \emph{In preparation}.
+
 \bibitem{kassiopeia}
 \textsc{Furse, D.} \textsc{et~al.} (2017) \enquote{{Kassiopeia: a modern, extensible C++ particle tracking package},} \emph{New Journal of Physics}, \textbf{19}(5), p. 053012.
 \newline\urlprefix\url{https://doi.org/10.1088/1367-2630/aa6950}
@@ -67,27 +86,11 @@
 \bibitem{ml_ligo_2}
 \textsc{Gabbard, H.}, \textsc{C.~Messenger}, \textsc{I.~S. Heng}, \textsc{F.~Tonolini}, and \textsc{R.~Murray-Smith} (2022) \enquote{{Bayesian parameter estimation using conditional variational autoencoders for gravitational-wave astronomy},} \emph{Nature Phys.}, \textbf{18}(1), pp. 112--117, \eprint{1909.06296}.
 
-\bibitem{p8originalcres}
-\textsc{Monreal, B.} and \textsc{J.~A. Formaggio} (2009) \enquote{Relativistic cyclotron radiation detection of tritium decay electrons as a new technique for measuring the neutrino mass,} \emph{Phys. Rev. D}, \textbf{80}, p. 051301.
-\newline\urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevD.80.051301}
-
-\bibitem{p8prl2023}
-\textsc{Esfahani, A.~A.}, \textsc{S.~Böser}, \textsc{N.~Buzinsky}, \textsc{M.~C. Carmona-Benitez}, \textsc{C.~Claessens}, \textsc{L.~de~Viveiros}, \textsc{P.~J. Doe}, \textsc{M.~Fertl}, \textsc{J.~A. Formaggio}, \textsc{J.~K. Gaison}, \textsc{L.~Gladstone}, \textsc{M.~Grando}, \textsc{M.~Guigue}, \textsc{J.~Hartse}, \textsc{K.~M. Heeger}, \textsc{X.~Huyan}, \textsc{J.~Johnston}, \textsc{A.~M. Jones}, \textsc{K.~Kazkaz}, \textsc{B.~H. LaRoque}, \textsc{M.~Li}, \textsc{A.~Lindman}, \textsc{E.~Machado}, \textsc{A.~Marsteller}, \textsc{C.~Matthé}, \textsc{R.~Mohiuddin}, \textsc{B.~Monreal}, \textsc{R.~Mueller}, \textsc{J.~A. Nikkel}, \textsc{E.~Novitski}, \textsc{N.~S. Oblath}, \textsc{J.~I. Peña}, \textsc{W.~Pettus}, \textsc{R.~Reimann}, \textsc{R.~G.~H. Robertson}, \textsc{D.~R.~D. Jesús}, \textsc{G.~Rybka}, \textsc{L.~Saldaña}, \textsc{M.~Schram}, \textsc{P.~L. Slocum}, \textsc{J.~Stachurska}, \textsc{Y.~H. Sun}, \textsc{P.~T. Surukuchi}, \textsc{J.~R. Tedeschi}, \textsc{A.~B. Telles}, \textsc{F.~Thomas}, \textsc{M.~Thomas}, \textsc{L.~A. Thorne}, \textsc{T.~Thümmler}, \textsc{L.~Tvrznikova}, \textsc{W.~V.~D. Pontseele}, \textsc{B.~A. VanDevender}, \textsc{J.~Weintroub}, \textsc{T.~E. Weiss}, \textsc{T.~Wendler}, \textsc{A.~Young}, \textsc{E.~Zayas}, and \textsc{A.~Ziegler} (2023) \enquote{Tritium Beta Spectrum and Neutrino Mass Limit from Cyclotron Radiation Emission Spectroscopy,} \eprint{2212.05048}.
-
-\bibitem{p8prc2023}
-\textsc{Esfahani, A.~A.}, \textsc{S.~Böser}, \textsc{N.~Buzinsky}, \textsc{M.~C. Carmona-Benitez}, \textsc{C.~Claessens}, \textsc{L.~de~Viveiros}, \textsc{P.~J. Doe}, \textsc{M.~Fertl}, \textsc{J.~A. Formaggio}, \textsc{J.~K. Gaison}, \textsc{L.~Gladstone}, \textsc{M.~Guigue}, \textsc{J.~Hartse}, \textsc{K.~M. Heeger}, \textsc{X.~Huyan}, \textsc{A.~M. Jones}, \textsc{K.~Kazkaz}, \textsc{B.~H. LaRoque}, \textsc{M.~Li}, \textsc{A.~Lindman}, \textsc{E.~Machado}, \textsc{A.~Marsteller}, \textsc{C.~Matthé}, \textsc{R.~Mohiuddin}, \textsc{B.~Monreal}, \textsc{R.~Mueller}, \textsc{J.~A. Nikkel}, \textsc{E.~Novitski}, \textsc{N.~S. Oblath}, \textsc{J.~I. Peña}, \textsc{W.~Pettus}, \textsc{R.~Reimann}, \textsc{R.~G.~H. Robertson}, \textsc{D.~R.~D. Jesús}, \textsc{G.~Rybka}, \textsc{L.~Saldaña}, \textsc{M.~Schram}, \textsc{P.~L. Slocum}, \textsc{J.~Stachurska}, \textsc{Y.~H. Sun}, \textsc{P.~T. Surukuchi}, \textsc{J.~R. Tedeschi}, \textsc{A.~B. Telles}, \textsc{F.~Thomas}, \textsc{M.~Thomas}, \textsc{L.~A. Thorne}, \textsc{T.~Thümmler}, \textsc{L.~Tvrznikova}, \textsc{W.~V.~D. Pontseele}, \textsc{B.~A. VanDevender}, \textsc{J.~Weintroub}, \textsc{T.~E. Weiss}, \textsc{T.~Wendler}, \textsc{A.~Young}, \textsc{E.~Zayas}, and \textsc{A.~Ziegler} (2023) \enquote{Cyclotron Radiation Emission Spectroscopy of Electrons from Tritium Beta Decay and $^{83\rm m}$Kr Internal Conversion,} \eprint{2303.12055}.
-
-\bibitem{p8snowmass2022}
-\textsc{Esfahani, A.~A.}, \textsc{S.~Böser}, \textsc{N.~Buzinsky}, \textsc{M.~C. Carmona-Benitez}, \textsc{C.~Claessens}, \textsc{L.~de~Viveiros}, \textsc{P.~J. Doe}, \textsc{S.~Enomoto}, \textsc{M.~Fertl}, \textsc{J.~A. Formaggio}, \textsc{J.~K. Gaison}, \textsc{M.~Grando}, \textsc{K.~M. Heeger}, \textsc{X.~Huyan}, \textsc{A.~M. Jones}, \textsc{K.~Kazkaz}, \textsc{M.~Li}, \textsc{A.~Lindman}, \textsc{C.~Matthé}, \textsc{R.~Mohiuddin}, \textsc{B.~Monreal}, \textsc{R.~Mueller}, \textsc{J.~A. Nikkel}, \textsc{E.~Novitski}, \textsc{N.~S. Oblath}, \textsc{J.~I. Peña}, \textsc{W.~Pettus}, \textsc{R.~Reimann}, \textsc{R.~G.~H. Robertson}, \textsc{G.~Rybka}, \textsc{L.~Saldaña}, \textsc{M.~Schram}, \textsc{P.~L. Slocum}, \textsc{J.~Stachurska}, \textsc{Y.~H. Sun}, \textsc{P.~T. Surukuchi}, \textsc{J.~R. Tedeschi}, \textsc{A.~B. Telles}, \textsc{F.~Thomas}, \textsc{M.~Thomas}, \textsc{L.~A. Thorne}, \textsc{T.~Thümmler}, \textsc{W.~V.~D. Pontseele}, \textsc{B.~A. VanDevender}, \textsc{T.~E. Weiss}, \textsc{T.~Wendler}, and \textsc{A.~Ziegler} (2022) \enquote{The Project 8 Neutrino Mass Experiment,} \eprint{2203.07349}.
-
 \bibitem{p8PanicProc}
 \textsc{Reimann, R.} (2022) \enquote{{Project 8: R\&D for a next-generation neutrino mass experiment},} \emph{PoS}, \textbf{PANIC2021}, p. 283.
 
 \bibitem{p8daqIII}
 \textsc{LaRoque, B.} (2020) \enquote{{Zero-deadtime processing in beta spectroscopy for measurement of the non-zero neutrino mass},} \emph{EPJ Web Conf.}, \textbf{245}, p. 01014.
-
-\bibitem{p8jugaad}
- \enquote{Antenna Arrays for Physics Measurements with Large-scale CRES Detectors,} \emph{In preparation}.
 
 \bibitem{nb_thesis}
 \textsc{Buzinsky, N.} (2021) \emph{Statistical Signal Processing and Detector Optimization in Project 8}, Ph.D. thesis, Massachusetts Institute of Technology.
