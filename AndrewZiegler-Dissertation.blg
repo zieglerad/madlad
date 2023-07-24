@@ -10,56 +10,58 @@ A level-1 auxiliary file: chapters/Chapter-6.aux
 A level-1 auxiliary file: chapters/Chapter-7.aux
 The style file: GLG-bibstyle.bst
 Database file #1: refs.bib
+Warning--I didn't find a database entry for "PhysRevC.103.065501"
+Warning--empty journal in lw_potential_1
+Warning--empty journal in ml_lhc
 Warning--empty journal in p8prl2023
 Warning--empty journal in p8prc2023
 Warning--empty journal in p8snowmass2022
 Warning--empty author in p8jugaad
 Warning--empty year in p8jugaad
 Warning--empty pages in vgg
-Warning--empty journal in lw_potential_1
 Warning--empty pages in Project8:2022wqh
 Warning--empty author in p8phase3trigger
 Warning--empty year in p8phase3trigger
 Warning--empty journal in cresHe6
-You've used 61 entries,
+You've used 69 entries,
             2552 wiz_defined-function locations,
-            887 strings with 16879 characters,
-and the built_in function-call counts, 27769 in all, are:
-= -- 1359
-> -- 1369
-< -- 28
-+ -- 381
-- -- 320
-* -- 2238
-:= -- 2704
-add.period$ -- 99
-call.type$ -- 61
+            933 strings with 18031 characters,
+and the built_in function-call counts, 30797 in all, are:
+= -- 1561
+> -- 1454
+< -- 32
++ -- 407
+- -- 338
+* -- 2456
+:= -- 3020
+add.period$ -- 113
+call.type$ -- 69
 change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 72
-duplicate$ -- 3270
-empty$ -- 2785
-format.name$ -- 349
-if$ -- 6194
+cite$ -- 81
+duplicate$ -- 3613
+empty$ -- 3113
+format.name$ -- 372
+if$ -- 6889
 int.to.chr$ -- 0
-int.to.str$ -- 61
-missing$ -- 653
-newline$ -- 210
-num.names$ -- 46
-pop$ -- 964
+int.to.str$ -- 69
+missing$ -- 720
+newline$ -- 234
+num.names$ -- 54
+pop$ -- 1062
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 884
+skip$ -- 981
 stack$ -- 0
-substring$ -- 832
-swap$ -- 2175
-text.length$ -- 28
+substring$ -- 946
+swap$ -- 2395
+text.length$ -- 32
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 11
-while$ -- 104
-width$ -- 63
-write$ -- 506
-(There were 11 warnings)
+warning$ -- 12
+while$ -- 123
+width$ -- 71
+write$ -- 577
+(There were 13 warnings)

@@ -41,17 +41,17 @@
 \contentsline {subsection}{\numberline {4.3.3}Machine Learning}{87}{}%
 \contentsline {section}{\numberline {4.4}Analysis of Signal Detection Algorithms for the Antenna Array Demonstrator}{91}{}%
 \contentsline {subsection}{\numberline {4.4.1}Introduction}{91}{}%
-\contentsline {subsection}{\numberline {4.4.2}Signal Detection with Antenna Array CRES}{94}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.1}Antenna Array and DAQ System}{94}{}%
+\contentsline {subsection}{\numberline {4.4.2}Signal Detection with Antenna Array CRES}{93}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Antenna Array and DAQ System}{93}{}%
 \contentsline {subsubsection}{\numberline {4.4.2.2}Real-time Signal Detection}{96}{}%
 \contentsline {subsection}{\numberline {4.4.3}Signal Detection Algorithms}{100}{}%
 \contentsline {subsubsection}{\numberline {4.4.3.1}Power Threshold}{100}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.2}Matched Filtering}{102}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.2}Matched Filtering}{101}{}%
 \contentsline {subsubsection}{\numberline {4.4.3.3}Machine Learning}{106}{}%
-\contentsline {subsection}{\numberline {4.4.4}Methods}{108}{}%
-\contentsline {subsubsection}{\numberline {4.4.4.1}Data Generation}{108}{}%
-\contentsline {subsubsection}{\numberline {4.4.4.2}Template Number and Match Estimation}{109}{}%
-\contentsline {subsubsection}{\numberline {4.4.4.3}CNN Training and Data Augmentation}{110}{}%
+\contentsline {subsection}{\numberline {4.4.4}Methods}{107}{}%
+\contentsline {subsubsection}{\numberline {4.4.4.1}Data Generation}{107}{}%
+\contentsline {subsubsection}{\numberline {4.4.4.2}Template Number and Match Estimation}{108}{}%
+\contentsline {subsubsection}{\numberline {4.4.4.3}CNN Training and Data Augmentation}{109}{}%
 \contentsline {subsection}{\numberline {4.4.5}Results and Discussion}{111}{}%
 \contentsline {subsubsection}{\numberline {4.4.5.1}Trigger Classification Performance}{111}{}%
 \contentsline {subsubsection}{\numberline {4.4.5.2}Computational Cost and Hardware Requirements}{113}{}%
