@@ -293,6 +293,27 @@ One of the most attractive features of digital beamforming is the spatial filter
 
 The digital beamforming positions can be specified with arbitrary densities limited only by the available computational resources. This provides a very straight-forward way to estimate the position of the electron in the trap by using a dense grid of beamforming positions and maximizing the output power of the beamforming summation over this grid. This natural approach to position reconstruction is attractive due the requirements of an event-by-event signal reconstruction, which needs an accurate estimation of the exact magnetic field experienced by the electron in order to correctly estimate it's kinetic energy. Combined with an accurate map of the magnetic field inhomogeneities of the trap obtained from calibrations, beamforming allows one to apply this magnetic field correction with a spatial resolution that is a fraction of the cyclotron wavelength.
 
+\subsubsection*{Laboratory Beamforming Demonstrations}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/230725_beamforming_setup_diagram.png}
+    \caption{}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/230725_beamforming_demo_image.png}
+    \caption{}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics*[width=0.85\textwidth]{figs/Chapter-4/230725_beamforming_example.png}
+    \caption{}
+\end{figure}
+
+
 \subsubsection*{FSCD Beamforming Simulations}
 
 Using Locust simulations of the FSCD one can perform beamforming reconstruction studies using the simulated CRES signal data. As we mentioned in the previous section, the beamforming procedure beings by specifying a set of beamforming positions and corresponding beamforming shifts. The beamforming positions form a grid that covers the region of interest in the field of view of the antenna array. There are effectively an infinite number of ways to specify the grid positions, however, uniform square grids are the most commonly used due to their simplicity. In the FSCD experiment the number and pattern of the grid positions would be optimized to cover the most important regions of the trap volume to maximize detection efficiency while minimizing superfluous calculations.
@@ -388,6 +409,12 @@ where $\tau$ is the variance of the WGN and $x[n]$ is the known signal. Strictly
 
 Although matched filters are canonically formulated in terms of a perfectly known signal, it is still possible to apply the matched filter technique given imperfect information about the signal provided that the signal is deterministic. From our discussion of CRES simulation tools for the FSCD (see Section \ref{sec:chap4-simulations}) we know that the shape of CRES signals are completely determined by the initial parameters of the electron. The random collisions with background gas molecules which cause the formation of signal tracks are the only stochastic component of the CRES event after the initial beta-decay, therefore, it is possible to develop a matched filter for the detection of CRES signal tracks which are fully determined by the parameters of the electron after the initial beta-decay or subsequent collision events.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220318_example_convolution.png}
+    \caption{}
+\end{figure}
+
 The matched filter test statistic for CRES signals is a modified version of Equation \ref{eq:chap4-mf-test-stat-perfect}
 \begin{equation}
     \mathcal{T} = \max_{\bm{h},m}\left|\bm{h}\ast\bm{y}\right|=\max_{\bm{h},m}\left|\sum_{k}h^\dagger[k]x[m-k]\right|,
@@ -407,6 +434,36 @@ where $\bm{f}$ and $\bm{g}$ are discretely sampled time-series, $\bm{F}$ and $\b
 One thing to note here is that the convolution theorem for discrete sequences shown here, is technically valid only for circular convolutions, which is not directly specified in Equation \ref{eq:chap4-mf-test-stat-conv}. However, because typical CRES track lengths are much longer than the Fourier analysis window and also that the frequency chirp rates are small compared to the time-slice duration, it is relatively safe to use circular convolutions to evaluate matched filter scores for CRES signals, which allows us to apply the convolution theorem to compute matched filter scores using the frequency representation of the data and matched filter template.
 
 \subsubsection*{Matched Filter Analysis of the FSCD}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/230725_example_mf_score_map.png}
+    \caption{}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/230725_matched_filter_grid_example.png}
+    \caption{}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220114_mean_match_vs_number_of_templates_87.0_0cm_modify_sample_number.png}
+    \caption{}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220223_mf_roc_curve_comparison_with_bf.png}
+    \caption{}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220318_static_vs_bf_vs_mf_vs_dnn_detection_threshold_electron_paramter_map.png}
+    \caption{}
+\end{figure}
 
 The optimality provided by the matched filter makes it a useful algorithm for analysis of CRES experiment designs for sensitivity analyses, since it indicates the best possible detection efficiency achievable by an experiment configuration. The standard approach to performing these studies involves generating a large number of simulated electron signals that span the kinematic parameter space of electrons in the magnetic trap. In general, electrons have six kinematic parameters along with an additional start time parameter. 
 
@@ -459,7 +516,7 @@ The first product in the sum is the number of operations required by beamforming
 \end{equation}
 This expression can be simplified by observing that $O(N_\mathrm{E}N_\theta)\times O(\log{N_\mathrm{s}})\gg O(N_\mathrm{ch})$, which means that the ratio of computational cost for the two methods can be reduced to
 \begin{equation}
-    \Gamma_\mathrm{BFMF}\approx frac{O(N_{\omega_{\nabla B}})}{O(N_\mathrm{ch})}.
+    \Gamma_\mathrm{BFMF}\approx \frac{O(N_{\omega_{\nabla B}})}{O(N_\mathrm{ch})}.
 \end{equation} 
 If we limit ourselves to a number of estimated drift frequencies of $O(1)$ then we see that the estimated computational cost reduction of the hybrid approach is of $O(N_\mathrm{ch})$. This is quite a large reduction considering that the FSCD antenna array contains sixty antennas in the baseline design. 
 
@@ -529,6 +586,33 @@ CNNs have been extremely influential in the field of computer vision, particular
 In the machine learning paradigm signal detection is equivalent to a binary classification problem between the signal and noise data classes, and my investigation focuses specifically on the application of CNNs to signal detection in the FSCD, which is motivated by relatively recent demonstrations of CNNs achieving classification accuracies for gravitational wave time-series signals comparable to a matched filter template bank. In this framework it is possible to interpret the matched filter as a type of CNN composed of a single convolutional layer with the templates making up the layer filters (see Figure \ref{fig:chap4-mf-neural-network}). Since this neural network has no hidden layers, it is not a DNN like we have been discussing so far, but we can attempt to construct a proper CNN that attempts to reproduce the classification performance of the matched filter network.
 
 The name deep filtering refers to this scheme of replacing a matched filter template bank with a DNN. The reason why one might want to do this is that it may be possible to exploit redundancies and correlations between templates that may allow one to perform signal detection with similar accuracy but with fewer computations, which is important for real-time detection scenarios like the FSCD experiment. In Section \ref{sec:chap4-trigger-paper} we perform a detailed comparison of the signal detection performance of a CNN to beamforming and a matched filter template bank.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.55\textwidth}
+        \includegraphics*[width=\textwidth]{figs/Chapter-4/210604_training_info_dset_name210602_df1_ch3_temp10.0_modeldf_conv6_fc2_3ch_domain_freq.png}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}{0.4\textwidth}
+        \includegraphics*[width=\textwidth]{figs/Chapter-4/210604_test_confusion_matrix_train_dset_210602_df1_ch3_test_dset_210602_df2_test_ch3_model_df_conv6_fc2_3ch_domain_freq_epoch_48.png}
+        \caption{}
+    \end{subfigure}
+    \caption{}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=1.0\textwidth]{figs/Chapter-4/210625_plot_dfcnn_efficiency_vs_noise_temp.png}
+    \caption{}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=1.0\textwidth]{figs/Chapter-4/210625_plot_dfcnn_roc_vs_noise_temp.png}
+    \caption{}
+\end{figure}
+
+
 
 \section{Analysis of Signal Detection Algorithms for the Antenna Array Demonstrator}
 \label{sec:chap4-trigger-paper}
