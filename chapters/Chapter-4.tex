@@ -298,20 +298,26 @@ The digital beamforming positions can be specified with arbitrary densities limi
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/230725_beamforming_setup_diagram.png}
-    \caption{}
+    \caption{\label{fig:chap4-beamforming-demo-system}System level diagram of the laboratory setup used for beamforming demonstrations at Penn State. For more information on this system see Chapter 5. Signals near 26~GHz are fed to a dipole antenna using and arbitrary waveform generator (AWG) and vector network analyzer (VNA), which drive a mixer. The dipole radiation is collected by an array of antennas connected to the digitizer data acquisition (DAQ) system.}
 \end{figure}
+
+As part of the development of antenna array CRES for the FSCD, an antenna measurement setup was constructed at Penn State to serve as a testbed for antenna prototypes and to perform laboratory validations of array simulations. This system is discussed in more detail in Chapter 5. Early versions of the antenna measurement system (see Figure \ref{fig:chap4-beamforming-demo-system} and Figure \ref{fig:chap4-beamforming-demo-photos}) were used to perform beamforming reconstruction studies of a simple probe antenna to better understand the principles of beamforming and confirm the estimated beamforming performance of Locust.
 
 \begin{figure}
     \centering
     \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/230725_beamforming_demo_image.png}
-    \caption{}
+    \caption{\label{fig:chap4-beamforming-demo-photos}Photographs of the beamforming demonstration setup. In (a) I show a top-down view of the dipole antenna and the array of eight horn antennas. Manual repositioning of the horn antennas allows one to synthesize a full-circular antenna array. The dipole antenna is mounted on a camera tripod mount that allows for manual position tuning. (b) is a close up image of the dipole, which is manufactured from two segments of semi-rigid coaxial cable. (c) is another image of the dipole and array.}
 \end{figure}
+
+Signals from an arbitrary waveform generator were up-converted to 26~GHz using a mixer and a high-frequency source from a vector network analyzer and fed to the dipole antenna through a balun. The radiation from the dipole antenna was received by an array of horn antennas. The signals from the horn antennas were then down-converted to baseband using a collection of mixers and an 8-way power divider. The signals were then digitized and saved to a host computer for analysis.
 
 \begin{figure}
     \centering
     \includegraphics*[width=0.85\textwidth]{figs/Chapter-4/230725_beamforming_example.png}
-    \caption{}
+    \caption{\label{fig:chap4-beamforming-demo-example}An example of digital beamforming reconstruction of a dipole antenna using a synthetic array of horn antennas. The beamforming image on the right is constructed by computing the time-averaged power of the summed signals for a two-dimensional grid of beamforming positions. In the image one can see a clear maximum that corresponds to the position of the dipole antenna. On the left I show the frequency spectrum of the time-series at the maximum power pixel. White gaussian noise is added to the signal to mimic a more realistic signal-to-noise-ratio. The signal emitted by the dipole is clearly visible as the high power peak in the frequency spectrum.}
 \end{figure}
+
+The data collected using the dipole and horn antenna array is reconstructed using the beamforming reconstruction approach specified in Section \ref{sec:chap4-dig-bf}. A two-dimensional grid of xy-positions is defined and the beamforming phase shifts for each of these positions is calculated. The phased summation can be visualized by plotting the time-averaged power for each of the summations as a pixel in the resulting beamforming image (see Figure \ref{fig:chap4-beamforming-demo-example}). White Gaussian noise (WGN) can be added to the data at this stage to simulate more realistic signal-to-noise ratios (SNR) if desired. The beamforming peak maxima is expected to have a Bessel function shape due to the circular symmetry of the array, and by analyzing the size of the beamforming maxima one can confirm that the beamforming reconstruction measurement has similar position resolution as expected from Locust simulations. Additionally, signal detection rates can be estimated from the data by comparing the magnitude of the beamforming signal peak in the frequency spectra to simulation.
 
 
 \subsubsection*{FSCD Beamforming Simulations}
@@ -412,7 +418,7 @@ Although matched filters are canonically formulated in terms of a perfectly know
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220318_example_convolution.png}
-    \caption{}
+    \caption{Example of a convolution of a CRES signal template with a segment of noisy data. A simulated CRES signal was simulated using Locust and normalized to create a matched filter template. When this template is convolved with noisy data the contains the matching signal the convolution output increases dramatically compared to data with only noise. The decreasing convolution output as the time offset of the convolution increases is caused by zero-padding of the data and template. }
 \end{figure}
 
 The matched filter test statistic for CRES signals is a modified version of Equation \ref{eq:chap4-mf-test-stat-perfect}
@@ -435,41 +441,57 @@ One thing to note here is that the convolution theorem for discrete sequences sh
 
 \subsubsection*{Matched Filter Analysis of the FSCD}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/230725_example_mf_score_map.png}
-    \caption{}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/230725_matched_filter_grid_example.png}
-    \caption{}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220114_mean_match_vs_number_of_templates_87.0_0cm_modify_sample_number.png}
-    \caption{}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220223_mf_roc_curve_comparison_with_bf.png}
-    \caption{}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220318_static_vs_bf_vs_mf_vs_dnn_detection_threshold_electron_paramter_map.png}
-    \caption{}
-\end{figure}
-
 The optimality provided by the matched filter makes it a useful algorithm for analysis of CRES experiment designs for sensitivity analyses, since it indicates the best possible detection efficiency achievable by an experiment configuration. The standard approach to performing these studies involves generating a large number of simulated electron signals that span the kinematic parameter space of electrons in the magnetic trap. In general, electrons have six kinematic parameters along with an additional start time parameter. 
 
 In order to limit the number of simulations required to evaluate the detection efficiency the standard approach is to fix the starting axial position, starting azimuthal position, starting direction of the perpendicular component of the electron's momentum, and event start time to reduce the parameter space to starting radial position, starting kinetic energy, and starting pitch angle. The fixed variables are true nuisance parameters that do not affect the detection efficiency estimates for the FSCD design, because they manifest as phases which are marginalized during the calculation of the matched filter score.
 
-Across radial position, kinetic energy, and pitch angle we can define a regular grid of parameters and use Locust to simulate the corresponding signals. This grid of simulated signals can be used to estimate the likelihood of detecting signals in the FSCD by using the same set of signals as both the data and templates when evaluating the matched filter scores. The matched filter score specifies the shape of the PDF that defines the detection probability.
+Across radial position, kinetic energy, and pitch angle one defines a regular grid of parameters and uses Locust to simulate the corresponding signals (see Figure \ref{fig:chap4-mf-parameter-grid}). This grid of simulated signals can be used to estimate the likelihood of detecting signals, because the matched filter score specifies the shape of the PDF that defines the detection probability and the size of the template bank influences the likelihood of a good match between a template and a random signal.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/230725_matched_filter_grid_example.png}
+    \caption{\label{fig:chap4-mf-parameter-grid}}
+\end{figure}
+
+The matched filter approach can also be used to estimate the achievable energy resolution of the experiment by using a dense grid of templates generated with parameters close to the unknown signal (see figure \ref{fig:chap4-mf-score-dense-grid}). Because matched filter templates with similar parameters have signal shapes that are also similar, templates with incorrect parameters can have nearly identical matched filter scores as the correct template. Since only one sample of noise is included in a sample of real data, one cannot guarantee that the best matching template corresponds to the ground truth parameters of the signal. This introduces uncertainty into the signal parameter estimation that manifests as an energy broadening. Dense grids of matched filter templates allows one to quantify this broadening by analyzing the parameter space of templates with matched filter scores close to the ground truth. This approach is analogous to maximum likelihood estimation and is one key component of a complete sensitivity analysis for an antenna array CRES experiment.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/230725_example_mf_score_map.png}
+    \caption{\label{fig:chap4-mf-score-dense-grid}}
+\end{figure}
+
+A key parameter for describing the performance of a matched filter template bank at signal detection is match, which we define as the average ratio of the highest matched filter score for a random signal to the matched filter score for a perfectly matching template. In equation form this is 
+\begin{equation}
+    \textrm{Match}\equiv\Gamma=\frac{\mathcal{T}_\mathrm{best}}{\mathcal{T}_\textrm{ideal}},
+\end{equation}
+where $\mathcal{T}_\textrm{best}$ is the matched filter score of the best fitting template in the bank and $\mathcal{T}_\textrm{ideal}$ is the hypothetical matched filter score one would measure if the signal perfectly matched the template. Generally, one desires an average match as close to one as possible, however, the average match value is an exponential function of the number of templates in the template bank (see Figure \ref{fig:chap4-mean-match-dense-grid}).
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220114_mean_match_vs_number_of_templates_87.0_0cm_modify_sample_number.png}
+    \caption{\label{fig:chap4-mean-match-dense-grid}}
+\end{figure}
+This behavior is observed for dense matched filter grids like the one in Figure \ref{fig:chap4-mf-score-dense-grid}. A dense grid was used to calculate the average value of match for different template bank sizes shown in Figure \ref{fig:chap4-mean-match-dense-grid}. 
+
+The exponential relationship between match and template bank size is also evident for template banks that cover a wide range of parameters, such as the template bank visualized in Figure \ref{fig:chap4-mf-parameter-grid}. Since no prior knowledge of the signal parameters is available, one has no choice but to use a template bank that covers a large range of parameters for signal detection. Achieving a high average match in this scenario can easily overwhelm the available computational resources, so in practice only a limited number of templates could be used at the detection stage. Therefore, accurately modeling the effects of match is key to correct sensitivity calculations.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220223_mf_roc_curve_comparison_with_bf.png}
+    \caption{\label{fig:chap4-mf-roc-curve-match-analysis}}
+\end{figure}
+
+The effect of match on the detection efficiency of the matched filter template bank can be summarized using the ROC curve (see Figure \ref{fig:chap4-mf-roc-curve-match-analysis}). A single ROC curve is obtained by averaging over the PDFs that describe the detection probabilities of each individual template. The matched filter score for a template follows a Rician distribution with a mean value equal to the matched filter score multiplied by the match ratio between the template and signal. Therefore, the distribution that describes the average matched filter score when there is a signal in the data is obtained by averaging over the distributions for every template, whose expectation values are multiplied by the average match ratio.
+
+The distribution of the matched filter score when there is no signal in the data follows a Rayleigh distribution. Therefore, a trials penalty, which is the statistical penalty one pays for randomly checking many templates in order to avoid a random match between noise and a template, is included by computing the joint distribution of $N_\mathrm{template}$ Rayleigh distributions, where $N_\mathrm{template}$ is the size of the template bank. For more information on the calculation of matched filter template bank ROC curves please refer to Section \ref{sec:chap4-trigger-paper}.
+
+An alternative way to visualize the detection performance for each algorithm is to specify a minimum acceptable false positive rate at the trigger level. This is equivalent to specifying a minimum threshold on the value of the matched filter score or the size of a frequency peak for a beamforming power threshold trigger. One can then draw regions of detectable signals as a function of the electron's pitch angle and radial position (see Figure \ref{fig:chap4-estimated-detection-threshold-parameter-space}).
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220318_static_vs_bf_vs_mf_vs_dnn_detection_threshold_electron_paramter_map.png}
+    \caption{\label{fig:chap4-estimated-detection-threshold-parameter-space}}
+\end{figure}
+A kinetic energy shift is equivalent to an overall frequency shift of the signal and should have no effect on the detection probability assuming sufficient density of matched filter templates in the energy dimension. A electron is declared "detectable" for the regions in Figure \ref{fig:chap4-estimated-detection-threshold-parameter-space} if the signal has at least 50\% probability of falling above the decision threshold of the respective classifier. One can see that the parameter space of detectable signals is greatly expanded beyond the beamforming power threshold trigger with a matched filter (MF) or deep neural network (DNN) (see Section \ref{sec:chap4-intro-ml}). Plots such as Figure \ref{fig:chap4-estimated-detection-threshold-parameter-space} are useful for visualization, but, since the handling of detection likelihood is not sufficiently rigorous, the detection probability boundaries are not particularlly well-suited to sensitivity estimates.
 
 \subsubsection*{Optimized Matched Filtering Implementation for the FSCD}
 
