@@ -449,8 +449,8 @@ Across radial position, kinetic energy, and pitch angle one defines a regular gr
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/230725_matched_filter_grid_example.png}
-    \caption{\label{fig:chap4-mf-parameter-grid}}
+    \includegraphics*[width=0.6\textwidth]{figs/Chapter-4/230725_matched_filter_grid_example.png}
+    \caption{\label{fig:chap4-mf-parameter-grid} An example two-dimensional parameter distribution of a matched filter template bank and random test signals. $\theta$ refers to the pitch angle of the electron and $E$ is the kinetic energy. The template bank forms a regular grid of in pitch angle and energy, whereas, the test signals are uniformly distributed in pitch angle and follow the tritium beta-decay kinetic energy distribution. This is why there are fewer test signals at higher energies. The need for high match across the full parameter space prevents one from reducing the density of templates in this low activity region. A zoomed in version of the template bank illustrates the relative density of templates and signals needed for match $>90\%$. }
 \end{figure}
 
 The matched filter approach can also be used to estimate the achievable energy resolution of the experiment by using a dense grid of templates generated with parameters close to the unknown signal (see figure \ref{fig:chap4-mf-score-dense-grid}). Because matched filter templates with similar parameters have signal shapes that are also similar, templates with incorrect parameters can have nearly identical matched filter scores as the correct template. Since only one sample of noise is included in a sample of real data, one cannot guarantee that the best matching template corresponds to the ground truth parameters of the signal. This introduces uncertainty into the signal parameter estimation that manifests as an energy broadening. Dense grids of matched filter templates allows one to quantify this broadening by analyzing the parameter space of templates with matched filter scores close to the ground truth. This approach is analogous to maximum likelihood estimation and is one key component of a complete sensitivity analysis for an antenna array CRES experiment.
@@ -458,7 +458,7 @@ The matched filter approach can also be used to estimate the achievable energy r
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/230725_example_mf_score_map.png}
-    \caption{\label{fig:chap4-mf-score-dense-grid}}
+    \caption{\label{fig:chap4-mf-score-dense-grid} The matched filter scores of a dense grid of templates in pitch angle energy space. Dense template grids allow one to estimate the kinetic energy of the electron by identifying the best matching template. The uncertainty on this value is proportional to the space of templates that also match the test signal well. In the worst case matched filter templates can be completely degenerate where templates with different parameters match a signal with equal likelihood. }
 \end{figure}
 
 A key parameter for describing the performance of a matched filter template bank at signal detection is match, which we define as the average ratio of the highest matched filter score for a random signal to the matched filter score for a perfectly matching template. In equation form this is 
@@ -469,7 +469,7 @@ where $\mathcal{T}_\textrm{best}$ is the matched filter score of the best fittin
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220114_mean_match_vs_number_of_templates_87.0_0cm_modify_sample_number.png}
-    \caption{\label{fig:chap4-mean-match-dense-grid}}
+    \caption{\label{fig:chap4-mean-match-dense-grid} The mean match of the dense template grid shown in Figure \ref{fig:chap4-mf-score-dense-grid} for different numbers of templates. Grids of different sizes were obtained by decimating a dense grid of templates and the average match for each grid was computed using the same set of randomly distributed test signals. Plotting the mean match against the size of the grid allows one to visualize the exponential relationship between match and template bank size. The noise in each curve is caused by sampling effects from the decimation algorithm. In general, longer templates are harder to than shorter templates.}
 \end{figure}
 This behavior is observed for dense matched filter grids like the one in Figure \ref{fig:chap4-mf-score-dense-grid}. A dense grid was used to calculate the average value of match for different template bank sizes shown in Figure \ref{fig:chap4-mean-match-dense-grid}. 
 
@@ -478,7 +478,7 @@ The exponential relationship between match and template bank size is also eviden
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220223_mf_roc_curve_comparison_with_bf.png}
-    \caption{\label{fig:chap4-mf-roc-curve-match-analysis}}
+    \caption{\label{fig:chap4-mf-roc-curve-match-analysis} Matched filter template bank ROC curves as a function of mean match. One can see that for low match a matched filter is on average worse than the more straight forward beamforming detection approach. }
 \end{figure}
 
 The effect of match on the detection efficiency of the matched filter template bank can be summarized using the ROC curve (see Figure \ref{fig:chap4-mf-roc-curve-match-analysis}). A single ROC curve is obtained by averaging over the PDFs that describe the detection probabilities of each individual template. The matched filter score for a template follows a Rician distribution with a mean value equal to the matched filter score multiplied by the match ratio between the template and signal. Therefore, the distribution that describes the average matched filter score when there is a signal in the data is obtained by averaging over the distributions for every template, whose expectation values are multiplied by the average match ratio.
@@ -489,7 +489,7 @@ An alternative way to visualize the detection performance for each algorithm is 
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.7\textwidth]{figs/Chapter-4/220318_static_vs_bf_vs_mf_vs_dnn_detection_threshold_electron_paramter_map.png}
-    \caption{\label{fig:chap4-estimated-detection-threshold-parameter-space}}
+    \caption{\label{fig:chap4-estimated-detection-threshold-parameter-space} Boundaries of detectable electrons in pitch angle kinetic energy space for a series of different signal detection algorithms. A detectable signal is defined as a signal that is above a consistent decision with at least 50\% probability. This non-rigorous treatment of detection probability is primarily useful for the visualization the relative increases in detection performance provided by the different algorithms. The static beamforming (Static-BF) algorithm is the digital beamforming algorithm introduced above without the $\nabla B$-drift correction. The DNN algorithm refers to a convolutional neural network classifier trained to detect CRES signals (see Section \ref{sec:chap4-intro-ml}). }
 \end{figure}
 A kinetic energy shift is equivalent to an overall frequency shift of the signal and should have no effect on the detection probability assuming sufficient density of matched filter templates in the energy dimension. A electron is declared "detectable" for the regions in Figure \ref{fig:chap4-estimated-detection-threshold-parameter-space} if the signal has at least 50\% probability of falling above the decision threshold of the respective classifier. One can see that the parameter space of detectable signals is greatly expanded beyond the beamforming power threshold trigger with a matched filter (MF) or deep neural network (DNN) (see Section \ref{sec:chap4-intro-ml}). Plots such as Figure \ref{fig:chap4-estimated-detection-threshold-parameter-space} are useful for visualization, but, since the handling of detection likelihood is not sufficiently rigorous, the detection probability boundaries are not particularlly well-suited to sensitivity estimates.
 

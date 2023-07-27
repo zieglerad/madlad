@@ -53,7 +53,7 @@
 \contentsline {subsection}{\numberline {4.4.4}Methods}{121}{}%
 \contentsline {subsubsection}{\numberline {4.4.4.1}Data Generation}{121}{}%
 \contentsline {subsubsection}{\numberline {4.4.4.2}Template Number and Match Estimation}{122}{}%
-\contentsline {subsubsection}{\numberline {4.4.4.3}CNN Training and Data Augmentation}{122}{}%
+\contentsline {subsubsection}{\numberline {4.4.4.3}CNN Training and Data Augmentation}{123}{}%
 \contentsline {subsection}{\numberline {4.4.5}Results and Discussion}{124}{}%
 \contentsline {subsubsection}{\numberline {4.4.5.1}Trigger Classification Performance}{124}{}%
 \contentsline {subsubsection}{\numberline {4.4.5.2}Computational Cost and Hardware Requirements}{126}{}%
