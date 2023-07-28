@@ -4,6 +4,9 @@
 \providecommand{\urlprefix}{URL }
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem{KATRIN:2022kkv}
+\textsc{Aker, M.} \textsc{et~al.} (2022) \enquote{{New Constraint on the Local Relic Neutrino Background Overdensity with the First KATRIN Data Runs},} \emph{Phys. Rev. Lett.}, \textbf{129}(1), p. 011806, \eprint{2202.04587}.
+
 \bibitem{direct_meas_nu_mass}
 \textsc{Formaggio, J.~A.}, \textsc{A.~L.~C. de~Gouv\^ea}, and \textsc{R.~G.~H. Robertson} (2021) \enquote{{Direct Measurements of Neutrino Mass},} \emph{Phys. Rept.}, \textbf{914}, pp. 1--54, \eprint{2102.00594}.
 
@@ -23,13 +26,58 @@
 \bibitem{p8jugaad}
  \enquote{Antenna Arrays for Physics Measurements with Large-scale CRES Detectors,} \emph{In preparation}.
 
-\bibitem{kassiopeia}
-\textsc{Furse, D.} \textsc{et~al.} (2017) \enquote{{Kassiopeia: a modern, extensible C++ particle tracking package},} \emph{New Journal of Physics}, \textbf{19}(5), p. 053012.
-\newline\urlprefix\url{https://doi.org/10.1088/1367-2630/aa6950}
+\bibitem{atomic_clock}
+\textsc{Nicholson, T.} \textsc{et~al.} (2015) \enquote{Systematic evaluation of an atomic clock at 2 x 10-18 total uncertainty,} \emph{Nature Communications}, \textbf{6}(6896).
+
+\bibitem{never_meas_anything_but_freq}
+\textsc{H\"ansch, T.~W.} (2006) \enquote{Nobel Lecture: Passion for precision,} \emph{Rev. Mod. Phys.}, \textbf{78}, pp. 1297--1309.
+\newline\urlprefix\url{https://link.aps.org/doi/10.1103/RevModPhys.78.1297}
+
+\bibitem{gabor}
+\textsc{Gabor, D.} (1946) \enquote{Theory of communication. Part 1: The analysis of information,} \emph{Journal of the Institution of Electrical Engineers-part III: radio and communication engineering}, \textbf{93}(26), pp. 429--441.
+
+\bibitem{nick_viterbi}
+\textsc{Esfahani~Ashtari, A.} \textsc{et~al.} (2022) \enquote{{Viterbi decoding of CRES signals in Project 8},} \emph{New J. Phys.}, \textbf{24}(5), p. 053013, \eprint{2112.05265}.
 
 \bibitem{jackson_classical_1999}
 \textsc{Jackson, J.~D.} (1999) \emph{Classical electrodynamics}, 3rd ed., Wiley, New York, {NY}.
 \newline\urlprefix\url{http://cdsweb.cern.ch/record/490457}
+
+\bibitem{larmor_eqn}
+\textsc{F.R.S., J. L.~D.} (1897) \enquote{LXIII. On the theory of the magnetic influence on spectra; and on the radiation from moving ions,} \emph{The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science}, \textbf{44}(271), pp. 503--512, \eprint{https://doi.org/10.1080/14786449708621095}.
+\newline\urlprefix\url{https://doi.org/10.1080/14786449708621095}
+
+\bibitem{p8snomass}
+\textsc{Esfahani, A.~A.} \textsc{et~al.} (2022) \enquote{{The Project 8 Neutrino Mass Experiment},} in \emph{{2022 Snowmass Summer Study}}, \eprint{2203.07349}.
+
+\bibitem{mainz_final}
+\textsc{Kraus, C.} \textsc{et~al.} (2005) \enquote{{Final results from phase II of the Mainz neutrino mass search in tritium beta decay},} \emph{Eur. Phys. J. C}, \textbf{40}, pp. 447--468, \eprint{hep-ex/0412056}.
+
+\bibitem{troitsk_result}
+\textsc{Aseev, V.~N.} \textsc{et~al.} (2011) \enquote{{An upper limit on electron antineutrino mass from Troitsk experiment},} \emph{Phys. Rev. D}, \textbf{84}, p. 112003, \eprint{1108.5034}.
+
+\bibitem{tritium_final_state_saenz}
+\textsc{Saenz, A.}, \textsc{S.~Jonsell}, and \textsc{P.~Froelich} (2000) \enquote{{Improved Molecular Final-State Distribution of HeT+ for the \ensuremath{\beta}-Decay Process of T2},} \emph{Phys. Rev. Lett.}, \textbf{84}(2), p. 242.
+
+\bibitem{Bodine:2015sma}
+\textsc{Bodine, L.~I.}, \textsc{D.~S. Parno}, and \textsc{R.~G.~H. Robertson} (2015) \enquote{{Assessment of molecular effects on neutrino mass measurements from tritium \ensuremath{\beta} decay},} \emph{Phys. Rev. C}, \textbf{91}(3), p. 035505, \eprint{1502.03497}.
+
+\bibitem{Project8:2014ivu}
+\textsc{Asner, D.~M.} \textsc{et~al.} (2015) \enquote{{Single electron detection and spectroscopy via relativistic cyclotron radiation},} \emph{Phys. Rev. Lett.}, \textbf{114}(16), p. 162501, \eprint{1408.5362}.
+
+\bibitem{krypton83m}
+\textsc{V\'enos, D.}, \textsc{J.~Sentkerestiov\'a}, \textsc{O.~Dragoun}, \textsc{M.~Slez\'ak}, \textsc{M.~Ry\v{s}av\'y}, and \textsc{A.~\v{S}palek} (2018) \enquote{{Properties of 83mKr conversion electrons and their use in the KATRIN experiment},} \emph{JINST}, \textbf{13}(02), p. T02012.
+
+\bibitem{tritium_spin_exchange}
+\textsc{Lagendijk, A.}, \textsc{I.~F. Silvera}, and \textsc{B.~J. Verhaar} (1986) \enquote{Spin exchange and dipolar relaxation rates in atomic hydrogen: Lifetimes in magnetic traps,} \emph{Phys. Rev. B}, \textbf{33}, pp. 626--628.
+\newline\urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.33.626}
+
+\bibitem{tritium_hyperfine}
+\textsc{Silvera, I.} and \textsc{J.~Walraven} (1986) \enquote{Spin-polarized atomic hydrogen,} \emph{Prog. Low Temp. Phys.}, \textbf{X}, pp. 139--370.
+
+\bibitem{kassiopeia}
+\textsc{Furse, D.} \textsc{et~al.} (2017) \enquote{{Kassiopeia: a modern, extensible C++ particle tracking package},} \emph{New Journal of Physics}, \textbf{19}(5), p. 053012.
+\newline\urlprefix\url{https://doi.org/10.1088/1367-2630/aa6950}
 
 \bibitem{p8pheno}
 \textsc{Esfahani, A.~A.}, \textsc{V.~Bansal}, \textsc{S.~B\"oser}, \textsc{N.~Buzinsky}, \textsc{R.~Cervantes}, \textsc{C.~Claessens}, \textsc{L.~de~Viveiros}, \textsc{P.~J. Doe}, \textsc{M.~Fertl}, \textsc{J.~A. Formaggio}, \textsc{L.~Gladstone}, \textsc{M.~Guigue}, \textsc{K.~M. Heeger}, \textsc{J.~Johnston}, \textsc{A.~M. Jones}, \textsc{K.~Kazkaz}, \textsc{B.~H. LaRoque}, \textsc{M.~Leber}, \textsc{A.~Lindman}, \textsc{E.~Machado}, \textsc{B.~Monreal}, \textsc{E.~C. Morrison}, \textsc{J.~A. Nikkel}, \textsc{E.~Novitski}, \textsc{N.~S. Oblath}, \textsc{W.~Pettus}, \textsc{R.~G.~H. Robertson}, \textsc{G.~Rybka}, \textsc{L.~Salda\~na}, \textsc{V.~Sibille}, \textsc{M.~Schram}, \textsc{P.~L. Slocum}, \textsc{Y.-H. Sun}, \textsc{J.~R. Tedeschi}, \textsc{T.~Th\"ummler}, \textsc{B.~A. VanDevender}, \textsc{M.~Wachtendonk}, \textsc{M.~Walter}, \textsc{T.~E. Weiss}, \textsc{T.~Wendler}, and \textsc{E.~Zayas} (2019) \enquote{Electron radiated power in cyclotron radiation emission spectroscopy experiments,} \emph{Phys. Rev. C}, \textbf{99}, p. 055501.
@@ -166,17 +214,11 @@
 \bibitem{Monreal:2009za}
 \textsc{Monreal, B.} and \textsc{J.~A. Formaggio} (2009) \enquote{{Relativistic Cyclotron Radiation Detection of Tritium Decay Electrons as a New Technique for Measuring the Neutrino Mass},} \emph{Phys. Rev. D}, \textbf{80}, p. 051301, \eprint{0904.2860}.
 
-\bibitem{Project8:2014ivu}
-\textsc{Asner, D.~M.} \textsc{et~al.} (2015) \enquote{{Single electron detection and spectroscopy via relativistic cyclotron radiation},} \emph{Phys. Rev. Lett.}, \textbf{114}(16), p. 162501, \eprint{1408.5362}.
-
 \bibitem{Project8:2017nal}
 \textsc{Ashtari~Esfahani, A.} \textsc{et~al.} (2017) \enquote{{Determining the neutrino mass with cyclotron radiation emission spectroscopy\textemdash{}Project 8},} \emph{J. Phys. G}, \textbf{44}(5), p. 054004, \eprint{1703.02037}.
 
 \bibitem{Project8:2022wqh}
 \textsc{Esfahani, A.~A.} \textsc{et~al.} (2022) \enquote{{The Project 8 Neutrino Mass Experiment},} in \emph{{2022 Snowmass Summer Study}}, \eprint{2203.07349}.
-
-\bibitem{Bodine:2015sma}
-\textsc{Bodine, L.~I.}, \textsc{D.~S. Parno}, and \textsc{R.~G.~H. Robertson} (2015) \enquote{{Assessment of molecular effects on neutrino mass measurements from tritium \ensuremath{\beta} decay},} \emph{Phys. Rev. C}, \textbf{91}(3), p. 035505, \eprint{1502.03497}.
 
 \bibitem{Ashtari_Esfahani_2019}
 \textsc{Ashtari~Esfahani, A.} \textsc{et~al.} (2019) \enquote{Locust: C++ software for simulation of {RF} detection,} \emph{New Journal of Physics}, \textbf{21}(11), p. 113051.
@@ -208,10 +250,6 @@
 \bibitem{purcell}
 \textsc{Purcell, E.} (1946) \enquote{Spontaneous Emission Probabilities at Radio Frequencies,} \emph{Phys. Rev.}, \textbf{69}, pp. 674--674.
 \newline\urlprefix\url{https://link.aps.org/doi/10.1103/PhysRev.69.674}
-
-\bibitem{larmor_eqn}
-\textsc{F.R.S., J. L.~D.} (1897) \enquote{LXIII. On the theory of the magnetic influence on spectra; and on the radiation from moving ions,} \emph{The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science}, \textbf{44}(271), pp. 503--512, \eprint{https://doi.org/10.1080/14786449708621095}.
-\newline\urlprefix\url{https://doi.org/10.1080/14786449708621095}
 
 \bibitem{cavity_coupled_to_amp}
 \textsc{Moskowitz, B.~E.} and \textsc{J.~Rogers} (1988) \enquote{{ANALYSIS OF A MICROWAVE CAVITY DETECTOR COUPLED TO A NOISY AMPLIFIER},} \emph{Nucl. Instrum. Meth. A}, \textbf{264}, pp. 445--452.
