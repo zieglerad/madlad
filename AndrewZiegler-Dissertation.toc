@@ -13,7 +13,7 @@
 \contentsline {section}{\numberline {2.5}Neutrino Absolute Mass Scale}{13}{}%
 \contentsline {subsection}{\numberline {2.5.1}Limits from Cosmology}{13}{}%
 \contentsline {subsection}{\numberline {2.5.2}Limits from Neutrinoless Double Beta-decay Searches}{15}{}%
-\contentsline {subsection}{\numberline {2.5.3}Limits from Beta-decay}{17}{}%
+\contentsline {subsection}{\numberline {2.5.3}Limits from Beta-decay}{16}{}%
 \contentsline {chapter}{\numberline {3}Direct Measurement of the Neutrino Mass with Project 8}{21}{}%
 \contentsline {section}{\numberline {3.1}Introduction}{21}{}%
 \contentsline {section}{\numberline {3.2}Cyclotron Radiation Emission Spectroscopy and Project 8}{22}{}%
