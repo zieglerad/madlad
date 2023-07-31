@@ -277,42 +277,9 @@
 \bibitem{friis_paper}
 \textsc{Friis, H.} (1946) \enquote{A Note on a Simple Transmission Formula,} \emph{Proceedings of the IRE}, \textbf{34}(5), pp. 254--256.
 
-\bibitem{friis_wiki}
-\url{https://en.wikipedia.org/wiki/Friis_transmission_equation}.
-
 \bibitem{pozar}
 \textsc{Pozar, D.~M.} (2005) \emph{{Microwave engineering; 3rd ed.}}, Wiley, Hoboken, NJ.
 \newline\urlprefix\url{https://cds.cern.ch/record/882338}
-
-\bibitem{absorber_foam}
-\url{https://www.mvg-world.com/en/products/absorbers/standard-absorbers/convoluted-absorbers-aec-series}.
-
-\bibitem{vna}
-\url{https://en.wikipedia.org/wiki/Network_analyzer_(electrical)}.
-
-\bibitem{keysight_vna}
-\url{https://www.keysight.com/us/en/product/N5222A/pna-microwave-network-analyzer-265-ghz.html}.
-
-\bibitem{pasternack_antenna}
-\url{https://www.pasternack.com/standard-gain-horn-antennas-category.aspx}.
-
-\bibitem{marki}
-\url{https://www.markimicrowave.com/home/}.
-
-\bibitem{quad}
-\url{https://en.wikipedia.org/wiki/Power_dividers_and_directional_couplers}.
-
-\bibitem{balun}
-\url{https://en.wikipedia.org/wiki/Balun}.
-
-\bibitem{awg}
-\url{https://www.rigolna.com/products/waveform-generators/dg5000/}.
-
-\bibitem{mixer}
-\url{https://en.wikipedia.org/wiki/Frequency_mixer}.
-
-\bibitem{caen}
-\url{https://www.caen.it/}.
 
 \bibitem{Aker2022}
 \textsc{Aker, M.} \textsc{et~al.} (2022) \enquote{Direct neutrino-mass measurement with sub-electronvolt sensitivity,} \emph{Nature Physics}, \textbf{18}(2), pp. 160--166.
