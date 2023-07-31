@@ -1,8 +1,85 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{nuclear_physics}
+\textsc{Das, A.} and \textsc{T.~Ferbel} (2003) \emph{Introduction to Nuclear and Particle Physics}, World Scientific.
+
+\bibitem{curie}
+\textsc{Curie, P.} (1898) \enquote{Sur une nouvelle substance fortement radioactive, contenue dans la pechblende,} \emph{Comptes rendus de 1'Academie des Sciences, Paris}, \textbf{127}, pp. 1215--1217.
+
+\bibitem{rutherford_rad_types}
+\textsc{Rutherford, E.} (1899) \enquote{{Uranium radiation and the electrical conduction produced by it},} \emph{Philos. Mag.}, \textbf{47}, p. 109.
+\newline\urlprefix\url{https://cds.cern.ch/record/261896}
+
+\bibitem{villard}
+\textsc{Gerward, L.} (1999) \enquote{Paul Villard and his Discovery of Gamma Rays,} \emph{Physics in Perspective}, \textbf{1}, pp. 367--383.
+
+\bibitem{Becquerel_beta_electron}
+\textsc{Becquerel, H.} (1900) \enquote{Deviation du rayonnement du radium dans un champ \'{e}lectrique,} \emph{C.R.}, \textbf{130}, pp. 809--815.
+
+\bibitem{rutherford_transmutation}
+\textsc{D.Sc., E. R.~M.} and \textsc{F.~S. B.A.} (1902) \enquote{XLI. The cause and nature of radioactivity.—Part I,} \emph{The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science}, \textbf{4}(21), pp. 370--396, \eprint{https://doi.org/10.1080/14786440209462856}.
+\newline\urlprefix\url{https://doi.org/10.1080/14786440209462856}
+
+\bibitem{chadwick1914}
+\textsc{Chadwick, J.} (1914) \emph{Intensit\"{a}tsverteilung im magnetischen Spektrum der {\ss}-Strahlen von Radium B+C}, Druck von Friedr. Vieweg und Sohn.
+\newline\urlprefix\url{https://books.google.com/books?id=8s8UmQEACAAJ}
+
+\bibitem{bohr_energy_nonconservation_ref}
+\textsc{Brown, L.~M.} (1978) \enquote{The idea of the neutrino,} \emph{Physics Today}, \textbf{31}(9).
+
+\bibitem{Pauli:1930pc}
+\textsc{Pauli, W.} (1978) \enquote{{Dear radioactive ladies and gentlemen},} \emph{Phys. Today}, \textbf{31N9}, p.~27.
+
+\bibitem{fermi_rename}
+\textsc{Amaldi, E.} (1984) \enquote{From the discovery of the neutron to the discovery of nuclear fission,} \emph{Physics Reports}, \textbf{111}(1), pp. 1--331.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/037015738490214X}
+
+\bibitem{neutron}
+\textsc{Chadwick, J.} (1932) \enquote{The existence of a neutron,} \emph{Proceedings of the Royal Society of London. Series A, Containing Papers of a Mathematical and Physical Character}, \textbf{136}(830), pp. 692--708, \eprint{https://royalsocietypublishing.org/doi/pdf/10.1098/rspa.1932.0112}.
+\newline\urlprefix\url{https://royalsocietypublishing.org/doi/abs/10.1098/rspa.1932.0112}
+
+\bibitem{fermi_beta_decay}
+\textsc{Wilson, F.~L.} (1968) \enquote{{Fermi's Theory of Beta Decay},} \emph{American Journal of Physics}, \textbf{36}(12), pp. 1150--1160, \eprint{https://pubs.aip.org/aapt/ajp/article-pdf/36/12/1150/11891052/1150\_1\_online.pdf}.
+\newline\urlprefix\url{https://doi.org/10.1119/1.1974382}
+
+\bibitem{crane_halpern}
+\textsc{Crane, H.~R.} and \textsc{J.~Halpern} (1938) \enquote{New Experimental Evidence for the Existence of a Neutrino,} \emph{Phys. Rev.}, \textbf{53}, pp. 789--794.
+\newline\urlprefix\url{https://link.aps.org/doi/10.1103/PhysRev.53.789}
+
+\bibitem{cowan_reines}
+\textsc{Cowan, C.~L.}, \textsc{F.~Reines}, \textsc{F.~B. Harrison}, \textsc{H.~W. Kruse}, and \textsc{A.~D. McGuire} (1956) \enquote{Detection of the Free Neutrino: a Confirmation,} \emph{Science}, \textbf{124}(3212), pp. 103--104, \eprint{https://www.science.org/doi/pdf/10.1126/science.124.3212.103}.
+\newline\urlprefix\url{https://www.science.org/doi/abs/10.1126/science.124.3212.103}
+
+\bibitem{neutrino_flavor}
+\textsc{{Anicin}, I.~V.} (2005) \enquote{{The Neutrino - Its Past, Present and Future},} \emph{arXiv e-prints}, physics/0503172, \eprint{physics/0503172}.
+
+\bibitem{ray_davis}
+\textsc{Davis, R.} (2003) \enquote{{Nobel Lecture: A half-century with solar neutrinos},} \emph{Rev. Mod. Phys.}, \textbf{75}, pp. 985--994.
+
+\bibitem{SNO}
+\textsc{McDonald, A.~B.} \textsc{et~al.} (2002) \enquote{{Direct evidence for neutrino flavor transformation from neutral-current interactions in SNO},} \emph{AIP Conf. Proc.}, \textbf{646}(1), pp. 43--58.
+
+\bibitem{superk}
+\textsc{Fukuda, Y.} \textsc{et~al.} (1998) \enquote{{Evidence for oscillation of atmospheric neutrinos},} \emph{Phys. Rev. Lett.}, \textbf{81}, pp. 1562--1567, \eprint{hep-ex/9807003}.
+
+\bibitem{nu_oscillations}
+\textsc{Giganti, C.}, \textsc{S.~Lavignac}, and \textsc{M.~Zito} (2018) \enquote{{Neutrino oscillations: The rise of the PMNS paradigm},} \emph{Prog. Part. Nucl. Phys.}, \textbf{98}, pp. 1--54, \eprint{1710.00715}.
+
+\bibitem{JUNO}
+\textsc{An, F.} \textsc{et~al.} (2016) \enquote{{Neutrino Physics with JUNO},} \emph{J. Phys. G}, \textbf{43}(3), p. 030401, \eprint{1507.05613}.
+
+\bibitem{hyperk}
+\textsc{Bian, J.} \textsc{et~al.} (2022) \enquote{{Hyper-Kamiokande Experiment: A Snowmass White Paper},} in \emph{{Snowmass 2021}}, \eprint{2203.02029}.
+
+\bibitem{DUNE}
+\textsc{Abi, B.} \textsc{et~al.} (2020) \enquote{{Long-baseline neutrino oscillation physics potential of the DUNE experiment},} \emph{Eur. Phys. J. C}, \textbf{80}(10), p. 978, \eprint{2006.16043}.
+
+\bibitem{pdg2022}
+\textsc{Workman, R.~L.} \textsc{et~al.} (2022) \enquote{{Review of Particle Physics},} \emph{PTEP}, \textbf{2022}, p. 083C01.
 
 \bibitem{KATRIN:2022kkv}
 \textsc{Aker, M.} \textsc{et~al.} (2022) \enquote{{New Constraint on the Local Relic Neutrino Background Overdensity with the First KATRIN Data Runs},} \emph{Phys. Rev. Lett.}, \textbf{129}(1), p. 011806, \eprint{2202.04587}.

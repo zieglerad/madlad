@@ -11,6 +11,7 @@ A level-1 auxiliary file: chapters/Chapter-7.aux
 The style file: GLG-bibstyle.bst
 Database file #1: refs.bib
 Warning--I didn't find a database entry for "PhysRevC.103.065501"
+Warning--empty pages in hyperk
 Warning--empty journal in p8snowmass2022
 Warning--empty journal in p8prc2023
 Warning--empty journal in p8prl2023
@@ -24,45 +25,45 @@ Warning--empty pages in Project8:2022wqh
 Warning--empty author in p8phase3trigger
 Warning--empty year in p8phase3trigger
 Warning--empty journal in cresHe6
-You've used 82 entries,
+You've used 105 entries,
             2552 wiz_defined-function locations,
-            1014 strings with 19993 characters,
-and the built_in function-call counts, 36971 in all, are:
-= -- 2025
-> -- 1602
-< -- 43
-+ -- 451
-- -- 369
-* -- 2908
-:= -- 3635
-add.period$ -- 139
-call.type$ -- 82
+            1167 strings with 23292 characters,
+and the built_in function-call counts, 46650 in all, are:
+= -- 2749
+> -- 1788
+< -- 61
++ -- 512
+- -- 407
+* -- 3591
+:= -- 4623
+add.period$ -- 183
+call.type$ -- 105
 change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 95
-duplicate$ -- 4288
-empty$ -- 3732
-format.name$ -- 414
-if$ -- 8327
+cite$ -- 119
+duplicate$ -- 5346
+empty$ -- 4756
+format.name$ -- 463
+if$ -- 10592
 int.to.chr$ -- 0
-int.to.str$ -- 82
-missing$ -- 839
-newline$ -- 275
-num.names$ -- 67
-pop$ -- 1212
+int.to.str$ -- 105
+missing$ -- 1030
+newline$ -- 352
+num.names$ -- 90
+pop$ -- 1456
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1222
+skip$ -- 1585
 stack$ -- 0
-substring$ -- 1281
-swap$ -- 2875
-text.length$ -- 43
+substring$ -- 1791
+swap$ -- 3607
+text.length$ -- 61
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 13
-while$ -- 164
-width$ -- 84
-write$ -- 701
-(There were 14 warnings)
+warning$ -- 14
+while$ -- 231
+width$ -- 108
+write$ -- 922
+(There were 15 warnings)
