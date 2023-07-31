@@ -24,45 +24,45 @@ Warning--empty pages in Project8:2022wqh
 Warning--empty author in p8phase3trigger
 Warning--empty year in p8phase3trigger
 Warning--empty journal in cresHe6
-You've used 82 entries,
+You've used 92 entries,
             2552 wiz_defined-function locations,
-            1014 strings with 19993 characters,
-and the built_in function-call counts, 36971 in all, are:
-= -- 2025
-> -- 1602
-< -- 43
-+ -- 451
-- -- 369
-* -- 2908
-:= -- 3635
-add.period$ -- 139
-call.type$ -- 82
+            1072 strings with 26121 characters,
+and the built_in function-call counts, 48163 in all, are:
+= -- 2349
+> -- 2583
+< -- 52
++ -- 702
+- -- 610
+* -- 4100
+:= -- 4737
+add.period$ -- 157
+call.type$ -- 92
 change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 95
-duplicate$ -- 4288
-empty$ -- 3732
-format.name$ -- 414
-if$ -- 8327
+cite$ -- 105
+duplicate$ -- 5642
+empty$ -- 4627
+format.name$ -- 662
+if$ -- 10671
 int.to.chr$ -- 0
-int.to.str$ -- 82
-missing$ -- 839
-newline$ -- 275
-num.names$ -- 67
-pop$ -- 1212
+int.to.str$ -- 92
+missing$ -- 1147
+newline$ -- 305
+num.names$ -- 77
+pop$ -- 1554
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1222
+skip$ -- 1388
 stack$ -- 0
-substring$ -- 1281
-swap$ -- 2875
-text.length$ -- 43
+substring$ -- 1500
+swap$ -- 3858
+text.length$ -- 52
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 13
-while$ -- 164
-width$ -- 84
-write$ -- 701
+while$ -- 194
+width$ -- 94
+write$ -- 797
 (There were 14 warnings)

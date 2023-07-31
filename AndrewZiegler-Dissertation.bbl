@@ -4,6 +4,43 @@
 \providecommand{\urlprefix}{URL }
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem{nu_physics1}
+\textsc{Zuber, K.} (2020) \emph{Neutrino Physics}, CRC Press.
+
+\bibitem{nu_physics2}
+\textsc{Xing, Z.~Z.} and \textsc{S.~Zhou} (2011) \emph{Neutrinos in Particle Physics, Astronomy and Cosmology}, Springer.
+
+\bibitem{nu_physics3}
+\textsc{Mohapatra, R.~N.} \textsc{et~al.} (2007) \enquote{{Theory of neutrinos: A White paper},} \emph{Rept. Prog. Phys.}, \textbf{70}, pp. 1757--1867, \eprint{hep-ph/0510213}.
+
+\bibitem{numass_models_seesaw}
+\textsc{de~Gouv\^ea, A.} (2016) \enquote{{Neutrino Mass Models},} \emph{Ann. Rev. Nucl. Part. Sci.}, \textbf{66}, pp. 197--217.
+
+\bibitem{Workman:2022ynf}
+\textsc{Workman, R.~L.} and \textsc{Others} (2022) \enquote{{Review of Particle Physics},} \emph{PTEP}, \textbf{2022}, p. 083C01.
+
+\bibitem{numass_cosmo}
+\textsc{Wong, Y. Y.~Y.} (2011) \enquote{{Neutrino mass in cosmology: status and prospects},} \emph{Ann. Rev. Nucl. Part. Sci.}, \textbf{61}, pp. 69--98, \eprint{1111.1436}.
+
+\bibitem{planck2015}
+\textsc{Ade, P. A.~R.} \textsc{et~al.} (2016) \enquote{{Planck 2015 results. XIII. Cosmological parameters},} \emph{Astron. Astrophys.}, \textbf{594}, p. A13, \eprint{1502.01589}.
+
+\bibitem{cmb_s4}
+\textsc{{Carlstrom}, J.}, \textsc{K.~{Abazajian}}, \textsc{G.~{Addison}}, \textsc{P.~{Adshead}}, \textsc{Z.~{Ahmed}}, \textsc{S.~W. {Allen}}, \textsc{D.~{Alonso}}, \textsc{M.~{Alvarez}}, \textsc{A.~{Anderson}}, \textsc{K.~S. {Arnold}}, \textsc{C.~{Baccigalupi}}, \textsc{K.~{Bailey}}, \textsc{D.~{Barkats}}, \textsc{D.~{Barron}}, \textsc{P.~S. {Barry}}, \textsc{J.~G. {Bartlett}}, \textsc{R.~{Basu Thakur}}, \textsc{N.~{Battaglia}}, \textsc{E.~{Baxter}}, \textsc{R.~{Bean}}, \textsc{C.~{Bebek}}, \textsc{A.~N. {Bender}}, \textsc{B.~A. {Benson}}, \textsc{E.~{Berger}}, \textsc{S.~{Bhimani}}, \textsc{C.~A. {Bischoff}}, \textsc{L.~{Bleem}}, \textsc{S.~{Bocquet}}, \textsc{K.~{Boddy}}, \textsc{M.~{Bonato}}, \textsc{J.~R. {Bond}}, \textsc{J.~{Borrill}}, \textsc{F.~R. {Bouchet}}, \textsc{M.~L. {Brown}}, \textsc{S.~{Bryan}}, \textsc{B.~{Burkhart}}, \textsc{V.~{Buza}}, \textsc{K.~{Byrum}}, \textsc{E.~{Calabrese}}, \textsc{V.~{Calafut}}, \textsc{R.~{Caldwell}}, \textsc{J.~E. {Carlstrom}}, \textsc{J.~{Carron}}, \textsc{T.~{Cecil}}, \textsc{A.~{Challinor}}, \textsc{C.~L. {Chang}}, \textsc{Y.~{Chinone}}, \textsc{H.-M.~S. {Cho}}, \textsc{A.~{Cooray}}, \textsc{T.~M. {Crawford}}, \textsc{A.~{Crites}}, \textsc{A.~{Cukierman}}, \textsc{F.-Y. {Cyr-Racine}}, \textsc{T.~{de Haan}}, \textsc{G.~{de Zotti}}, \textsc{J.~{Delabrouille}}, \textsc{M.~{Demarteau}}, \textsc{M.~{Devlin}}, \textsc{E.~{Di Valentino}}, \textsc{M.~{Dobbs}}, \textsc{S.~{Duff}}, \textsc{A.~{Duivenvoorden}}, \textsc{C.~{Dvorkin}}, \textsc{W.~{Edwards}}, \textsc{J.~{Eimer}}, \textsc{J.~{Errard}}, \textsc{T.~{Essinger-Hileman}}, \textsc{G.~{Fabbian}}, \textsc{C.~{Feng}}, \textsc{S.~{Ferraro}}, \textsc{J.~P. {Filippini}}, \textsc{R.~{Flauger}}, \textsc{B.~{Flaugher}}, \textsc{A.~A. {Fraisse}}, \textsc{A.~{Frolov}}, \textsc{N.~{Galitzki}}, \textsc{S.~{Galli}}, \textsc{K.~{Ganga}}, \textsc{M.~{Gerbino}}, \textsc{M.~{Gilchriese}}, \textsc{V.~{Gluscevic}}, \textsc{D.~{Green}}, \textsc{D.~{Grin}}, \textsc{E.~{Grohs}}, \textsc{R.~{Gualtieri}}, \textsc{V.~{Guarino}}, \textsc{J.~E. {Gudmundsson}}, \textsc{S.~{Habib}}, \textsc{G.~{Haller}}, \textsc{M.~{Halpern}}, \textsc{N.~W. {Halverson}}, \textsc{S.~{Hanany}}, \textsc{K.~{Harrington}}, \textsc{M.~{Hasegawa}}, \textsc{M.~{Hasselfield}}, \textsc{M.~{Hazumi}}, \textsc{K.~{Heitmann}}, \textsc{S.~{Henderson}}, \textsc{J.~W. {Henning}}, \textsc{J.~C. {Hill}}, \textsc{R.~{Hlo{\v{z}}ek}}, \textsc{G.~{Holder}}, \textsc{W.~{Holzapfel}}, \textsc{J.~{Hubmayr}}, \textsc{K.~M. {Huffenberger}}, \textsc{M.~{Huffer}}, \textsc{H.~{Hui}}, \textsc{K.~{Irwin}}, \textsc{B.~R. {Johnson}}, \textsc{D.~{Johnstone}}, \textsc{W.~C. {Jones}}, \textsc{K.~{Karkare}}, \textsc{N.~{Katayama}}, \textsc{J.~{Kerby}}, \textsc{S.~{Kernovsky}}, \textsc{R.~{Keskitalo}}, \textsc{T.~{Kisner}}, \textsc{L.~{Knox}}, \textsc{A.~{Kosowsky}}, \textsc{J.~{Kovac}}, \textsc{E.~D. {Kovetz}}, \textsc{S.~{Kuhlmann}}, \textsc{C.-l. {Kuo}}, \textsc{N.~{Kurita}}, \textsc{A.~{Kusaka}}, \textsc{A.~{Lahteenmaki}}, \textsc{C.~R. {Lawrence}}, \textsc{A.~T. {Lee}}, \textsc{A.~{Lewis}}, \textsc{D.~{Li}}, \textsc{E.~{Linder}}, \textsc{M.~{Loverde}}, \textsc{A.~{Lowitz}}, \textsc{M.~S. {Madhavacheril}}, \textsc{A.~{Mantz}}, \textsc{F.~{Matsuda}}, \textsc{P.~{Mauskopf}}, \textsc{J.~{McMahon}}, \textsc{P.~D. {Meerburg}}, \textsc{J.~{Melin}}, \textsc{J.~{Meyers}}, \textsc{M.~{Millea}}, \textsc{J.~{Mohr}}, \textsc{L.~{Moncelsi}}, \textsc{T.~{Mroczkowski}}, \textsc{S.~{Mukherjee}}, \textsc{M.~{Munchmeyer}}, \textsc{D.~{Nagai}}, \textsc{J.~{Nagy}}, \textsc{T.~{Namikawa}}, \textsc{F.~{Nati}}, \textsc{T.~{Natoli}}, \textsc{M.~{Negrello}}, \textsc{L.~{Newburgh}}, \textsc{M.~D. {Niemack}}, \textsc{H.~{Nishino}}, \textsc{M.~{Nordby}}, \textsc{V.~{Novosad}}, \textsc{P.~{O'Connor}}, \textsc{G.~{Obied}}, \textsc{S.~{Padin}}, \textsc{S.~{Pandey}}, \textsc{B.~{Partridge}}, \textsc{E.~{Pierpaoli}}, \textsc{L.~{Pogosian}}, \textsc{C.~{Pryke}}, \textsc{G.~{Puglisi}}, \textsc{B.~{Racine}}, \textsc{S.~{Raghunathan}}, \textsc{A.~{Rahlin}}, \textsc{S.~{Rajagopalan}}, \textsc{M.~{Raveri}}, \textsc{M.~{Reichanadter}}, \textsc{C.~L. {Reichardt}}, \textsc{M.~{Remazeilles}}, \textsc{G.~{Rocha}}, \textsc{N.~A. {Roe}}, \textsc{A.~{Roy}}, \textsc{J.~{Ruhl}}, \textsc{M.~{Salatino}}, \textsc{B.~{Saliwanchik}}, \textsc{E.~{Schaan}}, \textsc{A.~{Schillaci}}, \textsc{M.~M. {Schmittfull}}, \textsc{D.~{Scott}}, \textsc{N.~{Sehgal}}, \textsc{S.~{Shandera}}, \textsc{C.~{Sheehy}}, \textsc{B.~D. {Sherwin}}, \textsc{E.~{Shirokoff}}, \textsc{S.~M. {Simon}}, \textsc{A.~{Slosar}}, \textsc{R.~{Somerville}}, \textsc{S.~T. {Staggs}}, \textsc{A.~{Stark}}, \textsc{R.~{Stompor}}, \textsc{K.~T. {Story}}, \textsc{C.~{Stoughton}}, \textsc{A.~{Suzuki}}, \textsc{O.~{Tajima}}, \textsc{G.~P. {Teply}}, \textsc{K.~{Thompson}}, \textsc{P.~{Timbie}}, \textsc{M.~{Tomasi}}, \textsc{J.~I. {Treu}}, \textsc{M.~{Tristram}}, \textsc{G.~{Tucker}}, \textsc{C.~{Umilta}}, \textsc{A.~{van Engelen}}, \textsc{J.~D. {Vieira}}, \textsc{A.~G. {Vieregg}}, \textsc{M.~{Vogelsberger}}, \textsc{G.~{Wang}}, \textsc{S.~{Watson}}, \textsc{M.~{White}}, \textsc{N.~{Whitehorn}}, \textsc{E.~J. {Wollack}}, \textsc{W.~L.~K. {Wu}}, \textsc{Z.~{Xu}}, \textsc{S.~{Yasini}}, \textsc{J.~{Yeck}}, \textsc{K.~W. {Yoon}}, \textsc{E.~{Young}}, and \textsc{A.~{Zonca}} (2019) \enquote{{CMB-S4},} in \emph{Bulletin of the American Astronomical Society}, vol.~51, p. 209, \eprint{1908.01062}.
+
+\bibitem{double_beta1}
+\textsc{Elliott, S.~R.} and \textsc{P.~Vogel} (2002) \enquote{{Double beta decay},} \emph{Ann. Rev. Nucl. Part. Sci.}, \textbf{52}, pp. 115--151, \eprint{hep-ph/0202264}.
+
+\bibitem{double_beta2}
+\textsc{Dolinski, M.~J.}, \textsc{A.~W.~P. Poon}, and \textsc{W.~Rodejohann} (2019) \enquote{{Neutrinoless Double-Beta Decay: Status and Prospects},} \emph{Ann. Rev. Nucl. Part. Sci.}, \textbf{69}, pp. 219--251, \eprint{1902.04097}.
+
+\bibitem{double_beta_plot}
+\textsc{Agostini, M.}, \textsc{G.~Benato}, and \textsc{J.~Detwiler} (2017) \enquote{{Discovery probability of next-generation neutrinoless double- \ensuremath{\beta} decay experiments},} \emph{Phys. Rev. D}, \textbf{96}(5), p. 053001, \eprint{1705.02996}.
+
+\bibitem{FORMAGGIO20211}
+\textsc{Formaggio, J.~A.}, \textsc{A.~L.~C. {de Gouvêa}}, and \textsc{R.~G.~H. Robertson} (2021) \enquote{Direct measurements of neutrino mass,} \emph{Physics Reports}, \textbf{914}, pp. 1--54, direct measurements of neutrino mass.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0370157321000636}
+
 \bibitem{KATRIN:2022kkv}
 \textsc{Aker, M.} \textsc{et~al.} (2022) \enquote{{New Constraint on the Local Relic Neutrino Background Overdensity with the First KATRIN Data Runs},} \emph{Phys. Rev. Lett.}, \textbf{129}(1), p. 011806, \eprint{2202.04587}.
 
@@ -199,13 +236,6 @@
 
 \bibitem{caen}
 \url{https://www.caen.it/}.
-
-\bibitem{Workman:2022ynf}
-\textsc{Workman, R.~L.} and \textsc{Others} (2022) \enquote{{Review of Particle Physics},} \emph{PTEP}, \textbf{2022}, p. 083C01.
-
-\bibitem{FORMAGGIO20211}
-\textsc{Formaggio, J.~A.}, \textsc{A.~L.~C. {de Gouvêa}}, and \textsc{R.~G.~H. Robertson} (2021) \enquote{Direct measurements of neutrino mass,} \emph{Physics Reports}, \textbf{914}, pp. 1--54, direct measurements of neutrino mass.
-\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0370157321000636}
 
 \bibitem{Aker2022}
 \textsc{Aker, M.} \textsc{et~al.} (2022) \enquote{Direct neutrino-mass measurement with sub-electronvolt sensitivity,} \emph{Nature Physics}, \textbf{18}(2), pp. 160--166.
