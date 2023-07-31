@@ -290,6 +290,9 @@
 \bibitem{nasa_cavity_measurement}
 \textsc{Wenger, N.~C.} and \textsc{J.~Smetana} (1972) \enquote{Hydrogen Density Measurements Using an Open-Ended Microwave Cavity,} \emph{IEEE Transactions on Instrumentation and Measurement}, \textbf{21}(2), pp. 105--114.
 
+\bibitem{bead_pull}
+\textsc{Rapidis, N.~M.} (2018) \enquote{{Application of the Bead Perturbation Technique to a Study of a Tunable 5 GHz Annular Cavity},} \emph{Springer Proc. Phys.}, \textbf{211}, pp. 45--51, \eprint{1708.04276}.
+
 \bibitem{p8phase3trigger}
  \enquote{Real-time Signal Detection for Cyclotron Radiation Emission Spectroscopy Measurements using Antenna Arrays,} \emph{In preparation}.
 
