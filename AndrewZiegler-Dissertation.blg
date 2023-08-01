@@ -27,37 +27,37 @@ Warning--empty year in p8phase3trigger
 Warning--empty journal in cresHe6
 You've used 105 entries,
             2552 wiz_defined-function locations,
-            1209 strings with 28787 characters,
-and the built_in function-call counts, 56785 in all, are:
+            1205 strings with 19679 characters,
+and the built_in function-call counts, 42541 in all, are:
 = -- 3074
-> -- 2763
+> -- 923
 < -- 71
-+ -- 754
-- -- 649
-* -- 4801
-:= -- 5680
++ -- 294
+- -- 189
+* -- 2955
+:= -- 4304
 add.period$ -- 192
 call.type$ -- 105
 change.case$ -- 2
 chr.to.int$ -- 0
 cite$ -- 119
-duplicate$ -- 6547
-empty$ -- 5421
-format.name$ -- 712
-if$ -- 12682
+duplicate$ -- 4713
+empty$ -- 4507
+format.name$ -- 252
+if$ -- 9928
 int.to.chr$ -- 0
 int.to.str$ -- 105
-missing$ -- 1313
+missing$ -- 853
 newline$ -- 352
 num.names$ -- 101
-pop$ -- 1695
+pop$ -- 1229
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1635
+skip$ -- 1641
 stack$ -- 0
 substring$ -- 2035
-swap$ -- 4545
+swap$ -- 3165
 text.length$ -- 71
 text.prefix$ -- 0
 top$ -- 0
