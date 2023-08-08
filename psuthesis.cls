@@ -95,8 +95,10 @@
 \RequirePackage{setspace}
 % If you are using the subfigure package, load the tocloft package with
 % the subfigure option and comment out the next line.
-%\RequirePackage{tocloft}[2003/09/26]
-\RequirePackage[subfigure]{tocloft}[2003/09/26]
+\RequirePackage{tocloft}[2003/09/26]
+\RequirePackage{subcaption}
+%\RequirePackage{subfig}
+%\RequirePackage[subfigure]{tocloft}[2003/09/26]
 \RequirePackage{fancyhdr}
 \RequirePackage[overload]{textcase}
 \RequirePackage[letterpaper, left = 1.4in, right = 0.9in, top = 0.9in, bottom = 0.9in, includefoot]{geometry}
@@ -818,9 +820,9 @@ Department Head \\
 %\else
 %\@restonecolfalse
 %\fi
-%%\chapter{\listfigurename
-%%\@mkboth{%
-%%\MakeUppercase\listfigurename}{\MakeUppercase\listfigurename}}%
+%\chapter{\listfigurename
+%\@mkboth{%
+%\MakeUppercase\listfigurename}{\MakeUppercase\listfigurename}}%
 %\chapter{\listfigurename}
 %\@starttoc{lof}%
 %\if@restonecol\twocolumn\fi
@@ -830,19 +832,19 @@ Department Head \\
 
 \renewcommand{\listtablename}{List of Tables}
 \newcommand{\thesislistoftables}{%
-\begin{singlespace}
-\if@twocolumn
-\@restonecoltrue\onecolumn
-\else
-\@restonecolfalse
-\fi
-\chapter{\listtablename
-\@mkboth{%
-\MakeUppercase\listtablename}{\MakeUppercase\listtablename}}%
-\@starttoc{lot}%
-\if@restonecol\twocolumn\fi
-\end{singlespace}
-\clearpage
+    \begin{singlespace}
+    \if@twocolumn
+    \@restonecoltrue\onecolumn
+    \else
+    \@restonecolfalse
+    \fi
+    \chapter{\listtablename
+    \@mkboth{%
+    \MakeUppercase\listtablename}{\MakeUppercase\listtablename}}%
+    \@starttoc{lot}%
+    \if@restonecol\twocolumn\fi
+    \end{singlespace}
+    \clearpage
 }
 
 

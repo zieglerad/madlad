@@ -79,6 +79,7 @@
 \usepackage{lmodern}
 \usepackage{textcomp}
 \usepackage{microtype}
+%\usepackage{tocloft}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Packages I like to use. %
@@ -89,7 +90,8 @@
 \usepackage{exscale}
 \usepackage[mathscr]{eucal}
 \usepackage{bm}
-\usepackage{subcaption}
+%\usepackage{subcaption}
+%\usepackage{subfigure}
 \usepackage{eqlist} % Makes for a nice list of symbols.
 \usepackage[nosepfour,warning,np,debug,autolanguage]{numprint}
 \usepackage{acro}
@@ -327,7 +329,7 @@ chapters/Chapter-7,
 %\fancypagestyle{plain}{%
 %\fancyhf{} % clear all header and footer fields
 %\fancyfoot[C]{\thepage}} % except the center
-%\listoffigures %%%%%%%%%%%% uncomment for list of figures
+\listoffigures %%%%%%%%%%%% uncomment for list of figures
 \end{singlespace}
 \clearpage
 
@@ -336,7 +338,7 @@ chapters/Chapter-7,
 \renewcommand{\listtablename}{\sffamily\Huge List of Tables}
 \setlength{\cftparskip}{\baselineskip}
 \addcontentsline{toc}{chapter}{List of Tables}
-%\listoftables %%%%%%%%%%%% uncomment for list of tables
+\listoftables %%%%%%%%%%%% uncomment for list of tables
 \end{singlespace}
 \clearpage
 
@@ -346,12 +348,12 @@ chapters/Chapter-7,
 
 % Generates the Acknowledgments. The argument should point to
 % the file containing your Acknowledgments. 
-\thesisacknowledgments{SupplementaryMaterial/Acknowledgments}
+%\thesisacknowledgments{SupplementaryMaterial/Acknowledgments}
 
 % Generates the Epigraph/Dedication. The first argument should
 % point to the file containing your Epigraph/Dedication and
 % the second argument should be the title of this page. 
-\thesisdedication{SupplementaryMaterial/Dedication}{Dedication}
+%\thesisdedication{SupplementaryMaterial/Dedication}{Dedication}
 
 
 
@@ -445,7 +447,7 @@ chapters/Chapter-7,
 \backmatter
 
 % Vita
-%\vita{SupplementaryMaterial/Vita}
+\vita{SupplementaryMaterial/Vita}
 
 \end{document}
 
