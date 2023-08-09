@@ -15,10 +15,10 @@
 \contentsline {subsection}{\numberline {2.5.3}Limits from Beta-decay}{17}{}%
 \contentsline {chapter}{\numberline {3}Direct Measurement of the Neutrino Mass with Project 8}{21}{}%
 \contentsline {section}{\numberline {3.1}Introduction}{21}{}%
-\contentsline {section}{\numberline {3.2}Cyclotron Radiation Emission Spectroscopy and Project 8}{22}{}%
+\contentsline {section}{\numberline {3.2}Project 8 and Cyclotron Radiation Emission Spectroscopy}{22}{}%
 \contentsline {subsection}{\numberline {3.2.1}Cyclotron Radiation Emission Spectroscopy --- CRES}{22}{}%
 \contentsline {subsection}{\numberline {3.2.2}The Project 8 Collaboration}{26}{}%
-\contentsline {subsection}{\numberline {3.2.3}The Project 8 Phased Development Plan}{30}{}%
+\contentsline {subsection}{\numberline {3.2.3}The Project 8 Phased Development Plan}{29}{}%
 \contentsline {section}{\numberline {3.3}Phase II: First Tritium Beta Decay Spectrum and Neutrino Mass Measurement with CRES}{33}{}%
 \contentsline {subsection}{\numberline {3.3.1}The Phase II CRES Apparatus}{34}{}%
 \contentsline {subsection}{\numberline {3.3.2}CRES Track and Event Reconstruction}{38}{}%
@@ -28,7 +28,7 @@
 \contentsline {subsection}{\numberline {3.4.2}The FSCD: Free-space CRES Demonstrator}{48}{}%
 \contentsline {section}{\numberline {3.5}Pilot-scale Experiments}{53}{}%
 \contentsline {subsection}{\numberline {3.5.1}Choice of Frequency}{53}{}%
-\contentsline {subsection}{\numberline {3.5.2}Pilot-scale Experiment Concepts}{56}{}%
+\contentsline {subsection}{\numberline {3.5.2}Pilot-scale Experiment Concepts}{55}{}%
 \contentsline {section}{\numberline {3.6}Phase IV}{58}{}%
 \contentsline {chapter}{\numberline {4}Signal Reconstruction Techniques for Antenna Array CRES and the FSCD}{60}{}%
 \contentsline {section}{\numberline {4.1}Introduction}{60}{}%
