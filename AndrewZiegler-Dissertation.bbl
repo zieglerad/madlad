@@ -78,6 +78,9 @@
 \bibitem{nu_oscillations}
 \textsc{Giganti, C.}, \textsc{S.~Lavignac}, and \textsc{M.~Zito} (2018) \enquote{{Neutrino oscillations: The rise of the PMNS paradigm},} \emph{Prog. Part. Nucl. Phys.}, \textbf{98}, pp. 1--54, \eprint{1710.00715}.
 
+\bibitem{Workman:2022ynf}
+\textsc{Workman, R.~L.} and \textsc{Others} (2022) \enquote{{Review of Particle Physics},} \emph{PTEP}, \textbf{2022}, p. 083C01.
+
 \bibitem{JUNO}
 \textsc{An, F.} \textsc{et~al.} (2016) \enquote{{Neutrino Physics with JUNO},} \emph{J. Phys. G}, \textbf{43}(3), p. 030401, \eprint{1507.05613}.
 
@@ -86,9 +89,6 @@
 
 \bibitem{DUNE}
 \textsc{Abi, B.} \textsc{et~al.} (2020) \enquote{{Long-baseline neutrino oscillation physics potential of the DUNE experiment},} \emph{Eur. Phys. J. C}, \textbf{80}(10), p. 978, \eprint{2006.16043}.
-
-\bibitem{pdg2022}
-\textsc{Workman, R.~L.} \textsc{et~al.} (2022) \enquote{{Review of Particle Physics},} \emph{PTEP}, \textbf{2022}, p. 083C01.
 
 \bibitem{nu_physics1}
 \textsc{Zuber, K.} (2020) \emph{Neutrino Physics}, CRC Press.
@@ -101,9 +101,6 @@
 
 \bibitem{numass_models_seesaw}
 \textsc{de~Gouv\^ea, A.} (2016) \enquote{{Neutrino Mass Models},} \emph{Ann. Rev. Nucl. Part. Sci.}, \textbf{66}, pp. 197--217.
-
-\bibitem{Workman:2022ynf}
-\textsc{Workman, R.~L.} and \textsc{Others} (2022) \enquote{{Review of Particle Physics},} \emph{PTEP}, \textbf{2022}, p. 083C01.
 
 \bibitem{numass_cosmo}
 \textsc{Wong, Y. Y.~Y.} (2011) \enquote{{Neutrino mass in cosmology: status and prospects},} \emph{Ann. Rev. Nucl. Part. Sci.}, \textbf{61}, pp. 69--98, \eprint{1111.1436}.
