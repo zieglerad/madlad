@@ -5,9 +5,9 @@
 
 \section{Introduction}
 
-The FSCD and antenna array CRES represent an innovative approach to beta-decay spectroscopy. While much can be learned from simulations about the systematics of CRES with antenna arrays, laboratory measurements and demonstrations provide critical inputs to sensitivity and simulation models as well as provide a means for calibration and commissioning of the experiment. Therefore, a robust program of antenna and antenna measurement hardware development is important to the success of the FSCD and the development of antenna array CRES more broadly.
+The FSCD and antenna array CRES represent an innovative approach to beta-decay spectroscopy. While much can be learned from simulations about the systematics of CRES with antenna arrays, laboratory measurements and demonstrations provide critical inputs to sensitivity and simulation models, and provide a means for calibration and commissioning of the experiment. Therefore, a robust program of antenna and antenna measurement hardware development is key to the success of the FSCD and the development of antenna array CRES more broadly.
 
-In this chapter we summarize the development of an antenna measurement system at Penn State to implement and test the techniques of antenna array CRES on the bench-top, in order to support the efforts of the Project 8 collaboration. In Section \ref{sec:chap4-ant-meas} we provide an introduction to some fundamental parameters and concepts related to antenna measurements as well as an overview of the Penn State antenna measurement system hardware. In Section \ref{sec:SYNCA} we include the manuscript of a paper \cite{p8synca} which details the design and characterization of a specialized antenna developed to mimic the electric fields emitted by an electron in a CRES experiment. This antenna, called the Synthetic Cyclotron Antenna (SYNCA), is intended as a calibration tool for antenna arrays developed for CRES measurements. Lastly, in Section \ref{sec:chap5-fscd-array-measurements} we summarize a set of prototype FSCD antenna array measurements with the SYNCA \cite{p8jugaad}, which we use to validate the simulated performance of the antenna array and estimate systematic errors associated with the antenna array.
+In this chapter I summarize the development of an antenna measurement system at Penn State to implement and test the techniques of antenna array CRES on the bench-top. In Section \ref{sec:chap4-ant-meas} I provide an introduction to some fundamental parameters and concepts related to antenna measurements as well as an overview of the Penn State antenna measurement system hardware. In Section \ref{sec:SYNCA} I include the manuscript of a paper \cite{p8synca} which details the design and characterization of a specialized antenna developed to mimic the electric fields emitted by an electron in a CRES experiment. This antenna, called the Synthetic Cyclotron Antenna (SYNCA), is intended as a calibration tool for antenna arrays developed for CRES measurements. Lastly, in Section \ref{sec:chap5-fscd-array-measurements} I summarize a set of prototype FSCD antenna array measurements with the SYNCA \cite{p8jugaad}, which I use to validate the simulated performance of the antenna array and estimate systematic errors associated with the antenna array.
 
 \section{Antenna Measurements for CRES experiments}
 \label{sec:chap4-ant-meas}
@@ -15,7 +15,7 @@ In this chapter we summarize the development of an antenna measurement system at
 \subsection{Antenna Parameters}
 \label{sec:ant-meas-fun}
 
-Antenna characterization measurements are intended to validate simulations of the antenna array performance, which ultimately informs the neutrino mass sensitivity of the experiment. In this section, I shall summarize a few fundamental concepts relating to antennas and antenna measurement, before introducing how Project 8 uses antenna measurement for the development of antenna array CRES.
+Antenna characterization measurements are intended to validate simulations of the antenna array performance, which ultimately informs the neutrino mass sensitivity of the experiment. In this section, I shall summarize a few fundamental concepts relating to antennas and antenna measurement, before introducing how Project 8 uses antenna measurements for the development of antenna array CRES.
 
 \subsubsection{Radiation Patterns}
 
@@ -38,29 +38,29 @@ Antenna characterization measurements are intended to validate simulations of th
     \label{fig:rad-pattern-examples}
 \end{figure}
 
-Antennas are conductive structures designed to carry alternating electric currents in order to transmit energy in the form of electro-magnetic (EM) waves \cite{balanis2015antenna}. Perhaps the most fundamental way to characterize an antenna, is to map out the radiated power density as a function of position, which is called the radiation pattern (see Figure \ref{fig:rad-pattern-examples}). We find the radiation power density by calculating the time-averaged Poynting vector for all positions surrounding the antenna, which in equation form is
+Antennas are conductive structures designed to carry alternating electric currents to transmit energy in the form of EM waves \cite{balanis2015antenna}. Perhaps the most fundamental way to characterize an antenna, is to map out the radiated power density as a function of position, which is called the radiation pattern (see Figure \ref{fig:rad-pattern-examples}). The radiation power density is obtained by calculating the time-averaged Poynting vector for all positions surrounding the antenna, which in equation form is
 \begin{equation}
     \mathbf{W}(x,y,z) = \left<\mathbf{E}(x,y,z,t)\times\mathbf{H}^\ast(x,y,z,t)\right>_t,
 \end{equation}
 where $\mathbf{E}(x,y,z,t)$ and $\mathbf{H}(x,y,z,t)$ are the time-dependent electric and magnetic fields produced by the antenna \cite{jackson_classical_1999}. The radiation power density has units of $\mathrm{W}/\mathrm{m}^2$ and is more typically called the energy flux density in physics applications, since it is a measure of the amount of energy passing through a unit area over time. 
 
-Because the radiation power density is a measure of power per unit area, its value in a particular direction will depend on the distance from the antenna at which we are measuring. This is undesirable for practical applications A related quantity, which is distance independent, is the energy flux per unit solid angle or radiation intensity, which is computed directly from the radition power density by multiplying by the squared distance from the antenna. Specifically,
+Because the radiation power density is a measure of power per unit area, its value in a particular direction will depend on the distance from the antenna at which we are measuring. This is undesirable for practical applications. A related quantity, which is distance independent, is the energy flux per unit solid angle or radiation intensity, which is computed directly from the radiation power density by multiplying by the squared distance from the antenna. Specifically,
 \begin{equation}
     U = r^2W(x,y,z),
 \end{equation}
 where $r$ is the distance from the antenna to the field measurement point. The radiation intensity is typically defined in regions where the Poynting vector consists only of a radial component where it is safe to treat as a scalar quantity. 
 
 \subsubsection{Directivity and Gain}
-Since the radiation intensity is a measure of average power per unit solid angle, it is independent of distance and more useful as feature for antenna measurement. However, most antenna measurements are performed in terms of the directly related directivity and gain quantities. Directivity is defined as the ratio between the radiation intensity at particular point on the radiation pattern to the average radiation intensity computed over all solid angles \cite{balanis2015antenna}.
+Since the radiation intensity is a measure of average power per unit solid angle, it is independent of distance and more useful as feature for antenna measurement. The radiation intensity is directly related to antenna directivity and gain, which are common antenna engineering figures-of-merit. Directivity is defined as the ratio between the radiation intensity at particular point on the radiation pattern to the average radiation intensity computed over all solid angles \cite{balanis2015antenna}.
 The equation that relates the radiation intensity to directivity is
 \begin{equation}
     D = \frac{U}{U_0}=\frac{4\pi U}{P_\textrm{rad}},
 \end{equation}
-where $U_0$ is the average radiation intensity over all solid angles, which simply the total radiated power ($P_\textrm{rad}$) divided by $4\pi$. Closely related to directivity is concept of gain, which accounts for energy losses that occur inside then antenna when attempting to transmit or receive a signal. The antenna gain is given by 
+where $U_0$ is the average radiation intensity over all solid angles, which simply the total radiated power ($P_\textrm{rad}$) divided by $4\pi$. Closely related to directivity is antenna gain, which accounts for energy losses that occur inside then antenna when attempting to transmit or receive a signal. The antenna gain is given by 
 \begin{equation}
     G=\frac{4\pi U}{P_\mathrm{in}},
 \end{equation}
-where $P_\mathrm{in}$ is the total power delivered to the antenna. Gain can be thought of as the ratio of the antenna's radiation intensity to that of a hypothetical isotropic, lossless radiator. The maximum values of gain and directivity exhibited by the main lobe of the antenna pattern as well as the ratio between the gain of the main lobe and any side-lobes are important figures of merit used to evaluate antenna designs. 
+where $P_\mathrm{in}$ is the total power delivered to the antenna. Gain can be thought of as the ratio of the antenna's radiation intensity to that of a hypothetical isotropic, lossless radiator. The maximum values of gain and directivity exhibited by the main lobe of the antenna pattern as well as the ratio between the gain of the main lobe and any side-lobes are important figures-of-merit to evaluate antenna design performance. 
 
 \begin{figure}[htbp]
     \centering
@@ -70,32 +70,28 @@ where $P_\mathrm{in}$ is the total power delivered to the antenna. Gain can be t
 \end{figure}
 
 \subsubsection{Far-field and Near-field}
-Radiation patterns are only well-defined in regions where the shape of the radiation pattern is independent of distance. The region where this approximation is valid is called the "far-field", and in this region we can treat the EM fields from the antenna as spherical plane waves. A rule of thumb for antennas is that the far-field approximation is valid when the condition
+Radiation patterns are well-defined only in regions where the shape of the radiation pattern is independent of distance. The region where this approximation is valid is called the "far-field", and in this region the EM fields from the antenna can be approximated as spherical plane waves. A rule of thumb for antennas is that the far-field approximation applies when the condition
 \begin{equation}
     R > \frac{2l^2}{\lambda}
 \end{equation}
-is met. In this expression, $R$ is the distance from the antenna, $l$ is the largest characteristic dimension of the antenna, and $\lambda$ is the wavelength of the radiation (see Figure \ref{fig:field-regions}). 
+is true. In this expression, $R$ is the distance from the antenna, $l$ is the largest characteristic dimension of the antenna, and $\lambda$ is the wavelength of the radiation (see Figure \ref{fig:field-regions}). 
 
-The region very close to the antenna is called the reactive near-field, because in this region the reactive component of the EM field is dominant. Unlike radiative electric fields, the reactive electric and magnetic fields are out of phase from each other by $90^\circ$, since they are the result of electrostatic and magnetostatic effects coming from the self-capacitance and self-inductance of the antenna. The reactive fields are unable to transfer energy a significant distance from the antenna and are thus completely negligible for most antenna applications. The limit of the reactive near-field for an electrically-large antenna is typically taken to be
+The region very close to the antenna is called the reactive near-field, because in this region the reactive component of the EM field is dominant. Unlike radiative electric fields, the reactive electric and magnetic fields are out of phase from each other by $90^\circ$, since they are caused by electrostatic and magnetostatic effects from the self-capacitance and self-inductance of the antenna. The reactive fields are unable to transfer energy a significant distance from the antenna and are thus completely negligible for most antenna applications. The limit of the reactive near-field for an electrically-large antenna is typically taken to be
 \begin{equation}
     R<0.62\sqrt{l^3/\lambda}.
 \end{equation}
-The unique application of antennas by Project 8 is somewhat limited by reactive near-field effects in the form of a maximum radial position for electrons inside the uniform cylindrical antenna array. If electrons are too close to the edge of the array than reactive near-field effects leads to a large reduction in the received power and consequently detection efficiency. This leads to a significant volume inside of the antenna array that is unsuitable for CRES lowering the volumetric efficiency of the antenna array CRES technique relative to a cavity experiment.
+The unique application of antennas by Project 8 is limited by reactive near-field effects, since it defines an absolute minimum distance for detectable electrons inside the uniform cylindrical antenna array. If electrons are too close to the edge of the array than reactive near-field effects leads to a large reduction in the received power and detection efficiency. This leads to a significant volume inside the antenna array that is unsuitable for CRES lowering the volumetric efficiency of the antenna array CRES technique.
 
-In between the reactive near-field and the far-field is the radiative near-field region. In this region the fields are primarily radiative, however we are still too close to the antenna for the spherical plane wave approximation to apply. Therefore, interference effects between EM waves emitted from different points on the antenna occur causing the shape of the radiation pattern to change as a function of distance from the antenna. If we evaluate the far-field distance limit for the FSCD one finds an estimated far-field distance of 43~cm, which is a factor of four larger than the radius of the antenna array designed for the experiment. Consequently, we expect near-field effects to influence the performance of the antenna array highlighting the importance of calibration and characterization measurements.
+Between the reactive near-field and the far-field is the radiative near-field region. In this region the fields are primarily radiative, however, it is too close to the antenna for the spherical plane wave approximation to apply. Therefore, interference effects between EM waves emitted from different points on the antenna occur causing the shape of the radiation pattern to change as a function of distance from the antenna. Evaluating the far-field distance limit for the FSCD antennas one finds an estimated far-field distance of 43~cm, which is a factor of four larger than the radius of the antenna array designed for the experiment. Consequently, it is expected that near-field effects will influence the performance of the antenna array highlighting the importance of calibration and characterization measurements to mitigate these effects.
 
 \subsubsection{Polarization}
-The polarization of an EM wave defines the spatial orientation of the electric field oscillations in the plane perpendicular to the direction of the propagation, and is defined in terms of orthogonal polarization components. In our application, one analyzes the properties of radiation propagating along the radial ($\hat{r}$) direction away from the antenna, which implies that the electric fields can be described as a linear combination of orthogonal polarization components
-\begin{equation}
-    \mathbf{E}_\mathrm{tot}=E_x\hat{x}+E_y\hat{y}+E_z\hat{z},
-\end{equation}
-in Cartesian coordinates, or
+The polarization of an EM wave defines the spatial orientation of the electric field oscillations. Conventionally, polarization vectors a defined in the plane perpendicular to the direction of propagation for the EM wave. For radiation moving in the radial ($\hat{r}$) direction the electric field can be decomposed into the orthogonal basis
 \begin{equation}
     \mathbf{E}_\mathrm{tot}=E_\theta\hat{\theta}+E_\phi\hat{\phi},
 \end{equation}
-in spherical coordinates. 
+assuming a spherical coordinate system. 
 
-In general, one defines partial radiation patterns, directivities, and gains so that the performance of the antenna for the desired polarization can be analyzed. The radiation pattern defined in terms of partial patterns is
+In general, one defines partial radiation patterns, directivities, and gains so that the performance of the antenna can be analyzed for the desired polarization. The radiation pattern defined in terms of partial patterns is
 \begin{equation}
     U_\mathrm{tot}=U_\phi + U_\theta,
 \end{equation}
@@ -104,7 +100,7 @@ where $U_\phi$ and $U_\theta$ are the radiation intensities in a particular dire
     G_\mathrm{tot}=G_\phi+G_\theta=\frac{2\pi U_\phi}{P_\mathrm{in}}+\frac{2\pi U_\theta}{P_\mathrm{in}}.
 \end{equation}
 
-If we view an electron performing a circular orbit in the XY-plane from the side, that is, along the X or Y axes, then we would observe the electron to be performing a linear oscillation perpendicular to the viewing axis. From this intuitive picture, we can predict that the primary polarization of electric fields from CRES events to be linearly polarized in the $\hat\phi$ direction when viewed with an antenna positioned in the XY-plane.
+An electron performing a circular orbit in the XY-plane from the side, viewed along the X or Y axes, would be seen as performing a linear oscillation perpendicular to the viewing axis. From this picture, one would predict that the primary polarization of electric fields from CRES events is linearly polarization in the $\hat\phi$ direction in the XY-plane.
 
 \subsubsection{Antenna Factor and Effective Aperture}
 \label{sec:ant-factor}
@@ -121,7 +117,7 @@ The antenna factor can be expressed in terms of the antenna's gain through a rel
 \end{equation}
 where the received power is $P_r$ and the total incoming power is $P_\mathrm{in}$.
 
-If we express the incident power in terms of the magnitude of the Poynting vector, then
+The magnitude of the Poynting vector can be written as
 \begin{equation}
     |\mathbf{S}_\mathrm{in}|=|\mathbf{E}_\mathrm{in}|^2/\eta_0,
 \end{equation}
@@ -129,27 +125,27 @@ where $\eta_0$ is the impedance of free-space, which relates the magnitudes of t
 \begin{equation}
     \eta_0 = \frac{|\mathbf{E}|}{|\mathbf{H}|} = \sqrt{\frac{\epsilon_0}{\mu_0}}.
 \end{equation}
-The total received power by the antenna can therefore be expressed as
+Therefore, the total received power by the antenna is
 \begin{equation}
     P_\mathrm{rec}=|\mathbf{S}_\mathrm{in}|A_\mathrm{eff}=|\mathbf{S}_\mathrm{in}|\frac{\lambda^2}{4\pi}G=\frac{|\mathbf{E}_\mathrm{in}|^2\lambda^2G}{4\pi\eta_0}.
     \label{eq:power-rec-1}
 \end{equation}
 
-To relate this to the antenna factor recall that we can relate the voltage produced by the antenna to the received power with
+To relate this to the antenna factor recall that the voltage produced by the antenna is related to the received power by
 \begin{equation}
     P_\mathrm{rec}=\frac{V_\mathrm{ant}^2}{Z}=\frac{|\mathbf{E}_\mathrm{in}|^2}{A_\mathrm{F}^2Z},
     \label{eq:power-rec-2}
 \end{equation}
-where $Z$ is the system impedance. Setting Equations \ref{eq:power-rec-1} and \ref{eq:power-rec-2} equal to each other, we obtain the following expression for antenna factor in terms of gain
+where $Z$ is the system impedance. Setting Equations \ref{eq:power-rec-1} and \ref{eq:power-rec-2} equal to each other, one obtains the following expression for antenna factor in terms of gain
 \begin{equation}
     A_\mathrm{F} = \sqrt{\frac{4\pi\eta_0}{ZG\lambda^2}}=\frac{9.73}{\lambda\sqrt{G}}.
     \label{eq:ant-factor}
 \end{equation}
 The second expression in Equation \ref{eq:ant-factor} is obtained by evaluating the constant terms assuming a system impedance of 50~$\Omega$.
 
-We have gone through the effort of expressing the antenna factor in terms of gain to highlight that the majority of antenna parameters that we care to measure for a CRES experiment can be obtained from the radiation or gain pattern of the antenna. The antenna factor is a particularly important parameter for CRES measurements due to it's relevance to antenna array simulations with the Locust software \cite{p8locustpaper, nb_thesis}. Specifically, Locust simulates the trajectory of an electron in a magnetic trap by running the Kassiopeia software package \cite{kassiopeia} and then uses the Li\'{e}nard-Wiechert equations \cite{lw_potential_1, lw_potential_2} to calculate the electric fields that are incident on the antenna. 
+The point of this exercise is to highlight that the majority of antenna parameters that one cares to measure about an antenna can be obtained from the radiation or gain pattern of the antenna. The antenna factor is a particularly important parameter for CRES measurements due to it's relevance to antenna array simulations with the Locust software \cite{p8locustpaper, nb_thesis}. %Specifically, Locust simulates the trajectory of an electron in a magnetic trap by running the Kassiopeia software package \cite{kassiopeia} and then uses the Li\'{e}nard-Wiechert equations \cite{lw_potential_1, lw_potential_2} to calculate the electric fields that are incident on the antenna. 
 
-To compute the response of the antenna to the electric field, Locust relies upon linear time-invariant system theory, which computes the response of the antenna (i.e. the voltage time series generated by the antenna) using a convolution between the electric field time-series and the antenna impulse response. This approach is necessary for correctly modeling the antenna response to the electric field due to the broadband and non-stationary nature of the electric fields from CRES events. Since antenna measurements take place under steady-state conditions, parameters such as the radiation pattern, gain, and antenna factor are defined in the frequency domain. However, by performing an inverse Fourier transform on the antenna factor we can obtain the antenna impulse response, which allows us to simulate CRES events in the antenna array demonstrator experiment. 
+To compute the response of the antenna to the electric field, Locust relies upon linear time-invariant system theory, which computes the response of the antenna (i.e. the voltage time series generated by the antenna) using a convolution between the electric field time-series and the antenna impulse response. This approach is necessary for correctly modeling the antenna response to the electric field due to the broadband and non-stationary nature of the electric fields from CRES events. Since antenna measurements take place under steady-state conditions, parameters such as the radiation pattern, gain, and antenna factor are defined in the frequency domain. However, by performing an inverse Fourier transform on the antenna factor one obtains the antenna impulse response, which is used to caculate CRES signal voltages in Locust.
 
 \subsection{Antenna Measurement Fundamentals}
 \subsubsection{Friis Transmission Equation}
