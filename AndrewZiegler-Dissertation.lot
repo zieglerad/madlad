@@ -3,11 +3,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces A summary of the CNN model layers and parameters. The output of each 1D-Convolution and Fully Connected layer is passed through a LeakyReLU activation function and re-normalized using batch normalization before being passed to the next layer in the model. The output of the final Fully Connected layer in the model is left without activation so that the model outputs can be directly passed to the Binary Cross-entropy loss function used during training. \relax }}{120}{}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces A summary of the CNN model layers and parameters. The output of each 1D-Convolution and Fully Connected layer is passed through a LeakyReLU activation function and re-normalized using batch normalization before being passed to the next layer in the model. The output of the final Fully Connected layer in the model is left without activation so that the model outputs can be directly passed to the Binary Cross-entropy loss function used during training. The first layer in the network has two input channels for the real and imaginary components of the spectrum. \relax }}{117}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces A table of the values of $p_{nm}^\prime $.\relax }}{187}{}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces A table of the values of $p_{nm}$.\relax }}{188}{}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces A table of cavity design parameters used for HFSS simulations.\relax }}{207}{}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces A table of parameters describing the cavity prototypes. Certain values such as the cavity length and the distace between dielectric spacers are approximate due to variation in the machining of the copper. In particular, the filtered cavity was constructed from conducting copper segments that varied in size from 1.50" to 1.85".\relax }}{210}{}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces A table of the values of $p_{nm}^\prime $.\relax }}{185}{}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces A table of the values of $p_{nm}$.\relax }}{186}{}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces A table of cavity design parameters used for HFSS simulations.\relax }}{205}{}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces A table of parameters describing the cavity prototypes. Certain values such as the cavity length and the distace between dielectric spacers are approximate due to variation in the machining of the copper. In particular, the filtered cavity was constructed from conducting copper segments that varied in size from 1.50" to 1.85".\relax }}{208}{}%
 \addvspace {10\p@ }
