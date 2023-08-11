@@ -31,7 +31,7 @@ A method is required for translating an electron kinetic energy measurement into
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/Chapter-3/230303_cres_cartoon.png}
-    \caption{A cartoon illustration of the CRES technique. An electron is contained in a magnetic trap, which is a local minimum in the magnetic field, so that it's cyclotron radiation can be detected by an array of antennas. Detecting the cyclotron radiation allows us to measure its cyclotron frequency and determine its kinetic energy.}
+    \caption{A cartoon illustration of the CRES technique. An electron is contained in a magnetic trap, which is a local minimum in the magnetic field, so that it's cyclotron radiation can be detected by an array of antennas. Detecting the cyclotron radiation allows one to measure its cyclotron frequency and determine its kinetic energy.}
     \label{fig:chap3-cres-cartoon}
 \end{figure}
 
@@ -46,7 +46,7 @@ The frequency resolution of a CRES measurement can be estimated by differentiati
 \begin{equation}
     \frac{df_c}{dE_\mathrm{kin}} = \frac{1}{2\pi}\frac{-qBc^2}{\left(m_ec^2+E_\mathrm{kin}\right)^2},
 \end{equation}
-from which we  obtain the relationship between fractional differences in energy and frequency,
+from which one obtains the relationship between fractional differences in energy and frequency,
 \begin{equation}
     \frac{df_c}{f_c}=\frac{1-\gamma}{\gamma}\frac{dE_\mathrm{kin}}{E_\mathrm{kin}}.
 \end{equation}
@@ -171,7 +171,7 @@ Phase III R\&D is divided into two main efforts --- atomic tritium and CRES dete
 
 The need for new CRES detection techniques is driven by the drastic increase in scale from Phase II to the pilot-scale experiments. The physical volume used for CRES in Phase II was on the order of a few cubic-centimeters, and achieving Project 8's sensitivity target of 40~meV requires an experiment volume on the multi-cubic meter scale. Therefore, the waveguide gas cell CRES detection technique used in Phase II is not a feasible option for the future of Project 8 due to its inability to scale to the required size.
 
-Two alternative CRES detection techniques have been proposed for the pilot-scale experiment --- antenna arrays and resonant cavities (see Section \ref{sec:chap3-phaseIII-antenna-arrays} and Chapter \ref{chap:cavity}). Both approaches have relative advantages and disadvantages, however, the improved understanding of the antenna array and cavity approaches to CRES in the recent years has led to cavities being the preferred technology for the pilot-scale experiment and Phase IV due to the estimated reduced cost and complexity of this approach. Since a large degree of the work presented in this dissertation is focused specifically on the development of the antenna array CRES technique as well as the design of demonstrator experiments, we described the proposed R\&D plan for antenna array Section \ref{sec:chap3-phaseIII-antenna-arrays}. A description of the cavity approach to CRES can be found in Chapter \ref{chap:cavity}.
+Two alternative CRES detection techniques have been proposed for the pilot-scale experiment --- antenna arrays and resonant cavities (see Section \ref{sec:chap3-phaseIII-antenna-arrays} and Chapter \ref{chap:cavity}). Both approaches have relative advantages and disadvantages, however, the improved understanding of the antenna array and cavity approaches to CRES in the recent years has led to cavities being the preferred technology for the pilot-scale experiment and Phase IV due to the estimated reduced cost and complexity of this approach. Since a large degree of the work presented in this dissertation is focused specifically on the development of the antenna array CRES technique as well as the design of demonstrator experiments, I describe the proposed R\&D plan for antenna array CRES in Section \ref{sec:chap3-phaseIII-antenna-arrays}. A description of the cavity approach to CRES can be found in Chapter \ref{chap:cavity}.
 
 Cavity CRES R\&D consists of a series of demonstrator experiments intended to demonstrate cavity CRES at a variety of scales and magnetic fields. Radioactive sources gases include $^{83m}\rm{Kr}$ and molecular tritium, as well as electrons produced by an electron-gun, which is a key calibration tool for future CRES experiments. The near-term cavity effort in Project 8 is the cavity CRES apparatus (CCA), which is a small-scale cavity experiment operating near 26~GHz. The CCA will perform the first CRES measurements using a small cavity, and will pave the way towards larger scale cavity experiments in preparation for the eventual pilot-scale tritium experiment. 
 
@@ -324,7 +324,7 @@ The tritium measurement campaign resulted in the collection of 82 days of detect
     \label{fig:chap3-final-tritium-fit}
 \end{figure}
 
-CRES is inherently a very low background technique with the dominant source of noise being random RF fluctuations. Monte Carlo simulations backed validated using measurements of the RF noise background were used to set track and event cuts to guarantee that zero false events would occur over the duration of the experiment with 90\% confidence. Notably, the measured spectrum has zero events beyond the tritium spectrum endpoint, which allows us to constrain the background rate in the Phase II apparatus to less than $3\times10^{-10}$~counts/ev/s. Achieving a low background is critical for future neutrino mass experiments that seek to measure the neutrino mass with less than 100~meV sensitivity.
+CRES is inherently a very low background technique with the dominant source of noise being random RF fluctuations. Monte Carlo simulations backed validated using measurements of the RF noise background were used to set track and event cuts to guarantee that zero false events would occur over the duration of the experiment with 90\% confidence. Notably, the measured spectrum has zero events beyond the tritium spectrum endpoint, which allows one to constrain the background rate in the Phase II apparatus to less than $3\times10^{-10}$~counts/ev/s. Achieving a low background is critical for future neutrino mass experiments that seek to measure the neutrino mass with less than 100~meV sensitivity.
 
 Bayesian and frequentist based fits to the measured tritium spectrum, incorporating information gained about CRES systematics from the krypton measurements, were performed to extract upper limits on the tritium beta-decay spectrum endpoint as well as the neutrino mass. The estimated spectrum endpoints are $18553^{+18}_{-19}$~eV for the Bayesian analysis and $18548^{+19}_{-19}$~eV for the frequentist analysis. The quoted uncertainties are 1-$\sigma$, and both results are within 2-$\sigma$ of the literature endpoint value of 15574~eV. The estimated neutrino mass for both results is consistent with $m_\beta^2=0$. The 90\% confidence upper limits for the Bayesian analysis is $m_\beta < 155$~$\rm{eV}/\rm{c}^2$ and $m_\beta < 152$~$\rm{eV}/\rm{c}$ for the frequentist analysis.
 
@@ -421,7 +421,7 @@ The feasibility of a real-time reconstruction pipeline rests on the development 
 \label{sec:chap3-freq-choice-and-pilot-scale}
 
 \subsection{Choice of Frequency}
-The optimal CRES frequency for Project 8 is that which allows us reach our target sensitivity of 40~meV, while minimizing the cost and complexity of the overall experiment. The magnitude of the background magnetic field determines the cyclotron frequency, which affects the entirety of the CRES detection system design, therefore, specifying the operating frequency of the CRES experiments is one of the first steps towards developing a full design.
+The optimal CRES frequency for Project 8 is that which reaches the target sensitivity of 40~meV, while minimizing the cost and complexity of the overall experiment. The magnitude of the background magnetic field determines the cyclotron frequency, which affects the entirety of the CRES detection system design, therefore, specifying the operating frequency of the CRES experiments is one of the first steps towards developing a full design.
 
 \subsubsection*{Scaling Laws}
 
