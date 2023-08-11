@@ -16,7 +16,7 @@ Finally, in Sections \ref{sec:chap6-single-mode-cavity-sims} and \ref{sec:chap6-
 \section{Cylindrical Resonant Cavities}
 \label{sec:chap6-resonant-cavities}
 
-Resonant cavities are sealed conductive containers, which allows us to describe the electromagnetic (EM) fields contained in the cavity volume as a superposition of resonant modes \cite{pozar}. The field shapes of the resonant modes are determined by Maxwell's equations and the boundary conditions enforced by the cavity geometry. Of interest to Project 8 for CRES measurements are cylindrical cavities due to their ease of construction and integration with atom and electron trapping magnets. 
+Resonant cavities are sealed conductive containers, which allows one to describe the electromagnetic (EM) fields contained in the cavity volume as a superposition of resonant modes \cite{pozar}. The field shapes of the resonant modes are determined by Maxwell's equations and the boundary conditions enforced by the cavity geometry. Of interest to Project 8 for CRES measurements are cylindrical cavities due to their ease of construction and integration with atom and electron trapping magnets. 
 
 \subsection{General Field Solutions}
 
@@ -38,7 +38,7 @@ The solutions assume a harmonic time dependence of the form $e^{i\omega t}$ and 
     \nabla\times\bm{E}&=-i\omega\mu\bm{H},\\
     \nabla\times\bm{H}&=i\omega\epsilon\bm{E},
 \end{align}
-where $\epsilon$ and $\mu$ are the permittivity and permeability of the material inside the waveguide or cavity. Using the field solutions from Equations \ref{eq:chap6-maxwell-eqn-solutions-E} and \ref{eq:chap6-maxwell-eqn-solutions-H} one can solve for the transverse components of the fields in terms of the longitudinal fields. Because we are interested in cylindrical cavities it is advantageous to write the field solutions in cylindrical coordinates. After performing this transformation the set of four equations for the transverse field components are,
+where $\epsilon$ and $\mu$ are the permittivity and permeability of the material inside the waveguide or cavity. Using the field solutions from Equations \ref{eq:chap6-maxwell-eqn-solutions-E} and \ref{eq:chap6-maxwell-eqn-solutions-H} one can solve for the transverse components of the fields in terms of the longitudinal fields. Because cylindrical cavities are of interest, it is advantageous to write the field solutions in cylindrical coordinates. After performing this transformation, the set of four equations for the transverse field components are
 \begin{align}
     H_\rho&=\frac{i}{k_c^2}\left(\frac{\omega\epsilon}{\rho}\frac{\partial E_z}{\partial \phi}-\beta \frac{\partial H_z}{\partial \rho}\right),\\
     H_\phi&=\frac{-i}{k_c^2}\left(\omega\epsilon\frac{\partial E_z}{\partial \rho}+\frac{\beta}{\rho}\frac{\partial H_z}{\partial \phi}\right),\\
@@ -47,7 +47,7 @@ where $\epsilon$ and $\mu$ are the permittivity and permeability of the material
 \end{align}
 where $k_c$ is the cutoff wavenumber defined by $k_c^2=k^2-\beta^2$ with $k=\omega\sqrt{\mu\epsilon}$ being the wavenumber of the EM radiation. 
 
-This set of equations can be used to solve for a variety of different modes that can be obtained by setting conditions on $E_z$ and $H_z$. For cylindrical cavities two types of modes are allowed, which correspond to solutions where $E_z=0$ and $H_z=0$ respectively. 
+This set of equations can be used to solve for a variety of different modes, which can be obtained by setting conditions on $E_z$ and $H_z$. For cylindrical cavities two types of modes are allowed, which correspond to solutions where $E_z=0$ and $H_z=0$ respectively. 
 
 \subsection{TE and TM Modes}
 \label{sec:chap6-TE-TM-modes}
@@ -57,14 +57,14 @@ The TE family of modes corresponds to the case where $E_z=0$. This implies that 
     (\nabla^2 + k^2)H_z = 0.
     \label{eq:chap6-helmholtz-magnetic}
 \end{equation}
-For solutions of the form $H_z(\rho,\phi,z)=h_z(\rho,\phi)e^{-i\beta z}$, Equation \ref{eq:chap6-helmholtz-magnetic} can be solved using the standard technique of separation of variables. Rather than reproduce the derivation here we shall simply quote the solutions for the transverse fields \cite{pozar}, which are 
+For solutions of the form $H_z(\rho,\phi,z)=h_z(\rho,\phi)e^{-i\beta z}$, Equation \ref{eq:chap6-helmholtz-magnetic} can be solved using the standard technique of separation of variables. Rather than reproduce the derivation here I shall simply quote the solutions for the transverse fields \cite{pozar}, which are 
 \begin{align}
     H_\rho &= \frac{-i\beta }{k_{c_{nm}}}(A\sin{n\phi}+B\cos{n\phi})J_n^\prime(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},\\
     H_\phi &=\frac{-i\beta n}{k_{c_{nm}}^2\rho}(A\cos{n\phi}-B\sin{n\phi})J_n(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},\\
     E_\rho &=\frac{-i\omega\mu n}{k_{c_{nm}}^2 \rho}(A\cos{n\phi}-B\sin{n\phi})J_n(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},\label{eq:chap6-erho-TE}\\
     E_\phi &=\frac{i\omega\mu}{k_{c_{nm}}}(A\sin{n\phi}+B\cos{n\phi})J_n^\prime(k_{c_{nm}}\rho)e^{-i\beta_{nm} z}\label{eq:chap6-ephi-TE}.
 \end{align}
-One can observe that the solutions have a periodic dependence on $\phi$, and radial profiles given by the Bessel functions of the first kind. The integer indices $n$ and $m$ arise from continuity conditions on the EM fields in the azimuthal and radial directions. For the TE modes $n\geq0$ and $m\geq1$. $k_{c_{nm}}$ is the cutoff wavenumber for the $\mathrm{TE}_{nm}$ mode given by 
+One observes that the solutions have a periodic dependence on $\phi$, and radial profiles given by the Bessel functions of the first kind. The integer indices $n$ and $m$ arise from continuity conditions on the EM fields in the azimuthal and radial directions. For the TE modes, the indices range from $n\geq0$ and $m\geq1$. $k_{c_{nm}}$ is the cutoff wavenumber for the $\mathrm{TE}_{nm}$ mode given by 
 \begin{equation}
     k_{c_{nm}} = \frac{p^\prime_{nm}}{b},
 \end{equation}
@@ -84,7 +84,7 @@ where $b$ is the radius of the cavity or waveguide and $p^\prime_{nm}$ is the $m
     \end{tabular}
 \end{table}
 
-The TM mode family corresponds to the case where $H_z=0$, and $(\nabla^2 +k^2)E_z=0$. Again, we assume solutions of the form $E_z(\rho,\phi,z)=e_z(\rho,\phi)e^{-i\beta z}$, for which the general form of the solutions is the same as for the TE modes. However, the different boundary conditions for the TM modes results in particular solutions with a different from, which we shall quote here without derivation. The transverse fields of the TM modes are given by 
+The TM mode family corresponds to the case where $H_z=0$, and $(\nabla^2 +k^2)E_z=0$. Again, solutions are assumed of the form $E_z(\rho,\phi,z)=e_z(\rho,\phi)e^{-i\beta z}$, for which the general form of the solutions is the same as for the TE modes. However, the different boundary conditions for the TM modes results in particular solutions with a different from, which I shall quote here without derivation. The transverse fields of the TM modes are given by 
 \begin{align}
     H_\rho &=\frac{-i\omega\epsilon n}{k_{c_{nm}}^2 \rho}(A\cos{n\phi}-B\sin{n\phi})J_n(k_{c_{nm}}\rho)e^{-i\beta_{nm} z},\\
     H_\phi &=\frac{-i\omega\epsilon}{k_{c_{nm}}}(A\sin{n\phi}+B\cos{n\phi})J_n^\prime(k_{c_{nm}}\rho)e^{-i\beta_{nm} z}\\
@@ -109,7 +109,7 @@ which one may notice are the same solutions as the TE modes with $H$ and $E$ fli
 
 \subsection{Resonant Frequencies of a Cylindrical Cavity}
 
-A cylindrical cavity is constructed by taking a section of cylindrical waveguide and shorting both ends with conductive material. This means that the electric fields inside a cylindrical cavity are exactly those we derived in Section \ref{sec:chap6-TE-TM-modes} with the additional condition that the electric fields must go to zero at $z=0$ and $z=L$ (see Figure \ref{fig:chap6-cyl-cav}).
+A cylindrical cavity is constructed by taking a section of cylindrical waveguide and shorting both ends with conductive material. This means that the electric fields inside a cylindrical cavity are exactly those derived in Section \ref{sec:chap6-TE-TM-modes} with the additional condition that the electric fields must go to zero at $z=0$ and $z=L$ (see Figure \ref{fig:chap6-cyl-cav}).
 \begin{figure}[htbp]
     \centering
     \includegraphics*[width=0.3\textwidth]{figs/Chapter-6/230606_cylindrical_cavity.png}
@@ -120,11 +120,11 @@ The transverse electric field solutions for a cylindrical waveguide are of the f
 \begin{equation}
     \bm{E}(\rho,\phi,z)=\bm{e}(\rho,\phi)\left(A_+e^{-i\beta_{nm}z}+A_-e^{i\beta_{nm}z }\right),
 \end{equation}
-where $A_+$ and $A_-$ are arbitrary amplitudes of forward and backward propagating waves. In order to enforce that $\bm{E}$ is zero at both ends of the cavity we require that 
+where $A_+$ and $A_-$ are arbitrary amplitudes of forward and backward propagating waves. In order to enforce that $\bm{E}$ is zero at both ends of the cavity it is required that 
 \begin{equation}
     \beta_{nm}L = 2\pi \ell,
 \end{equation}
-where $\ell=0,1,2,3\ldots$. Using this constraint on the propagation constant we can solve for the resonant frequencies of the $\mathrm{TE}_{nm\ell}$ and the $\mathrm{TM}_{nm\ell}$ modes in a cylindrical cavity. For the TE modes the resonant frequencies are
+where $\ell=0,1,2,3\ldots$. Using this constraint on the propagation constant one can solve for the resonant frequencies of the $\mathrm{TE}_{nm\ell}$ and the $\mathrm{TM}_{nm\ell}$ modes in a cylindrical cavity. For the TE modes the resonant frequencies are
 \begin{equation}
     f_{nm\ell}=\frac{c}{2\pi\sqrt{\mu_r\epsilon_r}}\sqrt{\left(\frac{p_{nm}^\prime}{b}\right)^2+\left(\frac{\ell\pi}{L}\right)^2},
 \end{equation}
@@ -151,7 +151,7 @@ The resonant behavior of cylindrical cavities can be modeled as a series RLC cir
 \begin{equation}
     Z_\mathrm{in}=\left(\frac{1}{R}+\frac{1}{i\omega L}+i\omega C\right).
 \end{equation}
-The resistance in the circuit represents all sources of loss in the cavity, which is primarily caused by the finite conductivity of the cavity walls. The inductor and capacitor represent the energy stored in the cavity in the form of electric and magnetic fields. If the circuit is being driven by an external power source we can write the input power in terms of the circuit input impedance and the source voltage 
+The resistance in the circuit represents all sources of loss in the cavity, which is primarily caused by the finite conductivity of the cavity walls. The inductor and capacitor represent the energy stored in the cavity in the form of electric and magnetic fields. If the circuit is being driven by an external power source the input power can be written in terms of the circuit input impedance and the source voltage 
 \begin{equation}
     P_\mathrm{in} = \frac{1}{2}Z_\mathrm{in}|I|^2=\frac{1}{2}|I|^2\left(\frac{1}{R}+\frac{1}{i\omega L}+i\omega C\right).
 \end{equation} 
@@ -164,7 +164,7 @@ and the capacitor and inductor store energies given by
     W_e&=\frac{1}{4}\frac{|I|^2}{\omega^2 C},\\
     W_m&=\frac{1}{4}|I|^2 L,
 \end{align}
-respectively. Using these expressions we can write the input power and input impedance expressions in terms of the lost power and stored energy 
+respectively. Using these expressions the input power and input impedance can be written in terms of the lost power and stored energy 
 \begin{align}
     P_\mathrm{in}=P_\mathrm{loss}+2i\omega(W_m-W_e),\\
     Z_\mathrm{in}=\frac{P_\mathrm{loss}+2i\omega(W_m-W_e)}{\frac{1}{2}|I|^2}.
@@ -186,11 +186,11 @@ from which one observes that as the resistance of the RLC circuit is decreased t
     \caption{\label{fig:chap6-rlc-resonance} Illustration of the behavior of the input impedance of the series RLC circuit as a function of the driving frequency. The BW is proportion to the width of the resonance, which is inversely proportional to Q.}
 \end{figure}
 
-The Q-factor of the resonator also determines with bandwidth (BW) of the system. A cavity with a high Q-factor will resonant with a smaller range of frequencies than a cavity with a low Q-factor. To see this we can examine the behavior of the RLC circuit when driven by frequencies near the resonance. For a frequency $\omega=\omega_0+\Delta \omega$, where $\Delta \omega=\omega-\omega_0\ll \omega_0$, we can write the input impedance as 
+The Q-factor of the resonator also determines with bandwidth (BW) of the system. A cavity with a high Q-factor will resonant with a smaller range of frequencies than a cavity with a low Q-factor. To see this examine the behavior of the RLC circuit when driven by frequencies near the resonance. For a frequency $\omega=\omega_0+\Delta \omega$, where $\Delta \omega=\omega-\omega_0\ll \omega_0$, the input impedance can be written as
 \begin{equation}
     Z_\mathrm{in}=R+i\omega L\left(\frac{\omega^2-\omega_0^2}{\omega^2}\right),
 \end{equation}
-and by expanding $(\omega^2-\omega_0^2)/\omega^2$ to first order in $\Delta\omega$, we obtain 
+and by expanding $(\omega^2-\omega_0^2)/\omega^2$ to first order in $\Delta\omega$, one obtains 
 \begin{equation}
     Z_\mathrm{in}\approx R+i\frac{2RQ_0\Delta\omega}{\omega_0}.
 \end{equation}
@@ -199,7 +199,7 @@ Therefore, the magnitude of the input impedance near the resonance is given by
     |Z_\mathrm{in}|=R\sqrt{1+4Q_0^2\frac{\Delta\omega^2}{\omega^2}}, 
     \label{eq:chap6-mag-input-impedance}
 \end{equation}
-from which we observe that for the series RLC circuit the input impedance is minimized at the resonant frequency, which corresponds to the maximum input power (see Figure \ref{fig:chap6-rlc-resonance}). The half-power BW is the range of frequencies over which the input power drops to half the input power on resonance. This occurs when $|Z_\mathrm{in}|=\sqrt{2}R$, which corresponds to $\Delta\omega/\omega=\textrm{BW}/2$. Using Equation \ref{eq:chap6-mag-input-impedance} one can find that
+from which it is seen that for the series RLC circuit the input impedance is minimized at the resonant frequency, which corresponds to the maximum input power (see Figure \ref{fig:chap6-rlc-resonance}). The half-power BW is the range of frequencies over which the input power drops to half the input power on resonance. This occurs when $|Z_\mathrm{in}|=\sqrt{2}R$, which corresponds to $\Delta\omega/\omega=\textrm{BW}/2$. Using Equation \ref{eq:chap6-mag-input-impedance} one can find that
 \begin{equation}
     2R^2=R^2(1+Q_0^2\mathrm{BW}^2),
 \end{equation}
@@ -232,7 +232,7 @@ One can described the degree of coupling between the cavity and an external circ
 \begin{equation}
     g=\frac{Q_0}{Q_L}-1.
 \end{equation} 
-When $g=1$ then $Q_L=Q_0/2$, and the cavity is said to be critically coupled as we described. If $Q_L<Q_0/2$, then the cavity is undercoupled to the transmission line, corresponding to $g<1$. Alternatively, if $Q_L>Q_0/2$, then $g>1$, and the cavity is overcoupled to the transmission line. Various specialized circuits can be used to tune the input impedance of the external circuit as seen by the cavity to achieve a wide range of different coupling factors based on the desired application of the cavity.
+When $g=1$ then $Q_L=Q_0/2$, and the cavity is said to be critically coupled. If $Q_L<Q_0/2$, then the cavity is undercoupled to the transmission line, corresponding to $g<1$. Alternatively, if $Q_L>Q_0/2$, then $g>1$, and the cavity is overcoupled to the transmission line. Various specialized circuits can be used to tune the input impedance of the external circuit as seen by the cavity to achieve a wide range of different coupling factors based on the desired application of the cavity.
 
 \section{The Cavity Approach to CRES}
 \label{sec:chap6-cavity-approach}
@@ -246,9 +246,9 @@ Resonant cavities can be used to perform CRES measurements, and they represent t
     \caption{\label{fig:chap6-cav-cartoon} A cartoon depiction of a cavity CRES experiment. A metallic cavity filled with tritium gas is inserted into a uniform background magnetic field to perform CRES measurements. Electrons from beta-decays inside the cavity can be trapped and used to excite a resonant mode(s). By coupling to the cavity mode with a suitable probe one can measure the cyclotron frequency of the electron and perform CRES. }
 \end{figure}
 
-At the core of the experiment is a large resonant cavity filled with tritium gas. The filled cavity is then placed in a uniform magnetic field provided by a primary magnet that provides the background magnetic field. The value of the background magnetic field sets the range of cyclotron frequencies for electrons emitted near the tritium spectrum endpoint. When a beta-decay electron is produced in the cavity it is trapped using a set of magnetic pinch coils that keep electrons inside the cavity volume.
+At the core of the experiment is a large resonant cavity filled with tritium gas. The filled cavity is then placed in a uniform magnetic field provided by a primary magnet, which provides the background magnetic field. The value of the background magnetic field sets the range of cyclotron frequencies for electrons emitted near the tritium spectrum endpoint. When a beta-decay electron is produced in the cavity it is trapped using a set of magnetic pinch coils that keep electrons inside the cavity volume.
 
-Electrons trapped inside the cavity do not radiate in the same way as electrons in free-space. Effectively, the same boundary conditions that were used to derive the resonant modes of a cylindrical cavity in Section \ref{sec:chap6-resonant-cavities} apply to the radiation of the electron as well. The coupling of an electron performing cyclotron motion in a cavity has been studied in detail for measurements of the electron's magnetic moment \cite{cyclotron_motion_cavity, hanneke_paper, hanneke_thesis} If an electron is emitted with a kinetic energy that corresponds to a cyclotron frequency that matches a resonant frequency of the cavity, then energy radiated by the electron excites a corresponding resonance in the cavity. The strength of the electron's coupling to the cavity is given to first order by the dot product between the electrons trajectory and the electric field vector of the resonant mode. Additional effects, such as the Purcell enhancement \cite{purcell}, alter the emitted power from the free-space Larmor equation \cite{larmor_eqn}. If an electron is moving with a cyclotron frequency that is far from any resonant modes in the cavity, then radiation from the electron is suppressed. One can interpret this somewhat surprising effect as the metallic walls of the cavity reflecting the radiated energy back to the electron. 
+Electrons trapped inside the cavity do not radiate in the same way as electrons in free-space. Effectively, the same boundary conditions that were used to derive the resonant modes of a cylindrical cavity in Section \ref{sec:chap6-resonant-cavities} apply to the radiation of the electron as well. The coupling of an electron performing cyclotron motion in a cavity has been studied in detail for measurements of the electron's magnetic moment \cite{cyclotron_motion_cavity, hanneke_paper, hanneke_thesis}. If an electron is emitted with a kinetic energy that corresponds to a cyclotron frequency that matches a resonant frequency of the cavity, then energy radiated by the electron excites a corresponding resonance in the cavity. The strength of the electron's coupling to the cavity is given to first order by the dot product between the electrons trajectory and the electric field vector of the resonant mode. Additional effects, such as the Purcell enhancement \cite{purcell}, alter the emitted power from the free-space Larmor equation \cite{larmor_eqn}. If an electron is moving with a cyclotron frequency that is far from any resonant modes in the cavity, then radiation from the electron is suppressed. One can interpret this somewhat surprising effect as the metallic walls of the cavity reflecting the radiated energy back to the electron. 
 
 Detecting an electron in the cavity is accomplished by coupling the cavity to an external transmission line that leads to an amplifier and RF receiver chain \cite{cavity_coupled_to_amp}. The coupling of the cavity resonance to the amplifier occurs through a coupling probe or aperture designed to read-out the excitation of the mode(s) excited by the electron. For CRES measurements, the placement of a wire antenna coupling probe inside the cavity volume leads to unacceptable losses of tritium atoms due to recombination to molecular tritium on the antenna surface, therefore, apertures are the preferred coupling method for cavity CRES experiments.
 
@@ -260,7 +260,7 @@ One of the attractive features of the CRES technique for neutrino mass measureme
 
 For a CRES experiment, cylindrical cavities are a natural choice since they match the geometry of standard solenoid magnets, which are needed in order to produce the background magnetic field for CRES measurements. Furthermore, the cylindrical shape is compatible with a Halbach array, which is the leading choice of atom trapping technology for future atomic tritium experiments by the Project 8 collaboration. Cylindrical cavities also benefit from well-established machining practices that are able to achieve high geometric precision at large lengths scales. More exotic cavity designs are under-consideration and there are on-going efforts to investigate the potential advantages these may have over the standard cylindrical geometry.
 
-As we saw in Section \ref{sec:chap6-resonant-cavities}, the physical dimensions of the cavity are directly coupled to the resonant frequencies of the cavity. This dependency links the size of the cavity to the magnitude of the background magnetic field, because the magnetic field determines the cyclotron frequencies of trapped electrons. Specifically, as the size of the cavity is increased to accommodate larger volumes of tritium gas, the frequencies of the resonant modes decrease proportionally. This requires that the magnetic field also decrease in order to maintain coupling between electrons and the desired cavity mode. 
+As shown in Section \ref{sec:chap6-resonant-cavities}, the physical dimensions of the cavity are directly coupled to the resonant frequencies of the cavity. This dependency links the size of the cavity to the magnitude of the background magnetic field, because the magnetic field determines the cyclotron frequencies of trapped electrons. Specifically, as the size of the cavity is increased to accommodate larger volumes of tritium gas, the frequencies of the resonant modes decrease proportionally. This requires that the magnetic field also decrease in order to maintain coupling between electrons and the desired cavity mode. 
 
 The required cavity size is ultimately determined by the required statistics in the tritium spectrum endpoint region. Because the gas density must be kept below a certain level to ensure that electrons have sufficient time to radiate before scattering, larger volumes become the only way to achieve higher event statistics. To achieve the sensitivity goals of Phase III and IV cavity volumes on the order of several cubic-meters are required, which pushes one towards frequencies in the range of 100's of MHz.
 
@@ -300,7 +300,7 @@ An example of a resonant mode that exhibits these traits is the $\mathrm{TE}_{01
 
 The choice between cavities and antennas for large-scale CRES measurements is not without trade-offs. Both the antenna array and cavity approaches are relatively immature techniques, at present there are no known obstacles that would prevent either approach from being used for a large scale neutrino mass experiment. The preference for cavities is largely driven by important practical considerations that could make a cavity based experiment significantly cheaper than an antenna experiment of similar size and scope. However, the switch to cavities also introduces new challenges less relevant to the antenna array, which must be solved in order for Project 8 to achieve its neutrino mass measurement goals. 
 
-One of the major relative drawbacks of the antenna array approach is the size and complexity of the data-acquisition system. A large-scale antenna array experiment requires $O(100)$ antennas independently digitized at rates of $O(10)$ to $O(100)$~MHz. Since there is insufficient information in a single antenna channel to detect or reconstruct the CRES signal, the entire array output must be processed during the signal reconstruction. Because data storage becomes an issue with these data volumes, there is a real-time signal reconstruction requirement that allows one to detect CRES signals buried in the thermal noise. As we discuss in Section \ref{sec:chap4-trigger-paper}, the computational cost of these real-time detection algorithms are potentially quite large for even a small scale antenna array experiment. However, the operating principle of a cavity experiment allows the CRES signal to be detected using only a single read-out channel digitized at rates of O(10)~MHz, which reduces the cost of the data acquisition system by many orders of magnitude.
+One of the major relative drawbacks of the antenna array approach is the size and complexity of the data-acquisition system. A large-scale antenna array experiment requires $O(100)$ antennas independently digitized at rates of $O(10)$ to $O(100)$~MHz. Since there is insufficient information in a single antenna channel to detect or reconstruct the CRES signal, the entire array output must be processed during the signal reconstruction. Because data storage becomes an issue with these data volumes, there is a real-time signal reconstruction requirement that allows one to detect CRES signals buried in the thermal noise. As discussed in Section \ref{sec:chap4-trigger-paper}, the computational cost of these real-time detection algorithms are potentially quite large for even a small scale antenna array experiment. However, the operating principle of a cavity experiment allows the CRES signal to be detected using only a single read-out channel digitized at rates of O(10)~MHz, which reduces the cost of the data acquisition system by many orders of magnitude.
 
 From an engineering perspective, the simple geometry and thin-walls of a cylindrical cavity are simpler to interface with the cryogenic and magnetic subsystems needed for a CRES experiment. Whereas, the antenna array requires careful design and engineering to accommodate the antenna array and receiver electronics in proximity to the trapping magnets. Additionally, due to near-field interference effects, the antenna array is unable to reconstruct CRES events within the reactive near-field distance of the antennas. Because atom trapping requirements require magnetic fields which correspond to cyclotron frequencies for endpoint electrons less than 1~GHz, the required stand-off distance leads to a significant loss in useable experiment volume, necessitating larger and more expensive magnets.
 
@@ -328,7 +328,7 @@ Cylindrical cavities with mostly open ends that also exhibit Q values for the $\
 \end{figure}
 This cavity design leaves the ends of the cavity wide open, but retains high Q-values for the $\mathrm{TE}_{01\ell}$ modes due to the coaxial endcap, which are designed to perfectly reflect the electric fields of $\mathrm{TE}_{01\ell}$ modes. Coupling to the $\mathrm{TE_{01\ell}}$ mode is achieved via an aperture located at the center of the cavity wall. 
 
-A cavity similar to Figure \ref{fig:chap6-open-cavity-image} is a candidate design for the future CRES experiments by Project 8, since it appears to elegantly solve many practical issues that arise when combining cavity CRES and atomic tritium. The coaxial endcaps leave significant regions of the cavity ends completely open, which allows for the entrance of atomic tritium as well as the pumping away of molecular tritium that has recombined on the cavity walls. These open ends are achieved while preserving the high Q-values of the $\mathrm{TE}_{01\ell}$ modes, which is important for extracting as much signal power from the electron as possible. In subsequent sections we shall analyze this cavity design in more detail, primarily by using HFSS simulations to analyze the resonant mode structure of this cavity geometry.
+A cavity similar to Figure \ref{fig:chap6-open-cavity-image} is a candidate design for the future CRES experiments by Project 8, since it appears to elegantly solve many practical issues that arise when combining cavity CRES and atomic tritium. The coaxial endcaps leave significant regions of the cavity ends completely open, which allows for the entrance of atomic tritium as well as the pumping away of molecular tritium that has recombined on the cavity walls. These open ends are achieved while preserving the high Q-values of the $\mathrm{TE}_{01\ell}$ modes, which is important for extracting as much signal power from the electron as possible. In subsequent sections this cavity design will be analyzed in more detail, primarily by using HFSS simulations to analyze the resonant mode structure of this cavity geometry.
 
 \subsubsection*{Coaxial Terminator Constraints}
 
@@ -339,7 +339,7 @@ The reason that coaxial endcaps can be used to achieve high Q-values for the $\m
     \caption{\label{fig:chap6-open-cavity-sketch} The simplified geometry of an open cavity with coaxial terminations. Figure from \cite{nasa_cavity_theory}.}
 \end{figure}
 
-The correct radius of the cylindrical partition is derived by setting up the boundary value problem in Figure \ref{fig:chap6-open-cavity-sketch}, and analyzing the reflection and transmission coefficients for waves incident on the coaxial terminators. The basic problem is to identify the radius $a$ where the reflection coefficient for the $\mathrm{TE}_{01\ell}$ modes becomes equal to 1. One can show that if the coaxial partitions are made sufficiently long relative to the wavelength of the $\mathrm{TE}_{01}$ modes than perfect reflection can be achieved. This derivation is quite lengthy and complex and is presented in full in \cite{nasa_cavity_theory}. Here, we shall simply explain the resulting conditions on the partition radius for perfect reflection.
+The correct radius of the cylindrical partition is derived by setting up the boundary value problem in Figure \ref{fig:chap6-open-cavity-sketch}, and analyzing the reflection and transmission coefficients for waves incident on the coaxial terminators. The basic problem is to identify the radius $a$ where the reflection coefficient for the $\mathrm{TE}_{01\ell}$ modes becomes equal to 1. One can show that if the coaxial partitions are made sufficiently long relative to the wavelength of the $\mathrm{TE}_{01}$ modes than perfect reflection can be achieved. This derivation is quite lengthy and complex and is presented in full in \cite{nasa_cavity_theory}. Here, I shall simply explain the resulting conditions on the partition radius for perfect reflection.
 
 \begin{figure}[htbp]
     \centering
@@ -349,18 +349,19 @@ The correct radius of the cylindrical partition is derived by setting up the bou
 
 The open cavity boundary value problem is solved by expressing the forms of the electric fields in the different regions of the cavity and requiring that the electric fields are continuous. There are effectively three distinct regions in the open cavity corresponding to the central cavity volume, the inner coaxial volume, and the outer coaxial volume (see Figure \ref{fig:chap6-open-cavity-regions}). 
 
-In Region I, the boundary conditions are those of a cylindrical waveguide, and we require that $E_\phi$ for the $\mathrm{TE}_{0m}$ modes go to zero at the cavity wall ($r=b$). This requires that $J^\prime_{0m}(k_{c_{0m}}b)=0$. We aim to solve for the radius $a$ in the specific situation where the $\mathrm{TE}_{01}$ mode can propagate but all other $\mathrm{TE}_{0m}$ modes are below the cutoff frequency for the circular waveguide. This is equivalent to requiring 
+In Region I, the boundary conditions are those of a cylindrical waveguide, and it is required that $E_\phi$ for the $\mathrm{TE}_{0m}$ modes go to zero at the cavity wall ($r=b$). This necessitates $J^\prime_{0m}(k_{c_{0m}}b)=0$. A solution for the radius $a$ is desired such that the $\mathrm{TE}_{01}$ mode propagates, but other $\mathrm{TE}_{0m}$ modes are below the cutoff frequency for the circular waveguide. This is equivalent to requiring 
 \begin{equation}
     3.832<k_{c_{0m}}b<7.016,
 \end{equation}
 where the numbers $3.832$ and $7.016$ correspond to the first and second zeros of the Bessel function (see Table \ref{tab:chap6-bessel-derivative-roots}).
 
-In Region II the boundary conditions are those of a cylindrical waveguide, but with a smaller radius. The condition that $E_\phi=0$ at the cylindrical partition radius is that $J^\prime_{0m}(k_{c_{0m}}a)=0$. To ensure perfect reflection, we want all modes in Region 1 of the cavity to be below the cutoff frequency of the circular waveguide formed by the inner volume of the coaxial terminator. Therefore, we consider the solutions where
+In Region II the boundary conditions are those of a cylindrical waveguide, but with a smaller radius. The condition that $E_\phi=0$ at the cylindrical partition radius is that $J^\prime_{0m}(k_{c_{0m}}a)=0$. To ensure perfect reflection, all modes in Region 1 of the cavity must be below the cutoff frequency of the circular waveguide formed by the inner volume of the coaxial terminator. Therefore, solutions where the condition
 \begin{equation}
-    k_{c_{0m}}a<3.832.
+    k_{c_{0m}}a<3.832,
 \end{equation}
+is true are required.
 
-Finally, in Region III the boundary condition are those of a coaxial waveguide. We need to guarantee that $E_\phi = 0$ at both $r=b$ and $r=a$, which involves finding the eigenvalues of the following equation
+Finally, in Region III the boundary condition are those of a coaxial waveguide. One needs to guarantee that $E_\phi = 0$ at both $r=b$ and $r=a$, which involves finding the eigenvalues of the following equation
 \begin{equation}
     J^\prime_{0}(k_{c_{0m}}a)Y^\prime_0(k_{c_{0m}}b)-J^\prime_0(k_{c_{0m}}b)Y^\prime_0(k_{c_{0m}}a) = 0,
     \label{eq:chap6-regionIII-evalue-eqn}
@@ -369,7 +370,7 @@ where $Y_0^\prime$ the zeroth-order derivatives of the Bessel function of the se
 \begin{equation}
     \delta_na\simeq\frac{n\pi}{b/a-1},  
 \end{equation}
-where $\delta_n$ are eigenvalues of Equation \ref{eq:chap6-regionIII-evalue-eqn}. Similar to Region II, we are interested in solutions for which the $\mathrm{TE}_{01}$ modes of Region I are below the cutoff of Region III. Therefore, we require that 
+where $\delta_n$ are eigenvalues of Equation \ref{eq:chap6-regionIII-evalue-eqn}. Similar to Region II, solutions for which the $\mathrm{TE}_{01}$ modes of Region I are below the cutoff frequency of Region III are needed. Therefore, it is required that 
 \begin{equation}
     k_{c_{0m}}<\delta_1.
 \end{equation}
