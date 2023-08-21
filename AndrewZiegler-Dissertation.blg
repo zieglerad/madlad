@@ -14,6 +14,7 @@ Warning--I didn't find a database entry for "p8ml_1"
 Warning--I didn't find a database entry for "balanis"
 Warning--I didn't find a database entry for "cnn_are_mf"
 Warning--I didn't find a database entry for "PhysRevC.103.065501"
+Warning--empty pages in nu_mass_ordering_figure_inspiration
 Warning--empty pages in hyperk
 Warning--empty journal in p8snowmass2022
 Warning--empty journal in p8prc2023
@@ -28,45 +29,45 @@ Warning--empty pages in Project8:2022wqh
 Warning--empty author in p8phase3trigger
 Warning--empty year in p8phase3trigger
 Warning--empty journal in cresHe6
-You've used 103 entries,
+You've used 106 entries,
             2552 wiz_defined-function locations,
-            1198 strings with 19430 characters,
-and the built_in function-call counts, 41607 in all, are:
-= -- 2998
-> -- 908
-< -- 69
-+ -- 289
-- -- 186
-* -- 2900
-:= -- 4212
-add.period$ -- 188
-call.type$ -- 103
+            1220 strings with 20129 characters,
+and the built_in function-call counts, 43032 in all, are:
+= -- 3084
+> -- 960
+< -- 71
++ -- 304
+- -- 198
+* -- 3017
+:= -- 4359
+add.period$ -- 194
+call.type$ -- 106
 change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 117
-duplicate$ -- 4611
-empty$ -- 4414
-format.name$ -- 248
-if$ -- 9702
+cite$ -- 121
+duplicate$ -- 4772
+empty$ -- 4560
+format.name$ -- 261
+if$ -- 10023
 int.to.chr$ -- 0
-int.to.str$ -- 103
-missing$ -- 836
-newline$ -- 346
-num.names$ -- 99
-pop$ -- 1206
+int.to.str$ -- 106
+missing$ -- 867
+newline$ -- 357
+num.names$ -- 102
+pop$ -- 1248
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1595
+skip$ -- 1636
 stack$ -- 0
-substring$ -- 1978
-swap$ -- 3093
-text.length$ -- 69
+substring$ -- 2036
+swap$ -- 3201
+text.length$ -- 71
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 14
-while$ -- 259
-width$ -- 106
-write$ -- 955
-(There were 18 warnings)
+warning$ -- 15
+while$ -- 267
+width$ -- 109
+write$ -- 984
+(There were 19 warnings)

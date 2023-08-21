@@ -12,9 +12,9 @@ In Section \ref{sec:chap2-nu-history} I provide background information on the hi
 \label{sec:chap2-nu-history}
 Late in the 19th century the phenomena of radioactivity was first observed in experiments performed by Henri Becquerel with uranium, and further studied using thorium and radium by Marie and Pierre Currie \cite{nuclear_physics, curie}. Early work in radioactivity classified different forms of radiation based on it's ability to penetrate different materials. Rutherford was the first to separate radioactive emissions into two types, alpha and beta radiation \cite{rutherford_rad_types}. Alpha rays were easily stopped by a piece of paper or thin foil of metal, whereas beta radiation could penetrate metal several millimeters thick. Later a third form of radiation was identified by Villard \cite{villard}, which was still more penetrating, later termed gamma radiation by Rutherford. 
 
-When these forms of radioactivity were first discovered it was unclear what physically constituted an alpha, beta, or gamma particle. Experiments with radioactivity in magnetic fields ware eventually able to identify the charge composition of the different forms of radiation. In particular, experiments by Becquerel identified \cite{Becquerel_beta_electron} that beta radiation had an identical charge-to-mass ratio to the electron. This was strongly suggestive that beta particles were indeed electrons.
+When these forms of radioactivity were first discovered, it was unclear what physically constituted an alpha, beta, or gamma particle. Experiments with radioactivity in magnetic fields ware eventually able to identify the charge composition of the different forms of radiation. In particular, experiments by Becquerel identified \cite{Becquerel_beta_electron} that beta radiation had an identical charge-to-mass ratio to the electron. This was strongly suggestive that beta particles were indeed electrons.
 
-Studies of beta radiation lead to the discovery that radioactivity resulted in the transmutation of elements \cite{rutherford_transmutation} caused by the decay of a heavier nucleus to a lighter species. One feature of beta radiation, which I will now refer to as beta-decay, that differentiated it from alpha and gamma radiation is that the electrons produced by beta-decay have a continuous spectrum of kinetic energies, whereas, alpha and gamma particles are emitted with discrete energies. This feature of beta-decay was first observed by Chadwick in 1914 \cite{chadwick1914}, and was extremely puzzling at the time, since the continuous spectrum apparently violates energy conservation \cite{bohr_energy_nonconservation_ref}. 
+Studies of beta radiation lead to the discovery that radioactivity resulted in the transmutation of elements \cite{rutherford_transmutation} caused by the decay of a heavier nucleus to a lighter species. A decay that produces beta-radiation is called a beta-decay. One feature of beta radiation that differentiated it from alpha and gamma radiation is that the electrons produced by beta-decay have a continuous spectrum of kinetic energies, whereas, alpha and gamma particles are emitted with discrete energies. This feature of beta-decay was first observed by Chadwick in 1914 \cite{chadwick1914}, and was extremely puzzling at the time, since the continuous spectrum apparently violates energy conservation \cite{bohr_energy_nonconservation_ref}. 
 
 Famously, in 1930 Pauli proposed the existence of a new neutral particle, which he termed the "neutron", that was also produced during beta-decay to resolve the missing energy problem posed by the beta-decay spectrum \cite{Pauli:1930pc}. Because this particle carried no charge, it was hypothesized that it had simply not been observed in any previous experiments. This "neutron", which was initially estimated to have a mass no larger than that of an electron, was eventually renamed the "neutrino" by Fermi \cite{fermi_rename} after the discovery of the neutron by Chadwick in 1932 \cite{neutron}. Later, in 1933, Fermi developed a quantum mechanical theory for beta-decay in which an electron and neutrino are produced by the decay of a neutron to a proton inside the radioactive nucleus \cite{fermi_beta_decay}.
 
@@ -25,7 +25,7 @@ Little more than a speculation when first introduced, indirect evidence for the 
 
 One of the first clues that neutrino flavor transitions or neutrino oscillations were occurring was the solar neutrino problem. The solar neutrino problem is a discrepancy between the measured and predicted flux of $\nu_e$ from the sum. The solar neutrino problem was famously observed by Ray Davis Jr. and collaborators in the 1960's \cite{ray_davis} at the Homestake mine in South Dakota. In the early 2000's, the SNO experiment was able to resolve the solar neutrino problem by identifying neutrino oscillations as the cause of the observed deficit \cite{SNO}. Furthermore, measurements of the atmospheric flux of neutrinos by the Super-Kamiokande experiment and others revealed that fewer muon-type neutrinos survived passage through the earth than expected providing strong evidence for neutrino oscillations for both flavors \cite{superk}.
 
-Neutrino oscillations occur because the weakly-interacting neutrino eigenstates are distinct from the mass eigenstates \cite{nu_oscillations}. The neutrino mass eigenstates represent physical particles in that they are solutions to the free-particle Hamiltonian, whereas, the neutrino weak eigenstates correspond to the neutrino states that interact via the weak charged-current interaction. The neutrino weak eigenstates are a linear superposition of the neutrino mass eigenstates
+Neutrino oscillations occur because the neutrino flavor eigenstates are distinct from the mass eigenstates \cite{nu_oscillations}. The neutrino mass eigenstates represent physical particles in that they are solutions to the free-particle Hamiltonian, whereas, the neutrino flavor eigenstates correspond to the neutrino states that interact via the weak charged-current interaction. The neutrino flavor eigenstates are a linear superposition of the neutrino mass eigenstates
 \begin{equation}
     \nu_\ell=\sum_i{U_{\ell i}\nu_i},
 \end{equation}
@@ -34,7 +34,7 @@ where $\ell=e,\mu,\tau$ and $i=1,2,3$. The matrix elements $U_{\ell i}$ are the 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/Chapter-2/230227_chap2_nu_hierarchy.png}
-    \caption{A diagram of two different neutrino mass ordering scenarios. In the inverted hierarchy (inverted mass ordering) the lightest neutrino mass is $m_3$, whereas,in the normal hierarchy (normal mass ordering) $m_1$ is the lightest neutrino. What cannot be measured by neutrino oscillations is the neutrino absolute mass scale, which is essentially the mass of the lightest neutrino mass eigenstate.}
+    \caption{A diagram of two different neutrino mass ordering scenarios \cite{nu_mass_ordering_figure_inspiration}. In the inverted hierarchy (inverted mass ordering) the lightest neutrino mass is $m_3$, whereas,in the normal hierarchy (normal mass ordering) $m_1$ is the lightest neutrino. What cannot be measured by neutrino oscillations is the neutrino absolute mass scale, which is essentially the mass of the lightest neutrino mass eigenstate.}
     \label{fig:chap2-nu-hierarchy}
 \end{figure}
 
@@ -80,7 +80,7 @@ for the normal mass ordering, and for the inverted ordering the limit is
 \begin{align}
     \Delta m_{32}^2&=(-2.498^{+0.028}_{-0.028})\times 10^{-3}\text{ eV}^2\text{ (IMO)}.
 \end{align}
-The parameter $\Delta m_{21}^2$ is the same in the NMO and the IMO. Allowing the lightest neutrino mass in each ordering scenario ($m_\textrm{least}$) to take on a range of values one can visualize the relative masses of the neutrinos as a function of $m_\textrm{least}$ (see Figure \ref{fig:chap2-mass-estates}). The absolute neutrino mass scale is effectively the value of this $m_\textrm{least}$ parameter.
+The parameter $\Delta m_{21}^2$ is the same in the NMO and the IMO. Allowing the lightest neutrino mass in each ordering scenario ($m_\textrm{least}$) to take on a range of values, one can visualize the relative masses of the neutrinos as a function of $m_\textrm{least}$ (see Figure \ref{fig:chap2-mass-estates}). The absolute neutrino mass scale is effectively the value of this $m_\textrm{least}$ parameter.
 
 \begin{figure}[htbp]
     \centering
@@ -122,7 +122,7 @@ One approach is to introduce to the standard model a right-handed neutrino field
 \begin{equation}
     \mathcal{L}_{\nu\textrm{Yukawa}} = -Y^\ell_{ij}\bar{L}_{Li}\phi \nu_{Rj}+\textrm{h.c.}
 \end{equation}
-where $\nu_{Rj}$ is the right-handed neutrino singlet. Because experimental evidence strongly predicts only three active neutrinos, these additional neutrinos are sterile and do not interact via the strong, weak, or electromagnetic interactions. After spontaneous symmetry breaking, the Yukawa interaction leads to mass terms given by 
+where $\nu_{Rj}$ is the right-handed neutrino singlet. Because experimental evidence strongly predicts only three active neutrinos, these additional neutrinos are "sterile", in that they do not interact via the strong, weak, or electromagnetic interactions. After spontaneous symmetry breaking, the Yukawa interaction leads to mass terms given by 
 \begin{equation}
     \mathcal{L}_{D}=-M_{Dij}\bar{\nu}_{Ri}\nu_{Lj} +\textrm{h.c.},
 \end{equation}
@@ -191,7 +191,7 @@ Upcoming experiments \cite{cmb_s4} are planned to refine measurements of the CMB
 
 \subsection{Limits from Neutrinoless Double Beta-decay Searches}
 
-If neutrinos are Majorana fermions, then the neutrino is equivalent to its own antiparticle and lepton conservation is not an exact law of nature \cite{double_beta1}. Limits on the rate of neutrinoless double beta-decay ($0\nu\beta\beta$), are some of the most powerful current tests of lepton number conservation \cite{Workman:2022ynf}. If $0\nu\beta\beta$ were observed, it would direct evidence that neutrinos are Majorana fermions and provide a method for measuring the neutrino mass scale.
+If neutrinos are Majorana fermions, then the neutrino is equivalent to its own antiparticle and lepton conservation is not an exact law of nature \cite{double_beta1}. Limits on the rate of neutrinoless double beta-decay ($0\nu\beta\beta$), are some of the most powerful current tests of lepton number conservation \cite{Workman:2022ynf}. If $0\nu\beta\beta$ were observed, it would be direct evidence that neutrinos are Majorana fermions and provide a method for measuring the neutrino mass scale.
 
 Standard double beta-decay occurs when two neutrons in an unstable nucleus spontaneously decay into two protons, which results in the production of two electrons and two neutrinos (see Figure \ref{fig:chap2-0nubetabeta-diagram}).  
 \begin{figure}[htbp]
@@ -284,7 +284,7 @@ The neutrino mass scale variable measured by beta-decay is given by
 \begin{equation}
     m_\beta^2=\sum_i{|U_{ei}|^2}m_i^2,
 \end{equation}
-where $m_\beta$ is the electron-weighted neutrino mass or simply "neutrino mass" for brevity. $m_\beta$ corresponds to a particular weighted sum of the neutrino masses, which is distinct from effective neutrino masses such as $m_{\beta\beta}$ \cite{FORMAGGIO20211}. Assuming unitarity, the neutrino mass can be expressed in terms of the PMNS matrix elements, squared mass differences, and the lightest neutrino mass eigenstate. For the normal mass ordering the equation is
+where $m_\beta$ is the electron-weighted neutrino mass or simply "neutrino mass" for brevity. The quantity $m_\beta$ corresponds to a particular weighted sum of the neutrino masses, which is distinct from effective neutrino masses such as $m_{\beta\beta}$ \cite{FORMAGGIO20211}. Assuming unitarity, the neutrino mass can be expressed in terms of the PMNS matrix elements, squared mass differences, and the lightest neutrino mass eigenstate. For the normal mass ordering the equation is
 \begin{equation}
     m_\beta^2=m^2_\textrm{least} + |U_{e2}|^2\Delta m_{21}^2 +|U_{e3}|^2\Delta m_{31}^2,
 \end{equation} 
@@ -294,6 +294,6 @@ and for the inverted ordering the equation is
 \end{equation}
 Therefore, a measurement of the neutrino mass in combination with neutrino mixing parameters is effectively a measurement of $m_\textrm{least}$.
 
-Since the neutrino mass is small ($<1$~eV), it's effect on the spectrum is limited to the endpoint region. The affect of a non-zero neutrino mass on the endpoint spectrum is plotted for the reader in Figure \ref{fig:chap2-atomic-tritium-endpoint}. Resolving the small changes in the spectrum shape requires an experimental technique with high statistics, excellent energy resolution, and low background activity. 
+Since the neutrino mass is small ($<1$~eV), its effect on the spectrum is limited to the endpoint region. The affect of a non-zero neutrino mass on the endpoint spectrum is plotted for the reader in Figure \ref{fig:chap2-atomic-tritium-endpoint}. Resolving the small changes in the spectrum shape requires an experimental technique with high statistics, excellent energy resolution, and low background activity. 
 
 %The KATRIN collaboration, utilizing a large MAC-E (magnetic adiabatic collimation with electrostactic) filter spectrometer recently obtained the best direct measurement of the neutrino mass, with a 90\% confidence upper limit of 0.8~eV. With more statistics the KATRIN collaboration estimates an ultimate sensitivity to neutrino masses of 0.2~eV.
