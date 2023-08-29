@@ -10,10 +10,6 @@ A level-1 auxiliary file: chapters/Chapter-6.aux
 A level-1 auxiliary file: chapters/Chapter-7.aux
 The style file: GLG-bibstyle.bst
 Database file #1: refs.bib
-Warning--I didn't find a database entry for "p8ml_1"
-Warning--I didn't find a database entry for "balanis"
-Warning--I didn't find a database entry for "cnn_are_mf"
-Warning--I didn't find a database entry for "PhysRevC.103.065501"
 Warning--empty pages in nu_mass_ordering_figure_inspiration
 Warning--empty pages in hyperk
 Warning--empty journal in p8snowmass2022
@@ -22,52 +18,52 @@ Warning--empty journal in p8prl2023
 Warning--empty author in p8jugaad
 Warning--empty year in p8jugaad
 Warning--empty pages in p8snomass
+Warning--empty author in p8phase3trigger
+Warning--empty year in p8phase3trigger
 Warning--empty journal in lw_potential_1
 Warning--empty journal in ml_lhc
 Warning--empty pages in vgg
 Warning--empty pages in Project8:2022wqh
-Warning--empty author in p8phase3trigger
-Warning--empty year in p8phase3trigger
 Warning--empty journal in cresHe6
-You've used 106 entries,
+You've used 109 entries,
             2552 wiz_defined-function locations,
-            1220 strings with 20129 characters,
-and the built_in function-call counts, 43032 in all, are:
-= -- 3084
-> -- 960
-< -- 71
-+ -- 304
-- -- 198
-* -- 3017
-:= -- 4359
-add.period$ -- 194
-call.type$ -- 106
+            1228 strings with 20467 characters,
+and the built_in function-call counts, 44305 in all, are:
+= -- 3179
+> -- 985
+< -- 73
++ -- 312
+- -- 203
+* -- 3100
+:= -- 4485
+add.period$ -- 199
+call.type$ -- 109
 change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 121
-duplicate$ -- 4772
-empty$ -- 4560
-format.name$ -- 261
-if$ -- 10023
+cite$ -- 124
+duplicate$ -- 4910
+empty$ -- 4698
+format.name$ -- 268
+if$ -- 10328
 int.to.chr$ -- 0
-int.to.str$ -- 106
-missing$ -- 867
-newline$ -- 357
-num.names$ -- 102
-pop$ -- 1248
+int.to.str$ -- 109
+missing$ -- 891
+newline$ -- 366
+num.names$ -- 105
+pop$ -- 1281
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1636
+skip$ -- 1690
 stack$ -- 0
-substring$ -- 2036
-swap$ -- 3201
-text.length$ -- 71
+substring$ -- 2104
+swap$ -- 3298
+text.length$ -- 73
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 15
-while$ -- 267
-width$ -- 109
-write$ -- 984
-(There were 19 warnings)
+while$ -- 274
+width$ -- 112
+write$ -- 1011
+(There were 15 warnings)

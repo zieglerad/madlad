@@ -3,7 +3,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces A summary of the CNN model layers and parameters. The output of each 1D-Convolution and Fully Connected layer is passed through a LeakyReLU activation function and re-normalized using batch normalization before being passed to the next layer in the model. The output of the final Fully Connected layer in the model is left without activation so that the model outputs can be directly passed to the Binary Cross-entropy loss function used during training. The first layer in the network has two input channels for the real and imaginary components of the spectrum. \relax }}{118}{}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces A summary of the CNN model layers and parameters. The output of each 1D-Convolution and Fully Connected layer is passed through a LeakyReLU activation function and re-normalized using batch normalization before being passed to the next layer in the model. The output of the final Fully Connected layer in the model is left without activation so that the model outputs can be directly passed to the Binary Cross-entropy loss function used during training. The first layer in the network has two input channels for the real and imaginary components of the spectrum. \relax }}{117}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {6.1}{\ignorespaces A table of the values of $p_{nm}^\prime $.\relax }}{185}{}%

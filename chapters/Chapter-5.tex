@@ -5,7 +5,7 @@
 
 \section{Introduction}
 
-The FSCD and antenna array CRES represent an innovative approach to beta-decay spectroscopy. While much can be learned from simulations about the systematics of CRES with antenna arrays, laboratory measurements and demonstrations provide critical inputs to sensitivity and simulation models, and provide a means for calibration and commissioning of the experiment. Therefore, a robust program of antenna and antenna measurement hardware development is key to the success of the FSCD and the development of antenna array CRES more broadly.
+The FSCD (free space CRES demonstrator) and antenna array CRES (cyclotron radiation emission spectroscopy) represent an innovative approach to beta-decay spectroscopy. While much can be learned from simulations about the systematics of CRES with antenna arrays, laboratory measurements and demonstrations provide critical inputs to sensitivity and simulation models, and provide a means for calibration and commissioning of the experiment. Therefore, a robust program of antenna and antenna measurement hardware development is key to the success of the FSCD and the development of antenna array CRES more broadly.
 
 In this chapter I summarize the development of an antenna measurement system at Penn State to implement and test the techniques of antenna array CRES on the bench-top. In Section \ref{sec:chap4-ant-meas} I provide an introduction to some fundamental parameters and concepts related to antenna measurements as well as an overview of the Penn State antenna measurement system hardware. In Section \ref{sec:SYNCA} I include the manuscript of a paper \cite{p8synca} which details the design and characterization of a specialized antenna developed to mimic the electric fields emitted by an electron in a CRES experiment. This antenna, called the Synthetic Cyclotron Antenna (SYNCA), is intended as a calibration tool for antenna arrays developed for CRES measurements. Lastly, in Section \ref{sec:chap5-fscd-array-measurements} I summarize a set of prototype FSCD antenna array measurements with the SYNCA \cite{p8jugaad}, which I use to validate the simulated performance of the antenna array and estimate systematic errors associated with the antenna array.
 
@@ -38,7 +38,7 @@ Antenna characterization measurements are intended to validate simulations of th
     \label{fig:rad-pattern-examples}
 \end{figure}
 
-Antennas are conductive structures designed to carry alternating electric currents to transmit energy in the form of EM waves \cite{balanis2015antenna}. Perhaps the most fundamental way to characterize an antenna, is to map out the radiated power density as a function of position, which is called the radiation pattern (see Figure \ref{fig:rad-pattern-examples}). The radiation power density is obtained by calculating the time-averaged Poynting vector for all positions surrounding the antenna, which in equation form is
+Antennas are conductive structures designed to carry alternating electric currents to transmit energy in the form of EM (electro-magnetic) waves \cite{balanis2015antenna}. Perhaps the most fundamental way to characterize an antenna, is to map out the radiated power density as a function of position, which is called the radiation pattern (see Figure \ref{fig:rad-pattern-examples}). The radiation power density is obtained by calculating the time-averaged Poynting vector for all positions surrounding the antenna, which in equation form is
 \begin{equation}
     \mathbf{W}(x,y,z) = \left<\mathbf{E}(x,y,z,t)\times\mathbf{H}^\ast(x,y,z,t)\right>_t,
 \end{equation}
@@ -203,7 +203,7 @@ where the elements of the matrix are the device S-parameters. It is assumed that
 \end{equation}
 Alternatively, S-parameters can be defined as the ratio of the scattered and incident power, which is proportional to the ratio of the squared voltage waves.
 
-Returning to the antenna measurement setup, it is clear that measuring the ratio of the received to the transmitted power is equivalent to measuring the ratio of power being scattered from port 1 to port 2 in a RF network. Therefore, measuring an antenna's gain can be accomplished quite easily using a VNA to perform a two port $S_{21}$ measurement.
+Returning to the antenna measurement setup, it is clear that measuring the ratio of the received to the transmitted power is equivalent to measuring the ratio of power being scattered from port 1 to port 2 in a RF (radio-frequency) network. Therefore, measuring an antenna's gain can be accomplished quite easily using a VNA to perform a two port $S_{21}$ measurement.
 
 \subsubsection{Antenna Array Commissioning and Calibration Measurements}
 
@@ -264,7 +264,7 @@ The second measurement configuration mimics the conditions of the FSCD as it con
         \caption{\label{fig:chap5-dig-meas-sys}}
     \end{subfigure}
     \hfill
-    \caption{\label{fig:meas-sys-diagrams}Diagrams of two measurement system configurations. Configuration (a) utilizes a VNA and is more suited to antenna characterization. Configuration (b) utilizes an AWG and VNA as a signal generation system and digitizer to collect measurement data, which is more suited to simulating CRES measurements. The transmission chain utilizes a quadrature hybrid and a pair of baluns to drive the cross-dipole variant test antenna developed for synthetic CRES measurements.}
+    \caption{\label{fig:meas-sys-diagrams}Diagrams of two measurement system configurations. Configuration (a) utilizes a VNA and is more suited to antenna characterization. Configuration (b) utilizes an AWG (arbitrary waveform generator) and VNA as a signal generation system and digitizer to collect measurement data, which is more suited to simulating CRES measurements. The transmission chain utilizes a quadrature hybrid and a pair of baluns to drive the cross-dipole variant test antenna developed for synthetic CRES measurements.}
 \end{figure}
 
 Figure \ref{fig:meas-sys-diagrams} shows two high-level system diagrams of the Penn State antenna measurement system that depict the important system components and the connections between them. The two configurations of the measurement system utilize different hardware. For characterization and radiation pattern measurements, the configuration shown in Figure \ref{fig:chap5-vna-meas-sys} is used. In this case a vector network analyzer (VNA) is used as the transmission source and data acquisition system, which is easy to calibrate over a wide range of frequencies. The configuration in \ref{fig:chap5-dig-meas-sys} is used to mimic the FSCD experiment, since this system includes a more realistic receiver chain. 
@@ -293,7 +293,7 @@ Neutrinos are the most abundant standard model fermions in our universe, but due
 \caption{\label{fig:fscd-cartoon} A sketch of an antenna array large-volume CRES experiment. Electrons from $\beta$-decays are confined in a magnetic field using a set of trap coils. The cyclotron radiation produced by the motion of the trapped electrons can be detected by a surrounding antenna array to determine the electron energies. Measuring the energies of many electrons produces a $\beta$-decay spectrum.}
 \end{figure}
 
-The Project 8 collaboration is developing new methods for neutrino mass measurement based on Cyclotron Radiation Emission Spectroscopy (CRES) \cite{Monreal:2009za, Project8:2014ivu, Project8:2017nal, Project8:2022wqh}, with the goal of measuring the absolute scale of the neutrino mass with a 40 $\textrm{meV}/\textrm{c}^2$ sensitivity \cite{PhysRevC.103.065501, FORMAGGIO20211}. This sensitivity goal will require the development of two separate technical capabilities. First is the development of an atomic tritium source, which avoids significant spectral broadening due to molecular final states \cite{Bodine:2015sma}. Second is the technology for performing CRES in a multi-cubic-meter experimental volume with high combined detection and reconstruction efficiency, which is required in order to obtain sufficient event statistics near the tritium spectrum endpoint.
+The Project 8 collaboration is developing new methods for neutrino mass measurement based on Cyclotron Radiation Emission Spectroscopy (CRES) \cite{Monreal:2009za, Project8:2014ivu, Project8:2017nal, Project8:2022wqh}, with the goal of measuring the absolute scale of the neutrino mass with a 40 $\textrm{meV}/\textrm{c}^2$ sensitivity \cite{p8bayesian, FORMAGGIO20211}. This sensitivity goal will require the development of two separate technical capabilities. First is the development of an atomic tritium source, which avoids significant spectral broadening due to molecular final states \cite{Bodine:2015sma}. Second is the technology for performing CRES in a multi-cubic-meter experimental volume with high combined detection and reconstruction efficiency, which is required in order to obtain sufficient event statistics near the tritium spectrum endpoint.
 
 One approach for a large-volume CRES experiment is to use an array of antennas, which surrounds a volume of tritium gas, to detect the cyclotron radiation produced by the $\beta$-decay electrons when they are trapped in a background magnetic field using a set of magnetic trapping coils (see Figure \ref{fig:fscd-cartoon}). Project 8 has developed a conceptual experiment design to study the feasibility of this approach. The design consists of a single circular array of antennas with a radius of 10~cm and 60 independent channels positioned around the center of the magnetic trap. The motivation behind this antenna array design is to first develop an understanding of the antenna array approach to CRES with a small scale experiment before attempting to scale the technique to large volumes by using multiple antenna rings to construct the full cylindrical array. The development of the antenna array approach to CRES has largely proceeded through simulations using the Locust software package \cite{Ashtari_Esfahani_2019, nb_thesis}, which is used to model the fields emitted by CRES events and predict the signals received by the surrounding antenna array. To validate these simulations, a dedicated test stand is being constructed to perform characterization measurements of the prototype antenna array developed by Project 8 (see Figure \ref{fig:testbed-cartoon}) and benchmark signal reconstruction methods using a specially designed transmitting calibration probe antenna.
 \begin{figure}[htbp]
@@ -425,15 +425,47 @@ The Locust simulation package \cite{Ashtari_Esfahani_2019} can be used to direct
 
 \subsection{SYNCA Simulations and Design}
 \label{sec:synca_design}
-One potential SYNCA design is the crossed-dipole antenna \cite{balanis2011modern}. A crossed-dipole antenna consists of two dipole antennas, one of which is rotated $90^\circ$ with respect to the other, which are fed with signals that are out of phase from the opposite dipole by $90^\circ$ (see Figure \ref{fig:cross-dipole}). 
+
+\subsubsection*{Early SYNCA Design Development}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{1.0\textwidth}
+        \includegraphics*[width=1.0\textwidth]{figs/Chapter-5/230801_first_cross_dipole.png}
+    \end{subfigure}
+    \begin{subfigure}{0.7\textwidth}
+        \includegraphics*[width=1.0\textwidth]{figs/Chapter-5/230801_vna_first_cross_dipole.png}
+    \end{subfigure}
+    \caption{\label{fig:chap5-first-dipole}Images of an early prototype crossed-dipole antenna manufactured by hand and the first measurement setup. The antenna was constructed by hand using four stripped coaxial cables. The antenna was connected to one port of the VNA, and the remaining three ports on the VNA were connected to horn antenna arranged with 90~deg offsets around the crossed-dipole. The measured unwrapped S-parameter phases exhibit the desired relative phase behavior for a SYNCA. These early measurements were the first laboratory proof-of-principle for the crossed-dipole SYNCA.}
+\end{figure}
+
+A crossed-dipole antenna \cite{balanis2011modern} (see Figure \ref{fig:chap5-first-dipole}) was identified early on as a candidate SYNCA design. The crossed-dipole is a circularly polarized antenna, consequently, the electric fields measured in the plane of the dipole antenna exhibit the same relative phase offsets as a $90^\circ$ electron in a magnetic trap. These phase offsets were measured with the first rudimentary crossed-dipole prototype manufactured from coaxial cables with the insulation and shield stripped away. 
+
+Because the SYNCA is ultimately a calibration tool, it is desireable that the antenna have a well-characterized and robust antenna pattern. Therefore, manufacturing a SYNCA using the stripped wire method shown in Figure \ref{fig:chap5-first-dipole} is infeasible. Studies of crossed-dipole antennas manufactured out of printed circuit boards were performed using HFSS to identify an antenna design that imitated an electron, while being more robust and simpler to manufacture (see Figure \ref{fig:chap5-early-hfss-synca}). 
+
+\begin{figure}
+    \centering
+    \includegraphics*[width=0.4\textwidth]{figs/Chapter-5/230801_early_hfss_prototype.png}
+    \caption{\label{fig:chap5-early-hfss-synca} An early iteration of a crossed-dipole SYNCA antenna simulated in HFSS. The antenna is electrically small at 26~GHz, which requires dipole arms on the order of 1~mm long. This design is limited by the minimum achievable distance between the dipole arms caused by the available diameters of coaxial cables. The assumed termination scheme for the coaxial cables to the antenna is hand-soldering, which introduces random variation in the antenna pattern from the inevitable blobs of solder left on the surface of the PCB.}
+\end{figure}
+
+Identifying a design that was robust, manufacturable, and matched the electric fields of a trapped electron proved to be a non-trivial task. The primary factor driving the difficulty was the high operating frequency of the antenna (26~GHz) combined with the requirement that the antenna be electrically-small. An antenna that is electrically-small at 26~GHz has a largest dimension on the order of 1~mm, which poses significant manufacturability challenges given the limited available budget for SYCNA fabrication.
+
+One of the key limitations with the small size requirements is the diameter of the coaxial cables needed to feed the crossed-dipole antenna. The smallest commonly available rigid coaxial cables available on the market have diameters of approximately 0.5~mm, which limited the spacing between dipole arms to a minimum of about 1~mm. The crossed-dipole antenna performs better as a SYNCA if the dipole arm separation is significantly less than the operating wavelength. Therefore, the high operating frequency ultimately limited how well the SYNCA could mimic an electron. If the desired cyclotron frequency was lowered by an order of magnitude to approximately 3~GHz a significantly higher quality SYNCA could be manufactured at lower cost.
+
+The decision to use coaxial transmission lines terminated on the antenna PCB with a hand-soldered connection was driven primarily to limit the costs of SYNCA development and contributed to the observable variations in the SYNCA's gain and phase patterns. A second iteration of the SYNCA design that minimized hand-soldering by using surface-mount components could significantly reduce variations in the antenna pattern. The major drawback in the development of a surface-mount SYNCA is the cost, and given the transition to a cavity based design for Phase IV, such a design was never investigated.
+
+\subsubsection*{Finalized SYNCA Simulations and Design}
+
+%One potential SYNCA design is the crossed-dipole antenna . A crossed-dipole antenna consists of two dipole antennas, one of which is rotated $90^\circ$ with respect to the other, which are fed with signals that are out of phase from the opposite dipole by $90^\circ$ (see Figure \ref{fig:cross-dipole}). 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/Chapter-5/220727_quad_balun_chain.pdf}
     \caption{\label{fig:cross-dipole} An idealized crossed-dipole antenna consists of two electric dipole antennas oriented perpendicular to each other and is fed with four signals with a quadrature phase relationship. An example antenna feed circuit is shown which is composed of a chained combination of a quadrature hybrid-coupler (Quad) and two baluns. }
 \end{figure}
-This arrangement causes the signals fed to each arm of the dipole to be out of phase from each of the neighboring arms by $90^\circ$, which mirrors the spatial phase relationship of cyclotron radiation fields.
+%This arrangement causes the signals fed to each arm of the dipole to be out of phase from each of the neighboring arms by $90^\circ$, which mirrors the spatial phase relationship of cyclotron radiation fields.
 
-A potential drawback of this design is that standard crossed-dipole antennas do not radiate uniform electric fields near the $\theta=\pi/2$ plane. Typical crossed-dipole antennas use dipole arm lengths equal to $\lambda/4$ or larger \cite{balanis2011modern}, where $\lambda$ is the wavelength at the desired operating frequency. Such large arm lengths cause the electric field magnitude to vary significantly around the circumference of the antenna. However, making the antenna electrically small by shrinking the arm length can improve the antenna pattern uniformity.
+One of the main drawbacks of a standard crossed-dipole design is that they do not radiate uniform electric fields near the $\theta=\pi/2$ plane. Typical crossed-dipole antennas use dipole arm lengths equal to $\lambda/4$ or larger \cite{balanis2011modern}, where $\lambda$ is the wavelength at the desired operating frequency. Such large arm lengths cause the electric field magnitude to vary significantly around the circumference of the antenna. However, making the antenna electrically small by shrinking the arm length can improve the antenna pattern uniformity.
 
 In general, the criterion for an electrically small antenna is that the largest dimension of the antenna ($D$) obey $D\lesssim\lambda/10$ \cite{balanis2015antenna}. In our application, we are attempting to mimic the cyclotron radiation emitted by electrons produced from tritium $\beta$-decay with energies near the spectrum endpoint. For a background magnetic field of 1~T, the corresponding cyclotron frequency of tritium endpoint electrons is approximately 26~GHz. Therefore, the electrically small condition would require that the largest dimension of the crossed-dipole antenna be smaller than 1.2~mm.
 
@@ -615,34 +647,34 @@ The discrepancies in the radiation pattern and phases exhibited by the as-built 
 
 The SYNCA antenna technology advances the CRES technique by providing a mechanism to characterize free-space antenna arrays for CRES measurements without the need for a magnet and cryogenics system, which would be required for calibration using electron sources. Both the Project 8 collaboration as well as future collaborations which are developing antenna array based CRES experiments can make use of SYNCA antennas as an important component of their calibration and commissioning phases.
 
-\section{SYNCA Development Discussion}
+%\section{SYNCA Development Discussion}
 
-\begin{figure}[htbp]
-    \centering
-    \begin{subfigure}{1.0\textwidth}
-        \includegraphics*[width=1.0\textwidth]{figs/Chapter-5/230801_first_cross_dipole.png}
-    \end{subfigure}
-    \begin{subfigure}{0.7\textwidth}
-        \includegraphics*[width=1.0\textwidth]{figs/Chapter-5/230801_vna_first_cross_dipole.png}
-    \end{subfigure}
-    \caption{\label{fig:chap5-first-dipole}Images of an early prototype crossed-dipole antenna manufactured by hand and the first measurement setup. The antenna was constructed by hand using four stripped coaxial cables. The antenna was connected to one port of the VNA, and the remaining three ports on the VNA were connected to horn antenna arranged with 90~deg offsets around the crossed-dipole. The measured unwrapped S-parameter phases exhibit the desired relative phase behavior for a SYNCA. These early measurements were the first laboratory proof-of-principle for the crossed-dipole SYNCA.}
-\end{figure}
+%\begin{figure}[htbp]
+%    \centering
+%    \begin{subfigure}{1.0\textwidth}
+%        \includegraphics*[width=1.0\textwidth]{figs/Chapter-5/230801_first_cross_dipole.png}
+%    \end{subfigure}
+%    \begin{subfigure}{0.7\textwidth}
+%        \includegraphics*[width=1.0\textwidth]{figs/Chapter-5/230801_vna_first_cross_dipole.png}
+%    \end{subfigure}
+%    \caption{\label{fig:chap5-first-dipole}Images of an early prototype crossed-dipole antenna manufactured by hand and the first measurement setup. The antenna was constructed by hand using four stripped coaxial cables. The antenna was connected to one port of the VNA, and the remaining three ports on the VNA were connected to horn antenna arranged with 90~deg offsets around the crossed-dipole. The measured unwrapped S-parameter phases exhibit the desired relative phase behavior for a SYNCA. These early measurements were the first laboratory proof-of-principle for the crossed-dipole SYNCA.}
+%\end{figure}
 
-A crossed-dipole antenna (see Figure \ref{fig:chap5-first-dipole}) was identified early on as a candidate SYNCA design. The crossed-dipole is a circularly polarized antenna, consequently, the electric fields measured in the plane of the dipole antenna exhibit the same relative phase offsets as a $90^\circ$ electron in a magnetic trap. This is explained in greater detail in Section \ref{sec:SYNCA}. These phase offsets were measured with the first rudimentary crossed-dipole prototype manufactured from coaxial cables with the insulation and shield stripped away. 
+%A crossed-dipole antenna (see Figure \ref{fig:chap5-first-dipole}) was identified early on as a candidate SYNCA design. The crossed-dipole is a circularly polarized antenna, consequently, the electric fields measured in the plane of the dipole antenna exhibit the same relative phase offsets as a $90^\circ$ electron in a magnetic trap. This is explained in greater detail in Section \ref{sec:SYNCA}. These phase offsets were measured with the first rudimentary crossed-dipole prototype manufactured from coaxial cables with the insulation and shield stripped away. 
 
-Because the SYNCA is ultimately a calibration tool, it is desireable that the antenna have a well-characterized and robust antenna pattern. Therefore, manufacturing a SYNCA using the stripped wire method shown in Figure \ref{fig:chap5-first-dipole} is infeasible. Studies of crossed-dipole antennas manufactured out of printed circuit boards were performed using HFSS to identify an antenna design that imitated an electron, while being more robust and simpler to manufacture (see Figure \ref{fig:chap5-early-hfss-synca}). 
+%Because the SYNCA is ultimately a calibration tool, it is desireable that the antenna have a well-characterized and robust antenna pattern. Therefore, manufacturing a SYNCA using the stripped wire method shown in Figure \ref{fig:chap5-first-dipole} is infeasible. Studies of crossed-dipole antennas manufactured out of printed circuit boards were performed using HFSS to identify an antenna design that imitated an electron, while being more robust and simpler to manufacture (see Figure \ref{fig:chap5-early-hfss-synca}). 
 
-\begin{figure}
-    \centering
-    \includegraphics*[width=0.4\textwidth]{figs/Chapter-5/230801_early_hfss_prototype.png}
-    \caption{\label{fig:chap5-early-hfss-synca} An early iteration of a crossed-dipole SYNCA antenna simulated in HFSS. The antenna is electrically small at 26~GHz, which requires dipole arms on the order of 1~mm long. This design is limited by the minimum achievable distance between the dipole arms caused by the available diameters of coaxial cables. The assumed termination scheme for the coaxial cables to the antenna is hand-soldering, which introduces random variation in the antenna pattern from the inevitable blobs of solder left on the surface of the PCB.}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \includegraphics*[width=0.4\textwidth]{figs/Chapter-5/230801_early_hfss_prototype.png}
+%    \caption{\label{fig:chap5-early-hfss-synca} An early iteration of a crossed-dipole SYNCA antenna simulated in HFSS. The antenna is electrically small at 26~GHz, which requires dipole arms on the order of 1~mm long. This design is limited by the minimum achievable distance between the dipole arms caused by the available diameters of coaxial cables. The assumed termination scheme for the coaxial cables to the antenna is hand-soldering, which introduces random variation in the antenna pattern from the inevitable blobs of solder left on the surface of the PCB.}
+%\end{figure}
 
-Identifying a design that was robust, manufacturable, and matched the electric fields of a trapped electron proved to be a non-trivial task. The primary factor driving the difficulty was the high operating frequency of the antenna (26~GHz) combined with the requirement that the antenna be electrically-small. An antenna that is electrically-small at 26~GHz has a largest dimension on the order of 1~mm, which poses significant manufacturability challenges given the limited available budget for SYCNA fabrication.
+%Identifying a design that was robust, manufacturable, and matched the electric fields of a trapped electron proved to be a non-trivial task. The primary factor driving the difficulty was the high operating frequency of the antenna (26~GHz) combined with the requirement that the antenna be electrically-small. An antenna that is electrically-small at 26~GHz has a largest dimension on the order of 1~mm, which poses significant manufacturability challenges given the limited available budget for SYCNA fabrication.
 
-One of the key limitations with the small size requirements is the diameter of the coaxial cables needed to feed the crossed-dipole antenna. The smallest commonly available rigid coaxial cables available on the market have diameters of approximately 0.5~mm, which limited the spacing between dipole arms to a minimum of about 1~mm. The crossed-dipole antenna performs better as a SYNCA if the dipole arm separation is significantly less than the operating wavelength. Therefore, the high operating frequency ultimately limited how well the SYNCA could mimic an electron. If the desired cyclotron frequency was lowered by an order of magnitude to approximately 3~GHz a significantly higher quality SYNCA could be manufactured at lower cost.
+%One of the key limitations with the small size requirements is the diameter of the coaxial cables needed to feed the crossed-dipole antenna. The smallest commonly available rigid coaxial cables available on the market have diameters of approximately 0.5~mm, which limited the spacing between dipole arms to a minimum of about 1~mm. The crossed-dipole antenna performs better as a SYNCA if the dipole arm separation is significantly less than the operating wavelength. Therefore, the high operating frequency ultimately limited how well the SYNCA could mimic an electron. If the desired cyclotron frequency was lowered by an order of magnitude to approximately 3~GHz a significantly higher quality SYNCA could be manufactured at lower cost.
 
-The decision to use coaxial transmission lines terminated on the antenna PCB with a hand-soldered connection was driven primarily to limit the costs of SYNCA development and contributed to the observable variations in the SYNCA's gain and phase patterns. A second iteration of the SYNCA design that minimized hand-soldering by using surface-mount components could significantly reduce variations in the antenna pattern. The major drawback in the development of a surface-mount SYNCA is the cost, and given the transition to a cavity based design for Phase IV, such a design was never investigated.
+%The decision to use coaxial transmission lines terminated on the antenna PCB with a hand-soldered connection was driven primarily to limit the costs of SYNCA development and contributed to the observable variations in the SYNCA's gain and phase patterns. A second iteration of the SYNCA design that minimized hand-soldering by using surface-mount components could significantly reduce variations in the antenna pattern. The major drawback in the development of a surface-mount SYNCA is the cost, and given the transition to a cavity based design for Phase IV, such a design was never investigated.
 
 \section{FSCD Antenna Array Measurements with the SYNCA}
 \label{sec:chap5-fscd-array-measurements}
@@ -770,14 +802,14 @@ One can observe a higher average variance in the phase errors measured for the F
 
 \begin{figure}[h]
 \centering
-\begin{subfigure}{.6\textwidth}
+\begin{subfigure}{.75\textwidth}
   \centering
   \includegraphics[width=1\textwidth]{figs/Chapter-5/230120_synth_array_phase_error_map_z0.png}
   \caption{}
   \label{fig:jugaad_phase_map}
 \end{subfigure}
 \par\medskip % force a bit of vertical whitespace
-\begin{subfigure}{.6\textwidth}
+\begin{subfigure}{.75\textwidth}
   \centering
   \includegraphics[width=1\textwidth]{figs/Chapter-5/230123_jugaad_phase_error_map_z0.png}
   \caption{}
@@ -817,14 +849,14 @@ As the SYNCA is moved off-axis one observes a similar increase in the number of 
 
 \begin{figure}[htbp]
 \centering
-\begin{subfigure}{.7\textwidth}
+\begin{subfigure}{.75\textwidth}
   \centering
   \includegraphics[width=1\textwidth]{figs/Chapter-5/230120_synth_array_signal_amplitude_map_z0.png}
   \caption{}
   \label{fig:synth-jugaad-mag-map}
 \end{subfigure}
 \par\medskip % force a bit of vertical whitespace
-\begin{subfigure}{.7\textwidth}
+\begin{subfigure}{.75\textwidth}
   \centering
   \includegraphics[width=1\textwidth]{figs/Chapter-5/230123_jugaad_magnitude_map_z0.png}
   \caption{The two-dimensional maps showing the diffractive pattern exhibited by the FSCD and synthetic array signal magnitudes.}
@@ -841,7 +873,7 @@ The fact that one observes a similar diffraction pattern in the signal magnitude
 \subsubsection{Beamforming Characterization}
 \label{sec:jugaad_bf_analysis}
 
-Errors in the signal magnitudes and phases lead to errors in signal reconstruction. For example, a matched filter reconstruction requires accurate knowledge of the signals in each channel to achieve optimal performance. Uncorrected errors leads to mismatches between the template and signal, which reduces detection efficiency and introduces uncertainty in the parameter estimation. In this section, I analyze the beamformed signal amplitude as a function of the position of the SYNCA to quantify the impact of the phase and magnitude errors on signal reconstruction. Because of the imperfections in the SYNCA source, it is inappropriate to directly compare the beamformed signal amplitude of the FSCD array or synthetic array. Such a comparison would not allow one to disentangle losses that occur because of the antenna array from those that occur because of the source. Therefore, I focus on comparing the beamforming of the FSCD array to the synthetic array.
+Errors in the signal magnitudes and phases lead to errors in signal reconstruction. For example, a matched filter reconstruction requires accurate knowledge of the signals in each channel to achieve optimal performance. Uncorrected errors leads to mismatches between the template and signal, which reduces detection efficiency and introduces uncertainty in the parameter estimation. In this section, I analyze the beamformed signal amplitude as a function of the position of the SYNCA to quantify the impact of the phase and magnitude errors on signal reconstruction. Because of the imperfections in the SYNCA source, it is inappropriate to directly compare the measured beamformed signal amplitudes of the FSCD array or synthetic array to simulations. Because such a comparison, would not allow one to disentangle losses that occur because of the antenna array from those that occur because of the source. Therefore, I focus on comparing the measured beamforming results of the FSCD array to the synthetic array, since the SYNCA imperfections are common to both setups.
 
 \begin{figure}[htbp]
     \centering

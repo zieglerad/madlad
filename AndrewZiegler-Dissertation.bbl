@@ -203,6 +203,9 @@
 \textsc{Halbach, K.} (1980) \enquote{Design of permanent multipole magnets with oriented rare earth cobalt material,} \emph{Nuclear Instruments and Methods}, \textbf{169}(1), pp. 1--10.
 \newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/0029554X80900944}
 
+\bibitem{p8phase3trigger}
+ \enquote{Real-time Signal Detection for Cyclotron Radiation Emission Spectroscopy Measurements using Antenna Arrays,} \emph{In preparation}.
+
 \bibitem{kassiopeia}
 \textsc{Furse, D.} \textsc{et~al.} (2017) \enquote{{Kassiopeia: a modern, extensible C++ particle tracking package},} \emph{New Journal of Physics}, \textbf{19}(5), p. 053012.
 \newline\urlprefix\url{https://doi.org/10.1088/1367-2630/aa6950}
@@ -250,6 +253,13 @@
 \bibitem{reciprocity_theorem}
 \textsc{Stumpf, M.} (2018) \emph{Electromagnetic Reciprocity in Antenna Theory}, Wiley.
 
+\bibitem{nb_thesis}
+\textsc{Buzinsky, N.} (2021) \emph{Statistical Signal Processing and Detector Optimization in Project 8}, Ph.D. thesis, Massachusetts Institute of Technology.
+
+\bibitem{p8synca}
+\textsc{Esfahani, A.~A.} \textsc{et~al.} (2023) \enquote{SYNCA: A Synthetic Cyclotron Antenna for the Project 8 Collaboration,} \emph{Journal of Instrumentation}, \textbf{18}(01), p. P01034.
+\newline\urlprefix\url{https://dx.doi.org/10.1088/1748-0221/18/01/P01034}
+
 \bibitem{prml}
 \textsc{Bishop, C.} (2016) \emph{Pattern Recognition and Machine Learning}, Springer.
 
@@ -265,12 +275,14 @@
 \bibitem{p8PanicProc}
 \textsc{Reimann, R.} (2022) \enquote{{Project 8: R\&D for a next-generation neutrino mass experiment},} \emph{PoS}, \textbf{PANIC2021}, p. 283.
 
-\bibitem{nb_thesis}
-\textsc{Buzinsky, N.} (2021) \emph{Statistical Signal Processing and Detector Optimization in Project 8}, Ph.D. thesis, Massachusetts Institute of Technology.
+\bibitem{p8ml_1}
+\textsc{Ashtari~Esfahani, A.} \textsc{et~al.} (2020) \enquote{{Cyclotron radiation emission spectroscopy signal classification with machine learning in project 8},} \emph{New J. Phys.}, \textbf{22}(3), p. 033004, \eprint{1909.08115}.
 
-\bibitem{p8synca}
-\textsc{Esfahani, A.~A.} \textsc{et~al.} (2023) \enquote{SYNCA: A Synthetic Cyclotron Antenna for the Project 8 Collaboration,} \emph{Journal of Instrumentation}, \textbf{18}(01), p. P01034.
-\newline\urlprefix\url{https://dx.doi.org/10.1088/1748-0221/18/01/P01034}
+\bibitem{balanis}
+\textsc{Balanis, C.~A.} (2016) \emph{Antenna Theory: Analysis and Design, 4th Edition}, Wiley.
+
+\bibitem{cnn_are_mf}
+\textsc{Stanković, L.} and \textsc{D.~Mandic} (2023) \enquote{Convolutional Neural Networks Demystified: A Matched Filtering Perspective-Based Tutorial,} \emph{IEEE Transactions on Systems, Man, and Cybernetics: Systems}, \textbf{53}(6), pp. 3614--3628.
 
 \bibitem{v100}
 \url{https://www.nvidia.com/en-us/data-center/v100/}.
@@ -341,9 +353,6 @@
 
 \bibitem{bead_pull}
 \textsc{Rapidis, N.~M.} (2018) \enquote{{Application of the Bead Perturbation Technique to a Study of a Tunable 5 GHz Annular Cavity},} \emph{Springer Proc. Phys.}, \textbf{211}, pp. 45--51, \eprint{1708.04276}.
-
-\bibitem{p8phase3trigger}
- \enquote{Real-time Signal Detection for Cyclotron Radiation Emission Spectroscopy Measurements using Antenna Arrays,} \emph{In preparation}.
 
 \bibitem{cresHe6}
 \textsc{Byron, W.} \textsc{et~al.} (2022) \enquote{{First observation of cyclotron radiation from MeV-scale ${\rm e}^{pm}$ following nuclear beta decay},} \eprint{2209.02870}.
