@@ -44,14 +44,14 @@ Antennas are conductive structures designed to carry alternating electric curren
 \end{equation}
 where $\mathbf{E}(x,y,z,t)$ and $\mathbf{H}(x,y,z,t)$ are the time-dependent electric and magnetic fields produced by the antenna \cite{jackson_classical_1999}. The radiation power density has units of $\mathrm{W}/\mathrm{m}^2$ and is more typically called the energy flux density in physics applications, since it is a measure of the amount of energy passing through a unit area over time. 
 
-Because the radiation power density is a measure of power per unit area, its value in a particular direction will depend on the distance from the antenna at which one is measuring. This is undesirable for practical applications. A related quantity, which is distance independent, is the energy flux per unit solid angle or radiation intensity, which is computed directly from the radiation power density by multiplying by the squared distance from the antenna. Specifically,
+Because the radiation power density is a measure of power per unit area, its value in a particular direction will depend on the distance from the antenna at which one is measuring. This is undesirable for practical applications. A related quantity, which is distance independent, is the energy flux per unit solid angle or radiation intensity. This is computed directly from the radiation power density by multiplying by the squared distance from the antenna. Specifically,
 \begin{equation}
     U = r^2W(x,y,z),
 \end{equation}
 where $r$ is the distance from the antenna to the field measurement point. The radiation intensity is typically defined in regions where the Poynting vector consists only of a radial component where it is safe to treat as a scalar quantity. 
 
 \subsubsection{Directivity and Gain}
-Since the radiation intensity is a measure of average power per unit solid angle, it is independent of distance and more useful as feature for antenna measurement. The radiation intensity is directly related to antenna directivity and gain, which are common antenna engineering figures-of-merit. Directivity is defined as the ratio between the radiation intensity at particular point on the radiation pattern to the average radiation intensity computed over all solid angles \cite{balanis2015antenna}.
+Since the radiation intensity is a measure of average power per unit solid angle, it is independent of distance and a more useful quantity for antenna measurements. The radiation intensity is directly related to antenna directivity and gain, which are common antenna engineering figures-of-merit. Directivity is defined as the ratio between the radiation intensity at particular point on the radiation pattern to the average radiation intensity computed over all solid angles \cite{balanis2015antenna}.
 The equation that relates the radiation intensity to directivity is
 \begin{equation}
     D = \frac{U}{U_0}=\frac{4\pi U}{P_\textrm{rad}},
@@ -100,7 +100,7 @@ where $U_\phi$ and $U_\theta$ are the radiation intensities in a particular dire
     G_\mathrm{tot}=G_\phi+G_\theta=\frac{2\pi U_\phi}{P_\mathrm{in}}+\frac{2\pi U_\theta}{P_\mathrm{in}}.
 \end{equation}
 
-An electron performing a circular orbit in the XY-plane from the side, viewed along the X or Y axes, would be seen as performing a linear oscillation perpendicular to the viewing axis. From this picture, one would predict that the primary polarization of electric fields from CRES events is linearly polarization in the $\hat\phi$ direction in the XY-plane.
+An electron performing a circular orbit in the XY-plane from the side, viewed along the X or Y axes, would be seen as performing a linear oscillation perpendicular to the viewing axis. From this picture, one would predict that the primary polarization of electric fields from CRES events is linear polarization in the $\hat\phi$ direction in the XY-plane.
 
 \subsubsection{Antenna Factor and Effective Aperture}
 \label{sec:ant-factor}
