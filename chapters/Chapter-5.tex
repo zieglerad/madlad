@@ -271,7 +271,7 @@ Figure \ref{fig:meas-sys-diagrams} shows two high-level system diagrams of the P
 
 The characterization configuration utilizes a network analyzer (Keysight N5222A) with two independent sources and four measurement ports as the primary measurement tool. A standard reference antenna is connected to one measurement port, and the test antenna is connected to a second port. The typical reference antenna used for these studies is a Pasternack PF9851 horn antenna. In the measurement shown, the test antenna represents a SYNCA antenna, which requires a transmission chain consisting of quadrature hybrid coupler (Marki QH-0226) connected to two baluns (Marki BAL-0026) to generate feed signals with the appropriate phases. The VNA measures the radiation pattern by performing a transmission S-parameter measurement, which can be used with the knowledge of the reference antenna's radiation pattern to determine the radiation pattern of the test antenna (see Section \ref{sec:ant-meas-fun}).
 
-The second configuration incorporates more hardware components to mimic the DAQ system envisioned for the FSCD experiment. The basic approach is to produce CRES-like radiation and use an antenna combined with a realistic RF receiver chain to acquire the signals. On the transmit side, an arbitrary waveform generator (AWG, RIGOL DG5252) is used to generate a waveform that mimics a CRES signal at a baseband frequency up to 250~MHz. This frequency is then up-converted to the CRES signal frequency band of 25.8 to 26.0 GHz using a mixer (Marki MM1-0832L) and a bandpass filter (K\&L Microwave 3C62-25900/T200-K/K) to reject unwanted mixing components outside out of the 200~MHz CRES signal band. The local oscillator signal for mixing is provided by one of the VNA sources configured to run in a continuous wave setting. On the receive side, a prototype antenna is used to detect the radiation emitted by the test antenna, which is down-converted and filtered using the same mixer and bandpass filter as the transmission chain. Lastly, data acquisition is performed using a 14-bit ADC sampling at 500~MSa/s (CAEN DT530) to digitize the down-converted signals.
+The second configuration incorporates more hardware components to mimic the DAQ system envisioned for the FSCD experiment. The basic approach is to produce CRES-like radiation and use an antenna combined with a realistic RF receiver chain to acquire the signals. On the transmit side, an arbitrary waveform generator (AWG, RIGOL DG5252) is used to generate a waveform that mimics a CRES signal at a baseband frequency up to 250~MHz. This frequency is then up-converted to the CRES signal frequency band of 25.8 to 26.0 GHz using a mixer (Marki MM1-0832L) and a bandpass filter (K\&L Microwave 3C62-25900/T200-K/K) to reject unwanted mixing components outside out of the 200~MHz CRES signal band. The local oscillator signal for mixing is provided by one of the VNA sources configured to run in a continuous wave setting. On the receive side, a prototype antenna is used to detect the radiation emitted by the test antenna, which is down-converted and filtered using the same mixer and bandpass filter as the transmission chain. Lastly, data acquisition is performed using a 14-bit ADC sampling at 500~MSa/s (CAEN DT5730) to digitize the down-converted signals.
 
 In order to distribute the LO to all mixers a 4-way power splitter (MiniCircuits ZC4PD-18263-S+) along with an amplifier (Marki APM-6848) is used to drive the four mixers used in the measurement system. A limitation of using the VNA as an LO source is that there is no control of the LO phase when a measurement is triggered by the control script, which leads to a random phase offset between acquisitions. This makes it impossible to perform synthetic array measurements, which require strict control over the starting phase of the transmitted signal. In order to monitor the random phase of the LO, a 2-way power splitter (MiniCircuits Z99SC-62-S+) is used to split the signal from the AWG between the transmission path and a LO monitoring path. The LO monitoring path consists of an up-conversion and down conversion using two mixers connected by a coaxial cable, and monitors the relative phase of the LO using a channel on the digitizer to sample this path. A phase shift in the LO will lead to a proportional phase shift in the mixed signal, which is measured and removed from the received signals.
 
@@ -802,14 +802,14 @@ One can observe a higher average variance in the phase errors measured for the F
 
 \begin{figure}[h]
 \centering
-\begin{subfigure}{.75\textwidth}
+\begin{subfigure}{.7\textwidth}
   \centering
   \includegraphics[width=1\textwidth]{figs/Chapter-5/230120_synth_array_phase_error_map_z0.png}
   \caption{}
   \label{fig:jugaad_phase_map}
 \end{subfigure}
 \par\medskip % force a bit of vertical whitespace
-\begin{subfigure}{.75\textwidth}
+\begin{subfigure}{.7\textwidth}
   \centering
   \includegraphics[width=1\textwidth]{figs/Chapter-5/230123_jugaad_phase_error_map_z0.png}
   \caption{}
@@ -849,20 +849,20 @@ As the SYNCA is moved off-axis one observes a similar increase in the number of 
 
 \begin{figure}[htbp]
 \centering
-\begin{subfigure}{.75\textwidth}
+\begin{subfigure}{.7\textwidth}
   \centering
   \includegraphics[width=1\textwidth]{figs/Chapter-5/230120_synth_array_signal_amplitude_map_z0.png}
   \caption{}
   \label{fig:synth-jugaad-mag-map}
 \end{subfigure}
 \par\medskip % force a bit of vertical whitespace
-\begin{subfigure}{.75\textwidth}
+\begin{subfigure}{.7\textwidth}
   \centering
   \includegraphics[width=1\textwidth]{figs/Chapter-5/230123_jugaad_magnitude_map_z0.png}
-  \caption{The two-dimensional maps showing the diffractive pattern exhibited by the FSCD and synthetic array signal magnitudes.}
+  \caption{}
   \label{fig:jugaad-mag-map}
 \end{subfigure}
-\caption{}
+\caption{The two-dimensional maps showing the diffractive pattern exhibited by the synthetic array (a) and FSCD array (b) signal magnitudes.}
 \label{fig:measured-mag-map-comp-jugaad}
 \end{figure}
 
