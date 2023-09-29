@@ -384,7 +384,8 @@ A thesis \\ submitted in partial fulfillment \\ of the requirements \\
 \vfill
 \mbox{}
 \begin{center}
-Reviewed and approved$^{*}$ by the following:\\[4mm]
+%Reviewed and approved$^{*}$ by the following:\\[4mm]
+Reviewed and approved by the following:\\[4mm]
 \psu@advisor \\
 \psu@advisortitle \\
 Thesis Supervisor \\[4mm]
@@ -563,7 +564,7 @@ Department Head \\
 \begin{center}
 	The Pennsylvania State University\\
 	\psu@submittedto \\
-	\psu@collegesubmittedto
+	%\psu@collegesubmittedto
 \end{center}
 \vfill
 \begin{center}
@@ -620,7 +621,8 @@ Department Head \\
         \setlength{\psu@intersigspace}{1.5\baselineskip}
     }
     \vspace*{-0.2in}
-    \noindent {\normalsize The \MakeTextLowercase{\psu@documenttype} of \psu@author\ was reviewed and approved$^{*}$ by the following:}\\[3\baselineskip]
+    %\noindent {\normalsize The \MakeTextLowercase{\psu@documenttype} of \psu@author\ was reviewed and approved$^{*}$ by the following:}\\[3\baselineskip]
+    \noindent {\normalsize The \MakeTextLowercase{\psu@documenttype} of \psu@author\ was reviewed and approved by the following:}\\[3\baselineskip]
 \mbox{}\hfill
 \parbox{\textwidth - 0.5in}{
          \psu@advisor\\[\psu@sigoptionskip]
@@ -762,7 +764,7 @@ Department Head \\
 \mbox{}\vfill
 
 \noindent
-\parbox{\textwidth}{$^{*}$Signatures are on file in the Graduate School.}
+%\parbox{\textwidth}{$^{*}$Signatures are on file in the Graduate School.}
 
 \newpage
 }

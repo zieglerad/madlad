@@ -272,11 +272,14 @@
 \bibitem{ml_ligo_2}
 \textsc{Gabbard, H.}, \textsc{C.~Messenger}, \textsc{I.~S. Heng}, \textsc{F.~Tonolini}, and \textsc{R.~Murray-Smith} (2022) \enquote{{Bayesian parameter estimation using conditional variational autoencoders for gravitational-wave astronomy},} \emph{Nature Phys.}, \textbf{18}(1), pp. 112--117, \eprint{1909.06296}.
 
-\bibitem{p8PanicProc}
-\textsc{Reimann, R.} (2022) \enquote{{Project 8: R\&D for a next-generation neutrino mass experiment},} \emph{PoS}, \textbf{PANIC2021}, p. 283.
+\bibitem{p8jphysg}
+\textsc{Ashtari~Esfahani, A.} \textsc{et~al.} (2017) \enquote{{Determining the neutrino mass with cyclotron radiation emission spectroscopy\textemdash{}Project 8},} \emph{J. Phys. G}, \textbf{44}(5), p. 054004, \eprint{1703.02037}.
 
 \bibitem{p8ml_1}
-\textsc{Ashtari~Esfahani, A.} \textsc{et~al.} (2020) \enquote{{Cyclotron radiation emission spectroscopy signal classification with machine learning in project 8},} \emph{New J. Phys.}, \textbf{22}(3), p. 033004, \eprint{1909.08115}.
+---{}---{}--- (2020) \enquote{{Cyclotron radiation emission spectroscopy signal classification with machine learning in project 8},} \emph{New J. Phys.}, \textbf{22}(3), p. 033004, \eprint{1909.08115}.
+
+\bibitem{p8PanicProc}
+\textsc{Reimann, R.} (2022) \enquote{{Project 8: R\&D for a next-generation neutrino mass experiment},} \emph{PoS}, \textbf{PANIC2021}, p. 283.
 
 \bibitem{balanis}
 \textsc{Balanis, C.~A.} (2016) \emph{Antenna Theory: Analysis and Design, 4th Edition}, Wiley.
